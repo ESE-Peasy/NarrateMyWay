@@ -118,7 +118,7 @@ package-lock.json
 
 # React Native .gitignore
 node_modules/**/*
-.expo/*
+.expo/
 npm-debug.*
 *.jks
 *.p8
