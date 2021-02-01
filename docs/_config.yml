@@ -3,7 +3,7 @@ color_scheme: custom
 
 aux_links:
   "View our GitHub!":
-    - "//github.com/ESE-Peasy/PosturePerfection"
+    - "//github.com/ESE-Peasy/NarrateMyWay"
 
 search_enabled: true
 
@@ -12,4 +12,4 @@ search:
   rel_url: false
   button: true
 
-footer_content: "Andrew Ritchie, Ashwin Maliampurakal, Conor Begley, Miklas Riechmann <br /> Distributed by an <a href=\"https://github.com/ESE-Peasy/PosturePerfection/blob/main/LICENSE\">GNU GPL-3.0 license.</a>"
+footer_content: "Andrew Ritchie, Ashwin Maliampurakal, Conor Begley, Miklas Riechmann <br /> Distributed by an <a href=\"https://github.com/ESE-Peasy/NarrateMyWay/blob/main/LICENSE\">GNU GPL-3.0 license.</a>"
