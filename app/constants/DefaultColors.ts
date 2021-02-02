@@ -1,4 +1,3 @@
-const tintColorLight = '#2f95dc';
 const tintColorDark = '#fff';
 const darkBlue = '#043964';
 
@@ -8,14 +7,14 @@ export default {
     background: '#fff',
     tint: darkBlue,
     tabIconDefault: '#ccc',
-    tabIconSelected: darkBlue,
+    tabIconSelected: darkBlue
   },
   dark: {
     text: '#fff',
     background: '#000',
     tint: tintColorDark,
     tabIconDefault: '#ccc',
-    tabIconSelected: tintColorDark,
+    tabIconSelected: tintColorDark
   },
   backgroundDarkBlue: darkBlue,
   navBar: {
@@ -23,7 +22,7 @@ export default {
     background: darkBlue,
     tint: '#fff',
     tabIconDefault: darkBlue,
-    tabIconSelected: '#fff',
+    tabIconSelected: '#fff'
   },
   customTheme: {
     dark: false,
@@ -33,7 +32,7 @@ export default {
       card: darkBlue,
       text: '#fff',
       border: 'rgb(199, 199, 204)',
-      notification: 'rgb(255, 69, 58)',
-    },
-  },
+      notification: 'rgb(255, 69, 58)'
+    }
+  }
 };
