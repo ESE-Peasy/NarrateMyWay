@@ -2,7 +2,7 @@
 <br />
 <p align="center">
 
-   <! -- <img src="docs/images/logo.svg" alt="Logo for Narrate My Way" width="250"> -->
+   <!-- <img src="docs/images/logo.svg" alt="Logo for Narrate My Way" width="250"> -->
 
   <h1 align="center">Narrate My Way</h1>
 
@@ -33,16 +33,11 @@
     <li>
       <a href="#about-the-project">About The Project</a>
       <ul>
-        <li><a href="#components-used">Components Used</a></li>
-        <li><a href="#built-with">Built With</a></li>
+        <li><a href="#technologies-used">Technologies Used</a></li>
       </ul>
     </li>
     <li>
       <a href="#getting-started">Getting Started</a>
-      <ul>
-        <li><a href="#prerequisites">Prerequisites</a></li>
-        <li><a href="#installation">Installation</a></li>
-      </ul>
     </li>
     <li><a href="#usage">Usage</a></li>
     <li><a href="#roadmap">Roadmap</a></li>
@@ -60,43 +55,16 @@
 
 To be completed
 
-### Components Used
+### Technologies Used
 
+* The application for this project is being developed using [React Native](https://reactnative.dev)
 *
 *
-*
-### Built With
-
-* <!-- [Bootstrap](https://getbootstrap.com) -->
-* <!-- [JQuery](https://jquery.com) -->
-* <!-- [Laravel](https://laravel.com) -->
-
 
 <!-- GETTING STARTED -->
 ## Getting Started
 
-To get PosturePerfection running by yourself you will need to follow these steps.
-
-### Prerequisites
-
-Specify which software dependencies are used and how to install them:
-
-  ```sh
-  TBC
-  ```
-
-### Installation
-
-1. Fork the repo
-2. Clone the repo
-   ```sh
-   git clone https://github.com/ESE-Peasy/NarrateMyWay.git
-   ```
-3. Install NPM packages
-   ```sh
-   TBC
-   ```
-
+To get started with installing and running the NarrateMyWay application please refer to our [development guide](https://ese-peasy.github.io/NarrateMyWay/development/development.html)
 
 <!-- USAGE EXAMPLES -->
 ## Usage
@@ -117,12 +85,15 @@ See the [open issues](https://github.com/ESE-Peasy/NarrateMyWay/issues) for a li
 
 Contributions are what make the open source community such an amazing place to be learn, inspire, and create. Any contributions you make are **greatly appreciated**.
 
+To contribute to our project we recommend the following steps:
+
 1. Fork the Project
 2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
 3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
 4. Push to the Branch (`git push origin feature/AmazingFeature`)
 5. Open a Pull Request
 
+Please look at the [Development](https://ese-peasy.github.io/NarrateMyWay/development/development.html) page within our GitHub Pages for more detailed guidance regarding setup and tools which can be used to optimise the development experience.
 
 <!-- LICENSE -->
 ## License
