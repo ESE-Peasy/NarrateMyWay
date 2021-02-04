@@ -28,8 +28,10 @@ export default function TabTwoScreen() {
 }
 
 const speak = () => {
-  const words = 'I am now saying some words';
-  Speech.speak(words);
+  const date = new Date();
+  const time = date.getHours() + ' ' + date.getMinutes();
+  const words = 'I am now saying some words at ';
+  Speech.speak(words + time);
 };
 
 const styles = StyleSheet.create({
