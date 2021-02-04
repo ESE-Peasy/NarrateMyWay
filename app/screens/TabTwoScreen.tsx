@@ -1,8 +1,10 @@
 import * as React from 'react';
-import { StyleSheet, Image } from 'react-native';
+import { StyleSheet, Image, Button } from 'react-native';
 
 import EditScreenInfo from '../components/EditScreenInfo';
 import { Text, View } from '../components/Themed';
+
+import * as Speech from 'expo-speech';
 
 export default function TabTwoScreen() {
   return (
@@ -19,9 +21,16 @@ export default function TabTwoScreen() {
         accessibilityLabel="Accessible image"
       />
       <EditScreenInfo path="/screens/TabTwoScreen.tsx" />
+
+      <Button title="Tap to hear words" onPress={speak} />
     </View>
   );
 }
+
+const speak = () => {
+  const words = 'I am now saying some words';
+  Speech.speak(words);
+};
 
 const styles = StyleSheet.create({
   container: {
