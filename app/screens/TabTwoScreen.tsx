@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { StyleSheet } from 'react-native';
+import { StyleSheet, Image } from 'react-native';
 
 import EditScreenInfo from '../components/EditScreenInfo';
 import { Text, View } from '../components/Themed';
@@ -12,6 +12,11 @@ export default function TabTwoScreen() {
         style={styles.separator}
         lightColor="#eee"
         darkColor="rgba(255,255,255,0.1)"
+      />
+      <Image
+        source={require('../assets/images/icon.png')}
+        style={{ width: 100, height: 100 }}
+        accessibilityLabel="Accessible image"
       />
       <EditScreenInfo path="/screens/TabTwoScreen.tsx" />
     </View>
