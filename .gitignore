@@ -1,3 +1,6 @@
+# GH Pages
+docs/_site
+
 #Ignore all locks generated from Vim, Gem etc.
 *.lock
 
