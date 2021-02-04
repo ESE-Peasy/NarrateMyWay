@@ -6,7 +6,7 @@
 
 # Screenshots/GIF (if appropriate)
 
-It can sometimes be useful to add a screenshot or animated gif to demonstrate new functionality
+It can sometimes be useful to add a screenshot or animated GIF to demonstrate new functionality
 
 # Checklist
 
