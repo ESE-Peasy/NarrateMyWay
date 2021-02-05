@@ -4,9 +4,9 @@
 -
 -
 
-# Screenshots/Gif (if appropriate)
+# Screenshots/GIF (if appropriate)
 
-It can sometimes be useful to add a screenshot or animated gif to demonstrate new functionality
+It can sometimes be useful to add a screenshot or animated GIF to demonstrate new functionality
 
 # Checklist
 
@@ -17,5 +17,11 @@ It can sometimes be useful to add a screenshot or animated gif to demonstrate ne
 ## Documentation
 - [ ] I have updated documentation appropriately (GitHub Pages)
 - [ ] I have tested the updated GitHub Pages locally to ensure the changes to documentation render correctly (see this [Guidance](https://ese-peasy.github.io/PosturePerfection/guidance.html) page)
+
+## Accessibility
+- [ ] Tested Accessibility on **Android**
+  - [ ] Any added fields can be read aloud by the screen reader
+- [ ] Tested Accessibility on **iOS**
+  - [ ] Any added fields can be read aloud by the screen reader
 
 Closes Issue #
