@@ -8,7 +8,9 @@ parent: Development
 
 ## Prerequisites
 
-Since this project is using React Native, an essential requirement is [Node](https://nodejs.org/en/download/). Assuming you have this installed, you need to first install the Expo CLI command line utility:
+Since this project is using React Native, an essential requirement is [Node](https://nodejs.org/en/download/). On Linux follow the instructions [here](https://github.com/nodesource/distributions/blob/master/README.md#installation-instructions) to install Node.
+
+Assuming you have this installed, you need to first install the Expo CLI command line utility:
 
 ```sh
 npm install -g expo-cli
