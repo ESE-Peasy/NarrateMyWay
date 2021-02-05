@@ -29,3 +29,6 @@ Server running... press ctrl-c to stop.
 for customisation options for the theme we are using. (Feel free to change the theme, I just thought this one works well for
 simplicity and how easy it is to add content)
 * Note - if you modify the `_config.yml` file you will need to restart the server by executing step 3
+
+## Using Code Blocks
+Code blocks work the same as standard Markdown. Note that to use certain syntax in the code block you first need to stop Jekyll from attempting to parse it. Things with double-braces will need to be enclosed in raw/endraw blocks as mentioned [here](https://stackoverflow.com/questions/24102498/escaping-double-curly-braces-inside-a-markdown-code-block-in-jekyll).
