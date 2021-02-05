@@ -19,6 +19,9 @@ It can sometimes be useful to add a screenshot or animated GIF to demonstrate ne
 - [ ] I have tested the updated GitHub Pages locally to ensure the changes to documentation render correctly (see this [Guidance](https://ese-peasy.github.io/PosturePerfection/guidance.html) page)
 
 ## Accessibility
-- [ ] I have tested that all added fields can be read aloud by the screen reader
+- [ ] Tested Accessibility on **Android**
+  - [ ] Any added fields can be read aloud by the screen reader
+- [ ] Tested Accessibility on **iOS**
+  - [ ] Any added fields can be read aloud by the screen reader
 
 Closes Issue #
