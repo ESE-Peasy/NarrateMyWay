@@ -9,14 +9,14 @@ import { View } from '../components/Themed';
 export default function MainScreen() {
   return (
     <View style={styles.container}>
-      <LargeButton accessibilityHint="Tap here to repeat the previous audio output">
-        Tap here to repeat
+      <LargeButton accessibilityLabel="Tap here to repeat the previous audio output">
+        Tap to repeat
       </LargeButton>
       <HorizontalSeparator />
       <BeaconInfo type="Point of Interest " place="Cafe " />
       <HorizontalSeparator />
-      <LargeButton accessibilityHint="Tap here for more information">
-        Tap here for more info
+      <LargeButton accessibilityLabel="Tap here for more information">
+        Tap for more info
       </LargeButton>
     </View>
   );

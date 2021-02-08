@@ -24,7 +24,7 @@ class LargeButton extends Component {
           console.log('Test onLongPress');
         }}
         accessible={true}
-        accessibilityHint={this.props.accessibilityHint}
+        accessibilityLabel={this.props.accessibilityLabel}
       >
         <Text style={styles.largeButtonText}>{this.props.children}</Text>
       </Pressable>

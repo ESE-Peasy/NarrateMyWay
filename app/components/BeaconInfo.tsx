@@ -38,17 +38,14 @@ const TypeText = ({ title }) => (
 );
 
 const PlaceIcon = () => (
-  <Pressable
-    style={styles.placeIconContainer}
-    android_ripple={{ color: '#000', borderless: true, radius: 48 }}
+  <Ionicons
+    name="cafe"
+    style={styles.placeIcon}
+    size={80}
     accessible={true}
-    accessibilityHint="Icon of a cafe"
-    onPress={() => {
-      Speech.speak('A cafe has been located near you');
-    }}
-  >
-    <Ionicons name="cafe" style={styles.placeIcon} />
-  </Pressable>
+    accessibilityLabel="Icon of a cafe"
+    accessibilityHint="test"
+  />
 );
 
 const PlaceText = ({ title }) => (

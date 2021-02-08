@@ -10,11 +10,8 @@ export default StyleSheet.create({
     elevation: 8,
     backgroundColor: '#ff9900',
     borderRadius: 50,
-    alignItems: 'center',
-    justifyContent: 'center',
-    height: '10%',
-    paddingHorizontal: 20,
-    paddingVertical: 50
+    paddingHorizontal: 30,
+    paddingVertical: 20
   },
   typeText: {
     fontSize: 36,
@@ -30,22 +27,11 @@ export default StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center'
   },
-  placeIconContainer: {
-    backgroundColor: '#fff',
-    width: 100,
-    height: 100,
-    borderRadius: 100 / 2,
-    borderColor: '#000',
-    borderWidth: 1,
-    padding: 15,
-    alignContent: 'center',
-    alignItems: 'center',
-    justifyContent: 'center'
-  },
   placeIcon: {
-    fontSize: 60,
     textAlign: 'center',
-    alignSelf: 'center'
+    textAlignVertical: 'center',
+    borderWidth: 2,
+    borderRadius: 25
   },
   placeTextContainer: {
     backgroundColor: '#009688',
