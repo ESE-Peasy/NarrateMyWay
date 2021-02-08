@@ -24,4 +24,4 @@ It can sometimes be useful to add a screenshot or animated GIF to demonstrate ne
 - [ ] Tested Accessibility on **iOS**
   - [ ] Any added fields can be read aloud by the screen reader
 
-Closes Issue #
+Closes #
