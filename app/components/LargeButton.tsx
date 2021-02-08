@@ -23,6 +23,8 @@ class LargeButton extends Component {
           // Can customise the duration by setting delayLongPress
           console.log('Test onLongPress');
         }}
+        accessible={true}
+        accessibilityHint={this.props.accessibilityHint}
       >
         <Text style={styles.largeButtonText}>{this.props.children}</Text>
       </Pressable>
