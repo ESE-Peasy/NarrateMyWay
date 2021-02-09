@@ -4,7 +4,9 @@ export default StyleSheet.create({
   beaconInfoContainer: {
     flex: 1,
     alignItems: 'center',
-    justifyContent: 'center'
+    justifyContent: 'center',
+    width: '95%',
+    height: '30%'
   },
   typeContainer: {
     elevation: 8,
@@ -14,7 +16,7 @@ export default StyleSheet.create({
     paddingVertical: 20
   },
   typeText: {
-    fontSize: 36,
+    fontSize: 42,
     color: '#fff',
     fontWeight: 'bold',
     alignSelf: 'center',
@@ -25,20 +27,26 @@ export default StyleSheet.create({
     flex: 1,
     flexDirection: 'row',
     alignItems: 'center',
-    justifyContent: 'center'
+    justifyContent: 'center',
+    width: '95%'
   },
   placeIcon: {
-    textAlign: 'center',
+    alignItems: 'center',
+    justifyContent: 'center',
     textAlignVertical: 'center',
     borderWidth: 2,
-    borderRadius: 25
+    borderRadius: 25,
+    padding: 5
   },
   placeTextContainer: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
     backgroundColor: '#009688',
     elevation: 8,
     borderRadius: 50,
-    paddingHorizontal: 70,
-    paddingVertical: 20
+    width: '70%',
+    height: '80%'
   },
   placeText: {
     fontSize: 42,

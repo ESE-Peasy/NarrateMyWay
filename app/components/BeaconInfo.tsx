@@ -5,7 +5,7 @@ import { Pressable, Text } from 'react-native';
 import styles from './styles/BeaconInfo.style';
 import { Ionicons } from '@expo/vector-icons';
 import { View } from 'react-native';
-import { VerticalSeparator } from './Separators';
+import { HorizontalSeparator, VerticalSeparator } from './Separators';
 
 import * as Speech from 'expo-speech';
 
@@ -14,6 +14,7 @@ class BeaconInfo extends Component {
     return (
       <View style={styles.beaconInfoContainer}>
         <TypeText title={this.props.type}></TypeText>
+        <HorizontalSeparator />
         <View style={styles.placeContainer}>
           <PlaceIcon></PlaceIcon>
           <VerticalSeparator />
@@ -33,7 +34,9 @@ const TypeText = ({ title }) => (
       Speech.speak('A point of interest has been located near you');
     }}
   >
-    <Text style={styles.typeText}>{title}</Text>
+    <Text style={styles.typeText} numberOfLines={1} adjustsFontSizeToFit>
+      {title}
+    </Text>
   </Pressable>
 );
 
@@ -45,6 +48,7 @@ const PlaceIcon = () => (
     accessible={true}
     accessibilityLabel="Icon of a cafe"
     accessibilityHint="test"
+    adjustsFontSizeToFit
   />
 );
 
@@ -57,7 +61,9 @@ const PlaceText = ({ title }) => (
       Speech.speak('A cafe has been located near you');
     }}
   >
-    <Text style={styles.placeText}>{title}</Text>
+    <Text style={styles.placeText} numberOfLines={1} adjustsFontSizeToFit>
+      {title}
+    </Text>
   </Pressable>
 );
 

@@ -26,7 +26,9 @@ class LargeButton extends Component {
         accessible={true}
         accessibilityLabel={this.props.accessibilityLabel}
       >
-        <Text style={styles.largeButtonText}>{this.props.children}</Text>
+        <Text style={styles.largeButtonText} adjustsFontSizeToFit>
+          {this.props.children}
+        </Text>
       </Pressable>
     );
   }
