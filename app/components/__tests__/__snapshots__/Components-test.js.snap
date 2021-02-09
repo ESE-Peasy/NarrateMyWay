@@ -6,7 +6,9 @@ exports[`BeaconInfo renders correctly 1`] = `
     Object {
       "alignItems": "center",
       "flex": 1,
+      "height": "30%",
       "justifyContent": "center",
+      "width": "95%",
     }
   }
 >
@@ -33,11 +35,13 @@ exports[`BeaconInfo renders correctly 1`] = `
     }
   >
     <Text
+      adjustsFontSizeToFit={true}
+      numberOfLines={1}
       style={
         Object {
           "alignSelf": "center",
           "color": "#fff",
-          "fontSize": 36,
+          "fontSize": 42,
           "fontWeight": "bold",
           "textAlign": "center",
           "textTransform": "uppercase",
@@ -50,10 +54,19 @@ exports[`BeaconInfo renders correctly 1`] = `
   <View
     style={
       Object {
+        "height": "3%",
+        "width": "80%",
+      }
+    }
+  />
+  <View
+    style={
+      Object {
         "alignItems": "center",
         "flex": 1,
         "flexDirection": "row",
         "justifyContent": "center",
+        "width": "95%",
       }
     }
   >
@@ -61,8 +74,7 @@ exports[`BeaconInfo renders correctly 1`] = `
     <View
       style={
         Object {
-          "marginVertical": 10,
-          "width": 20,
+          "width": "5%",
         }
       }
     />
@@ -80,15 +92,20 @@ exports[`BeaconInfo renders correctly 1`] = `
       onStartShouldSetResponder={[Function]}
       style={
         Object {
+          "alignItems": "center",
           "backgroundColor": "#009688",
           "borderRadius": 50,
           "elevation": 8,
-          "paddingHorizontal": 70,
-          "paddingVertical": 20,
+          "flex": 1,
+          "height": "80%",
+          "justifyContent": "center",
+          "width": "70%",
         }
       }
     >
       <Text
+        adjustsFontSizeToFit={true}
+        numberOfLines={1}
         style={
           Object {
             "color": "#fff",
@@ -109,8 +126,7 @@ exports[`HorizontalSeparator renders correctly 1`] = `
 <View
   style={
     Object {
-      "height": 1,
-      "marginVertical": 10,
+      "height": "3%",
       "width": "80%",
     }
   }
@@ -143,6 +159,7 @@ exports[`LargeButton renders correctly 1`] = `
   }
 >
   <Text
+    adjustsFontSizeToFit={true}
     style={
       Object {
         "alignSelf": "center",
@@ -200,6 +217,7 @@ exports[`MainScreen renders correctly 1`] = `
     }
   >
     <Text
+      adjustsFontSizeToFit={true}
       style={
         Object {
           "alignSelf": "center",
@@ -218,8 +236,7 @@ exports[`MainScreen renders correctly 1`] = `
   <View
     style={
       Object {
-        "height": 1,
-        "marginVertical": 10,
+        "height": "3%",
         "width": "80%",
       }
     }
@@ -229,7 +246,9 @@ exports[`MainScreen renders correctly 1`] = `
       Object {
         "alignItems": "center",
         "flex": 1,
+        "height": "30%",
         "justifyContent": "center",
+        "width": "95%",
       }
     }
   >
@@ -256,11 +275,13 @@ exports[`MainScreen renders correctly 1`] = `
       }
     >
       <Text
+        adjustsFontSizeToFit={true}
+        numberOfLines={1}
         style={
           Object {
             "alignSelf": "center",
             "color": "#fff",
-            "fontSize": 36,
+            "fontSize": 42,
             "fontWeight": "bold",
             "textAlign": "center",
             "textTransform": "uppercase",
@@ -273,10 +294,19 @@ exports[`MainScreen renders correctly 1`] = `
     <View
       style={
         Object {
+          "height": "3%",
+          "width": "80%",
+        }
+      }
+    />
+    <View
+      style={
+        Object {
           "alignItems": "center",
           "flex": 1,
           "flexDirection": "row",
           "justifyContent": "center",
+          "width": "95%",
         }
       }
     >
@@ -284,8 +314,7 @@ exports[`MainScreen renders correctly 1`] = `
       <View
         style={
           Object {
-            "marginVertical": 10,
-            "width": 20,
+            "width": "5%",
           }
         }
       />
@@ -303,15 +332,20 @@ exports[`MainScreen renders correctly 1`] = `
         onStartShouldSetResponder={[Function]}
         style={
           Object {
+            "alignItems": "center",
             "backgroundColor": "#009688",
             "borderRadius": 50,
             "elevation": 8,
-            "paddingHorizontal": 70,
-            "paddingVertical": 20,
+            "flex": 1,
+            "height": "80%",
+            "justifyContent": "center",
+            "width": "70%",
           }
         }
       >
         <Text
+          adjustsFontSizeToFit={true}
+          numberOfLines={1}
           style={
             Object {
               "color": "#fff",
@@ -329,8 +363,7 @@ exports[`MainScreen renders correctly 1`] = `
   <View
     style={
       Object {
-        "height": 1,
-        "marginVertical": 10,
+        "height": "3%",
         "width": "80%",
       }
     }
@@ -360,6 +393,7 @@ exports[`MainScreen renders correctly 1`] = `
     }
   >
     <Text
+      adjustsFontSizeToFit={true}
       style={
         Object {
           "alignSelf": "center",
@@ -382,8 +416,7 @@ exports[`VerticalSeparator renders correctly 1`] = `
 <View
   style={
     Object {
-      "marginVertical": 10,
-      "width": 20,
+      "width": "5%",
     }
   }
 />
