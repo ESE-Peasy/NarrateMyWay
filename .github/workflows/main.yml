@@ -30,7 +30,7 @@ jobs:
       - name: Install npm dependencies
         run: |
           cd app
-          npm install
+          npm ci
       
       - name: Run ESLint      
         run: |
@@ -52,7 +52,7 @@ jobs:
       - name: Install npm dependencies
         run: |
           cd app
-          npm install
+          npm ci
 
       - name: Run Prettier
         run: |
