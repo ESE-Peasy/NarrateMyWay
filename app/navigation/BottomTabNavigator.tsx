@@ -4,24 +4,24 @@ import { createStackNavigator } from '@react-navigation/stack';
 import * as React from 'react';
 
 import DefaultColors from '../constants/DefaultColors';
-import TabOneScreen from '../screens/TabOneScreen';
+import MainScreen from '../screens/MainScreen';
 import TabTwoScreen from '../screens/TabTwoScreen';
-import { BottomTabParamList, TabOneParamList, TabTwoParamList } from '../types';
+import { BottomTabParamList, MainParamList, TabTwoParamList } from '../types';
 
 const BottomTab = createBottomTabNavigator<BottomTabParamList>();
 
 export default function BottomTabNavigator() {
   return (
     <BottomTab.Navigator
-      initialRouteName="TabOne"
+      initialRouteName="Main"
       tabBarOptions={{
         activeTintColor: DefaultColors.customTheme.colors.primary,
         inactiveBackgroundColor: DefaultColors.customTheme.colors.primary
       }}
     >
       <BottomTab.Screen
-        name="TabOne"
-        component={TabOneNavigator}
+        name="Main"
+        component={MainNavigator}
         options={{
           tabBarIcon: ({ color }) => (
             <TabBarIcon name="ios-code" color={color} />
@@ -52,17 +52,17 @@ function TabBarIcon(props: {
 
 // Each tab has its own navigation stack, you can read more about this pattern here:
 // https://reactnavigation.org/docs/tab-based-navigation#a-stack-navigator-for-each-tab
-const TabOneStack = createStackNavigator<TabOneParamList>();
+const MainStack = createStackNavigator<MainParamList>();
 
-function TabOneNavigator() {
+function MainNavigator() {
   return (
-    <TabOneStack.Navigator>
-      <TabOneStack.Screen
-        name="TabOneScreen"
-        component={TabOneScreen}
-        options={{ headerTitle: 'Tab One Title' }}
+    <MainStack.Navigator>
+      <MainStack.Screen
+        name="MainScreen"
+        component={MainScreen}
+        options={{ headerTitle: 'Main Screen Title' }}
       />
-    </TabOneStack.Navigator>
+    </MainStack.Navigator>
   );
 }
 
