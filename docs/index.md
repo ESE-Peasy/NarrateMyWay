@@ -8,14 +8,14 @@ title: Welcome!
 </div> -->
 
 <div align="center"> 
-  <h1 class="fw-300">Narrate My Way</h1>
+  <h1 class="fw-300">NarrateMyWay</h1>
 </div>
 
 <div align="center" class="fs-6 fw-300"> 
   We are a group of 5th Year Electronics & Software Engineering students at the University of Glasgow, completing a project to create a navigation application for the visually impaired. Acting as audio signs giving users a better understanding of their surrounding to improve outdoor and indoor navigation.
 </div>
 
-With a large array of navigation tools currently available to the visually impaired community Narrate My Way aims to provide the benefits of visual signs to visually impaired users. This will give users more context to their surroundings to aid navigation. This will be achieved by connecting the user's device to various Bluetooth beacons that will be placed at significant locations. Despite the technology being developed for the University of Glasgow campus, it will have the ability to be easily expanded to any location. The technologies extensibility will also be combined with the application being free and available across Andriod and IOS devices.
+With a large array of navigation tools currently available to the visually impaired community NarrateMyWay aims to provide the benefits of visual signs to visually impaired users. This will give users more context to their surroundings to aid navigation. This will be achieved by connecting the user's device to various Bluetooth beacons that will be placed at significant locations. Despite the technology being developed for the University of Glasgow campus, it will have the ability to be easily expanded to any location. The technologies extensibility will also be combined with the application being free and available across Andriod and IOS devices.
 
 ## Demonstration
 
