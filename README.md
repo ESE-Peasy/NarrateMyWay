@@ -7,7 +7,7 @@
   <h1 align="center">NarrateMyWay</h1>
 
   <p align="center">
-    We are a group of 5th Year Electronics & Software Engineering students at the University of Glasgow, completing a project to create a navigation application for the visually impaired. Acting as audio signs giving users a better understanding of their surrounding to improve outdoor and indoor navigation.
+    We are a group of 5th Year Electronics & Software Engineering students at the University of Glasgow, completing a project to create a navigation application. Our app provides audio signage, giving users a better understanding of their surrounding to improve outdoor and indoor navigation.
     <br />
     <a href="https://ese-peasy.github.io/NarrateMyWay/"><strong>Explore the docs »</strong></a>
     <br />
@@ -53,7 +53,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-With a large array of navigation tools currently available to the visually impaired community NarrateMyWay aims to provide the benefits of visual signs to visually impaired users. This will give users more context to their surroundings to aid navigation. This will be achieved by connecting the user's device to various Bluetooth beacons that will be placed at significant locations. Despite the technology being developed for the University of Glasgow campus, it will have the ability to be easily expanded to any location. The technologies extensibility will also be combined with the application being free and available across Andriod and IOS devices.
+With a large array of navigation tools currently available, NarrateMyWay aims to provide the benefits of visual signs to various groups of individuals, such as visually impaired people, tourists who may not speak the native language and pensioners who require extra mobility aids. This will give users more context to their surroundings to aid navigation and will be achieved by connecting the user's device to various Bluetooth beacons that will be placed at significant locations. Despite the technology being developed for the University of Glasgow campus, it will have the ability to be easily expanded to any location. The technologies extensibility will also be combined with the application being free and available across Andriod and IOS devices.
 
 ### Technologies Used
 
@@ -76,7 +76,7 @@ To get started with installing and running the NarrateMyWay application please r
 
 ### Description
 
-The application will produce an audio output describing the next point of interest the user is approaching. This will be dynamically represented on the user interface, specifically designed for visually impaired users. The application will allow users to decide if they want more information regarding the current point of interest or to simply hear the original audio description again. As the application is currently being developed, it is important to note that the displayed user interface is being used as a design concept and may be altered throughout development.
+The application will produce an audio output describing the next point of interest the user is approaching. This will be dynamically represented on the user interface, specifically designed for visually impaired users. The application will allow users to decide if they want more information regarding the current point of interest or to simply hear the original audio description again. As the application is currently being developed, it is important to note that the displayed user interface is being used as a design concept and may be altered throughout development. 
 
 _For more examples, please refer to the [Documentation](https://ese-peasy.github.io/NarrateMyWay/)_
 

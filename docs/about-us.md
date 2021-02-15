@@ -4,7 +4,7 @@ title: About Us
 ---
 
 # About Us
-Our development team consists of four fifth-year Electronic and Software Engineering students from the University of Glasgow. All in our final semester we are working towards our university campus and surrounding area even more accessible.
+Our development team consists of four fifth-year Electronic and Software Engineering students from the University of Glasgow. All in our final semester we are working towards making our university campus and surrounding area even more accessible.
 
 ## Developer Links
 
