@@ -171,12 +171,12 @@ app/packages/**/*.spec.json
 app/packages/**/Info-generated.plist
 
 # Dynamic Macros
-#app/ios/Exponent/Supporting/EXBuildConstants.plist.bak
-#app/ios/Exponent/Supporting/EXBuildConstants.plist.json
-#app/ios/Exponent/Supporting/EXBuildConstants.plist
-#app/ios/Exponent/Supporting/GoogleService-Info.plist
-#app/ios/Exponent/Supporting/Info.plist.bak
-#app/ios/Exponent/Supporting/Info.plist.json
+app/ios/Exponent/Supporting/EXBuildConstants.plist.bak
+app/ios/Exponent/Supporting/EXBuildConstants.plist.json
+app/ios/Exponent/Supporting/EXBuildConstants.plist
+app/ios/Exponent/Supporting/GoogleService-Info.plist
+app/ios/Exponent/Supporting/Info.plist.bak
+app/ios/Exponent/Supporting/Info.plist.json
 app/android/expoview/src/main/java/host/exp/exponent/generated/ExponentBuildConstants.java
 app/android/app/src/androidTest/java/host/exp/exponent/generated/TestBuildConstants.java
 .kernel-ngrok-url
