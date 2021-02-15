@@ -3,9 +3,9 @@ nav_order: 1
 title: Welcome!
 ---
 
-<!-- <div align="center"> 
+<div align="center"> 
   <img src="images/logo.svg" alt="Logo for NarrateMyWay" width="300">
-</div> -->
+</div>
 
 <div align="center"> 
   <h1 class="fw-300">NarrateMyWay</h1>
