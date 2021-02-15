@@ -4,7 +4,7 @@
             "outputFile": "/home/conorbegley/code/Uni/NarrateMyWay/app/android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-v24/values-v24.xml",
             "map": [
                 {
-                    "source": "/home/conorbegley/.gradle/caches/transforms-2/files-2.1/6faaf2270ce42c656228bbc46504593c/media-1.0.0/res/values-v24/values-v24.xml",
+                    "source": "/home/conorbegley/.gradle/caches/transforms-2/files-2.1/e1a755a5eb4e9c5b244c1a9f660f0c11/media-1.0.0/res/values-v24/values-v24.xml",
                     "from": {
                         "startLines": "2,3,4,5",
                         "startColumns": "4,4,4,4",
@@ -21,7 +21,7 @@
                     }
                 },
                 {
-                    "source": "/home/conorbegley/.gradle/caches/transforms-2/files-2.1/3a1c9e556421120b91c14e3b0d627909/appcompat-1.2.0/res/values-v24/values-v24.xml",
+                    "source": "/home/conorbegley/.gradle/caches/transforms-2/files-2.1/3d80612cf866c25180a6f07f0dbf6ee9/appcompat-1.2.0/res/values-v24/values-v24.xml",
                     "from": {
                         "startLines": "2,3",
                         "startColumns": "4,4",

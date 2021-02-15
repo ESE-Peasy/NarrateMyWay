@@ -5,9 +5,9 @@ INJECTED from /home/conorbegley/code/Uni/NarrateMyWay/app/android/app/src/main/A
 INJECTED from /home/conorbegley/code/Uni/NarrateMyWay/app/android/app/src/main/AndroidManifest.xml:1:1-44:12
 INJECTED from /home/conorbegley/code/Uni/NarrateMyWay/app/android/app/src/main/AndroidManifest.xml:1:1-44:12
 MERGED from /home/conorbegley/code/Uni/NarrateMyWay/app/android/app/src/main/AndroidManifest.xml:1:1-44:12
-MERGED from [com.facebook.flipper:flipper:0.54.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/75238863e6b45aca4b9c498f6fefb9f4/flipper-0.54.0/AndroidManifest.xml:8:1-18:12
-MERGED from [com.facebook.flipper:flipper-network-plugin:0.54.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/61ec062d53d2287f955099e63a79622e/flipper-network-plugin-0.54.0/AndroidManifest.xml:8:1-15:12
-MERGED from [com.facebook.flipper:flipper-fresco-plugin:0.54.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/1e1cd6a6b632f76d3c385e19540f6b46/flipper-fresco-plugin-0.54.0/AndroidManifest.xml:8:1-15:12
+MERGED from [com.facebook.flipper:flipper:0.54.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/1c7787ec82631e0394972c76bdabe608/flipper-0.54.0/AndroidManifest.xml:8:1-18:12
+MERGED from [com.facebook.flipper:flipper-network-plugin:0.54.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/bd2cab46fd45b530a274001375333ead/flipper-network-plugin-0.54.0/AndroidManifest.xml:8:1-15:12
+MERGED from [com.facebook.flipper:flipper-fresco-plugin:0.54.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/dd7dfafbb0af41b4347f18654ea5c436/flipper-fresco-plugin-0.54.0/AndroidManifest.xml:8:1-15:12
 MERGED from [:unimodules-react-native-adapter] /home/conorbegley/code/Uni/NarrateMyWay/app/node_modules/@unimodules/react-native-adapter/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-17:12
 MERGED from [:expo-splash-screen] /home/conorbegley/code/Uni/NarrateMyWay/app/node_modules/expo-splash-screen/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-11:12
 MERGED from [:expo-updates] /home/conorbegley/code/Uni/NarrateMyWay/app/node_modules/expo-updates/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-13:12
@@ -16,17 +16,17 @@ MERGED from [:react-native-gesture-handler] /home/conorbegley/code/Uni/NarrateMy
 MERGED from [:react-native-reanimated] /home/conorbegley/code/Uni/NarrateMyWay/app/node_modules/react-native-reanimated/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-11:12
 MERGED from [:react-native-safe-area-context] /home/conorbegley/code/Uni/NarrateMyWay/app/node_modules/react-native-safe-area-context/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-9:12
 MERGED from [:react-native-screens] /home/conorbegley/code/Uni/NarrateMyWay/app/node_modules/react-native-screens/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-11:12
-MERGED from [com.facebook.react:react-native:0.63.4] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/e775c3d2b1e17b2cf55ab8cf9861cbf2/jetified-react-native-0.63.4/AndroidManifest.xml:2:1-13:12
+MERGED from [com.facebook.react:react-native:0.63.4] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/475cc4de8f014aae54cb4a5d57c65127/jetified-react-native-0.63.4/AndroidManifest.xml:2:1-13:12
 MERGED from [:expo-file-system] /home/conorbegley/code/Uni/NarrateMyWay/app/node_modules/expo-file-system/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-29:12
 MERGED from [:expo-location] /home/conorbegley/code/Uni/NarrateMyWay/app/node_modules/expo-location/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-21:12
-MERGED from [com.google.android.gms:play-services-location:16.0.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/5fe953e5bcda60015fbfb27a59b74051/jetified-play-services-location-16.0.0/AndroidManifest.xml:2:1-9:12
-MERGED from [com.google.android.gms:play-services-base:16.0.1] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/d6be980e7b770a6edc686738a1941073/jetified-play-services-base-16.0.1/AndroidManifest.xml:17:1-29:12
-MERGED from [com.google.android.gms:play-services-places-placereport:16.0.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/44611c34dc456e3e51126f8943f358b5/play-services-places-placereport-16.0.0/AndroidManifest.xml:17:1-24:12
-MERGED from [com.google.android.gms:play-services-tasks:16.0.1] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/5404bd8a9bce85e9c0413d7ba1af4759/jetified-play-services-tasks-16.0.1/AndroidManifest.xml:2:1-9:12
-MERGED from [com.google.android.gms:play-services-basement:16.0.1] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/8a5f2b3ec34331b23e4a4e981a2cc798/jetified-play-services-basement-16.0.1/AndroidManifest.xml:17:1-28:12
-MERGED from [androidx.legacy:legacy-support-v4:1.0.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/be56b5d129279b63ab3e0158c5c77eec/legacy-support-v4-1.0.0/AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/268f572d75795aa2cb7ea6d4b36d4269/legacy-support-core-ui-1.0.0/AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/81ff1fa454edf8ca554f30a203178e7e/swiperefreshlayout-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [com.google.android.gms:play-services-location:16.0.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/f79ed2c1e0a3d416c49e2823202e3305/jetified-play-services-location-16.0.0/AndroidManifest.xml:2:1-9:12
+MERGED from [com.google.android.gms:play-services-base:16.0.1] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/f01b0494439234502b9be6f1abe4130c/jetified-play-services-base-16.0.1/AndroidManifest.xml:17:1-29:12
+MERGED from [com.google.android.gms:play-services-places-placereport:16.0.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/3017a25ce3cb2bf8b7edc16a81b382a0/play-services-places-placereport-16.0.0/AndroidManifest.xml:17:1-24:12
+MERGED from [com.google.android.gms:play-services-tasks:16.0.1] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/e2361b03d71ed5c829038d8bdca9369b/jetified-play-services-tasks-16.0.1/AndroidManifest.xml:2:1-9:12
+MERGED from [com.google.android.gms:play-services-basement:16.0.1] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/38c4257a3b2e477fd605651527931c75/jetified-play-services-basement-16.0.1/AndroidManifest.xml:17:1-28:12
+MERGED from [androidx.legacy:legacy-support-v4:1.0.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/b9604666a0b9bbe1ab905eeb5622e5c4/legacy-support-v4-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/c4a0854b2c4c976f5fd7b439b5911773/legacy-support-core-ui-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/37b6f551bc5ae153b0b627de8f563815/swiperefreshlayout-1.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [:expo-application] /home/conorbegley/code/Uni/NarrateMyWay/app/node_modules/expo-application/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-11:12
 MERGED from [:expo-constants] /home/conorbegley/code/Uni/NarrateMyWay/app/node_modules/expo-constants/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-11:12
 MERGED from [:expo-error-recovery] /home/conorbegley/code/Uni/NarrateMyWay/app/node_modules/expo-error-recovery/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-11:12
@@ -51,66 +51,66 @@ MERGED from [:unimodules-file-system-interface] /home/conorbegley/code/Uni/Narra
 MERGED from [:unimodules-font-interface] /home/conorbegley/code/Uni/NarrateMyWay/app/node_modules/unimodules-font-interface/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-11:12
 MERGED from [:unimodules-image-loader-interface] /home/conorbegley/code/Uni/NarrateMyWay/app/node_modules/unimodules-image-loader-interface/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-11:12
 MERGED from [:unimodules-sensors-interface] /home/conorbegley/code/Uni/NarrateMyWay/app/node_modules/unimodules-sensors-interface/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-11:12
-MERGED from [org.webkit:android-jsc:r245459] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/568ad9f4553d01d53a292ec6245d6cea/android-jsc-r245459/AndroidManifest.xml:2:1-11:12
-MERGED from [com.facebook.fresco:flipper:2.2.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/bf4f8f93dcdeaf865c431513daa06e1f/flipper-2.2.0/AndroidManifest.xml:2:1-9:12
-MERGED from [com.facebook.fresco:stetho:2.2.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/4856c0622f0557c6159bd32000ec7a9d/stetho-2.2.0/AndroidManifest.xml:2:1-9:12
-MERGED from [com.facebook.fresco:fresco:2.2.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/1935e14be136baa421acd03dbe5b0e8a/fresco-2.2.0/AndroidManifest.xml:2:1-9:12
-MERGED from [com.facebook.fresco:imagepipeline-okhttp3:2.0.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/8c8eb2002e286dd821976fa6494d8281/imagepipeline-okhttp3-2.0.0/AndroidManifest.xml:2:1-9:12
-MERGED from [com.facebook.fresco:drawee:2.2.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/b6baac6b3db5e32ad5105313d8f4e05d/drawee-2.2.0/AndroidManifest.xml:2:1-9:12
-MERGED from [com.facebook.fresco:nativeimagefilters:2.2.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/28b3f060f3468bb416a4e63563105ffd/nativeimagefilters-2.2.0/AndroidManifest.xml:2:1-9:12
-MERGED from [com.facebook.fresco:memory-type-native:2.2.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/c69000498b9d669b4f18f999ac585e78/memory-type-native-2.2.0/AndroidManifest.xml:2:1-9:12
-MERGED from [com.facebook.fresco:memory-type-java:2.2.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/87b9c1f17708692e3774d6bc966f7ef9/memory-type-java-2.2.0/AndroidManifest.xml:2:1-9:12
-MERGED from [com.facebook.fresco:imagepipeline-native:2.2.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/e27ce9de34b0eee73e8ca8614423ccf6/imagepipeline-native-2.2.0/AndroidManifest.xml:2:1-9:12
-MERGED from [com.facebook.fresco:memory-type-ashmem:2.2.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/fae4afff945e01bc408d46d32b2db411/memory-type-ashmem-2.2.0/AndroidManifest.xml:2:1-9:12
-MERGED from [com.facebook.fresco:imagepipeline:2.2.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/9530eb065a162a0e1bbf2626a0811202/imagepipeline-2.2.0/AndroidManifest.xml:2:1-9:12
-MERGED from [com.facebook.fresco:nativeimagetranscoder:2.2.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/bb8c3514ab2ae0cd827e88bce63ca5d9/nativeimagetranscoder-2.2.0/AndroidManifest.xml:2:1-9:12
-MERGED from [com.facebook.fresco:imagepipeline-base:2.2.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/a4a8d8d3a758d6a1d83090626d426df0/imagepipeline-base-2.2.0/AndroidManifest.xml:2:1-9:12
-MERGED from [com.facebook.fresco:soloader:2.2.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/0f12ea78afa91a67e24ec14ba780a6ae/soloader-2.2.0/AndroidManifest.xml:2:1-9:12
-MERGED from [com.facebook.soloader:soloader:0.9.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/d28ac9a2ea57e720758a69b4dbacf807/soloader-0.9.0/AndroidManifest.xml:2:1-13:12
-MERGED from [com.google.android.material:material:1.1.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/268be37c762c3f1e21922779bb4297e4/material-1.1.0/AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.appcompat:appcompat:1.2.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/3a1c9e556421120b91c14e3b0d627909/appcompat-1.2.0/AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.browser:browser:1.2.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/4cf3304944e1fae2e7e65bd2ff2a2db4/browser-1.2.0/AndroidManifest.xml:17:1-24:12
-MERGED from [com.github.bumptech.glide:glide:4.9.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/1e77a625e12a45e09cb35eb7243c04d0/jetified-glide-4.9.0/AndroidManifest.xml:2:1-12:12
-MERGED from [androidx.appcompat:appcompat-resources:1.2.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/f40e4c09e19a611af01c1e41e707da0b/appcompat-resources-1.2.0/AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/ddd30b16d30af545fd3654c9a7e3e1c2/vectordrawable-animated-1.1.0/AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.interpolator:interpolator:1.0.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/191a2a70a59b7d2da080245a3be467f4/interpolator-1.0.0/AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.viewpager2:viewpager2:1.0.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/5fc6f3f591c7e2de151573672c34bbdd/viewpager2-1.0.0/AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.fragment:fragment:1.2.1] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/d2ed4c1f2d22e4d2b3166b95583ff78f/fragment-1.2.1/AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.1.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/6e480f47207a81e5da9fafeeb92a6b55/coordinatorlayout-1.1.0/AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.media:media:1.0.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/6faaf2270ce42c656228bbc46504593c/media-1.0.0/AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/c8cefc107aeb391d4d8f8ce6daad02f5/legacy-support-core-utils-1.0.0/AndroidManifest.xml:17:1-22:12
-MERGED from [com.github.bumptech.glide:gifdecoder:4.9.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/93e3bdf2de6bdaae9b89e23ed7ad0438/jetified-gifdecoder-4.9.0/AndroidManifest.xml:2:1-11:12
-MERGED from [androidx.room:room-runtime:2.1.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/1f9600edb87ec7249ed2f749439da712/room-runtime-2.1.0/AndroidManifest.xml:17:1-30:12
-MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/193953fa1608f778c6c0103510541d16/drawerlayout-1.0.0/AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.viewpager:viewpager:1.0.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/866f4023b0f6f111f4c80b2759f3a74c/viewpager-1.0.0/AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.loader:loader:1.0.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/4219b5a6d22e34f8b719171d3a1fa43b/loader-1.0.0/AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.activity:activity:1.1.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/94882809552827825dd69f1d1f1ec6b0/activity-1.1.0/AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.slidingpanelayout:slidingpanelayout:1.0.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/bf94fbf2bf5f5aa5562b26611e451ea7/slidingpanelayout-1.0.0/AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.recyclerview:recyclerview:1.1.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/59182b9b0f183be050527c4f3274a4d6/recyclerview-1.1.0/AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.customview:customview:1.0.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/02b1c70979ea1010935998189276b651/customview-1.0.0/AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.transition:transition:1.2.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/92e61fd8c8343e747c5fca09c5d3e5ff/transition-1.2.0/AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/b8c235ce17450056f4452b7a9e163f1c/vectordrawable-1.1.0/AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.asynclayoutinflater:asynclayoutinflater:1.0.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/1f0613d92538986fb046849581ac89c7/asynclayoutinflater-1.0.0/AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.core:core:1.3.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/e1f0764c0505c94615b22f37f2526db5/core-1.3.0/AndroidManifest.xml:17:1-26:12
-MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/f945758adb194b91c01c3955fc665313/cursoradapter-1.0.0/AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.sqlite:sqlite-framework:2.0.1] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/f7f9a1d456669ae2c0357e37393f1b7c/sqlite-framework-2.0.1/AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.sqlite:sqlite:2.0.1] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/d5e2a9f068783c9aac96fa8f011f7cc1/sqlite-2.0.1/AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/cf966c3591d0a3475bdaa62765d46ce5/versionedparcelable-1.1.0/AndroidManifest.xml:17:1-27:12
-MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.2.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/69eab2c511f9e7cf361179779a32fb2e/lifecycle-viewmodel-savedstate-2.2.0/AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.2.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/542825a307e3f5a1823b972a86e36515/lifecycle-viewmodel-2.2.0/AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.cardview:cardview:1.0.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/cc882b9ef562562d9a48f00a1e1033d5/cardview-1.0.0/AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.documentfile:documentfile:1.0.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/4364ad76604cf486136125f92b6c8f4c/documentfile-1.0.0/AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/ae101856600f7992838ee059e045c8d5/localbroadcastmanager-1.0.0/AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.print:print:1.0.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/f3e2dce65eacafd123c90c8836548fcb/print-1.0.0/AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.lifecycle:lifecycle-runtime:2.2.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/4e6a1bfc74562c4f2502d33ad020a007/lifecycle-runtime-2.2.0/AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.savedstate:savedstate:1.0.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/7966cbff17c6377a73caf2b644bb23b0/savedstate-1.0.0/AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/9b6dd764d42012524e9e5c32e438f0d0/lifecycle-livedata-2.0.0/AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.2.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/5989e88180b6bb166f367b6f165dcf44/lifecycle-livedata-core-2.2.0/AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.arch.core:core-runtime:2.1.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/9241caa57a4aba913a7bdf412b2b7ab5/core-runtime-2.1.0/AndroidManifest.xml:17:1-24:12
-MERGED from [com.android.installreferrer:installreferrer:1.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/410b2b76bc47bd0d5aa6762f530594dc/jetified-installreferrer-1.0/AndroidManifest.xml:2:1-13:12
-MERGED from [io.nlopez.smartlocation:library:3.2.11] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/0d09867a005e6e77dffb77a33685ca9f/jetified-library-3.2.11/AndroidManifest.xml:2:1-30:12
-MERGED from [com.facebook.fresco:fbcore:2.2.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/ba5b8375c7b8812d333c1956d2b46706/jetified-fbcore-2.2.0/AndroidManifest.xml:2:1-9:12
-MERGED from [com.facebook.fresco:ui-common:2.2.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/08c199096a1dde6865f04c38322cc469/ui-common-2.2.0/AndroidManifest.xml:2:1-9:12
+MERGED from [org.webkit:android-jsc:r245459] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/6dd6245206e34676e1ee3aa6ee0f68c9/android-jsc-r245459/AndroidManifest.xml:2:1-11:12
+MERGED from [com.facebook.fresco:flipper:2.2.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/40741ffe3de6a11d99116b4e82d60d46/flipper-2.2.0/AndroidManifest.xml:2:1-9:12
+MERGED from [com.facebook.fresco:stetho:2.2.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/03aa51752e7d7098a02114b07907dabd/stetho-2.2.0/AndroidManifest.xml:2:1-9:12
+MERGED from [com.facebook.fresco:fresco:2.2.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/e9f56679cbe795a6f7c93e9a035f66f2/fresco-2.2.0/AndroidManifest.xml:2:1-9:12
+MERGED from [com.facebook.fresco:imagepipeline-okhttp3:2.0.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/559ddc4b7f576fedc63e05921b88e895/imagepipeline-okhttp3-2.0.0/AndroidManifest.xml:2:1-9:12
+MERGED from [com.facebook.fresco:drawee:2.2.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/0288f1bca211d259126211029f92054c/drawee-2.2.0/AndroidManifest.xml:2:1-9:12
+MERGED from [com.facebook.fresco:nativeimagefilters:2.2.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/766471e6648d662c31b10c1bbc5126fe/nativeimagefilters-2.2.0/AndroidManifest.xml:2:1-9:12
+MERGED from [com.facebook.fresco:memory-type-native:2.2.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/57a87fccccbdbe36e69f72b01ce521f1/memory-type-native-2.2.0/AndroidManifest.xml:2:1-9:12
+MERGED from [com.facebook.fresco:memory-type-java:2.2.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/0abe31decb23fc939dbab3bf21d1ccec/memory-type-java-2.2.0/AndroidManifest.xml:2:1-9:12
+MERGED from [com.facebook.fresco:imagepipeline-native:2.2.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/3b508a8e13388bdc4e88ee330cec4cdc/imagepipeline-native-2.2.0/AndroidManifest.xml:2:1-9:12
+MERGED from [com.facebook.fresco:memory-type-ashmem:2.2.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/104429b66e46c675401dada578683150/memory-type-ashmem-2.2.0/AndroidManifest.xml:2:1-9:12
+MERGED from [com.facebook.fresco:imagepipeline:2.2.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/fe90bfac000734a7d0d9c150b7915ff6/imagepipeline-2.2.0/AndroidManifest.xml:2:1-9:12
+MERGED from [com.facebook.fresco:nativeimagetranscoder:2.2.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/34efa7b8fb78d46cf2b753de7fbfc5a5/nativeimagetranscoder-2.2.0/AndroidManifest.xml:2:1-9:12
+MERGED from [com.facebook.fresco:imagepipeline-base:2.2.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/237bbc58c0787eee6b78f947e2baeeaa/imagepipeline-base-2.2.0/AndroidManifest.xml:2:1-9:12
+MERGED from [com.facebook.fresco:soloader:2.2.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/65f592cbf7e10992754db73be6c6ba25/soloader-2.2.0/AndroidManifest.xml:2:1-9:12
+MERGED from [com.facebook.soloader:soloader:0.9.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/c34148f30cbc3e974eff21cbfb6a112a/soloader-0.9.0/AndroidManifest.xml:2:1-13:12
+MERGED from [com.google.android.material:material:1.1.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/863e0c3c6716935cd3657ad638fd992d/material-1.1.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.appcompat:appcompat:1.2.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/3d80612cf866c25180a6f07f0dbf6ee9/appcompat-1.2.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.browser:browser:1.2.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/df07536d08ede39907a37278171a76ee/browser-1.2.0/AndroidManifest.xml:17:1-24:12
+MERGED from [com.github.bumptech.glide:glide:4.9.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/82d0ab6cb0fef1492c1f61b5bd2ae6f5/jetified-glide-4.9.0/AndroidManifest.xml:2:1-12:12
+MERGED from [androidx.appcompat:appcompat-resources:1.2.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/9561223e5cc0dbe166dbda4b9d12b44b/appcompat-resources-1.2.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/28888a6f6660db47b3788df392c672a7/vectordrawable-animated-1.1.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.interpolator:interpolator:1.0.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/efb592adf2592d134c27edc4a56e19d2/interpolator-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.viewpager2:viewpager2:1.0.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/8cd6316737e8f518184be95be51b9ee8/viewpager2-1.0.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.fragment:fragment:1.2.1] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/37aaca75d3d19faa6fb296103cea95d8/fragment-1.2.1/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.1.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/c062602fe4e1f75f724363688044d993/coordinatorlayout-1.1.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.media:media:1.0.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/e1a755a5eb4e9c5b244c1a9f660f0c11/media-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/1b42f88dea3794bc67b44839b4ca1a7b/legacy-support-core-utils-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [com.github.bumptech.glide:gifdecoder:4.9.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/2580c905ffa4543f328d8f1c34e1d5df/jetified-gifdecoder-4.9.0/AndroidManifest.xml:2:1-11:12
+MERGED from [androidx.room:room-runtime:2.1.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/5f7132f69994fe4e2c8f322e81b3f8c9/room-runtime-2.1.0/AndroidManifest.xml:17:1-30:12
+MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/c99af001058cd5265376dded8456f828/drawerlayout-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.viewpager:viewpager:1.0.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/40f1c5d439eea30faeaafe93e7bdf45f/viewpager-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.loader:loader:1.0.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/faa15558a5d57e35e462c9e1f0248694/loader-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.activity:activity:1.1.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/89bcabef273c834c0566b445ed28172c/activity-1.1.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.slidingpanelayout:slidingpanelayout:1.0.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/f53bca436baf2a2670073f8750b0b7d5/slidingpanelayout-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.recyclerview:recyclerview:1.1.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/4300f0cd89d6453d731712a999b6e53f/recyclerview-1.1.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.customview:customview:1.0.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/e0a79d4379c4eef3803202a497c19313/customview-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.transition:transition:1.2.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/820068d4be612586a05a9daff9be7b77/transition-1.2.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/6bd464ed06f075f4e42b3fde6a89e60a/vectordrawable-1.1.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.asynclayoutinflater:asynclayoutinflater:1.0.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/8dc6c78d6d7c962ba02416981491cd60/asynclayoutinflater-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.core:core:1.3.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/8052cb9f2b6802b798b88e17408d1bd7/core-1.3.0/AndroidManifest.xml:17:1-26:12
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/3b41f2ef3d4a30256bbd9d1017371108/cursoradapter-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.sqlite:sqlite-framework:2.0.1] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/096a8f1603949d4f18a7cbc7eecc51f2/sqlite-framework-2.0.1/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.sqlite:sqlite:2.0.1] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/422ace6a75dd412e501b9bf85446fc1e/sqlite-2.0.1/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/2786c84c1e653e40bd67508414ca298f/versionedparcelable-1.1.0/AndroidManifest.xml:17:1-27:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.2.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/db36fbbf4470b1ce63fe644e40ae81d3/lifecycle-viewmodel-savedstate-2.2.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.2.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/304e6293e0820147023aa187c0f862e1/lifecycle-viewmodel-2.2.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.cardview:cardview:1.0.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/7ce8a2eb9e81825ec9bcc373c597a746/cardview-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.documentfile:documentfile:1.0.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/d78ae12d9aa12e93077461f94a53335b/documentfile-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/3d5c1e204ac62dc0f6d5059f5e3eaa42/localbroadcastmanager-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.print:print:1.0.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/37c50c3790fd1f696b8c9e7a44956408/print-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.2.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/124ee19a63f3e171c196264ecc845daa/lifecycle-runtime-2.2.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.savedstate:savedstate:1.0.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/4ce17f8b4390b23da9bedc3cee010ec1/savedstate-1.0.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/4da6ddd3c71dbaec92b0fdf3bbca4ce7/lifecycle-livedata-2.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.2.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/2ef959591ee3dfd7e7d0f130ebacb270/lifecycle-livedata-core-2.2.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.arch.core:core-runtime:2.1.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/babedcb26ba2505096ea9fb87ec93180/core-runtime-2.1.0/AndroidManifest.xml:17:1-24:12
+MERGED from [com.android.installreferrer:installreferrer:1.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/048cf0277286c5a5577ab59cd6ee29ad/jetified-installreferrer-1.0/AndroidManifest.xml:2:1-13:12
+MERGED from [io.nlopez.smartlocation:library:3.2.11] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/981e67a09a7b77c9c2c9c0fa55a61794/jetified-library-3.2.11/AndroidManifest.xml:2:1-30:12
+MERGED from [com.facebook.fresco:fbcore:2.2.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/98ee9edf5ef8bcbb90d6165c208b1ed9/jetified-fbcore-2.2.0/AndroidManifest.xml:2:1-9:12
+MERGED from [com.facebook.fresco:ui-common:2.2.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/c114d4501470930b3986c4f9bd2da0fd/ui-common-2.2.0/AndroidManifest.xml:2:1-9:12
 INJECTED from /home/conorbegley/code/Uni/NarrateMyWay/app/android/app/src/debug/AndroidManifest.xml:1:1-7:12
 INJECTED from /home/conorbegley/code/Uni/NarrateMyWay/app/android/app/src/debug/AndroidManifest.xml:1:1-7:12
 INJECTED from /home/conorbegley/code/Uni/NarrateMyWay/app/android/app/src/debug/AndroidManifest.xml:1:1-7:12
@@ -133,8 +133,8 @@ INJECTED from /home/conorbegley/code/Uni/NarrateMyWay/app/android/app/src/debug/
 		ADDED from /home/conorbegley/code/Uni/NarrateMyWay/app/android/app/src/main/AndroidManifest.xml:1:11-69
 uses-permission#android.permission.INTERNET
 ADDED from /home/conorbegley/code/Uni/NarrateMyWay/app/android/app/src/main/AndroidManifest.xml:2:3-64
-MERGED from [com.facebook.flipper:flipper:0.54.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/75238863e6b45aca4b9c498f6fefb9f4/flipper-0.54.0/AndroidManifest.xml:15:5-67
-MERGED from [com.facebook.flipper:flipper:0.54.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/75238863e6b45aca4b9c498f6fefb9f4/flipper-0.54.0/AndroidManifest.xml:15:5-67
+MERGED from [com.facebook.flipper:flipper:0.54.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/1c7787ec82631e0394972c76bdabe608/flipper-0.54.0/AndroidManifest.xml:15:5-67
+MERGED from [com.facebook.flipper:flipper:0.54.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/1c7787ec82631e0394972c76bdabe608/flipper-0.54.0/AndroidManifest.xml:15:5-67
 MERGED from [:expo-file-system] /home/conorbegley/code/Uni/NarrateMyWay/app/node_modules/expo-file-system/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:12:5-67
 MERGED from [:expo-file-system] /home/conorbegley/code/Uni/NarrateMyWay/app/node_modules/expo-file-system/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:12:5-67
 	android:name
@@ -169,16 +169,16 @@ uses-permission#android.permission.ACCESS_COARSE_LOCATION
 ADDED from /home/conorbegley/code/Uni/NarrateMyWay/app/android/app/src/main/AndroidManifest.xml:9:3-78
 MERGED from [:expo-location] /home/conorbegley/code/Uni/NarrateMyWay/app/node_modules/expo-location/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:11:5-81
 MERGED from [:expo-location] /home/conorbegley/code/Uni/NarrateMyWay/app/node_modules/expo-location/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:11:5-81
-MERGED from [io.nlopez.smartlocation:library:3.2.11] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/0d09867a005e6e77dffb77a33685ca9f/jetified-library-3.2.11/AndroidManifest.xml:12:5-81
-MERGED from [io.nlopez.smartlocation:library:3.2.11] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/0d09867a005e6e77dffb77a33685ca9f/jetified-library-3.2.11/AndroidManifest.xml:12:5-81
+MERGED from [io.nlopez.smartlocation:library:3.2.11] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/981e67a09a7b77c9c2c9c0fa55a61794/jetified-library-3.2.11/AndroidManifest.xml:12:5-81
+MERGED from [io.nlopez.smartlocation:library:3.2.11] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/981e67a09a7b77c9c2c9c0fa55a61794/jetified-library-3.2.11/AndroidManifest.xml:12:5-81
 	android:name
 		ADDED from /home/conorbegley/code/Uni/NarrateMyWay/app/android/app/src/main/AndroidManifest.xml:9:20-76
 uses-permission#android.permission.ACCESS_FINE_LOCATION
 ADDED from /home/conorbegley/code/Uni/NarrateMyWay/app/android/app/src/main/AndroidManifest.xml:10:3-76
 MERGED from [:expo-location] /home/conorbegley/code/Uni/NarrateMyWay/app/node_modules/expo-location/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:12:5-79
 MERGED from [:expo-location] /home/conorbegley/code/Uni/NarrateMyWay/app/node_modules/expo-location/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:12:5-79
-MERGED from [io.nlopez.smartlocation:library:3.2.11] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/0d09867a005e6e77dffb77a33685ca9f/jetified-library-3.2.11/AndroidManifest.xml:14:5-79
-MERGED from [io.nlopez.smartlocation:library:3.2.11] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/0d09867a005e6e77dffb77a33685ca9f/jetified-library-3.2.11/AndroidManifest.xml:14:5-79
+MERGED from [io.nlopez.smartlocation:library:3.2.11] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/981e67a09a7b77c9c2c9c0fa55a61794/jetified-library-3.2.11/AndroidManifest.xml:14:5-79
+MERGED from [io.nlopez.smartlocation:library:3.2.11] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/981e67a09a7b77c9c2c9c0fa55a61794/jetified-library-3.2.11/AndroidManifest.xml:14:5-79
 	android:name
 		ADDED from /home/conorbegley/code/Uni/NarrateMyWay/app/android/app/src/main/AndroidManifest.xml:10:20-74
 uses-permission#android.permission.ACCESS_BACKGROUND_LOCATION
@@ -229,8 +229,8 @@ uses-permission#android.permission.ACCESS_NETWORK_STATE
 ADDED from /home/conorbegley/code/Uni/NarrateMyWay/app/android/app/src/main/AndroidManifest.xml:21:3-76
 MERGED from [:expo-updates] /home/conorbegley/code/Uni/NarrateMyWay/app/node_modules/expo-updates/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:11:5-79
 MERGED from [:expo-updates] /home/conorbegley/code/Uni/NarrateMyWay/app/node_modules/expo-updates/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:11:5-79
-MERGED from [io.nlopez.smartlocation:library:3.2.11] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/0d09867a005e6e77dffb77a33685ca9f/jetified-library-3.2.11/AndroidManifest.xml:13:5-79
-MERGED from [io.nlopez.smartlocation:library:3.2.11] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/0d09867a005e6e77dffb77a33685ca9f/jetified-library-3.2.11/AndroidManifest.xml:13:5-79
+MERGED from [io.nlopez.smartlocation:library:3.2.11] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/981e67a09a7b77c9c2c9c0fa55a61794/jetified-library-3.2.11/AndroidManifest.xml:13:5-79
+MERGED from [io.nlopez.smartlocation:library:3.2.11] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/981e67a09a7b77c9c2c9c0fa55a61794/jetified-library-3.2.11/AndroidManifest.xml:13:5-79
 	android:name
 		ADDED from /home/conorbegley/code/Uni/NarrateMyWay/app/android/app/src/main/AndroidManifest.xml:21:20-74
 uses-permission#android.permission.WAKE_LOCK
@@ -247,42 +247,42 @@ MERGED from /home/conorbegley/code/Uni/NarrateMyWay/app/android/app/src/main/And
 MERGED from /home/conorbegley/code/Uni/NarrateMyWay/app/android/app/src/main/AndroidManifest.xml:24:3-43:17
 MERGED from [:unimodules-react-native-adapter] /home/conorbegley/code/Uni/NarrateMyWay/app/node_modules/@unimodules/react-native-adapter/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:11:5-15:19
 MERGED from [:unimodules-react-native-adapter] /home/conorbegley/code/Uni/NarrateMyWay/app/node_modules/@unimodules/react-native-adapter/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:11:5-15:19
-MERGED from [com.facebook.react:react-native:0.63.4] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/e775c3d2b1e17b2cf55ab8cf9861cbf2/jetified-react-native-0.63.4/AndroidManifest.xml:11:5-20
-MERGED from [com.facebook.react:react-native:0.63.4] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/e775c3d2b1e17b2cf55ab8cf9861cbf2/jetified-react-native-0.63.4/AndroidManifest.xml:11:5-20
+MERGED from [com.facebook.react:react-native:0.63.4] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/475cc4de8f014aae54cb4a5d57c65127/jetified-react-native-0.63.4/AndroidManifest.xml:11:5-20
+MERGED from [com.facebook.react:react-native:0.63.4] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/475cc4de8f014aae54cb4a5d57c65127/jetified-react-native-0.63.4/AndroidManifest.xml:11:5-20
 MERGED from [:expo-file-system] /home/conorbegley/code/Uni/NarrateMyWay/app/node_modules/expo-file-system/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:16:5-27:19
 MERGED from [:expo-file-system] /home/conorbegley/code/Uni/NarrateMyWay/app/node_modules/expo-file-system/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:16:5-27:19
 MERGED from [:expo-location] /home/conorbegley/code/Uni/NarrateMyWay/app/node_modules/expo-location/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:15:5-19:19
 MERGED from [:expo-location] /home/conorbegley/code/Uni/NarrateMyWay/app/node_modules/expo-location/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:15:5-19:19
-MERGED from [com.google.android.gms:play-services-location:16.0.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/5fe953e5bcda60015fbfb27a59b74051/jetified-play-services-location-16.0.0/AndroidManifest.xml:7:5-20
-MERGED from [com.google.android.gms:play-services-location:16.0.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/5fe953e5bcda60015fbfb27a59b74051/jetified-play-services-location-16.0.0/AndroidManifest.xml:7:5-20
-MERGED from [com.google.android.gms:play-services-base:16.0.1] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/d6be980e7b770a6edc686738a1941073/jetified-play-services-base-16.0.1/AndroidManifest.xml:22:5-27:19
-MERGED from [com.google.android.gms:play-services-base:16.0.1] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/d6be980e7b770a6edc686738a1941073/jetified-play-services-base-16.0.1/AndroidManifest.xml:22:5-27:19
-MERGED from [com.google.android.gms:play-services-places-placereport:16.0.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/44611c34dc456e3e51126f8943f358b5/play-services-places-placereport-16.0.0/AndroidManifest.xml:22:5-20
-MERGED from [com.google.android.gms:play-services-places-placereport:16.0.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/44611c34dc456e3e51126f8943f358b5/play-services-places-placereport-16.0.0/AndroidManifest.xml:22:5-20
-MERGED from [com.google.android.gms:play-services-tasks:16.0.1] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/5404bd8a9bce85e9c0413d7ba1af4759/jetified-play-services-tasks-16.0.1/AndroidManifest.xml:7:5-20
-MERGED from [com.google.android.gms:play-services-tasks:16.0.1] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/5404bd8a9bce85e9c0413d7ba1af4759/jetified-play-services-tasks-16.0.1/AndroidManifest.xml:7:5-20
-MERGED from [com.google.android.gms:play-services-basement:16.0.1] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/8a5f2b3ec34331b23e4a4e981a2cc798/jetified-play-services-basement-16.0.1/AndroidManifest.xml:22:5-26:19
-MERGED from [com.google.android.gms:play-services-basement:16.0.1] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/8a5f2b3ec34331b23e4a4e981a2cc798/jetified-play-services-basement-16.0.1/AndroidManifest.xml:22:5-26:19
-MERGED from [com.facebook.soloader:soloader:0.9.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/d28ac9a2ea57e720758a69b4dbacf807/soloader-0.9.0/AndroidManifest.xml:11:5-20
-MERGED from [com.facebook.soloader:soloader:0.9.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/d28ac9a2ea57e720758a69b4dbacf807/soloader-0.9.0/AndroidManifest.xml:11:5-20
-MERGED from [com.google.android.material:material:1.1.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/268be37c762c3f1e21922779bb4297e4/material-1.1.0/AndroidManifest.xml:22:5-20
-MERGED from [com.google.android.material:material:1.1.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/268be37c762c3f1e21922779bb4297e4/material-1.1.0/AndroidManifest.xml:22:5-20
-MERGED from [com.github.bumptech.glide:glide:4.9.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/1e77a625e12a45e09cb35eb7243c04d0/jetified-glide-4.9.0/AndroidManifest.xml:10:5-20
-MERGED from [com.github.bumptech.glide:glide:4.9.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/1e77a625e12a45e09cb35eb7243c04d0/jetified-glide-4.9.0/AndroidManifest.xml:10:5-20
-MERGED from [com.github.bumptech.glide:gifdecoder:4.9.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/93e3bdf2de6bdaae9b89e23ed7ad0438/jetified-gifdecoder-4.9.0/AndroidManifest.xml:9:5-20
-MERGED from [com.github.bumptech.glide:gifdecoder:4.9.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/93e3bdf2de6bdaae9b89e23ed7ad0438/jetified-gifdecoder-4.9.0/AndroidManifest.xml:9:5-20
-MERGED from [androidx.room:room-runtime:2.1.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/1f9600edb87ec7249ed2f749439da712/room-runtime-2.1.0/AndroidManifest.xml:24:5-28:19
-MERGED from [androidx.room:room-runtime:2.1.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/1f9600edb87ec7249ed2f749439da712/room-runtime-2.1.0/AndroidManifest.xml:24:5-28:19
-MERGED from [androidx.core:core:1.3.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/e1f0764c0505c94615b22f37f2526db5/core-1.3.0/AndroidManifest.xml:24:5-89
-MERGED from [androidx.core:core:1.3.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/e1f0764c0505c94615b22f37f2526db5/core-1.3.0/AndroidManifest.xml:24:5-89
-MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/cf966c3591d0a3475bdaa62765d46ce5/versionedparcelable-1.1.0/AndroidManifest.xml:24:5-25:19
-MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/cf966c3591d0a3475bdaa62765d46ce5/versionedparcelable-1.1.0/AndroidManifest.xml:24:5-25:19
-MERGED from [com.android.installreferrer:installreferrer:1.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/410b2b76bc47bd0d5aa6762f530594dc/jetified-installreferrer-1.0/AndroidManifest.xml:11:5-20
-MERGED from [com.android.installreferrer:installreferrer:1.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/410b2b76bc47bd0d5aa6762f530594dc/jetified-installreferrer-1.0/AndroidManifest.xml:11:5-20
-MERGED from [io.nlopez.smartlocation:library:3.2.11] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/0d09867a005e6e77dffb77a33685ca9f/jetified-library-3.2.11/AndroidManifest.xml:18:5-28:19
-MERGED from [io.nlopez.smartlocation:library:3.2.11] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/0d09867a005e6e77dffb77a33685ca9f/jetified-library-3.2.11/AndroidManifest.xml:18:5-28:19
+MERGED from [com.google.android.gms:play-services-location:16.0.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/f79ed2c1e0a3d416c49e2823202e3305/jetified-play-services-location-16.0.0/AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-location:16.0.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/f79ed2c1e0a3d416c49e2823202e3305/jetified-play-services-location-16.0.0/AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-base:16.0.1] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/f01b0494439234502b9be6f1abe4130c/jetified-play-services-base-16.0.1/AndroidManifest.xml:22:5-27:19
+MERGED from [com.google.android.gms:play-services-base:16.0.1] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/f01b0494439234502b9be6f1abe4130c/jetified-play-services-base-16.0.1/AndroidManifest.xml:22:5-27:19
+MERGED from [com.google.android.gms:play-services-places-placereport:16.0.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/3017a25ce3cb2bf8b7edc16a81b382a0/play-services-places-placereport-16.0.0/AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.gms:play-services-places-placereport:16.0.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/3017a25ce3cb2bf8b7edc16a81b382a0/play-services-places-placereport-16.0.0/AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.gms:play-services-tasks:16.0.1] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/e2361b03d71ed5c829038d8bdca9369b/jetified-play-services-tasks-16.0.1/AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-tasks:16.0.1] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/e2361b03d71ed5c829038d8bdca9369b/jetified-play-services-tasks-16.0.1/AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-basement:16.0.1] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/38c4257a3b2e477fd605651527931c75/jetified-play-services-basement-16.0.1/AndroidManifest.xml:22:5-26:19
+MERGED from [com.google.android.gms:play-services-basement:16.0.1] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/38c4257a3b2e477fd605651527931c75/jetified-play-services-basement-16.0.1/AndroidManifest.xml:22:5-26:19
+MERGED from [com.facebook.soloader:soloader:0.9.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/c34148f30cbc3e974eff21cbfb6a112a/soloader-0.9.0/AndroidManifest.xml:11:5-20
+MERGED from [com.facebook.soloader:soloader:0.9.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/c34148f30cbc3e974eff21cbfb6a112a/soloader-0.9.0/AndroidManifest.xml:11:5-20
+MERGED from [com.google.android.material:material:1.1.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/863e0c3c6716935cd3657ad638fd992d/material-1.1.0/AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.material:material:1.1.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/863e0c3c6716935cd3657ad638fd992d/material-1.1.0/AndroidManifest.xml:22:5-20
+MERGED from [com.github.bumptech.glide:glide:4.9.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/82d0ab6cb0fef1492c1f61b5bd2ae6f5/jetified-glide-4.9.0/AndroidManifest.xml:10:5-20
+MERGED from [com.github.bumptech.glide:glide:4.9.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/82d0ab6cb0fef1492c1f61b5bd2ae6f5/jetified-glide-4.9.0/AndroidManifest.xml:10:5-20
+MERGED from [com.github.bumptech.glide:gifdecoder:4.9.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/2580c905ffa4543f328d8f1c34e1d5df/jetified-gifdecoder-4.9.0/AndroidManifest.xml:9:5-20
+MERGED from [com.github.bumptech.glide:gifdecoder:4.9.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/2580c905ffa4543f328d8f1c34e1d5df/jetified-gifdecoder-4.9.0/AndroidManifest.xml:9:5-20
+MERGED from [androidx.room:room-runtime:2.1.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/5f7132f69994fe4e2c8f322e81b3f8c9/room-runtime-2.1.0/AndroidManifest.xml:24:5-28:19
+MERGED from [androidx.room:room-runtime:2.1.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/5f7132f69994fe4e2c8f322e81b3f8c9/room-runtime-2.1.0/AndroidManifest.xml:24:5-28:19
+MERGED from [androidx.core:core:1.3.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/8052cb9f2b6802b798b88e17408d1bd7/core-1.3.0/AndroidManifest.xml:24:5-89
+MERGED from [androidx.core:core:1.3.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/8052cb9f2b6802b798b88e17408d1bd7/core-1.3.0/AndroidManifest.xml:24:5-89
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/2786c84c1e653e40bd67508414ca298f/versionedparcelable-1.1.0/AndroidManifest.xml:24:5-25:19
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/2786c84c1e653e40bd67508414ca298f/versionedparcelable-1.1.0/AndroidManifest.xml:24:5-25:19
+MERGED from [com.android.installreferrer:installreferrer:1.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/048cf0277286c5a5577ab59cd6ee29ad/jetified-installreferrer-1.0/AndroidManifest.xml:11:5-20
+MERGED from [com.android.installreferrer:installreferrer:1.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/048cf0277286c5a5577ab59cd6ee29ad/jetified-installreferrer-1.0/AndroidManifest.xml:11:5-20
+MERGED from [io.nlopez.smartlocation:library:3.2.11] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/981e67a09a7b77c9c2c9c0fa55a61794/jetified-library-3.2.11/AndroidManifest.xml:18:5-28:19
+MERGED from [io.nlopez.smartlocation:library:3.2.11] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/981e67a09a7b77c9c2c9c0fa55a61794/jetified-library-3.2.11/AndroidManifest.xml:18:5-28:19
 	android:appComponentFactory
-		ADDED from [androidx.core:core:1.3.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/e1f0764c0505c94615b22f37f2526db5/core-1.3.0/AndroidManifest.xml:24:18-86
+		ADDED from [androidx.core:core:1.3.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/8052cb9f2b6802b798b88e17408d1bd7/core-1.3.0/AndroidManifest.xml:24:18-86
 	android:label
 		ADDED from /home/conorbegley/code/Uni/NarrateMyWay/app/android/app/src/main/AndroidManifest.xml:24:48-80
 		ADDED from /home/conorbegley/code/Uni/NarrateMyWay/app/android/app/src/main/AndroidManifest.xml:24:48-80
@@ -383,12 +383,12 @@ uses-sdk
 INJECTED from /home/conorbegley/code/Uni/NarrateMyWay/app/android/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from /home/conorbegley/code/Uni/NarrateMyWay/app/android/app/src/main/AndroidManifest.xml
 INJECTED from /home/conorbegley/code/Uni/NarrateMyWay/app/android/app/src/main/AndroidManifest.xml
-MERGED from [com.facebook.flipper:flipper:0.54.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/75238863e6b45aca4b9c498f6fefb9f4/flipper-0.54.0/AndroidManifest.xml:11:5-13:41
-MERGED from [com.facebook.flipper:flipper:0.54.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/75238863e6b45aca4b9c498f6fefb9f4/flipper-0.54.0/AndroidManifest.xml:11:5-13:41
-MERGED from [com.facebook.flipper:flipper-network-plugin:0.54.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/61ec062d53d2287f955099e63a79622e/flipper-network-plugin-0.54.0/AndroidManifest.xml:11:5-13:41
-MERGED from [com.facebook.flipper:flipper-network-plugin:0.54.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/61ec062d53d2287f955099e63a79622e/flipper-network-plugin-0.54.0/AndroidManifest.xml:11:5-13:41
-MERGED from [com.facebook.flipper:flipper-fresco-plugin:0.54.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/1e1cd6a6b632f76d3c385e19540f6b46/flipper-fresco-plugin-0.54.0/AndroidManifest.xml:11:5-13:41
-MERGED from [com.facebook.flipper:flipper-fresco-plugin:0.54.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/1e1cd6a6b632f76d3c385e19540f6b46/flipper-fresco-plugin-0.54.0/AndroidManifest.xml:11:5-13:41
+MERGED from [com.facebook.flipper:flipper:0.54.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/1c7787ec82631e0394972c76bdabe608/flipper-0.54.0/AndroidManifest.xml:11:5-13:41
+MERGED from [com.facebook.flipper:flipper:0.54.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/1c7787ec82631e0394972c76bdabe608/flipper-0.54.0/AndroidManifest.xml:11:5-13:41
+MERGED from [com.facebook.flipper:flipper-network-plugin:0.54.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/bd2cab46fd45b530a274001375333ead/flipper-network-plugin-0.54.0/AndroidManifest.xml:11:5-13:41
+MERGED from [com.facebook.flipper:flipper-network-plugin:0.54.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/bd2cab46fd45b530a274001375333ead/flipper-network-plugin-0.54.0/AndroidManifest.xml:11:5-13:41
+MERGED from [com.facebook.flipper:flipper-fresco-plugin:0.54.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/dd7dfafbb0af41b4347f18654ea5c436/flipper-fresco-plugin-0.54.0/AndroidManifest.xml:11:5-13:41
+MERGED from [com.facebook.flipper:flipper-fresco-plugin:0.54.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/dd7dfafbb0af41b4347f18654ea5c436/flipper-fresco-plugin-0.54.0/AndroidManifest.xml:11:5-13:41
 MERGED from [:unimodules-react-native-adapter] /home/conorbegley/code/Uni/NarrateMyWay/app/node_modules/@unimodules/react-native-adapter/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
 MERGED from [:unimodules-react-native-adapter] /home/conorbegley/code/Uni/NarrateMyWay/app/node_modules/@unimodules/react-native-adapter/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
 MERGED from [:expo-splash-screen] /home/conorbegley/code/Uni/NarrateMyWay/app/node_modules/expo-splash-screen/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
@@ -405,28 +405,28 @@ MERGED from [:react-native-safe-area-context] /home/conorbegley/code/Uni/Narrate
 MERGED from [:react-native-safe-area-context] /home/conorbegley/code/Uni/NarrateMyWay/app/node_modules/react-native-safe-area-context/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-7:41
 MERGED from [:react-native-screens] /home/conorbegley/code/Uni/NarrateMyWay/app/node_modules/react-native-screens/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
 MERGED from [:react-native-screens] /home/conorbegley/code/Uni/NarrateMyWay/app/node_modules/react-native-screens/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
-MERGED from [com.facebook.react:react-native:0.63.4] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/e775c3d2b1e17b2cf55ab8cf9861cbf2/jetified-react-native-0.63.4/AndroidManifest.xml:7:5-9:41
-MERGED from [com.facebook.react:react-native:0.63.4] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/e775c3d2b1e17b2cf55ab8cf9861cbf2/jetified-react-native-0.63.4/AndroidManifest.xml:7:5-9:41
+MERGED from [com.facebook.react:react-native:0.63.4] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/475cc4de8f014aae54cb4a5d57c65127/jetified-react-native-0.63.4/AndroidManifest.xml:7:5-9:41
+MERGED from [com.facebook.react:react-native:0.63.4] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/475cc4de8f014aae54cb4a5d57c65127/jetified-react-native-0.63.4/AndroidManifest.xml:7:5-9:41
 MERGED from [:expo-file-system] /home/conorbegley/code/Uni/NarrateMyWay/app/node_modules/expo-file-system/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:8:5-10:41
 MERGED from [:expo-file-system] /home/conorbegley/code/Uni/NarrateMyWay/app/node_modules/expo-file-system/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:8:5-10:41
 MERGED from [:expo-location] /home/conorbegley/code/Uni/NarrateMyWay/app/node_modules/expo-location/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
 MERGED from [:expo-location] /home/conorbegley/code/Uni/NarrateMyWay/app/node_modules/expo-location/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
-MERGED from [com.google.android.gms:play-services-location:16.0.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/5fe953e5bcda60015fbfb27a59b74051/jetified-play-services-location-16.0.0/AndroidManifest.xml:5:5-44
-MERGED from [com.google.android.gms:play-services-location:16.0.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/5fe953e5bcda60015fbfb27a59b74051/jetified-play-services-location-16.0.0/AndroidManifest.xml:5:5-44
-MERGED from [com.google.android.gms:play-services-base:16.0.1] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/d6be980e7b770a6edc686738a1941073/jetified-play-services-base-16.0.1/AndroidManifest.xml:20:5-44
-MERGED from [com.google.android.gms:play-services-base:16.0.1] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/d6be980e7b770a6edc686738a1941073/jetified-play-services-base-16.0.1/AndroidManifest.xml:20:5-44
-MERGED from [com.google.android.gms:play-services-places-placereport:16.0.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/44611c34dc456e3e51126f8943f358b5/play-services-places-placereport-16.0.0/AndroidManifest.xml:20:5-44
-MERGED from [com.google.android.gms:play-services-places-placereport:16.0.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/44611c34dc456e3e51126f8943f358b5/play-services-places-placereport-16.0.0/AndroidManifest.xml:20:5-44
-MERGED from [com.google.android.gms:play-services-tasks:16.0.1] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/5404bd8a9bce85e9c0413d7ba1af4759/jetified-play-services-tasks-16.0.1/AndroidManifest.xml:5:5-44
-MERGED from [com.google.android.gms:play-services-tasks:16.0.1] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/5404bd8a9bce85e9c0413d7ba1af4759/jetified-play-services-tasks-16.0.1/AndroidManifest.xml:5:5-44
-MERGED from [com.google.android.gms:play-services-basement:16.0.1] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/8a5f2b3ec34331b23e4a4e981a2cc798/jetified-play-services-basement-16.0.1/AndroidManifest.xml:20:5-44
-MERGED from [com.google.android.gms:play-services-basement:16.0.1] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/8a5f2b3ec34331b23e4a4e981a2cc798/jetified-play-services-basement-16.0.1/AndroidManifest.xml:20:5-44
-MERGED from [androidx.legacy:legacy-support-v4:1.0.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/be56b5d129279b63ab3e0158c5c77eec/legacy-support-v4-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.legacy:legacy-support-v4:1.0.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/be56b5d129279b63ab3e0158c5c77eec/legacy-support-v4-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/268f572d75795aa2cb7ea6d4b36d4269/legacy-support-core-ui-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/268f572d75795aa2cb7ea6d4b36d4269/legacy-support-core-ui-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/81ff1fa454edf8ca554f30a203178e7e/swiperefreshlayout-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/81ff1fa454edf8ca554f30a203178e7e/swiperefreshlayout-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-location:16.0.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/f79ed2c1e0a3d416c49e2823202e3305/jetified-play-services-location-16.0.0/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-location:16.0.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/f79ed2c1e0a3d416c49e2823202e3305/jetified-play-services-location-16.0.0/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-base:16.0.1] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/f01b0494439234502b9be6f1abe4130c/jetified-play-services-base-16.0.1/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-base:16.0.1] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/f01b0494439234502b9be6f1abe4130c/jetified-play-services-base-16.0.1/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-places-placereport:16.0.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/3017a25ce3cb2bf8b7edc16a81b382a0/play-services-places-placereport-16.0.0/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-places-placereport:16.0.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/3017a25ce3cb2bf8b7edc16a81b382a0/play-services-places-placereport-16.0.0/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-tasks:16.0.1] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/e2361b03d71ed5c829038d8bdca9369b/jetified-play-services-tasks-16.0.1/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-tasks:16.0.1] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/e2361b03d71ed5c829038d8bdca9369b/jetified-play-services-tasks-16.0.1/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-basement:16.0.1] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/38c4257a3b2e477fd605651527931c75/jetified-play-services-basement-16.0.1/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-basement:16.0.1] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/38c4257a3b2e477fd605651527931c75/jetified-play-services-basement-16.0.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-v4:1.0.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/b9604666a0b9bbe1ab905eeb5622e5c4/legacy-support-v4-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-v4:1.0.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/b9604666a0b9bbe1ab905eeb5622e5c4/legacy-support-v4-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/c4a0854b2c4c976f5fd7b439b5911773/legacy-support-core-ui-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/c4a0854b2c4c976f5fd7b439b5911773/legacy-support-core-ui-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/37b6f551bc5ae153b0b627de8f563815/swiperefreshlayout-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/37b6f551bc5ae153b0b627de8f563815/swiperefreshlayout-1.0.0/AndroidManifest.xml:20:5-44
 MERGED from [:expo-application] /home/conorbegley/code/Uni/NarrateMyWay/app/node_modules/expo-application/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
 MERGED from [:expo-application] /home/conorbegley/code/Uni/NarrateMyWay/app/node_modules/expo-application/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
 MERGED from [:expo-constants] /home/conorbegley/code/Uni/NarrateMyWay/app/node_modules/expo-constants/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
@@ -475,126 +475,126 @@ MERGED from [:unimodules-image-loader-interface] /home/conorbegley/code/Uni/Narr
 MERGED from [:unimodules-image-loader-interface] /home/conorbegley/code/Uni/NarrateMyWay/app/node_modules/unimodules-image-loader-interface/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
 MERGED from [:unimodules-sensors-interface] /home/conorbegley/code/Uni/NarrateMyWay/app/node_modules/unimodules-sensors-interface/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
 MERGED from [:unimodules-sensors-interface] /home/conorbegley/code/Uni/NarrateMyWay/app/node_modules/unimodules-sensors-interface/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
-MERGED from [org.webkit:android-jsc:r245459] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/568ad9f4553d01d53a292ec6245d6cea/android-jsc-r245459/AndroidManifest.xml:7:5-9:41
-MERGED from [org.webkit:android-jsc:r245459] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/568ad9f4553d01d53a292ec6245d6cea/android-jsc-r245459/AndroidManifest.xml:7:5-9:41
-MERGED from [com.facebook.fresco:flipper:2.2.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/bf4f8f93dcdeaf865c431513daa06e1f/flipper-2.2.0/AndroidManifest.xml:5:5-7:41
-MERGED from [com.facebook.fresco:flipper:2.2.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/bf4f8f93dcdeaf865c431513daa06e1f/flipper-2.2.0/AndroidManifest.xml:5:5-7:41
-MERGED from [com.facebook.fresco:stetho:2.2.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/4856c0622f0557c6159bd32000ec7a9d/stetho-2.2.0/AndroidManifest.xml:5:5-7:41
-MERGED from [com.facebook.fresco:stetho:2.2.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/4856c0622f0557c6159bd32000ec7a9d/stetho-2.2.0/AndroidManifest.xml:5:5-7:41
-MERGED from [com.facebook.fresco:fresco:2.2.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/1935e14be136baa421acd03dbe5b0e8a/fresco-2.2.0/AndroidManifest.xml:5:5-7:41
-MERGED from [com.facebook.fresco:fresco:2.2.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/1935e14be136baa421acd03dbe5b0e8a/fresco-2.2.0/AndroidManifest.xml:5:5-7:41
-MERGED from [com.facebook.fresco:imagepipeline-okhttp3:2.0.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/8c8eb2002e286dd821976fa6494d8281/imagepipeline-okhttp3-2.0.0/AndroidManifest.xml:5:5-7:41
-MERGED from [com.facebook.fresco:imagepipeline-okhttp3:2.0.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/8c8eb2002e286dd821976fa6494d8281/imagepipeline-okhttp3-2.0.0/AndroidManifest.xml:5:5-7:41
-MERGED from [com.facebook.fresco:drawee:2.2.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/b6baac6b3db5e32ad5105313d8f4e05d/drawee-2.2.0/AndroidManifest.xml:5:5-7:41
-MERGED from [com.facebook.fresco:drawee:2.2.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/b6baac6b3db5e32ad5105313d8f4e05d/drawee-2.2.0/AndroidManifest.xml:5:5-7:41
-MERGED from [com.facebook.fresco:nativeimagefilters:2.2.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/28b3f060f3468bb416a4e63563105ffd/nativeimagefilters-2.2.0/AndroidManifest.xml:5:5-7:41
-MERGED from [com.facebook.fresco:nativeimagefilters:2.2.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/28b3f060f3468bb416a4e63563105ffd/nativeimagefilters-2.2.0/AndroidManifest.xml:5:5-7:41
-MERGED from [com.facebook.fresco:memory-type-native:2.2.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/c69000498b9d669b4f18f999ac585e78/memory-type-native-2.2.0/AndroidManifest.xml:5:5-7:41
-MERGED from [com.facebook.fresco:memory-type-native:2.2.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/c69000498b9d669b4f18f999ac585e78/memory-type-native-2.2.0/AndroidManifest.xml:5:5-7:41
-MERGED from [com.facebook.fresco:memory-type-java:2.2.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/87b9c1f17708692e3774d6bc966f7ef9/memory-type-java-2.2.0/AndroidManifest.xml:5:5-7:41
-MERGED from [com.facebook.fresco:memory-type-java:2.2.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/87b9c1f17708692e3774d6bc966f7ef9/memory-type-java-2.2.0/AndroidManifest.xml:5:5-7:41
-MERGED from [com.facebook.fresco:imagepipeline-native:2.2.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/e27ce9de34b0eee73e8ca8614423ccf6/imagepipeline-native-2.2.0/AndroidManifest.xml:5:5-7:41
-MERGED from [com.facebook.fresco:imagepipeline-native:2.2.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/e27ce9de34b0eee73e8ca8614423ccf6/imagepipeline-native-2.2.0/AndroidManifest.xml:5:5-7:41
-MERGED from [com.facebook.fresco:memory-type-ashmem:2.2.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/fae4afff945e01bc408d46d32b2db411/memory-type-ashmem-2.2.0/AndroidManifest.xml:5:5-7:41
-MERGED from [com.facebook.fresco:memory-type-ashmem:2.2.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/fae4afff945e01bc408d46d32b2db411/memory-type-ashmem-2.2.0/AndroidManifest.xml:5:5-7:41
-MERGED from [com.facebook.fresco:imagepipeline:2.2.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/9530eb065a162a0e1bbf2626a0811202/imagepipeline-2.2.0/AndroidManifest.xml:5:5-7:41
-MERGED from [com.facebook.fresco:imagepipeline:2.2.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/9530eb065a162a0e1bbf2626a0811202/imagepipeline-2.2.0/AndroidManifest.xml:5:5-7:41
-MERGED from [com.facebook.fresco:nativeimagetranscoder:2.2.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/bb8c3514ab2ae0cd827e88bce63ca5d9/nativeimagetranscoder-2.2.0/AndroidManifest.xml:5:5-7:41
-MERGED from [com.facebook.fresco:nativeimagetranscoder:2.2.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/bb8c3514ab2ae0cd827e88bce63ca5d9/nativeimagetranscoder-2.2.0/AndroidManifest.xml:5:5-7:41
-MERGED from [com.facebook.fresco:imagepipeline-base:2.2.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/a4a8d8d3a758d6a1d83090626d426df0/imagepipeline-base-2.2.0/AndroidManifest.xml:5:5-7:41
-MERGED from [com.facebook.fresco:imagepipeline-base:2.2.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/a4a8d8d3a758d6a1d83090626d426df0/imagepipeline-base-2.2.0/AndroidManifest.xml:5:5-7:41
-MERGED from [com.facebook.fresco:soloader:2.2.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/0f12ea78afa91a67e24ec14ba780a6ae/soloader-2.2.0/AndroidManifest.xml:5:5-7:41
-MERGED from [com.facebook.fresco:soloader:2.2.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/0f12ea78afa91a67e24ec14ba780a6ae/soloader-2.2.0/AndroidManifest.xml:5:5-7:41
-MERGED from [com.facebook.soloader:soloader:0.9.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/d28ac9a2ea57e720758a69b4dbacf807/soloader-0.9.0/AndroidManifest.xml:7:5-9:41
-MERGED from [com.facebook.soloader:soloader:0.9.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/d28ac9a2ea57e720758a69b4dbacf807/soloader-0.9.0/AndroidManifest.xml:7:5-9:41
-MERGED from [com.google.android.material:material:1.1.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/268be37c762c3f1e21922779bb4297e4/material-1.1.0/AndroidManifest.xml:20:5-44
-MERGED from [com.google.android.material:material:1.1.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/268be37c762c3f1e21922779bb4297e4/material-1.1.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.appcompat:appcompat:1.2.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/3a1c9e556421120b91c14e3b0d627909/appcompat-1.2.0/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.appcompat:appcompat:1.2.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/3a1c9e556421120b91c14e3b0d627909/appcompat-1.2.0/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.browser:browser:1.2.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/4cf3304944e1fae2e7e65bd2ff2a2db4/browser-1.2.0/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.browser:browser:1.2.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/4cf3304944e1fae2e7e65bd2ff2a2db4/browser-1.2.0/AndroidManifest.xml:20:5-22:41
-MERGED from [com.github.bumptech.glide:glide:4.9.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/1e77a625e12a45e09cb35eb7243c04d0/jetified-glide-4.9.0/AndroidManifest.xml:6:5-8:41
-MERGED from [com.github.bumptech.glide:glide:4.9.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/1e77a625e12a45e09cb35eb7243c04d0/jetified-glide-4.9.0/AndroidManifest.xml:6:5-8:41
-MERGED from [androidx.appcompat:appcompat-resources:1.2.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/f40e4c09e19a611af01c1e41e707da0b/appcompat-resources-1.2.0/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.appcompat:appcompat-resources:1.2.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/f40e4c09e19a611af01c1e41e707da0b/appcompat-resources-1.2.0/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/ddd30b16d30af545fd3654c9a7e3e1c2/vectordrawable-animated-1.1.0/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/ddd30b16d30af545fd3654c9a7e3e1c2/vectordrawable-animated-1.1.0/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.interpolator:interpolator:1.0.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/191a2a70a59b7d2da080245a3be467f4/interpolator-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.interpolator:interpolator:1.0.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/191a2a70a59b7d2da080245a3be467f4/interpolator-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.viewpager2:viewpager2:1.0.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/5fc6f3f591c7e2de151573672c34bbdd/viewpager2-1.0.0/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.viewpager2:viewpager2:1.0.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/5fc6f3f591c7e2de151573672c34bbdd/viewpager2-1.0.0/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.fragment:fragment:1.2.1] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/d2ed4c1f2d22e4d2b3166b95583ff78f/fragment-1.2.1/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.fragment:fragment:1.2.1] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/d2ed4c1f2d22e4d2b3166b95583ff78f/fragment-1.2.1/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.1.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/6e480f47207a81e5da9fafeeb92a6b55/coordinatorlayout-1.1.0/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.1.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/6e480f47207a81e5da9fafeeb92a6b55/coordinatorlayout-1.1.0/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.media:media:1.0.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/6faaf2270ce42c656228bbc46504593c/media-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.media:media:1.0.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/6faaf2270ce42c656228bbc46504593c/media-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/c8cefc107aeb391d4d8f8ce6daad02f5/legacy-support-core-utils-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/c8cefc107aeb391d4d8f8ce6daad02f5/legacy-support-core-utils-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [com.github.bumptech.glide:gifdecoder:4.9.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/93e3bdf2de6bdaae9b89e23ed7ad0438/jetified-gifdecoder-4.9.0/AndroidManifest.xml:5:5-7:41
-MERGED from [com.github.bumptech.glide:gifdecoder:4.9.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/93e3bdf2de6bdaae9b89e23ed7ad0438/jetified-gifdecoder-4.9.0/AndroidManifest.xml:5:5-7:41
-MERGED from [androidx.room:room-runtime:2.1.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/1f9600edb87ec7249ed2f749439da712/room-runtime-2.1.0/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.room:room-runtime:2.1.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/1f9600edb87ec7249ed2f749439da712/room-runtime-2.1.0/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/193953fa1608f778c6c0103510541d16/drawerlayout-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/193953fa1608f778c6c0103510541d16/drawerlayout-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.viewpager:viewpager:1.0.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/866f4023b0f6f111f4c80b2759f3a74c/viewpager-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.viewpager:viewpager:1.0.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/866f4023b0f6f111f4c80b2759f3a74c/viewpager-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.loader:loader:1.0.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/4219b5a6d22e34f8b719171d3a1fa43b/loader-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.loader:loader:1.0.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/4219b5a6d22e34f8b719171d3a1fa43b/loader-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.activity:activity:1.1.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/94882809552827825dd69f1d1f1ec6b0/activity-1.1.0/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.activity:activity:1.1.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/94882809552827825dd69f1d1f1ec6b0/activity-1.1.0/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.slidingpanelayout:slidingpanelayout:1.0.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/bf94fbf2bf5f5aa5562b26611e451ea7/slidingpanelayout-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.slidingpanelayout:slidingpanelayout:1.0.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/bf94fbf2bf5f5aa5562b26611e451ea7/slidingpanelayout-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.recyclerview:recyclerview:1.1.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/59182b9b0f183be050527c4f3274a4d6/recyclerview-1.1.0/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.recyclerview:recyclerview:1.1.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/59182b9b0f183be050527c4f3274a4d6/recyclerview-1.1.0/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.customview:customview:1.0.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/02b1c70979ea1010935998189276b651/customview-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.customview:customview:1.0.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/02b1c70979ea1010935998189276b651/customview-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.transition:transition:1.2.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/92e61fd8c8343e747c5fca09c5d3e5ff/transition-1.2.0/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.transition:transition:1.2.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/92e61fd8c8343e747c5fca09c5d3e5ff/transition-1.2.0/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/b8c235ce17450056f4452b7a9e163f1c/vectordrawable-1.1.0/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/b8c235ce17450056f4452b7a9e163f1c/vectordrawable-1.1.0/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.asynclayoutinflater:asynclayoutinflater:1.0.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/1f0613d92538986fb046849581ac89c7/asynclayoutinflater-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.asynclayoutinflater:asynclayoutinflater:1.0.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/1f0613d92538986fb046849581ac89c7/asynclayoutinflater-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.core:core:1.3.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/e1f0764c0505c94615b22f37f2526db5/core-1.3.0/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.core:core:1.3.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/e1f0764c0505c94615b22f37f2526db5/core-1.3.0/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/f945758adb194b91c01c3955fc665313/cursoradapter-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/f945758adb194b91c01c3955fc665313/cursoradapter-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.sqlite:sqlite-framework:2.0.1] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/f7f9a1d456669ae2c0357e37393f1b7c/sqlite-framework-2.0.1/AndroidManifest.xml:20:5-44
-MERGED from [androidx.sqlite:sqlite-framework:2.0.1] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/f7f9a1d456669ae2c0357e37393f1b7c/sqlite-framework-2.0.1/AndroidManifest.xml:20:5-44
-MERGED from [androidx.sqlite:sqlite:2.0.1] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/d5e2a9f068783c9aac96fa8f011f7cc1/sqlite-2.0.1/AndroidManifest.xml:20:5-44
-MERGED from [androidx.sqlite:sqlite:2.0.1] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/d5e2a9f068783c9aac96fa8f011f7cc1/sqlite-2.0.1/AndroidManifest.xml:20:5-44
-MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/cf966c3591d0a3475bdaa62765d46ce5/versionedparcelable-1.1.0/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/cf966c3591d0a3475bdaa62765d46ce5/versionedparcelable-1.1.0/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.2.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/69eab2c511f9e7cf361179779a32fb2e/lifecycle-viewmodel-savedstate-2.2.0/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.2.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/69eab2c511f9e7cf361179779a32fb2e/lifecycle-viewmodel-savedstate-2.2.0/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.2.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/542825a307e3f5a1823b972a86e36515/lifecycle-viewmodel-2.2.0/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.2.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/542825a307e3f5a1823b972a86e36515/lifecycle-viewmodel-2.2.0/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.cardview:cardview:1.0.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/cc882b9ef562562d9a48f00a1e1033d5/cardview-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.cardview:cardview:1.0.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/cc882b9ef562562d9a48f00a1e1033d5/cardview-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.documentfile:documentfile:1.0.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/4364ad76604cf486136125f92b6c8f4c/documentfile-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.documentfile:documentfile:1.0.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/4364ad76604cf486136125f92b6c8f4c/documentfile-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/ae101856600f7992838ee059e045c8d5/localbroadcastmanager-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/ae101856600f7992838ee059e045c8d5/localbroadcastmanager-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.print:print:1.0.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/f3e2dce65eacafd123c90c8836548fcb/print-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.print:print:1.0.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/f3e2dce65eacafd123c90c8836548fcb/print-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.lifecycle:lifecycle-runtime:2.2.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/4e6a1bfc74562c4f2502d33ad020a007/lifecycle-runtime-2.2.0/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.lifecycle:lifecycle-runtime:2.2.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/4e6a1bfc74562c4f2502d33ad020a007/lifecycle-runtime-2.2.0/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.savedstate:savedstate:1.0.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/7966cbff17c6377a73caf2b644bb23b0/savedstate-1.0.0/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.savedstate:savedstate:1.0.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/7966cbff17c6377a73caf2b644bb23b0/savedstate-1.0.0/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/9b6dd764d42012524e9e5c32e438f0d0/lifecycle-livedata-2.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/9b6dd764d42012524e9e5c32e438f0d0/lifecycle-livedata-2.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.2.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/5989e88180b6bb166f367b6f165dcf44/lifecycle-livedata-core-2.2.0/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.2.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/5989e88180b6bb166f367b6f165dcf44/lifecycle-livedata-core-2.2.0/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.arch.core:core-runtime:2.1.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/9241caa57a4aba913a7bdf412b2b7ab5/core-runtime-2.1.0/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.arch.core:core-runtime:2.1.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/9241caa57a4aba913a7bdf412b2b7ab5/core-runtime-2.1.0/AndroidManifest.xml:20:5-22:41
-MERGED from [com.android.installreferrer:installreferrer:1.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/410b2b76bc47bd0d5aa6762f530594dc/jetified-installreferrer-1.0/AndroidManifest.xml:5:5-7:41
-MERGED from [com.android.installreferrer:installreferrer:1.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/410b2b76bc47bd0d5aa6762f530594dc/jetified-installreferrer-1.0/AndroidManifest.xml:5:5-7:41
-MERGED from [io.nlopez.smartlocation:library:3.2.11] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/0d09867a005e6e77dffb77a33685ca9f/jetified-library-3.2.11/AndroidManifest.xml:8:5-10:41
-MERGED from [io.nlopez.smartlocation:library:3.2.11] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/0d09867a005e6e77dffb77a33685ca9f/jetified-library-3.2.11/AndroidManifest.xml:8:5-10:41
-MERGED from [com.facebook.fresco:fbcore:2.2.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/ba5b8375c7b8812d333c1956d2b46706/jetified-fbcore-2.2.0/AndroidManifest.xml:5:5-7:41
-MERGED from [com.facebook.fresco:fbcore:2.2.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/ba5b8375c7b8812d333c1956d2b46706/jetified-fbcore-2.2.0/AndroidManifest.xml:5:5-7:41
-MERGED from [com.facebook.fresco:ui-common:2.2.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/08c199096a1dde6865f04c38322cc469/ui-common-2.2.0/AndroidManifest.xml:5:5-7:41
-MERGED from [com.facebook.fresco:ui-common:2.2.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/08c199096a1dde6865f04c38322cc469/ui-common-2.2.0/AndroidManifest.xml:5:5-7:41
+MERGED from [org.webkit:android-jsc:r245459] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/6dd6245206e34676e1ee3aa6ee0f68c9/android-jsc-r245459/AndroidManifest.xml:7:5-9:41
+MERGED from [org.webkit:android-jsc:r245459] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/6dd6245206e34676e1ee3aa6ee0f68c9/android-jsc-r245459/AndroidManifest.xml:7:5-9:41
+MERGED from [com.facebook.fresco:flipper:2.2.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/40741ffe3de6a11d99116b4e82d60d46/flipper-2.2.0/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:flipper:2.2.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/40741ffe3de6a11d99116b4e82d60d46/flipper-2.2.0/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:stetho:2.2.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/03aa51752e7d7098a02114b07907dabd/stetho-2.2.0/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:stetho:2.2.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/03aa51752e7d7098a02114b07907dabd/stetho-2.2.0/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:fresco:2.2.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/e9f56679cbe795a6f7c93e9a035f66f2/fresco-2.2.0/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:fresco:2.2.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/e9f56679cbe795a6f7c93e9a035f66f2/fresco-2.2.0/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:imagepipeline-okhttp3:2.0.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/559ddc4b7f576fedc63e05921b88e895/imagepipeline-okhttp3-2.0.0/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:imagepipeline-okhttp3:2.0.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/559ddc4b7f576fedc63e05921b88e895/imagepipeline-okhttp3-2.0.0/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:drawee:2.2.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/0288f1bca211d259126211029f92054c/drawee-2.2.0/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:drawee:2.2.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/0288f1bca211d259126211029f92054c/drawee-2.2.0/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:nativeimagefilters:2.2.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/766471e6648d662c31b10c1bbc5126fe/nativeimagefilters-2.2.0/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:nativeimagefilters:2.2.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/766471e6648d662c31b10c1bbc5126fe/nativeimagefilters-2.2.0/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:memory-type-native:2.2.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/57a87fccccbdbe36e69f72b01ce521f1/memory-type-native-2.2.0/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:memory-type-native:2.2.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/57a87fccccbdbe36e69f72b01ce521f1/memory-type-native-2.2.0/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:memory-type-java:2.2.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/0abe31decb23fc939dbab3bf21d1ccec/memory-type-java-2.2.0/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:memory-type-java:2.2.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/0abe31decb23fc939dbab3bf21d1ccec/memory-type-java-2.2.0/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:imagepipeline-native:2.2.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/3b508a8e13388bdc4e88ee330cec4cdc/imagepipeline-native-2.2.0/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:imagepipeline-native:2.2.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/3b508a8e13388bdc4e88ee330cec4cdc/imagepipeline-native-2.2.0/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:memory-type-ashmem:2.2.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/104429b66e46c675401dada578683150/memory-type-ashmem-2.2.0/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:memory-type-ashmem:2.2.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/104429b66e46c675401dada578683150/memory-type-ashmem-2.2.0/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:imagepipeline:2.2.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/fe90bfac000734a7d0d9c150b7915ff6/imagepipeline-2.2.0/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:imagepipeline:2.2.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/fe90bfac000734a7d0d9c150b7915ff6/imagepipeline-2.2.0/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:nativeimagetranscoder:2.2.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/34efa7b8fb78d46cf2b753de7fbfc5a5/nativeimagetranscoder-2.2.0/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:nativeimagetranscoder:2.2.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/34efa7b8fb78d46cf2b753de7fbfc5a5/nativeimagetranscoder-2.2.0/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:imagepipeline-base:2.2.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/237bbc58c0787eee6b78f947e2baeeaa/imagepipeline-base-2.2.0/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:imagepipeline-base:2.2.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/237bbc58c0787eee6b78f947e2baeeaa/imagepipeline-base-2.2.0/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:soloader:2.2.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/65f592cbf7e10992754db73be6c6ba25/soloader-2.2.0/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:soloader:2.2.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/65f592cbf7e10992754db73be6c6ba25/soloader-2.2.0/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.soloader:soloader:0.9.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/c34148f30cbc3e974eff21cbfb6a112a/soloader-0.9.0/AndroidManifest.xml:7:5-9:41
+MERGED from [com.facebook.soloader:soloader:0.9.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/c34148f30cbc3e974eff21cbfb6a112a/soloader-0.9.0/AndroidManifest.xml:7:5-9:41
+MERGED from [com.google.android.material:material:1.1.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/863e0c3c6716935cd3657ad638fd992d/material-1.1.0/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.material:material:1.1.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/863e0c3c6716935cd3657ad638fd992d/material-1.1.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.appcompat:appcompat:1.2.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/3d80612cf866c25180a6f07f0dbf6ee9/appcompat-1.2.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.appcompat:appcompat:1.2.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/3d80612cf866c25180a6f07f0dbf6ee9/appcompat-1.2.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.browser:browser:1.2.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/df07536d08ede39907a37278171a76ee/browser-1.2.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.browser:browser:1.2.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/df07536d08ede39907a37278171a76ee/browser-1.2.0/AndroidManifest.xml:20:5-22:41
+MERGED from [com.github.bumptech.glide:glide:4.9.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/82d0ab6cb0fef1492c1f61b5bd2ae6f5/jetified-glide-4.9.0/AndroidManifest.xml:6:5-8:41
+MERGED from [com.github.bumptech.glide:glide:4.9.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/82d0ab6cb0fef1492c1f61b5bd2ae6f5/jetified-glide-4.9.0/AndroidManifest.xml:6:5-8:41
+MERGED from [androidx.appcompat:appcompat-resources:1.2.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/9561223e5cc0dbe166dbda4b9d12b44b/appcompat-resources-1.2.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.appcompat:appcompat-resources:1.2.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/9561223e5cc0dbe166dbda4b9d12b44b/appcompat-resources-1.2.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/28888a6f6660db47b3788df392c672a7/vectordrawable-animated-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/28888a6f6660db47b3788df392c672a7/vectordrawable-animated-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.interpolator:interpolator:1.0.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/efb592adf2592d134c27edc4a56e19d2/interpolator-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.interpolator:interpolator:1.0.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/efb592adf2592d134c27edc4a56e19d2/interpolator-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.viewpager2:viewpager2:1.0.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/8cd6316737e8f518184be95be51b9ee8/viewpager2-1.0.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.viewpager2:viewpager2:1.0.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/8cd6316737e8f518184be95be51b9ee8/viewpager2-1.0.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.fragment:fragment:1.2.1] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/37aaca75d3d19faa6fb296103cea95d8/fragment-1.2.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.fragment:fragment:1.2.1] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/37aaca75d3d19faa6fb296103cea95d8/fragment-1.2.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.1.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/c062602fe4e1f75f724363688044d993/coordinatorlayout-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.1.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/c062602fe4e1f75f724363688044d993/coordinatorlayout-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.media:media:1.0.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/e1a755a5eb4e9c5b244c1a9f660f0c11/media-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.media:media:1.0.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/e1a755a5eb4e9c5b244c1a9f660f0c11/media-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/1b42f88dea3794bc67b44839b4ca1a7b/legacy-support-core-utils-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/1b42f88dea3794bc67b44839b4ca1a7b/legacy-support-core-utils-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [com.github.bumptech.glide:gifdecoder:4.9.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/2580c905ffa4543f328d8f1c34e1d5df/jetified-gifdecoder-4.9.0/AndroidManifest.xml:5:5-7:41
+MERGED from [com.github.bumptech.glide:gifdecoder:4.9.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/2580c905ffa4543f328d8f1c34e1d5df/jetified-gifdecoder-4.9.0/AndroidManifest.xml:5:5-7:41
+MERGED from [androidx.room:room-runtime:2.1.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/5f7132f69994fe4e2c8f322e81b3f8c9/room-runtime-2.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.room:room-runtime:2.1.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/5f7132f69994fe4e2c8f322e81b3f8c9/room-runtime-2.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/c99af001058cd5265376dded8456f828/drawerlayout-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/c99af001058cd5265376dded8456f828/drawerlayout-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.viewpager:viewpager:1.0.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/40f1c5d439eea30faeaafe93e7bdf45f/viewpager-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.viewpager:viewpager:1.0.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/40f1c5d439eea30faeaafe93e7bdf45f/viewpager-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.loader:loader:1.0.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/faa15558a5d57e35e462c9e1f0248694/loader-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.loader:loader:1.0.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/faa15558a5d57e35e462c9e1f0248694/loader-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.activity:activity:1.1.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/89bcabef273c834c0566b445ed28172c/activity-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.activity:activity:1.1.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/89bcabef273c834c0566b445ed28172c/activity-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.slidingpanelayout:slidingpanelayout:1.0.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/f53bca436baf2a2670073f8750b0b7d5/slidingpanelayout-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.slidingpanelayout:slidingpanelayout:1.0.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/f53bca436baf2a2670073f8750b0b7d5/slidingpanelayout-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.recyclerview:recyclerview:1.1.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/4300f0cd89d6453d731712a999b6e53f/recyclerview-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.recyclerview:recyclerview:1.1.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/4300f0cd89d6453d731712a999b6e53f/recyclerview-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.customview:customview:1.0.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/e0a79d4379c4eef3803202a497c19313/customview-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.customview:customview:1.0.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/e0a79d4379c4eef3803202a497c19313/customview-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.transition:transition:1.2.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/820068d4be612586a05a9daff9be7b77/transition-1.2.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.transition:transition:1.2.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/820068d4be612586a05a9daff9be7b77/transition-1.2.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/6bd464ed06f075f4e42b3fde6a89e60a/vectordrawable-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/6bd464ed06f075f4e42b3fde6a89e60a/vectordrawable-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.asynclayoutinflater:asynclayoutinflater:1.0.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/8dc6c78d6d7c962ba02416981491cd60/asynclayoutinflater-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.asynclayoutinflater:asynclayoutinflater:1.0.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/8dc6c78d6d7c962ba02416981491cd60/asynclayoutinflater-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.core:core:1.3.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/8052cb9f2b6802b798b88e17408d1bd7/core-1.3.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.core:core:1.3.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/8052cb9f2b6802b798b88e17408d1bd7/core-1.3.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/3b41f2ef3d4a30256bbd9d1017371108/cursoradapter-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/3b41f2ef3d4a30256bbd9d1017371108/cursoradapter-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.sqlite:sqlite-framework:2.0.1] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/096a8f1603949d4f18a7cbc7eecc51f2/sqlite-framework-2.0.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.sqlite:sqlite-framework:2.0.1] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/096a8f1603949d4f18a7cbc7eecc51f2/sqlite-framework-2.0.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.sqlite:sqlite:2.0.1] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/422ace6a75dd412e501b9bf85446fc1e/sqlite-2.0.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.sqlite:sqlite:2.0.1] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/422ace6a75dd412e501b9bf85446fc1e/sqlite-2.0.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/2786c84c1e653e40bd67508414ca298f/versionedparcelable-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/2786c84c1e653e40bd67508414ca298f/versionedparcelable-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.2.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/db36fbbf4470b1ce63fe644e40ae81d3/lifecycle-viewmodel-savedstate-2.2.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.2.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/db36fbbf4470b1ce63fe644e40ae81d3/lifecycle-viewmodel-savedstate-2.2.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.2.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/304e6293e0820147023aa187c0f862e1/lifecycle-viewmodel-2.2.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.2.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/304e6293e0820147023aa187c0f862e1/lifecycle-viewmodel-2.2.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.cardview:cardview:1.0.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/7ce8a2eb9e81825ec9bcc373c597a746/cardview-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.cardview:cardview:1.0.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/7ce8a2eb9e81825ec9bcc373c597a746/cardview-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.documentfile:documentfile:1.0.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/d78ae12d9aa12e93077461f94a53335b/documentfile-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.documentfile:documentfile:1.0.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/d78ae12d9aa12e93077461f94a53335b/documentfile-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/3d5c1e204ac62dc0f6d5059f5e3eaa42/localbroadcastmanager-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/3d5c1e204ac62dc0f6d5059f5e3eaa42/localbroadcastmanager-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.print:print:1.0.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/37c50c3790fd1f696b8c9e7a44956408/print-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.print:print:1.0.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/37c50c3790fd1f696b8c9e7a44956408/print-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.2.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/124ee19a63f3e171c196264ecc845daa/lifecycle-runtime-2.2.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.2.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/124ee19a63f3e171c196264ecc845daa/lifecycle-runtime-2.2.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.savedstate:savedstate:1.0.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/4ce17f8b4390b23da9bedc3cee010ec1/savedstate-1.0.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.savedstate:savedstate:1.0.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/4ce17f8b4390b23da9bedc3cee010ec1/savedstate-1.0.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/4da6ddd3c71dbaec92b0fdf3bbca4ce7/lifecycle-livedata-2.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/4da6ddd3c71dbaec92b0fdf3bbca4ce7/lifecycle-livedata-2.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.2.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/2ef959591ee3dfd7e7d0f130ebacb270/lifecycle-livedata-core-2.2.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.2.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/2ef959591ee3dfd7e7d0f130ebacb270/lifecycle-livedata-core-2.2.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.arch.core:core-runtime:2.1.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/babedcb26ba2505096ea9fb87ec93180/core-runtime-2.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.arch.core:core-runtime:2.1.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/babedcb26ba2505096ea9fb87ec93180/core-runtime-2.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [com.android.installreferrer:installreferrer:1.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/048cf0277286c5a5577ab59cd6ee29ad/jetified-installreferrer-1.0/AndroidManifest.xml:5:5-7:41
+MERGED from [com.android.installreferrer:installreferrer:1.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/048cf0277286c5a5577ab59cd6ee29ad/jetified-installreferrer-1.0/AndroidManifest.xml:5:5-7:41
+MERGED from [io.nlopez.smartlocation:library:3.2.11] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/981e67a09a7b77c9c2c9c0fa55a61794/jetified-library-3.2.11/AndroidManifest.xml:8:5-10:41
+MERGED from [io.nlopez.smartlocation:library:3.2.11] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/981e67a09a7b77c9c2c9c0fa55a61794/jetified-library-3.2.11/AndroidManifest.xml:8:5-10:41
+MERGED from [com.facebook.fresco:fbcore:2.2.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/98ee9edf5ef8bcbb90d6165c208b1ed9/jetified-fbcore-2.2.0/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:fbcore:2.2.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/98ee9edf5ef8bcbb90d6165c208b1ed9/jetified-fbcore-2.2.0/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:ui-common:2.2.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/c114d4501470930b3986c4f9bd2da0fd/ui-common-2.2.0/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:ui-common:2.2.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/c114d4501470930b3986c4f9bd2da0fd/ui-common-2.2.0/AndroidManifest.xml:5:5-7:41
 INJECTED from /home/conorbegley/code/Uni/NarrateMyWay/app/android/app/src/debug/AndroidManifest.xml
 INJECTED from /home/conorbegley/code/Uni/NarrateMyWay/app/android/app/src/debug/AndroidManifest.xml
 	android:targetSdkVersion
@@ -604,9 +604,9 @@ INJECTED from /home/conorbegley/code/Uni/NarrateMyWay/app/android/app/src/debug/
 		INJECTED from /home/conorbegley/code/Uni/NarrateMyWay/app/android/app/src/main/AndroidManifest.xml
 		INJECTED from /home/conorbegley/code/Uni/NarrateMyWay/app/android/app/src/debug/AndroidManifest.xml
 uses-permission#android.permission.ACCESS_WIFI_STATE
-ADDED from [com.facebook.flipper:flipper:0.54.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/75238863e6b45aca4b9c498f6fefb9f4/flipper-0.54.0/AndroidManifest.xml:16:5-76
+ADDED from [com.facebook.flipper:flipper:0.54.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/1c7787ec82631e0394972c76bdabe608/flipper-0.54.0/AndroidManifest.xml:16:5-76
 	android:name
-		ADDED from [com.facebook.flipper:flipper:0.54.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/75238863e6b45aca4b9c498f6fefb9f4/flipper-0.54.0/AndroidManifest.xml:16:22-73
+		ADDED from [com.facebook.flipper:flipper:0.54.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/1c7787ec82631e0394972c76bdabe608/flipper-0.54.0/AndroidManifest.xml:16:22-73
 meta-data#org.unimodules.core.AppLoader#react-native-headless
 ADDED from [:unimodules-react-native-adapter] /home/conorbegley/code/Uni/NarrateMyWay/app/node_modules/@unimodules/react-native-adapter/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:12:9-14:91
 	android:value
@@ -642,52 +642,52 @@ ADDED from [:expo-location] /home/conorbegley/code/Uni/NarrateMyWay/app/node_mod
 	android:name
 		ADDED from [:expo-location] /home/conorbegley/code/Uni/NarrateMyWay/app/node_modules/expo-location/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:17:13-78
 activity#com.google.android.gms.common.api.GoogleApiActivity
-ADDED from [com.google.android.gms:play-services-base:16.0.1] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/d6be980e7b770a6edc686738a1941073/jetified-play-services-base-16.0.1/AndroidManifest.xml:23:9-26:75
+ADDED from [com.google.android.gms:play-services-base:16.0.1] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/f01b0494439234502b9be6f1abe4130c/jetified-play-services-base-16.0.1/AndroidManifest.xml:23:9-26:75
 	android:exported
-		ADDED from [com.google.android.gms:play-services-base:16.0.1] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/d6be980e7b770a6edc686738a1941073/jetified-play-services-base-16.0.1/AndroidManifest.xml:25:13-37
+		ADDED from [com.google.android.gms:play-services-base:16.0.1] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/f01b0494439234502b9be6f1abe4130c/jetified-play-services-base-16.0.1/AndroidManifest.xml:25:13-37
 	android:theme
-		ADDED from [com.google.android.gms:play-services-base:16.0.1] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/d6be980e7b770a6edc686738a1941073/jetified-play-services-base-16.0.1/AndroidManifest.xml:26:13-72
+		ADDED from [com.google.android.gms:play-services-base:16.0.1] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/f01b0494439234502b9be6f1abe4130c/jetified-play-services-base-16.0.1/AndroidManifest.xml:26:13-72
 	android:name
-		ADDED from [com.google.android.gms:play-services-base:16.0.1] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/d6be980e7b770a6edc686738a1941073/jetified-play-services-base-16.0.1/AndroidManifest.xml:24:13-79
+		ADDED from [com.google.android.gms:play-services-base:16.0.1] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/f01b0494439234502b9be6f1abe4130c/jetified-play-services-base-16.0.1/AndroidManifest.xml:24:13-79
 meta-data#com.google.android.gms.version
-ADDED from [com.google.android.gms:play-services-basement:16.0.1] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/8a5f2b3ec34331b23e4a4e981a2cc798/jetified-play-services-basement-16.0.1/AndroidManifest.xml:23:9-25:69
+ADDED from [com.google.android.gms:play-services-basement:16.0.1] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/38c4257a3b2e477fd605651527931c75/jetified-play-services-basement-16.0.1/AndroidManifest.xml:23:9-25:69
 	android:value
-		ADDED from [com.google.android.gms:play-services-basement:16.0.1] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/8a5f2b3ec34331b23e4a4e981a2cc798/jetified-play-services-basement-16.0.1/AndroidManifest.xml:25:13-66
+		ADDED from [com.google.android.gms:play-services-basement:16.0.1] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/38c4257a3b2e477fd605651527931c75/jetified-play-services-basement-16.0.1/AndroidManifest.xml:25:13-66
 	android:name
-		ADDED from [com.google.android.gms:play-services-basement:16.0.1] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/8a5f2b3ec34331b23e4a4e981a2cc798/jetified-play-services-basement-16.0.1/AndroidManifest.xml:24:13-58
+		ADDED from [com.google.android.gms:play-services-basement:16.0.1] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/38c4257a3b2e477fd605651527931c75/jetified-play-services-basement-16.0.1/AndroidManifest.xml:24:13-58
 service#androidx.room.MultiInstanceInvalidationService
-ADDED from [androidx.room:room-runtime:2.1.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/1f9600edb87ec7249ed2f749439da712/room-runtime-2.1.0/AndroidManifest.xml:25:9-27:40
+ADDED from [androidx.room:room-runtime:2.1.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/5f7132f69994fe4e2c8f322e81b3f8c9/room-runtime-2.1.0/AndroidManifest.xml:25:9-27:40
 	android:exported
-		ADDED from [androidx.room:room-runtime:2.1.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/1f9600edb87ec7249ed2f749439da712/room-runtime-2.1.0/AndroidManifest.xml:27:13-37
+		ADDED from [androidx.room:room-runtime:2.1.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/5f7132f69994fe4e2c8f322e81b3f8c9/room-runtime-2.1.0/AndroidManifest.xml:27:13-37
 	android:name
-		ADDED from [androidx.room:room-runtime:2.1.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/1f9600edb87ec7249ed2f749439da712/room-runtime-2.1.0/AndroidManifest.xml:26:13-74
+		ADDED from [androidx.room:room-runtime:2.1.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/5f7132f69994fe4e2c8f322e81b3f8c9/room-runtime-2.1.0/AndroidManifest.xml:26:13-74
 uses-permission#com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE
-ADDED from [com.android.installreferrer:installreferrer:1.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/410b2b76bc47bd0d5aa6762f530594dc/jetified-installreferrer-1.0/AndroidManifest.xml:9:5-110
+ADDED from [com.android.installreferrer:installreferrer:1.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/048cf0277286c5a5577ab59cd6ee29ad/jetified-installreferrer-1.0/AndroidManifest.xml:9:5-110
 	android:name
-		ADDED from [com.android.installreferrer:installreferrer:1.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/410b2b76bc47bd0d5aa6762f530594dc/jetified-installreferrer-1.0/AndroidManifest.xml:9:22-107
+		ADDED from [com.android.installreferrer:installreferrer:1.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/048cf0277286c5a5577ab59cd6ee29ad/jetified-installreferrer-1.0/AndroidManifest.xml:9:22-107
 uses-permission#com.google.android.providers.gsf.permission.READ_GSERVICES
-ADDED from [io.nlopez.smartlocation:library:3.2.11] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/0d09867a005e6e77dffb77a33685ca9f/jetified-library-3.2.11/AndroidManifest.xml:15:5-98
+ADDED from [io.nlopez.smartlocation:library:3.2.11] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/981e67a09a7b77c9c2c9c0fa55a61794/jetified-library-3.2.11/AndroidManifest.xml:15:5-98
 	android:name
-		ADDED from [io.nlopez.smartlocation:library:3.2.11] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/0d09867a005e6e77dffb77a33685ca9f/jetified-library-3.2.11/AndroidManifest.xml:15:22-95
+		ADDED from [io.nlopez.smartlocation:library:3.2.11] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/981e67a09a7b77c9c2c9c0fa55a61794/jetified-library-3.2.11/AndroidManifest.xml:15:22-95
 uses-permission#com.google.android.gms.permission.ACTIVITY_RECOGNITION
-ADDED from [io.nlopez.smartlocation:library:3.2.11] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/0d09867a005e6e77dffb77a33685ca9f/jetified-library-3.2.11/AndroidManifest.xml:16:5-94
+ADDED from [io.nlopez.smartlocation:library:3.2.11] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/981e67a09a7b77c9c2c9c0fa55a61794/jetified-library-3.2.11/AndroidManifest.xml:16:5-94
 	android:name
-		ADDED from [io.nlopez.smartlocation:library:3.2.11] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/0d09867a005e6e77dffb77a33685ca9f/jetified-library-3.2.11/AndroidManifest.xml:16:22-91
+		ADDED from [io.nlopez.smartlocation:library:3.2.11] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/981e67a09a7b77c9c2c9c0fa55a61794/jetified-library-3.2.11/AndroidManifest.xml:16:22-91
 service#io.nlopez.smartlocation.activity.providers.ActivityGooglePlayServicesProvider$ActivityRecognitionService
-ADDED from [io.nlopez.smartlocation:library:3.2.11] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/0d09867a005e6e77dffb77a33685ca9f/jetified-library-3.2.11/AndroidManifest.xml:19:9-21:40
+ADDED from [io.nlopez.smartlocation:library:3.2.11] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/981e67a09a7b77c9c2c9c0fa55a61794/jetified-library-3.2.11/AndroidManifest.xml:19:9-21:40
 	android:exported
-		ADDED from [io.nlopez.smartlocation:library:3.2.11] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/0d09867a005e6e77dffb77a33685ca9f/jetified-library-3.2.11/AndroidManifest.xml:21:13-37
+		ADDED from [io.nlopez.smartlocation:library:3.2.11] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/981e67a09a7b77c9c2c9c0fa55a61794/jetified-library-3.2.11/AndroidManifest.xml:21:13-37
 	android:name
-		ADDED from [io.nlopez.smartlocation:library:3.2.11] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/0d09867a005e6e77dffb77a33685ca9f/jetified-library-3.2.11/AndroidManifest.xml:20:13-132
+		ADDED from [io.nlopez.smartlocation:library:3.2.11] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/981e67a09a7b77c9c2c9c0fa55a61794/jetified-library-3.2.11/AndroidManifest.xml:20:13-132
 service#io.nlopez.smartlocation.geofencing.providers.GeofencingGooglePlayServicesProvider$GeofencingService
-ADDED from [io.nlopez.smartlocation:library:3.2.11] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/0d09867a005e6e77dffb77a33685ca9f/jetified-library-3.2.11/AndroidManifest.xml:22:9-24:40
+ADDED from [io.nlopez.smartlocation:library:3.2.11] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/981e67a09a7b77c9c2c9c0fa55a61794/jetified-library-3.2.11/AndroidManifest.xml:22:9-24:40
 	android:exported
-		ADDED from [io.nlopez.smartlocation:library:3.2.11] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/0d09867a005e6e77dffb77a33685ca9f/jetified-library-3.2.11/AndroidManifest.xml:24:13-37
+		ADDED from [io.nlopez.smartlocation:library:3.2.11] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/981e67a09a7b77c9c2c9c0fa55a61794/jetified-library-3.2.11/AndroidManifest.xml:24:13-37
 	android:name
-		ADDED from [io.nlopez.smartlocation:library:3.2.11] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/0d09867a005e6e77dffb77a33685ca9f/jetified-library-3.2.11/AndroidManifest.xml:23:13-127
+		ADDED from [io.nlopez.smartlocation:library:3.2.11] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/981e67a09a7b77c9c2c9c0fa55a61794/jetified-library-3.2.11/AndroidManifest.xml:23:13-127
 service#io.nlopez.smartlocation.geocoding.providers.AndroidGeocodingProvider$AndroidGeocodingService
-ADDED from [io.nlopez.smartlocation:library:3.2.11] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/0d09867a005e6e77dffb77a33685ca9f/jetified-library-3.2.11/AndroidManifest.xml:25:9-27:40
+ADDED from [io.nlopez.smartlocation:library:3.2.11] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/981e67a09a7b77c9c2c9c0fa55a61794/jetified-library-3.2.11/AndroidManifest.xml:25:9-27:40
 	android:exported
-		ADDED from [io.nlopez.smartlocation:library:3.2.11] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/0d09867a005e6e77dffb77a33685ca9f/jetified-library-3.2.11/AndroidManifest.xml:27:13-37
+		ADDED from [io.nlopez.smartlocation:library:3.2.11] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/981e67a09a7b77c9c2c9c0fa55a61794/jetified-library-3.2.11/AndroidManifest.xml:27:13-37
 	android:name
-		ADDED from [io.nlopez.smartlocation:library:3.2.11] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/0d09867a005e6e77dffb77a33685ca9f/jetified-library-3.2.11/AndroidManifest.xml:26:13-120
+		ADDED from [io.nlopez.smartlocation:library:3.2.11] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/981e67a09a7b77c9c2c9c0fa55a61794/jetified-library-3.2.11/AndroidManifest.xml:26:13-120

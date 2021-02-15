@@ -75,20 +75,20 @@
 32-->/home/conorbegley/code/Uni/NarrateMyWay/app/android/app/src/main/AndroidManifest.xml:23:3-79
 32-->/home/conorbegley/code/Uni/NarrateMyWay/app/android/app/src/main/AndroidManifest.xml:23:20-77
 33    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
-33-->[com.facebook.flipper:flipper:0.54.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/75238863e6b45aca4b9c498f6fefb9f4/flipper-0.54.0/AndroidManifest.xml:16:5-76
-33-->[com.facebook.flipper:flipper:0.54.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/75238863e6b45aca4b9c498f6fefb9f4/flipper-0.54.0/AndroidManifest.xml:16:22-73
+33-->[com.facebook.flipper:flipper:0.54.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/1c7787ec82631e0394972c76bdabe608/flipper-0.54.0/AndroidManifest.xml:16:5-76
+33-->[com.facebook.flipper:flipper:0.54.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/1c7787ec82631e0394972c76bdabe608/flipper-0.54.0/AndroidManifest.xml:16:22-73
 34    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
 34-->[:expo-location] /home/conorbegley/code/Uni/NarrateMyWay/app/node_modules/expo-location/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:13:5-77
 34-->[:expo-location] /home/conorbegley/code/Uni/NarrateMyWay/app/node_modules/expo-location/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:13:22-74
 35    <uses-permission android:name="com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE" />
-35-->[com.android.installreferrer:installreferrer:1.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/410b2b76bc47bd0d5aa6762f530594dc/jetified-installreferrer-1.0/AndroidManifest.xml:9:5-110
-35-->[com.android.installreferrer:installreferrer:1.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/410b2b76bc47bd0d5aa6762f530594dc/jetified-installreferrer-1.0/AndroidManifest.xml:9:22-107
+35-->[com.android.installreferrer:installreferrer:1.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/048cf0277286c5a5577ab59cd6ee29ad/jetified-installreferrer-1.0/AndroidManifest.xml:9:5-110
+35-->[com.android.installreferrer:installreferrer:1.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/048cf0277286c5a5577ab59cd6ee29ad/jetified-installreferrer-1.0/AndroidManifest.xml:9:22-107
 36    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
-36-->[io.nlopez.smartlocation:library:3.2.11] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/0d09867a005e6e77dffb77a33685ca9f/jetified-library-3.2.11/AndroidManifest.xml:15:5-98
-36-->[io.nlopez.smartlocation:library:3.2.11] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/0d09867a005e6e77dffb77a33685ca9f/jetified-library-3.2.11/AndroidManifest.xml:15:22-95
+36-->[io.nlopez.smartlocation:library:3.2.11] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/981e67a09a7b77c9c2c9c0fa55a61794/jetified-library-3.2.11/AndroidManifest.xml:15:5-98
+36-->[io.nlopez.smartlocation:library:3.2.11] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/981e67a09a7b77c9c2c9c0fa55a61794/jetified-library-3.2.11/AndroidManifest.xml:15:22-95
 37    <uses-permission android:name="com.google.android.gms.permission.ACTIVITY_RECOGNITION" />
-37-->[io.nlopez.smartlocation:library:3.2.11] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/0d09867a005e6e77dffb77a33685ca9f/jetified-library-3.2.11/AndroidManifest.xml:16:5-94
-37-->[io.nlopez.smartlocation:library:3.2.11] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/0d09867a005e6e77dffb77a33685ca9f/jetified-library-3.2.11/AndroidManifest.xml:16:22-91
+37-->[io.nlopez.smartlocation:library:3.2.11] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/981e67a09a7b77c9c2c9c0fa55a61794/jetified-library-3.2.11/AndroidManifest.xml:16:5-94
+37-->[io.nlopez.smartlocation:library:3.2.11] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/981e67a09a7b77c9c2c9c0fa55a61794/jetified-library-3.2.11/AndroidManifest.xml:16:22-91
 38
 39    <application
 39-->/home/conorbegley/code/Uni/NarrateMyWay/app/android/app/src/main/AndroidManifest.xml:24:3-43:17
@@ -97,7 +97,7 @@
 41        android:allowBackup="true"
 41-->/home/conorbegley/code/Uni/NarrateMyWay/app/android/app/src/main/AndroidManifest.xml:24:162-188
 42        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
-42-->[androidx.core:core:1.3.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/e1f0764c0505c94615b22f37f2526db5/core-1.3.0/AndroidManifest.xml:24:18-86
+42-->[androidx.core:core:1.3.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/8052cb9f2b6802b798b88e17408d1bd7/core-1.3.0/AndroidManifest.xml:24:18-86
 43        android:debuggable="true"
 44        android:icon="@mipmap/ic_launcher"
 44-->/home/conorbegley/code/Uni/NarrateMyWay/app/android/app/src/main/AndroidManifest.xml:24:81-115
@@ -218,45 +218,45 @@
 103-->[:expo-location] /home/conorbegley/code/Uni/NarrateMyWay/app/node_modules/expo-location/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:18:13-37
 104
 105        <activity
-105-->[com.google.android.gms:play-services-base:16.0.1] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/d6be980e7b770a6edc686738a1941073/jetified-play-services-base-16.0.1/AndroidManifest.xml:23:9-26:75
+105-->[com.google.android.gms:play-services-base:16.0.1] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/f01b0494439234502b9be6f1abe4130c/jetified-play-services-base-16.0.1/AndroidManifest.xml:23:9-26:75
 106            android:name="com.google.android.gms.common.api.GoogleApiActivity"
-106-->[com.google.android.gms:play-services-base:16.0.1] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/d6be980e7b770a6edc686738a1941073/jetified-play-services-base-16.0.1/AndroidManifest.xml:24:13-79
+106-->[com.google.android.gms:play-services-base:16.0.1] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/f01b0494439234502b9be6f1abe4130c/jetified-play-services-base-16.0.1/AndroidManifest.xml:24:13-79
 107            android:exported="false"
-107-->[com.google.android.gms:play-services-base:16.0.1] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/d6be980e7b770a6edc686738a1941073/jetified-play-services-base-16.0.1/AndroidManifest.xml:25:13-37
+107-->[com.google.android.gms:play-services-base:16.0.1] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/f01b0494439234502b9be6f1abe4130c/jetified-play-services-base-16.0.1/AndroidManifest.xml:25:13-37
 108            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
-108-->[com.google.android.gms:play-services-base:16.0.1] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/d6be980e7b770a6edc686738a1941073/jetified-play-services-base-16.0.1/AndroidManifest.xml:26:13-72
+108-->[com.google.android.gms:play-services-base:16.0.1] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/f01b0494439234502b9be6f1abe4130c/jetified-play-services-base-16.0.1/AndroidManifest.xml:26:13-72
 109
 110        <meta-data
-110-->[com.google.android.gms:play-services-basement:16.0.1] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/8a5f2b3ec34331b23e4a4e981a2cc798/jetified-play-services-basement-16.0.1/AndroidManifest.xml:23:9-25:69
+110-->[com.google.android.gms:play-services-basement:16.0.1] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/38c4257a3b2e477fd605651527931c75/jetified-play-services-basement-16.0.1/AndroidManifest.xml:23:9-25:69
 111            android:name="com.google.android.gms.version"
-111-->[com.google.android.gms:play-services-basement:16.0.1] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/8a5f2b3ec34331b23e4a4e981a2cc798/jetified-play-services-basement-16.0.1/AndroidManifest.xml:24:13-58
+111-->[com.google.android.gms:play-services-basement:16.0.1] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/38c4257a3b2e477fd605651527931c75/jetified-play-services-basement-16.0.1/AndroidManifest.xml:24:13-58
 112            android:value="@integer/google_play_services_version" />
-112-->[com.google.android.gms:play-services-basement:16.0.1] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/8a5f2b3ec34331b23e4a4e981a2cc798/jetified-play-services-basement-16.0.1/AndroidManifest.xml:25:13-66
+112-->[com.google.android.gms:play-services-basement:16.0.1] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/38c4257a3b2e477fd605651527931c75/jetified-play-services-basement-16.0.1/AndroidManifest.xml:25:13-66
 113
 114        <service
-114-->[androidx.room:room-runtime:2.1.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/1f9600edb87ec7249ed2f749439da712/room-runtime-2.1.0/AndroidManifest.xml:25:9-27:40
+114-->[androidx.room:room-runtime:2.1.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/5f7132f69994fe4e2c8f322e81b3f8c9/room-runtime-2.1.0/AndroidManifest.xml:25:9-27:40
 115            android:name="androidx.room.MultiInstanceInvalidationService"
-115-->[androidx.room:room-runtime:2.1.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/1f9600edb87ec7249ed2f749439da712/room-runtime-2.1.0/AndroidManifest.xml:26:13-74
+115-->[androidx.room:room-runtime:2.1.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/5f7132f69994fe4e2c8f322e81b3f8c9/room-runtime-2.1.0/AndroidManifest.xml:26:13-74
 116            android:exported="false" />
-116-->[androidx.room:room-runtime:2.1.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/1f9600edb87ec7249ed2f749439da712/room-runtime-2.1.0/AndroidManifest.xml:27:13-37
+116-->[androidx.room:room-runtime:2.1.0] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/5f7132f69994fe4e2c8f322e81b3f8c9/room-runtime-2.1.0/AndroidManifest.xml:27:13-37
 117        <service
-117-->[io.nlopez.smartlocation:library:3.2.11] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/0d09867a005e6e77dffb77a33685ca9f/jetified-library-3.2.11/AndroidManifest.xml:19:9-21:40
+117-->[io.nlopez.smartlocation:library:3.2.11] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/981e67a09a7b77c9c2c9c0fa55a61794/jetified-library-3.2.11/AndroidManifest.xml:19:9-21:40
 118            android:name="io.nlopez.smartlocation.activity.providers.ActivityGooglePlayServicesProvider$ActivityRecognitionService"
-118-->[io.nlopez.smartlocation:library:3.2.11] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/0d09867a005e6e77dffb77a33685ca9f/jetified-library-3.2.11/AndroidManifest.xml:20:13-132
+118-->[io.nlopez.smartlocation:library:3.2.11] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/981e67a09a7b77c9c2c9c0fa55a61794/jetified-library-3.2.11/AndroidManifest.xml:20:13-132
 119            android:exported="false" />
-119-->[io.nlopez.smartlocation:library:3.2.11] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/0d09867a005e6e77dffb77a33685ca9f/jetified-library-3.2.11/AndroidManifest.xml:21:13-37
+119-->[io.nlopez.smartlocation:library:3.2.11] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/981e67a09a7b77c9c2c9c0fa55a61794/jetified-library-3.2.11/AndroidManifest.xml:21:13-37
 120        <service
-120-->[io.nlopez.smartlocation:library:3.2.11] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/0d09867a005e6e77dffb77a33685ca9f/jetified-library-3.2.11/AndroidManifest.xml:22:9-24:40
+120-->[io.nlopez.smartlocation:library:3.2.11] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/981e67a09a7b77c9c2c9c0fa55a61794/jetified-library-3.2.11/AndroidManifest.xml:22:9-24:40
 121            android:name="io.nlopez.smartlocation.geofencing.providers.GeofencingGooglePlayServicesProvider$GeofencingService"
-121-->[io.nlopez.smartlocation:library:3.2.11] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/0d09867a005e6e77dffb77a33685ca9f/jetified-library-3.2.11/AndroidManifest.xml:23:13-127
+121-->[io.nlopez.smartlocation:library:3.2.11] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/981e67a09a7b77c9c2c9c0fa55a61794/jetified-library-3.2.11/AndroidManifest.xml:23:13-127
 122            android:exported="false" />
-122-->[io.nlopez.smartlocation:library:3.2.11] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/0d09867a005e6e77dffb77a33685ca9f/jetified-library-3.2.11/AndroidManifest.xml:24:13-37
+122-->[io.nlopez.smartlocation:library:3.2.11] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/981e67a09a7b77c9c2c9c0fa55a61794/jetified-library-3.2.11/AndroidManifest.xml:24:13-37
 123        <service
-123-->[io.nlopez.smartlocation:library:3.2.11] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/0d09867a005e6e77dffb77a33685ca9f/jetified-library-3.2.11/AndroidManifest.xml:25:9-27:40
+123-->[io.nlopez.smartlocation:library:3.2.11] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/981e67a09a7b77c9c2c9c0fa55a61794/jetified-library-3.2.11/AndroidManifest.xml:25:9-27:40
 124            android:name="io.nlopez.smartlocation.geocoding.providers.AndroidGeocodingProvider$AndroidGeocodingService"
-124-->[io.nlopez.smartlocation:library:3.2.11] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/0d09867a005e6e77dffb77a33685ca9f/jetified-library-3.2.11/AndroidManifest.xml:26:13-120
+124-->[io.nlopez.smartlocation:library:3.2.11] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/981e67a09a7b77c9c2c9c0fa55a61794/jetified-library-3.2.11/AndroidManifest.xml:26:13-120
 125            android:exported="false" />
-125-->[io.nlopez.smartlocation:library:3.2.11] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/0d09867a005e6e77dffb77a33685ca9f/jetified-library-3.2.11/AndroidManifest.xml:27:13-37
+125-->[io.nlopez.smartlocation:library:3.2.11] /home/conorbegley/.gradle/caches/transforms-2/files-2.1/981e67a09a7b77c9c2c9c0fa55a61794/jetified-library-3.2.11/AndroidManifest.xml:27:13-37
 126    </application>
 127
 128</manifest>
