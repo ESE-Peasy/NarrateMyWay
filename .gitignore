@@ -144,6 +144,7 @@ app/packages/rn-tester/android/app/gradle/
 app/packages/rn-tester/android/app/gradlew
 app/packages/rn-tester/android/app/gradlew.bat
 app/android/build/
+app/android/app/build/
 #app/android/gradle/
 #app/android/gradlew
 #app/android/gradlew.bat
@@ -180,6 +181,7 @@ app/ios/Exponent/Supporting/Info.plist.json
 app/android/expoview/src/main/java/host/exp/exponent/generated/ExponentBuildConstants.java
 app/android/app/src/androidTest/java/host/exp/exponent/generated/TestBuildConstants.java
 .kernel-ngrok-url
+app/ios/Pods/
 
 # Android
 *.apk
