@@ -30,10 +30,10 @@ Follow the instructions [here](https://reactnative.dev/docs/environment-setup) f
    cd app
    npm install
    ```
-1. Install various dependencies for your OS system and android/Iosrun  [here](https://reactnative.dev/docs/environment-setup)
+1. Install various dependencies for your OS system and Android/iOS [here](https://reactnative.dev/docs/environment-setup)
 
 ### Linux android setup
-Steps take from [here](https://reactnative.dev/docs/environment-setup)
+Following steps from [here](https://reactnative.dev/docs/environment-setup)
 
 Install Android studio via snap:
 ```sh
