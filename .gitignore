@@ -85,7 +85,6 @@ node_modules
 
 # Root dir shouldn't have Xcode project
 /*.xcodeproj
-:wq
 # ReactCommon subdir shouldn't have Xcode project
 /ReactCommon/**/*.xcodeproj
 /packages/rn-tester/build
