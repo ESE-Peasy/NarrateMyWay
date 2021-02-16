@@ -34,7 +34,8 @@ Follow the instructions [here](https://reactnative.dev/docs/environment-setup) f
 
 ### Linux android setup
 Steps take from [here](https://reactnative.dev/docs/environment-setup)
-Installed Android studio via snap:
+
+Install Android studio via snap:
 ```sh
 sudo snap install android-studio --classic
 ```
