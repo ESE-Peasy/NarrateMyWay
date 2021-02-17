@@ -5,8 +5,8 @@ import * as React from 'react';
 
 import DefaultColors from '../constants/DefaultColors';
 import MainScreen from '../screens/MainScreen';
-import TabTwoScreen from '../screens/TabTwoScreen';
-import { BottomTabParamList, MainParamList, TabTwoParamList } from '../types';
+import ScanningScreen from '../screens/ScanningScreen';
+import { BottomTabParamList, MainParamList, ScanningParamList } from '../types';
 
 const BottomTab = createBottomTabNavigator<BottomTabParamList>();
 
@@ -29,8 +29,8 @@ export default function BottomTabNavigator() {
         }}
       />
       <BottomTab.Screen
-        name="TabTwo"
-        component={TabTwoNavigator}
+        name="Scanning"
+        component={ScanningNavigator}
         options={{
           tabBarIcon: ({ color }) => (
             <TabBarIcon name="ios-code" color={color} />
@@ -66,16 +66,16 @@ function MainNavigator() {
   );
 }
 
-const TabTwoStack = createStackNavigator<TabTwoParamList>();
+const ScanningStack = createStackNavigator<ScanningParamList>();
 
-function TabTwoNavigator() {
+function ScanningNavigator() {
   return (
-    <TabTwoStack.Navigator>
-      <TabTwoStack.Screen
-        name="TabTwoScreen"
-        component={TabTwoScreen}
+    <ScanningStack.Navigator>
+      <ScanningStack.Screen
+        name="ScanningScreen"
+        component={ScanningScreen}
         options={{ headerTitle: 'Tab Two Title' }}
       />
-    </TabTwoStack.Navigator>
+    </ScanningStack.Navigator>
   );
 }
