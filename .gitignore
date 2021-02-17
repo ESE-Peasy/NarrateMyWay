@@ -193,3 +193,6 @@ app/android/captures
 app/android/expoview/libs/ReactAndroid-temp
 app/android/versioned-react-native/ReactAndroid
 ReactAndroid-temp.aar
+
+# Ignore snapshots for Jest tests
+*.js.snap
