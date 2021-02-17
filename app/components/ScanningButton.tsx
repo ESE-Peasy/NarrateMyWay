@@ -13,7 +13,7 @@ class ScanningButton extends Component {
         style={styles.buttonContainer}
         android_ripple={{ color: '#fff' }}
         onPress={() => {
-          Speech.speak('Currently scanning for beacons');
+          Speech.speak('Scanning for beacons');
         }}
         accessible={true}
         accessibilityLabel={this.props.accessibilityLabel}

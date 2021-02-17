@@ -11,7 +11,7 @@ export default function ScanningScreen({
 }: StackScreenProps<RootStackParamList, 'Scanning'>) {
   return (
     <View style={styles.container}>
-      <ScanningButton accessibilityLabel="Scanning" />
+      <ScanningButton accessibilityLabel="Currently scanning for beacons near you" />
       <Button
         // TODO: Remove this when we navigate based on scanning state
         title="Go to Main Screen"
