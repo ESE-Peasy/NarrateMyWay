@@ -85,7 +85,6 @@ node_modules
 
 # Root dir shouldn't have Xcode project
 /*.xcodeproj
-
 # ReactCommon subdir shouldn't have Xcode project
 /ReactCommon/**/*.xcodeproj
 /packages/rn-tester/build
@@ -133,3 +132,62 @@ web-build/
 
 # macOS
 .DS_Store
+
+#expo eject stuff
+app/build/
+app/packages/react-native-codegen/android/build/
+app/packages/react-native-codegen/android/gradlePlugin-build/gradlePlugin/build
+app/packages/rn-tester/android/app/.cxx/
+app/packages/rn-tester/android/app/build/
+app/packages/rn-tester/android/app/gradle/
+app/packages/rn-tester/android/app/gradlew
+app/packages/rn-tester/android/app/gradlew.bat
+app/android/build/
+app/android/app/build/
+#app/android/gradle/
+#app/android/gradlew
+#app/android/gradlew.bat
+.expo/
+.expo-shared/
+
+#app/android/app/src/main/AndroidManifest.xml
+app/android/app/google-services.json
+app/android/expoview/src/main/java/host/exp/exponent/generated/ExponentKeys.java
+app/apps/bare-expo/android/app/google-services.json
+app/apps/bare-expo/ios/BareExpo/GoogleService-Info.plist
+app/ios/Exponent/Generated/EXKeys.h
+app/ios/ExponentIntegrationTests/EXTestEnvironment.plist
+app/exponent-view-template/ios/Podfile
+
+# Expo web env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+apps/bare-expo/deploy-url.txt
+
+app/packages/**/*.xcframework
+app/packages/**/*.spec.json
+app/packages/**/Info-generated.plist
+
+# Dynamic Macros
+app/ios/Exponent/Supporting/EXBuildConstants.plist.bak
+app/ios/Exponent/Supporting/EXBuildConstants.plist.json
+app/ios/Exponent/Supporting/EXBuildConstants.plist
+app/ios/Exponent/Supporting/GoogleService-Info.plist
+app/ios/Exponent/Supporting/Info.plist.bak
+app/ios/Exponent/Supporting/Info.plist.json
+app/android/expoview/src/main/java/host/exp/exponent/generated/ExponentBuildConstants.java
+app/android/app/src/androidTest/java/host/exp/exponent/generated/TestBuildConstants.java
+.kernel-ngrok-url
+app/ios/Pods/
+
+# Android
+*.apk
+*.hprof
+app/android/**/build
+app/android/**/local.properties
+app/android/captures
+app/android/expoview/libs/ReactAndroid-temp
+app/android/versioned-react-native/ReactAndroid
+ReactAndroid-temp.aar
