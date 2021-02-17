@@ -1,12 +1,16 @@
+import { StackScreenProps } from '@react-navigation/stack';
 import * as React from 'react';
-import { StyleSheet } from 'react-native';
+import { Button, StyleSheet } from 'react-native';
 import BeaconInfo from '../components/BeaconInfo';
 import LargeButton from '../components/LargeButton';
 import { HorizontalSeparator } from '../components/Separators';
 
 import { View } from '../components/Themed';
+import { RootStackParamList } from '../types';
 
-export default function MainScreen() {
+export default function MainScreen({
+  navigation
+}: StackScreenProps<RootStackParamList, 'Main'>) {
   return (
     <View style={styles.container}>
       <LargeButton accessibilityLabel="Tap here to repeat the previous audio output">
@@ -15,6 +19,10 @@ export default function MainScreen() {
       <HorizontalSeparator />
       <BeaconInfo type="Point of Interest " place="Cafe " />
       <HorizontalSeparator />
+      <Button
+        title="Go to Main"
+        onPress={() => navigation.replace('Scanning')}
+      ></Button>
       <LargeButton accessibilityLabel="Tap here for more information">
         Tap for more info
       </LargeButton>

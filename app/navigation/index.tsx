@@ -4,10 +4,10 @@ import * as React from 'react';
 import { ColorSchemeName } from 'react-native';
 import DefaultColors from '../constants/DefaultColors';
 
-import NotFoundScreen from '../screens/NotFoundScreen';
+import MainScreen from '../screens/MainScreen';
 import { RootStackParamList } from '../types';
-import BottomTabNavigator from './BottomTabNavigator';
 import LinkingConfiguration from './LinkingConfiguration';
+import ScanningScreen from '../screens/ScanningScreen';
 
 // If you are not familiar with React Navigation, we recommend going through the
 // "Fundamentals" guide: https://reactnavigation.org/docs/getting-started
@@ -32,12 +32,36 @@ const Stack = createStackNavigator<RootStackParamList>();
 
 function RootNavigator() {
   return (
-    <Stack.Navigator screenOptions={{ headerShown: false }}>
-      <Stack.Screen name="Root" component={BottomTabNavigator} />
+    <Stack.Navigator
+      screenOptions={{ headerShown: true }}
+      headerMode="float"
+      initialRouteName="Scanning"
+    >
       <Stack.Screen
-        name="NotFound"
-        component={NotFoundScreen}
-        options={{ title: 'Oops!' }}
+        name="Main"
+        component={MainScreen}
+        options={{
+          title: 'Narrate My Way',
+          headerTitleAlign: 'center',
+          // headerTintColor: '#fff',
+          headerTitleStyle: {
+            fontWeight: 'bold',
+            textTransform: 'uppercase'
+          }
+        }}
+      />
+      <Stack.Screen
+        name="Scanning"
+        component={ScanningScreen}
+        options={{
+          title: 'Narrate My Way',
+          headerTitleAlign: 'center',
+          // headerTintColor: '#fff',
+          headerTitleStyle: {
+            fontWeight: 'bold',
+            textTransform: 'uppercase'
+          }
+        }}
       />
     </Stack.Navigator>
   );
