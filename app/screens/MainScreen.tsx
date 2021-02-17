@@ -20,7 +20,8 @@ export default function MainScreen({
       <BeaconInfo type="Point of Interest " place="Cafe " />
       <HorizontalSeparator />
       <Button
-        title="Go to Main"
+        // TODO: Remove this when we navigate based on scanning state
+        title="Go to Scanning Screen"
         onPress={() => navigation.replace('Scanning')}
       ></Button>
       <LargeButton accessibilityLabel="Tap here for more information">

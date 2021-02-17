@@ -13,7 +13,8 @@ export default function ScanningScreen({
     <View style={styles.container}>
       <ScanningButton accessibilityLabel="Scanning" />
       <Button
-        title="Go to Main"
+        // TODO: Remove this when we navigate based on scanning state
+        title="Go to Main Screen"
         onPress={() => navigation.replace('Main')}
       ></Button>
     </View>
