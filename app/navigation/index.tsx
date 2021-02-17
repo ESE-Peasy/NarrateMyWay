@@ -9,6 +9,8 @@ import { RootStackParamList } from '../types';
 import LinkingConfiguration from './LinkingConfiguration';
 import ScanningScreen from '../screens/ScanningScreen';
 
+import { Header } from '../constants/Header';
+
 // If you are not familiar with React Navigation, we recommend going through the
 // "Fundamentals" guide: https://reactnavigation.org/docs/getting-started
 export default function Navigation({
@@ -40,28 +42,12 @@ function RootNavigator() {
       <Stack.Screen
         name="Main"
         component={MainScreen}
-        options={{
-          title: 'Narrate My Way',
-          headerTitleAlign: 'center',
-          // headerTintColor: '#fff',
-          headerTitleStyle: {
-            fontWeight: 'bold',
-            textTransform: 'uppercase'
-          }
-        }}
+        options={Header.options}
       />
       <Stack.Screen
         name="Scanning"
         component={ScanningScreen}
-        options={{
-          title: 'Narrate My Way',
-          headerTitleAlign: 'center',
-          // headerTintColor: '#fff',
-          headerTitleStyle: {
-            fontWeight: 'bold',
-            textTransform: 'uppercase'
-          }
-        }}
+        options={Header.options}
       />
     </Stack.Navigator>
   );
