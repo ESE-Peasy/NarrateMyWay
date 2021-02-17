@@ -5,13 +5,14 @@ import { Pressable, Text } from 'react-native';
 import styles from './styles/ScanningButton.style';
 
 import * as Speech from 'expo-speech';
+import DefaultColors from '../constants/DefaultColors';
 
 class ScanningButton extends Component {
   render() {
     return (
       <Pressable
         style={styles.buttonContainer}
-        android_ripple={{ color: '#fff' }}
+        android_ripple={DefaultColors.rippleColor}
         onPress={() => {
           Speech.speak('Scanning for beacons');
         }}

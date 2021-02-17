@@ -8,6 +8,7 @@ import { View } from 'react-native';
 import { HorizontalSeparator, VerticalSeparator } from './Separators';
 
 import * as Speech from 'expo-speech';
+import DefaultColors from '../constants/DefaultColors';
 
 class BeaconInfo extends Component {
   render() {
@@ -28,7 +29,7 @@ class BeaconInfo extends Component {
 const TypeText = ({ title }) => (
   <Pressable
     style={styles.typeContainer}
-    android_ripple={{ color: '#fff' }}
+    android_ripple={DefaultColors.rippleColor}
     accessible={true}
     onPress={() => {
       Speech.speak('A point of interest has been located near you');
@@ -55,7 +56,7 @@ const PlaceIcon = () => (
 const PlaceText = ({ title }) => (
   <Pressable
     style={styles.placeTextContainer}
-    android_ripple={{ color: '#fff' }}
+    android_ripple={DefaultColors.rippleColor}
     accessible={true}
     onPress={() => {
       Speech.speak('A cafe has been located near you');
