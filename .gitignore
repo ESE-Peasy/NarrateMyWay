@@ -10,6 +10,7 @@ docs/_site/*
 !**/*.xcodeproj
 !**/*.pbxproj
 !**/*.xcworkspacedata
+!**/*.xcworkspace
 !**/*.xcsettings
 !**/*.xcscheme
 *.pbxuser
@@ -27,7 +28,8 @@ DerivedData
 *.hmap
 *.ipa
 *.xcuserstate
-project.xcworkspace
+NarrateMyWay.xcodeproj/
+NarrateMyWay.xcworkspace/
 
 # Gradle
 /build/
