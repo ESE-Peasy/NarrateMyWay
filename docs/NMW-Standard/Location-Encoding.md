@@ -37,7 +37,23 @@ A location code will consist of four fields.
 
 #### 1.2.
 
-The length of each field is fixed to one byte, so the location type encoding is four bytes long in total.
+The fields are of fixed sizes, but not all of the same size. The length of each field is as follows:
+
+- Top-level category\\
+    **Length**: 4 bits\\
+    **Max. categories**: 16
+- Subcategory\\
+    **Length**: 7 bits\\
+    **Max. categories**: 128
+- Subsubcategory\\
+    **Length**: 7 bits\\
+    **Max. categories**: 128
+- Customised location\\
+    **Length**: 14 bits\\
+    **Max. categories**: 16384
+
+
+The location type encoding is therefore four bytes long in total.
 
 #### 1.3
 
@@ -51,7 +67,7 @@ Only the first field must be defined in any implementation of the standard. It m
 
 #### 1.5.
 
-When written as text, each field will be separated by a dot/period (`.`). Each field is written as a number in the inclusive interval [0,255].
+When written as text, each field will be separated by a dot/period (`.`). Each field is written as a decimal number in the interval [0, Max. categories), where *max. categories* is defined in [§1.2](12).
 
 ### 2. Location Codes
 
@@ -111,6 +127,30 @@ Locations are defined as in the following table. Note that these are English tra
   <tr>
     <td markdown="span">**_2_**</td>
     <td markdown="span">**_Education_**</td>
+  </tr>
+  <tr>
+    <td markdown="span">**2.0**</td>
+    <td markdown="span">**Classrooms**</td>
+  </tr>
+  <tr>
+    <td markdown="span">2.0.0</td>
+    <td markdown="span">Classroom</td>
+  </tr>
+  <tr>
+    <td markdown="span">2.0.1</td>
+    <td markdown="span">Lecture theatre</td>
+  </tr>
+  <tr>
+    <td markdown="span">**2.1**</td>
+    <td markdown="span">**Practical rooms**</td>
+  </tr>
+  <tr>
+    <td markdown="span">2.1.0</td>
+    <td markdown="span">Workshop</td>
+  </tr>
+  <tr>
+    <td markdown="span">2.1.1</td>
+    <td markdown="span">Laboratory</td>
   </tr>
   <tr>
     <td markdown="span">**_3_**</td>
