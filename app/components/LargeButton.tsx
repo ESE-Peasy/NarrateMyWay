@@ -3,13 +3,14 @@ import { Component } from 'react';
 import * as React from 'react';
 import { Pressable, Text } from 'react-native';
 import styles from './styles/LargeButton.style';
+import DefaultColors from '../constants/DefaultColors';
 
 class LargeButton extends Component {
   render() {
     return (
       <Pressable
         style={styles.largeButtonContainer}
-        android_ripple={{ color: '#fff' }}
+        android_ripple={DefaultColors.rippleColor}
         onPress={() => {
           // Triggered when the user taps on the button
           console.log('Test onPress');

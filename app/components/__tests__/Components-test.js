@@ -2,8 +2,10 @@ import * as React from 'react';
 import renderer from 'react-test-renderer';
 import LargeButton from '../LargeButton';
 import BeaconInfo from '../BeaconInfo';
+import ScanningButton from '../ScanningButton';
 import { HorizontalSeparator, VerticalSeparator } from '../Separators';
 import MainScreen from '../../screens/MainScreen';
+import ScanningScreen from '../../screens/ScanningScreen';
 
 // LargeButton tests
 it(`LargeButton renders correctly`, () => {
@@ -55,7 +57,28 @@ it(`BeaconInfo type and place correct`, () => {
   expect(beaconInfo.props.place).toBe('Test Place');
 });
 
+// ScanningButton tests
+it(`ScanningButton renders correctly`, () => {
+  const tree = renderer
+    .create(<ScanningButton accessibilityLabel="Scanning" />)
+    .toJSON();
+  expect(tree).toMatchSnapshot();
+});
+
+it(`ScanningButton type and place correct`, () => {
+  const scanningButton = <ScanningButton accessibilityLabel="Scanning" />;
+
+  expect(scanningButton.props.accessibilityLabel).toBe('Scanning');
+});
+
+// MainScreen tests
 it('MainScreen renders correctly', () => {
   const tree = renderer.create(<MainScreen />).toJSON();
+  expect(tree).toMatchSnapshot();
+});
+
+// ScanningScreen tests
+it('ScanningScreen renders correctly', () => {
+  const tree = renderer.create(<ScanningScreen />).toJSON();
   expect(tree).toMatchSnapshot();
 });
