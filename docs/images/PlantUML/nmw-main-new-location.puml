@@ -1,4 +1,10 @@
-@startuml TestUML
+@startuml NMW-Main-New-Location
+skinparam titleBorderThickness 2
+skinparam titleBorderColor red
+skinparam titleFontStyle bold
+
+title NarrateMyWay - Detecting a New Location
+
 participant NewLocationBeacon
 actor user
 participant NarrateMyWay

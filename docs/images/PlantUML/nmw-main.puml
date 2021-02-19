@@ -1,12 +1,20 @@
-@startuml TestUML
+@startuml NMW-Main
+skinparam titleBorderThickness 2
+skinparam titleBorderColor red
+skinparam titleFontStyle bold
+
+title NarrateMyWay - Main Application
+
 participant BluetoothBeacon
-participant NewLocationBeacon
+participant ExpansionPackBeacon
 actor user
 participant NarrateMyWay
 participant GUI
 participant LocalStorage
 participant ExternalStorage
 
+
+== Initialisation == 
 
 user->NarrateMyWay : Open application
 activate NarrateMyWay
@@ -20,15 +28,16 @@ user <- NarrateMyWay : Audio: "Scanning for beacons near you"
 
 deactivate NarrateMyWay
 
+== Expansion Pack Beacon Detected ==
 
-NarrateMyWay <- NewLocationBeacon : "NewLocation" beacon detected within 10m
+NarrateMyWay <- ExpansionPackBeacon : "Expansion Pack" beacon detected within 10m
 activate NarrateMyWay
 
 NarrateMyWay -> GUI : Render "New Location Discovered" screen
 NarrateMyWay <-- GUI
 
 note over NarrateMyWay
-    Process new location detection (see other image)
+    Process new location detection (see 'Detecting a New Location')
 end note
 
 NarrateMyWay -> GUI : Render "Scanning" screen
@@ -38,6 +47,7 @@ user <- NarrateMyWay : Audio: "Scanning for beacons near you"
 
 deactivate NarrateMyWay
 
+== Location Beacon Detected ==
 
 user<-BluetoothBeacon : Beacon detected within 10m
 user<-BluetoothBeacon : Code: "nmw:1-0-1" & UUID: 98765
@@ -64,6 +74,8 @@ NarrateMyWay->GUI: Render "Main" screen using this information
 NarrateMyWay<--GUI
 user <- NarrateMyWay : Audio: Play required audio snippet
 ...Allow user to engage with app and repeat audio etc...
+
+== Beacon Out Of Range ==
 
 BluetoothBeacon->user : Beacon no longer detected
 note over NarrateMyWay

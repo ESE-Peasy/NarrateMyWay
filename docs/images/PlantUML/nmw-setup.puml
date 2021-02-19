@@ -1,4 +1,10 @@
 @startuml NMWSetup
+skinparam titleBorderThickness 2
+skinparam titleBorderColor red
+skinparam titleFontStyle bold
+
+title NarrateMyWay Setup Application
+
 participant Beacon
 actor user
 participant NMWSetupApp
@@ -12,7 +18,7 @@ NMWSetupApp <-- GUI
 
 NMWSetupApp -> GUI : User selects required beacon
 
-NMWSetupApp -> Beacon : Determine UUID of chosen beacon
+NMWSetupApp -> Beacon : Get UUID of chosen beacon
 NMWSetupApp <-- Beacon
 
 NMWSetupApp -> GUI : Display setup screen with options to generate encoding
