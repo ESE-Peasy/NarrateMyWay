@@ -29,57 +29,83 @@ To summarise, the fundamental points of importance are:
 
 The locations should be encoded in a hierarchical manner, with each level being more specific than the last.
 
-An example location encoding could therefore be `1.42.0.0`.
-
 #### 1.1.
 
-A location code will consist of four fields.
+The location code is always presented in plaintext in a human-readable format and will consist of a `nmw:` label, followed by three fields, each separated by a dash (`-`) character.
+
+An example location encoding could therefore be `nmw:1-42-1`.
 
 #### 1.2.
 
-The fields are of fixed sizes, but not all of the same size. The length of each field is as follows:
+Each field consists of characters from zero to nine and *A* to *Z*. Any alphabetic characters in the location fields should be presented in upper-case form, although the standard is case-insensitive, so lower-case characters should not cause a failure.
+
+#### 1.3.
+
+Each field has a maximum character length that must not be exceeded, but leading zeros may be omitted. This means a field containing `001` is equivalent to a field containing `1`.
+
+The following character length limits apply to the fields:
 
 - Top-level category\\
-    **Length**: 4 bits\\
-    **Max. categories**: 16
+    **Length**: 3 characters\\
+    **Max. categories**: 46656
 - Subcategory\\
-    **Length**: 7 bits\\
-    **Max. categories**: 128
+    **Length**: 4 characters\\
+    **Max. categories**: 1679616
 - Subsubcategory\\
-    **Length**: 7 bits\\
-    **Max. categories**: 128
-- Customised location\\
-    **Length**: 14 bits\\
-    **Max. categories**: 16384
+    **Length**: 4 characters\\
+    **Max. categories**: 1679616
 
 
-The location type encoding is therefore four bytes long in total.
+The complete location code can therefore be up to 17 characters long.
 
-#### 1.3
+#### 1.4
 
-The first three fields are reserved by this standard, with the fourth field being unreserved. An organisation may release a customised mapping for codes in the fourth field. See [here (link TBC)]() for more information on how this works.
-
-_[§2.1](21) is an exception to this_
-
-#### 1.4.
-
-Only the first field must be defined in any implementation of the standard. It may be that in some languages or cultures it does not make sense to have a translation at all levels of the hierarchy, but any localisation/regionalisation of the system should have translations for the top-level field.
+The three location fields in the location code are defined by this standard and no other meanings should be associated with the location codes.
 
 #### 1.5.
 
-When written as text, each field will be separated by a dot/period (`.`). Each field is written as a decimal number in the interval [0, Max. categories), where *max. categories* is defined in [§1.2](12).
+Only the first field must be defined in any implementation of the standard. It may be that in some languages or cultures it does not make sense to have a translation at all levels of the hierarchy, but any localisation/regionalisation of the system should have translations for the top-level field.
 
-### 2. Location Codes
+If any level in the hierarchy is not to be defined this field should be set to `0`. A location code shall be read from left to right, where any fields to the right of a `0` are to be ignored. This means `nmw:1-0-0` and `nmw:1-0-5` have the same meaning, although the latter format is discouraged, because the meaning is not as clear.
 
-This section documents specific codes and their meanings.
+_See [§3.1](#31) for a description of what a top-level category of `0` means._
+
+### 2. Unique location identification
+
+The NMW standard allows for additional information to be supplied for locations. This is bound to a [Bluetooth UUID](https://www.bluetooth.com/specifications/assigned-numbers/) for unique identification of locations.
 
 #### 2.1.
 
-The top-level field code of zero is reserved for private usage. This allows a private network of beacons to be deployed that broadcast a code of `0.X.X.X`, where the meaning of fields is undefined in the standard and therefore not known by passers-by. This is the only case in which organisations may redefine any codes defined in this standard. It is not recommended for general usage as this reduces the effectiveness of the standard. It should only be used for private deployments where **all** potential users are able to download location code definitions for this custom deployment.
-
-_This is an exception to [§1.3](#13)_
+UUIDs must be transmitted independently of the location encoding described in [§1](#1).
 
 #### 2.2.
+
+Each location may have a UUID, but it does not need to have one for this standard.
+
+#### 2.3.
+
+Each location's UUID maps to information about that location. This consists of:
+
+| Location attribute | Required? | Description |
+|--------------------|-----------|-------------|
+| NMW location code  | Yes       | The location code according to this standard |
+| Name               | Yes       | A name for the location. This could be, for example the name of a business |
+| Description        | No        | An optional field that should only be used if the nature of the location is not clear from the name |
+| Website            | No        |This is optional and should only be present if the website is accessible for visually impaired users |
+
+#### 2.4.
+
+Audio description of a location based on looking up the location's UUID takes precedence of narration based on the location code. If required information is missing or there is no UUID for a location, the system should fall back to giving a generic narration for the location code.
+
+### 3. Location Codes
+
+This section documents specific codes and their meanings.
+
+#### 3.1.
+
+The top-level field code of zero is reserved for private usage. This allows a private network of beacons to be deployed that broadcast a code of `nmw:0-0-0`, where the meaning of sub/subsubcategory fields is undefined in the standard and therefore not known by passers-by. It is not recommended for general usage as this reduces the effectiveness of the standard. It should only be used for private deployments where **all** potential users are able to download location descriptions based on beacon UUIDs.
+
+#### 3.2.
 
 Incomplete
 {: .label .label-yellow}
@@ -101,64 +127,64 @@ Locations are defined as in the following table. Note that these are English tra
 
 <tbody>
   <tr>
-    <td markdown="span">**_1_**</td>
-    <td markdown="span">**_General navigation markers_**</td>
+    <td markdown="span" ><big style="font-size:120%">**1**</big>-0-0</td>
+    <td markdown="span">**General navigation markers**</td>
   </tr>
   <tr>
-    <td markdown="span">**1.0**</td>
+    <td markdown="span">**1-1**-0</td>
     <td markdown="span">**Warnings/dangerous area**</td>
   </tr>
   <tr>
-    <td markdown="span">1.0.0</td>
+    <td markdown="span">1-1-1</td>
     <td markdown="span">General caution/warning</td>
   </tr>
   <tr>
-    <td markdown="span">**1.1**</td>
+    <td markdown="span">**1-2**-0</td>
     <td markdown="span">**Information point**</td>
   </tr>
   <tr>
-    <td markdown="span">1.1.0</td>
+    <td markdown="span">1-2-1</td>
     <td markdown="span">Visual-only navigation sign</td>
   </tr>
   <tr>
-    <td markdown="span">1.1.1</td>
+    <td markdown="span">1-2-2</td>
     <td markdown="span">Audio-accessible information point</td>
   </tr>
   <tr>
-    <td markdown="span">**_2_**</td>
-    <td markdown="span">**_Education_**</td>
+    <td markdown="span"><big style="font-size:120%">**2**</big>-0-0</td>
+    <td markdown="span">**Education**</td>
   </tr>
   <tr>
-    <td markdown="span">**2.0**</td>
+    <td markdown="span">**2-1**-0</td>
     <td markdown="span">**Classrooms**</td>
   </tr>
   <tr>
-    <td markdown="span">2.0.0</td>
+    <td markdown="span">2-1-1</td>
     <td markdown="span">Classroom</td>
   </tr>
   <tr>
-    <td markdown="span">2.0.1</td>
+    <td markdown="span">2-1-1</td>
     <td markdown="span">Lecture theatre</td>
   </tr>
   <tr>
-    <td markdown="span">**2.1**</td>
+    <td markdown="span">**2-2**-0</td>
     <td markdown="span">**Practical rooms**</td>
   </tr>
   <tr>
-    <td markdown="span">2.1.0</td>
+    <td markdown="span">2-2-1</td>
     <td markdown="span">Workshop</td>
   </tr>
   <tr>
-    <td markdown="span">2.1.1</td>
+    <td markdown="span">2-2-2</td>
     <td markdown="span">Laboratory</td>
   </tr>
   <tr>
-    <td markdown="span">**_3_**</td>
-    <td markdown="span">**_Food/drink venues_**</td>
+    <td markdown="span"><big style="font-size:120%">**3**</big>-0-0</td>
+    <td markdown="span">**Food/drink venues**</td>
   </tr>
   <tr>
-    <td markdown="span">**_4_**</td>
-    <td markdown="span">**_Transport_**</td>
+    <td markdown="span"><big style="font-size:120%">**4**</big>-0-0</td>
+    <td markdown="span">**Transport**</td>
   </tr>
 </tbody>
 </table>
