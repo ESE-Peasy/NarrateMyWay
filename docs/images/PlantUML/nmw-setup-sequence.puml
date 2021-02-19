@@ -1,0 +1,52 @@
+@startuml NMWSetup
+participant Beacon
+actor user
+participant NMWSetupApp
+participant GUI
+
+user->NMWSetupApp : Open application
+activate NMWSetupApp
+
+NMWSetupApp -> GUI : Display "List of Detected BLE Devices" screen
+NMWSetupApp <-- GUI
+
+NMWSetupApp -> GUI : User selects required beacon
+
+NMWSetupApp -> Beacon : Determine UUID of chosen beacon
+NMWSetupApp <-- Beacon
+
+NMWSetupApp -> GUI : Display setup screen with options to generate encoding
+NMWSetupApp <-- GUI
+
+
+note over NMWSetupApp
+    Generate encoding
+end note
+
+NMWSetupApp -> GUI : Display generated encoding and option to copy to clipboard
+NMWSetupApp <-- GUI
+
+group Add additional information (optional)
+note over NMWSetupApp
+    Prompt user for more information
+    for beacon
+end note
+
+NMWSetupApp -> GUI : Fields for additional information
+NMWSetupApp <-- GUI
+
+NMWSetupApp -> GUI : Click "Submit" button
+NMWSetupApp <-- GUI
+
+
+NMWSetupApp -> Server : Add UUID & info to server database
+NMWSetupApp <-- Server
+end
+
+NMWSetupApp -> user : Copy encoding and set beacon \nname using external application
+
+
+
+
+
+@enduml

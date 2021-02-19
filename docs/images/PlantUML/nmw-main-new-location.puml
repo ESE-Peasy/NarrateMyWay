@@ -1,0 +1,62 @@
+@startuml TestUML
+participant NewLocationBeacon
+actor user
+participant NarrateMyWay
+participant GUI
+participant LocalStorage
+participant ExternalStorage
+
+
+user->NarrateMyWay : Open application
+activate NarrateMyWay
+note over NarrateMyWay
+    Begin loop to scan for
+    beacons.     
+end note
+NarrateMyWay->GUI : Render "Scanning" screen
+NarrateMyWay<--GUI
+user <- NarrateMyWay : Audio: "Scanning for beacons near you"
+
+deactivate NarrateMyWay
+
+NarrateMyWay <- NewLocationBeacon : "NewLocation" beacon detected within 10m
+
+note over NarrateMyWay
+    Halt loop which is scanning for beacons
+end note
+
+activate NarrateMyWay
+
+NarrateMyWay -> GUI : Render "New Location Detected" screen
+NarrateMyWay <-- GUI
+user <- NarrateMyWay : Audio: "A new location pack \nhas been detected near you..."
+
+group Option 1: User chooses to download this new pack
+NarrateMyWay -> GUI : User selects "Download Location" option
+NarrateMyWay <-- GUI
+NarrateMyWay <- NewLocationBeacon : URL for endpoint to retrieve extension \npack for this location
+NarrateMyWay -> ExternalStorage : Get extension pack for this location
+NarrateMyWay <-- ExternalStorage
+NarrateMyWay -> LocalStorage : Add pack to local storage
+NarrateMyWay <-- LocalStorage
+NarrateMyWay -> GUI : Notify user that pack has been downloaded
+NarrateMyWay <-- GUI
+user <- NarrateMyWay : Audio: "The location pack \nhas been downloaded"
+end
+
+group Option 2: User chooses not to download this new pack
+NarrateMyWay -> GUI : User selects "Do Not Download Location" option
+NarrateMyWay <-- GUI
+user <- NarrateMyWay : Audio: "The location pack \nwill not be downloaded"
+end
+
+note over NarrateMyWay
+    Begin loop to scan for 
+    beacons
+end note
+
+NarrateMyWay -> GUI : Render "Scanning" screen
+NarrateMyWay <-- GUI
+user <- NarrateMyWay : Audio: "Scanning for beacons near you"
+
+@enduml
