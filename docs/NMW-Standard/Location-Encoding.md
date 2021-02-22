@@ -46,17 +46,17 @@ Each field has a maximum character length that must not be exceeded, but leading
 The following character length limits apply to the fields:
 
 - Top-level category\\
+    **Length**: 2 characters\\
+    **Max. categories**: 1296
+- Subcategory\\
     **Length**: 3 characters\\
     **Max. categories**: 46656
-- Subcategory\\
-    **Length**: 4 characters\\
-    **Max. categories**: 1679616
 - Subsubcategory\\
-    **Length**: 4 characters\\
-    **Max. categories**: 1679616
+    **Length**: 3 characters\\
+    **Max. categories**: 46656
 
 
-The complete location code can therefore be up to 17 characters long.
+The complete location code can therefore be up to 14 characters long.
 
 #### 1.4
 
@@ -86,12 +86,14 @@ Each location may have a UUID, but it does not need to have one for this standar
 
 Each location's UUID maps to information about that location. This consists of:
 
-| Location attribute | Required? | Description |
-|--------------------|-----------|-------------|
-| NMW location code  | Yes       | The location code according to this standard |
-| Name               | Yes       | A name for the location. This could be, for example the name of a business |
-| Description        | No        | An optional field that should only be used if the nature of the location is not clear from the name |
-| Website            | No        |This is optional and should only be present if the website is accessible for visually impaired users |
+| Location attribute | Required? | Max. length | Description |
+|--------------------|-----------|-------------|-------------|
+| NMW location code  | Yes       | See [§1.3](#13) | The location code according to this standard |
+| Name               | Yes       | 25 chars.   | A name for the location. This could be, for example the name of a business |
+| Description        | Yes       | 140 chars.  | An optional field that should only be used if the nature of the location is not clear from the name |
+| Website            | No        | -           | This is optional and should only be present if the website is accessible for visually impaired users |
+
+All information provided by this mechanism is intended to be narrated and concise messages are therefore important. For this reason the *name* and *description* fields have a strict character limit.
 
 #### 2.4.
 
