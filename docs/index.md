@@ -29,7 +29,12 @@ With a large array of navigation tools currently available, NarrateMyWay aims to
 
 The application will produce an audio output describing the next point of interest the user is approaching. This will be dynamically represented on the user interface, specifically designed for visually impaired users. The application will allow users to decide if they want more information regarding the current point of interest or to simply hear the original audio description again. As the application is currently being developed, it is important to note that the displayed user interface is being used as a design concept and may be altered throughout development. 
 
-## Future Work
+## NMW Standard
+We have worked towards standardising the methods for interfacing with beacons used for audio navigation. This is intended to be compatible with the [Wayfindr](https://www.wayfindr.net/) open standard.
+
+Check out our documentation for the NMW expansion to the Wayfindr standard [here](/NMW-Standard).
+
+## Future Plans
 
 With the application being developed under Covid-19 restrictions and Glasgow Universities campus undergoing major redevelopment the application will be developed to be compatible with the universities new infrastructure, reducing the cost of deployment. Although it is outwith the scope of this project, the technologies extensibility will allow for the application to be utilised within the tourism industry, pensioner mobility aids and even during guided tours at the university or other venues. 
 
