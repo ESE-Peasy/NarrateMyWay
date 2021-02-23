@@ -14,7 +14,7 @@ parent: NMW Standard
 
 ## Outline
 
-Part of the NarrateMyWay project is concerned with the development of a language agnostic method for encoding locations. This also needs to be done in efficient way as some beacon technologies are limiting in the length of data that can be advertised to devices. Location encodings should also be useable in an off-line manner so travelling to a new location doesn't require using mobile data. Further expansions can be made possible that could require further downloads.
+Part of the NarrateMyWay project is concerned with the development of a language agnostic method for encoding locations. This also needs to be done in an efficient way as some beacon technologies are limiting in the length of data that can be advertised to devices. Location encodings should also be useable in an off-line manner so travelling to a new location doesn't require using mobile data. Further expansions can be made possible that could require further downloads.
 
 To summarise, the fundamental points of importance are:
 
@@ -165,7 +165,7 @@ Locations are defined as in the following table. Note that these are English tra
     <td markdown="span">Classroom</td>
   </tr>
   <tr>
-    <td markdown="span">2-1-1</td>
+    <td markdown="span">2-1-2</td>
     <td markdown="span">Lecture theatre</td>
   </tr>
   <tr>
