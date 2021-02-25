@@ -41,13 +41,12 @@ However, with the setup application, it is also possible for the beacon to provi
     <u>Table 2: Optional Additional Information</u>
 </h4>
 
-| Location attribute | Required? | Description                                                                                          |
-| ------------------ | --------- | ---------------------------------------------------------------------------------------------------- |
-| NMW location code  | **Yes**   | The location code according to this standard                                                         |
-| Name               | **Yes**   | A name for the location. This could be, for example the name of a business                           |
-| More Information   | **Yes**   | A more enriched audio snippet to be played to users describing the location                          |
-| Description        | No        | An optional field that should only be used if the nature of the location is not clear from the name  |
-| Website            | No        | This is optional and should only be present if the website is accessible for visually impaired users |
+| Location attribute | Required? | Description                                                                                           |
+| ------------------ | --------- | ----------------------------------------------------------------------------------------------------- | --- |
+| NMW location code  | **Yes**   | The location code according to this standard                                                          |
+| Name               | **Yes**   | A name for the location. This could be, for example the name of a business                            |     |
+| Description        | **Yes**   | A field that must be included to provide the user with more meaningful information about the location |
+| Website            | No        | This is optional and should only be present if the website is accessible for visually impaired users  |
 
 ### Extension Packs
 
