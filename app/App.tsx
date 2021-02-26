@@ -9,9 +9,15 @@ import useColorScheme from './hooks/useColorScheme';
 import Navigation from './navigation';
 import { Provider } from 'react-redux';
 
+const scanForBeacons = () => {
+  console.log('Scanning...');
+};
+
 export default function App() {
   const isLoadingComplete = useCachedResources();
   const colorScheme = useColorScheme();
+
+  scanForBeacons();
 
   if (!isLoadingComplete) {
     return null;

@@ -1,21 +1,26 @@
-import { BeaconDetectedAction, BeaconState, BeaconStateAction } from '../types';
+import {
+  BeaconDetectedAction,
+  CurrentBeacon,
+  BeaconStateAction
+} from '../types';
 import { BEACON_STATE_ACTION_TYPES } from './actions';
 
-export const initialState: BeaconState = [];
+export const currentBeacon: CurrentBeacon = {
+  beaconName: 'beaconName',
+  beaconId: 'beaconId'
+};
 
 function beaconStateReducer(
-  state: BeaconState = initialState,
+  state: CurrentBeacon = currentBeacon,
   action: BeaconStateAction
 ) {
-  //   const newState: BeaconState = state;
-  console.log(state);
   switch (action.type) {
     case BEACON_STATE_ACTION_TYPES.BEACON_DETECTED: {
       const { beacon } = action as BeaconDetectedAction;
-      return state.concat(beacon);
+      return beacon;
     }
     case BEACON_STATE_ACTION_TYPES.BEACON_OUT_OF_RANGE: {
-      return state;
+      return { beaconName: 'null', beaconId: 'test' };
     }
     default:
       return state;

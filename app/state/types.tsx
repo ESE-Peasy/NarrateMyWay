@@ -14,8 +14,8 @@ export type BeaconOutOfRangeAction = {
 
 export type BeaconStateAction = BeaconDetectedAction | BeaconOutOfRangeAction;
 
-export type BeaconState = BLEBeacon[];
+export type CurrentBeacon = BLEBeacon | null;
 
 export type AppState = {
-  beaconState: BeaconState;
+  currentBeacon: CurrentBeacon;
 };

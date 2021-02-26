@@ -6,19 +6,9 @@ import ScanningButton from '../components/ScanningButton';
 import { RootStackParamList } from '../types';
 import { StackScreenProps } from '@react-navigation/stack';
 
-import { useDispatch } from 'react-redux';
-import { beaconDetected } from '../state/bluetooth/actions';
-
 export default function ScanningScreen({
   navigation
 }: StackScreenProps<RootStackParamList, 'Scanning'>) {
-  const dispatch = useDispatch();
-
-  function onBeaconDetected() {
-    dispatch(beaconDetected('testName', 'testId'));
-    console.log('Beacon has been detected!');
-  }
-
   return (
     <View style={styles.container}>
       <ScanningButton accessibilityLabel="Currently scanning for beacons near you" />
@@ -27,7 +17,8 @@ export default function ScanningScreen({
         title="Go to Main Screen"
         onPress={() => navigation.replace('Main')}
       ></Button>
-      <Button title="Test button" onPress={() => onBeaconDetected()}></Button>
+      <Button title="Beacon Detected" onPress={() => {}}></Button>
+      <Button title="Beacon Out Of Range" onPress={() => {}}></Button>
     </View>
   );
 }
