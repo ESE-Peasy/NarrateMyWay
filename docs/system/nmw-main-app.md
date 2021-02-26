@@ -58,7 +58,7 @@ The intention is that each of these organisations will setup beacons with this a
 
 ### 2. Extension Pack Beacons
 
-As outlined above, it is possible for each beacon setup using NarrateMyWay to provide enriched information which makes use of the UUID of the beacon. If setup to include this additional information, these details along with the UUID is stored in an external database. The purpose of these Extension Pack Beacons, is to allow a user to easily download these packs when they come across such a beacon:
+As outlined above, it is possible for each beacon setup using NarrateMyWay to provide enriched information which makes use of the UUID of the beacon. If setup to include this additional information, these details along with the UUID are stored in an external database. The purpose of these Extension Pack Beacons, is to allow a user to easily download these packs when they come across such a beacon:
 
 <embed src="../images/NMW-Main-New-Location.pdf" type="application/pdf" width="100%" height="600px" />
 
