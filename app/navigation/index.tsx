@@ -11,7 +11,10 @@ import ScanningScreen from '../screens/ScanningScreen';
 
 import { Header } from '../constants/Header';
 import { BleManager } from 'react-native-ble-plx';
-import { beaconDetected, beaconOutOfRange } from '../state/bluetooth/actions';
+import {
+  beaconDetected,
+  beaconOutOfRange
+} from '../src/state/bluetooth/actions';
 import { useDispatch } from 'react-redux';
 
 // If you are not familiar with React Navigation, we recommend going through the
@@ -54,6 +57,7 @@ const scanForBeacons = (manager: BleManager) => {
           dispatch(beaconDetected(device.name, device.id));
         } else {
           console.log('beacon is far');
+          dispatch(beaconOutOfRange());
         }
       }
     }

@@ -9,7 +9,7 @@ import { HorizontalSeparator } from '../components/Separators';
 import { View } from '../components/Themed';
 import { RootStackParamList } from '../types';
 
-export default function MainScreen({
+function MainScreen({
   navigation
 }: StackScreenProps<RootStackParamList, 'Main'>) {
   return (
@@ -31,6 +31,15 @@ export default function MainScreen({
     </View>
   );
 }
+
+const mapStateToProps = (state, ownProps) => {
+  console.log(state);
+  if (!state.beaconName) {
+    ownProps.navigation.replace('Scanning');
+  }
+};
+
+export default connect(mapStateToProps)(MainScreen);
 
 const styles = StyleSheet.create({
   container: {
