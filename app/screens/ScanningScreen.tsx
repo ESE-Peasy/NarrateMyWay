@@ -13,13 +13,6 @@ function ScanningScreen({
   return (
     <View style={styles.container}>
       <ScanningButton accessibilityLabel="Currently scanning for beacons near you" />
-      <Button
-        // TODO: Remove this when we navigate based on scanning state
-        title="Go to Main Screen"
-        onPress={() => navigation.replace('Main')}
-      ></Button>
-      <Button title="Beacon Detected" onPress={() => {}}></Button>
-      <Button title="Beacon Out Of Range" onPress={() => {}}></Button>
     </View>
   );
 }
