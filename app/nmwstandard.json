@@ -1,0 +1,20 @@
+{
+    "version": "0.0.1",
+    "nmw": [
+    {"code": "1-0-0", "description": "General navigation markers"},
+    {"code": "1-1-0", "description": "Warnings/dangerous area"},
+    {"code": "1-1-1", "description": "General caution/warning"},
+    {"code": "1-2-0", "description": "Information point"},
+    {"code": "1-2-1", "description": "Visual-only navigation sign"},
+    {"code": "1-2-2", "description": "Audio-accessible information point"},
+    {"code": "2-0-0", "description": "Education"},
+    {"code": "2-1-0", "description": "Classrooms"},
+    {"code": "2-1-1", "description": "Classroom"},
+    {"code": "2-1-2", "description": "Lecture theatre"},
+    {"code": "2-2-0", "description": "Practical rooms"},
+    {"code": "2-2-1", "description": "Workshop"},
+    {"code": "2-2-2", "description": "Laboratory"},
+    {"code": "3-0-0", "description": "Food/drink venues"},
+    {"code": "4-0-0", "description": "Transport"}
+    ]
+   }
