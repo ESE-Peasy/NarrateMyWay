@@ -1,11 +1,13 @@
-export type BLEBeacon = {
+export type Beacon = {
   beaconName: string;
   beaconId: string;
 };
 
+export type NoBeacon = {};
+
 export type BeaconDetectedAction = {
   type: string;
-  beacon: BLEBeacon;
+  beacon: Beacon;
 };
 
 export type BeaconOutOfRangeAction = {
@@ -14,7 +16,7 @@ export type BeaconOutOfRangeAction = {
 
 export type BeaconStateAction = BeaconDetectedAction | BeaconOutOfRangeAction;
 
-export type CurrentBeacon = BLEBeacon | null;
+export type CurrentBeacon = Beacon | NoBeacon;
 
 export type AppState = {
   currentBeacon: CurrentBeacon;

@@ -5,8 +5,9 @@ import { View } from '../components/Themed';
 import ScanningButton from '../components/ScanningButton';
 import { RootStackParamList } from '../types';
 import { StackScreenProps } from '@react-navigation/stack';
+import { connect } from 'react-redux';
 
-export default function ScanningScreen({
+function ScanningScreen({
   navigation
 }: StackScreenProps<RootStackParamList, 'Scanning'>) {
   return (
@@ -22,6 +23,18 @@ export default function ScanningScreen({
     </View>
   );
 }
+
+const mapStateToProps = (state, ownProps) => {
+  console.log(state);
+  if (state.beaconName) {
+    ownProps.navigation.replace('Main');
+  }
+  return {
+    state
+  };
+};
+
+export default connect(mapStateToProps)(ScanningScreen);
 
 const styles = StyleSheet.create({
   container: {

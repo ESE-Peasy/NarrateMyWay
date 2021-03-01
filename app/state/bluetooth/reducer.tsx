@@ -5,10 +5,7 @@ import {
 } from '../types';
 import { BEACON_STATE_ACTION_TYPES } from './actions';
 
-export const currentBeacon: CurrentBeacon = {
-  beaconName: 'beaconName',
-  beaconId: 'beaconId'
-};
+export const currentBeacon: CurrentBeacon = {};
 
 function beaconStateReducer(
   state: CurrentBeacon = currentBeacon,
@@ -20,7 +17,8 @@ function beaconStateReducer(
       return beacon;
     }
     case BEACON_STATE_ACTION_TYPES.BEACON_OUT_OF_RANGE: {
-      return { beaconName: 'null', beaconId: 'test' };
+      console.log('The beacon is out of range');
+      return {};
     }
     default:
       return state;
