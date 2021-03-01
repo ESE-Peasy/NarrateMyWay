@@ -4,6 +4,7 @@ import { Button, StyleSheet } from 'react-native';
 import BeaconInfo from '../components/BeaconInfo';
 import LargeButton from '../components/LargeButton';
 import { HorizontalSeparator } from '../components/Separators';
+import Storage from '../storage';
 
 import { View } from '../components/Themed';
 import { RootStackParamList } from '../types';
@@ -30,6 +31,17 @@ export default function MainScreen({
     </View>
   );
 }
+
+// Test database functionality
+const storage = new Storage();
+storage.createTable();
+
+function printLookupResult(codeDescription:String){
+  console.log(codeDescription)
+}
+
+storage.lookUpCodeDescription("1-1-1", printLookupResult);
+
 
 const styles = StyleSheet.create({
   container: {
