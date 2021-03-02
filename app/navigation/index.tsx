@@ -39,24 +39,18 @@ export default function Navigation({
 const Stack = createStackNavigator<RootStackParamList>();
 
 const scanForBeacons = (manager: BleManager) => {
-  console.log('Scanning...');
   const dispatch = useDispatch();
 
   manager.startDeviceScan(null, null, (error, device) => {
     if (error) {
       // manager.stopDeviceScan();
-      console.log('error');
       console.log(error.reason);
     }
     if (device != null && device.name != null && device.id != null) {
-      console.log('Beacon detected');
-      console.log(device.name);
       if (device.name.startsWith('nmw')) {
         if (device.rssi && device.rssi > -70) {
-          console.log('Beacon is close');
           dispatch(beaconDetected(device.name, device.id));
         } else {
-          console.log('beacon is far');
           dispatch(beaconOutOfRange());
         }
       }
