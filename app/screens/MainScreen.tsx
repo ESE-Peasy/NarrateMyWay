@@ -14,14 +14,16 @@ export default function MainScreen({
 }: StackScreenProps<RootStackParamList, 'Main'>) {
   // Test database functionality
   const storage = new Storage();
+  storage.clearStorage();
   storage.createTable();
 
-  function printLookupResult(codeDescription:String){
-    console.log(codeDescription)
+  function printLookupResult(codeDescription: String) {
+    console.log(codeDescription);
   }
 
-  storage.lookUpCodeDescription("1-1-1", printLookupResult);
-  
+  storage.lookUpCodeDescription('1-1-1', printLookupResult);
+  storage.lookUpEmblem('1-1-1', printLookupResult);
+
   return (
     <View style={styles.container}>
       <LargeButton accessibilityLabel="Tap here to repeat the previous audio output">
@@ -41,7 +43,6 @@ export default function MainScreen({
     </View>
   );
 }
-
 
 const styles = StyleSheet.create({
   container: {
