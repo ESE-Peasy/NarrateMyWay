@@ -28,8 +28,6 @@ DerivedData
 *.hmap
 *.ipa
 *.xcuserstate
-NarrateMyWay.xcodeproj/
-NarrateMyWay.xcworkspace/
 
 # Gradle
 /build/
