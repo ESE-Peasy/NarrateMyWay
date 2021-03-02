@@ -21,8 +21,7 @@ export default function MainScreen({
     console.log(codeDescription);
   }
 
-  storage.lookUpCodeDescription('1-1-1', printLookupResult);
-  storage.lookUpEmblem('1-1-1', printLookupResult);
+  storage.lookupDataForNMWCode('1-1-1', printLookupResult);
 
   return (
     <View style={styles.container}>

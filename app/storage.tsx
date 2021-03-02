@@ -12,7 +12,7 @@ interface location {
 // Storage Class
 class Storage {
   //
-  // local varibles
+  // local variables
   db: SQLite.WebSQLDatabase;
 
   constructor() {
@@ -30,32 +30,30 @@ class Storage {
     this.db.transaction(
       (tx) => {
         tx.executeSql(
-          'create table if not exists locationcodes (id string primary key not null, description text, emblem text);'
+          'CREATE TABLE IF NOT EXISTS locationCodes (id string primary key not null, description text, emblem text);'
         );
         tx.executeSql(
-          'create table if not exists versionRecord (id integer primary key not null, version text);'
+          'CREATE TABLE IF NOT EXISTS versionRecord (id integer primary key not null, version text);'
         );
-        tx.executeSql('select * from versionRecord', [], (_, results) => {
+        tx.executeSql('SELECT * FROM versionRecord', [], (_, results) => {
           if (results.rows.length == 0) {
-            console.log(nmwTable.version);
-            tx.executeSql('insert into versionRecord (version) values (?)', [
+            tx.executeSql('INSERT INTO versionRecord (version) VALUES (?)', [
               nmwTable.version
             ]);
             nmwTable.nmw.forEach((value) => {
               tx.executeSql(
-                'insert into locationcodes (id, description, emblem) values (?,?,?)',
+                'INSERT INTO locationCodes (id, description, emblem) VALUES (?,?,?)',
                 [value.code, value.description, value.emblem]
               );
             });
-            console.log('length == 0');
           } else if (results.rows.item(0) != nmwTable.version) {
-            tx.executeSql('insert into versionRecord (version) values (?)', [
+            tx.executeSql('INSERT INTO versionRecord (version) VALUES (?)', [
               nmwTable.version
             ]);
 
             nmwTable.nmw.forEach((value) => {
               tx.executeSql(
-                'insert into locationcodes (id, description, emblem) values (?,?,?)',
+                'INSERT INTO locationCodes (id, description, emblem) VALUES (?,?,?)',
                 [value.code, value.description, value.emblem]
               );
             });
@@ -63,83 +61,66 @@ class Storage {
         });
       },
       null,
-      console.log('this runs')
     );
   }
 
-  // Test input data
+  // Input location code data
   loadData(data: location) {
     this.db.transaction(
       (tx) => {
         tx.executeSql(
-          'insert into locationcodes (id, description, emblem) values (? ,?, ?)',
+          'INSERT INTO locationCodes (id, description, emblem) VALUES (? ,?, ?)',
           [data.code, data.description, data.emblem]
-        );
-        tx.executeSql('select * from locationcodes', [], (_, { rows }) =>
-          console.log(JSON.stringify(rows))
         );
       },
       null,
-      console.log('FINISHED')
     );
   }
 
   // Clear storage
   clearStorage() {
     this.db.transaction((tx) => {
-      tx.executeSql('drop table locationcodes;');
+      tx.executeSql('DROP TABLE locationCodes;');
 
-      tx.executeSql('drop table versionRecord;');
+      tx.executeSql('DROP TABLE versionRecord;');
     });
   }
 
   // Delete element from location table
   deleteElementLocation(id: string) {
     this.db.transaction((tx) => {
-      tx.executeSql('delete from locationcodes where id=?', [id]);
-    });
-  }
-
-  // Delete element from uuid table
-  deleteElementUUID(id: string) {
-    this.db.transaction((tx) => {
-      tx.executeSql('delete from uuiddata where id=?', [id]);
+      tx.executeSql('DELETE FROM locationCodes WHERE id=?', [id]);
     });
   }
 
   // Print the version of currently stored data
   printVersionData() {
     this.db.transaction((tx) => {
-      tx.executeSql('select * from versionRecord', [], (_, { rows }) =>
+      tx.executeSql('SELECT * FROM versionRecord', [], (_, { rows }) =>
         console.log(JSON.stringify(rows))
       );
     });
   }
 
   // Lookup code description
-  lookUpCodeDescription(code: String, callback: Function) {
+  lookupDataForNMWCode(code: String, callback: Function) {
     this.db.transaction((tx) => {
       tx.executeSql(
-        'select description from locationcodes where id=?',
+        'SELECT description FROM locationCodes WHERE id=?',
         [code],
         (_, results) => {
           callback(results.rows.item(0).description);
         }
       );
-    });
-  }
-
-  // Lookup code emblem
-  lookUpEmblem(code: String, callback: Function) {
-    this.db.transaction((tx) => {
       tx.executeSql(
-        'select emblem from locationcodes where id=?',
+        'SELECT emblem FROM locationCodes WHERE id=?',
         [code],
         (_, results) => {
           callback(results.rows.item(0).emblem);
         }
       );
     });
+
   }
 }
 
