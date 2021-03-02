@@ -1,12 +1,13 @@
-import { StackScreenProps } from '@react-navigation/stack';
+import { StackNavigationProp, StackScreenProps } from '@react-navigation/stack';
 import * as React from 'react';
-import { Button, StyleSheet } from 'react-native';
+import { StyleSheet } from 'react-native';
 import { connect } from 'react-redux';
 import BeaconInfo from '../components/BeaconInfo';
 import LargeButton from '../components/LargeButton';
 import { HorizontalSeparator } from '../components/Separators';
 
 import { View } from '../components/Themed';
+import { Beacon } from '../src/state/types';
 import { RootStackParamList } from '../types';
 
 function MainScreen({
@@ -27,11 +28,15 @@ function MainScreen({
   );
 }
 
-const mapStateToProps = (state, ownProps) => {
+const mapStateToProps = (
+  state: Beacon,
+  ownProps: { navigation: StackNavigationProp<RootStackParamList, 'Main'> }
+) => {
   console.log(state);
   if (!state.beaconName) {
     ownProps.navigation.replace('Scanning');
   }
+  return { state };
 };
 
 export default connect(mapStateToProps)(MainScreen);

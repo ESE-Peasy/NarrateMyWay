@@ -1,11 +1,12 @@
 import * as React from 'react';
-import { Button, StyleSheet } from 'react-native';
+import { StyleSheet } from 'react-native';
 
 import { View } from '../components/Themed';
 import ScanningButton from '../components/ScanningButton';
 import { RootStackParamList } from '../types';
-import { StackScreenProps } from '@react-navigation/stack';
+import { StackNavigationProp, StackScreenProps } from '@react-navigation/stack';
 import { connect } from 'react-redux';
+import { Beacon } from '../src/state/types';
 
 function ScanningScreen({
   navigation
@@ -17,7 +18,10 @@ function ScanningScreen({
   );
 }
 
-const mapStateToProps = (state, ownProps) => {
+const mapStateToProps = (
+  state: Beacon,
+  ownProps: { navigation: StackNavigationProp<RootStackParamList, 'Scanning'> }
+) => {
   console.log(state);
   if (state.beaconName) {
     ownProps.navigation.replace('Main');
