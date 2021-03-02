@@ -12,6 +12,16 @@ import { RootStackParamList } from '../types';
 export default function MainScreen({
   navigation
 }: StackScreenProps<RootStackParamList, 'Main'>) {
+  // Test database functionality
+  const storage = new Storage();
+  storage.createTable();
+
+  function printLookupResult(codeDescription:String){
+    console.log(codeDescription)
+  }
+
+  storage.lookUpCodeDescription("1-1-1", printLookupResult);
+  
   return (
     <View style={styles.container}>
       <LargeButton accessibilityLabel="Tap here to repeat the previous audio output">
@@ -31,16 +41,6 @@ export default function MainScreen({
     </View>
   );
 }
-
-// Test database functionality
-const storage = new Storage();
-storage.createTable();
-
-function printLookupResult(codeDescription:String){
-  console.log(codeDescription)
-}
-
-storage.lookUpCodeDescription("1-1-1", printLookupResult);
 
 
 const styles = StyleSheet.create({
