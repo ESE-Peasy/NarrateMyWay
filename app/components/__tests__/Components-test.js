@@ -4,8 +4,6 @@ import LargeButton from '../LargeButton';
 import BeaconInfo from '../BeaconInfo';
 import ScanningButton from '../ScanningButton';
 import { HorizontalSeparator, VerticalSeparator } from '../Separators';
-import MainScreen from '../../screens/MainScreen';
-import ScanningScreen from '../../screens/ScanningScreen';
 
 // LargeButton tests
 it(`LargeButton renders correctly`, () => {
@@ -69,16 +67,4 @@ it(`ScanningButton type and place correct`, () => {
   const scanningButton = <ScanningButton accessibilityLabel="Scanning" />;
 
   expect(scanningButton.props.accessibilityLabel).toBe('Scanning');
-});
-
-// MainScreen tests
-it('MainScreen renders correctly', () => {
-  const tree = renderer.create(<MainScreen />).toJSON();
-  expect(tree).toMatchSnapshot();
-});
-
-// ScanningScreen tests
-it('ScanningScreen renders correctly', () => {
-  const tree = renderer.create(<ScanningScreen />).toJSON();
-  expect(tree).toMatchSnapshot();
 });

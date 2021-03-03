@@ -10,6 +10,12 @@ import LinkingConfiguration from './LinkingConfiguration';
 import ScanningScreen from '../screens/ScanningScreen';
 
 import { Header } from '../constants/Header';
+import { BleManager } from 'react-native-ble-plx';
+import {
+  beaconDetected,
+  beaconOutOfRange
+} from '../src/state/bluetooth/actions';
+import { useDispatch } from 'react-redux';
 
 // If you are not familiar with React Navigation, we recommend going through the
 // "Fundamentals" guide: https://reactnavigation.org/docs/getting-started
@@ -32,7 +38,31 @@ export default function Navigation({
 // Read more here: https://reactnavigation.org/docs/modal
 const Stack = createStackNavigator<RootStackParamList>();
 
+const scanForBeacons = (manager: BleManager) => {
+  const dispatch = useDispatch();
+
+  manager.startDeviceScan(null, null, (error, device) => {
+    if (error) {
+      // manager.stopDeviceScan();
+      console.log(error.reason);
+    }
+    if (device != null && device.name != null && device.id != null) {
+      if (device.name.startsWith('nmw')) {
+        if (device.rssi && device.rssi > -70) {
+          dispatch(beaconDetected(device.name, device.id));
+        } else {
+          dispatch(beaconOutOfRange());
+        }
+      }
+    }
+  });
+};
+
+const manager = new BleManager();
+
 function RootNavigator() {
+  scanForBeacons(manager);
+
   return (
     <Stack.Navigator
       screenOptions={{ headerShown: true }}

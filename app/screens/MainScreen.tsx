@@ -1,14 +1,16 @@
-import { StackScreenProps } from '@react-navigation/stack';
+import { StackNavigationProp, StackScreenProps } from '@react-navigation/stack';
 import * as React from 'react';
-import { Button, StyleSheet } from 'react-native';
+import { StyleSheet } from 'react-native';
+import { connect } from 'react-redux';
 import BeaconInfo from '../components/BeaconInfo';
 import LargeButton from '../components/LargeButton';
 import { HorizontalSeparator } from '../components/Separators';
 
 import { View } from '../components/Themed';
+import { Beacon } from '../src/state/types';
 import { RootStackParamList } from '../types';
 
-export default function MainScreen({
+function MainScreen({
   navigation
 }: StackScreenProps<RootStackParamList, 'Main'>) {
   return (
@@ -19,17 +21,25 @@ export default function MainScreen({
       <HorizontalSeparator />
       <BeaconInfo type="Point of Interest " place="Cafe " />
       <HorizontalSeparator />
-      <Button
-        // TODO: Remove this when we navigate based on scanning state
-        title="Go to Scanning Screen"
-        onPress={() => navigation.replace('Scanning')}
-      ></Button>
       <LargeButton accessibilityLabel="Tap here for more information">
         Tap for more info
       </LargeButton>
     </View>
   );
 }
+
+const mapStateToProps = (
+  state: Beacon,
+  ownProps: { navigation: StackNavigationProp<RootStackParamList, 'Main'> }
+) => {
+  console.log(state);
+  if (!state.beaconName) {
+    ownProps.navigation.replace('Scanning');
+  }
+  return { state };
+};
+
+export default connect(mapStateToProps)(MainScreen);
 
 const styles = StyleSheet.create({
   container: {
