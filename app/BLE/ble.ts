@@ -27,7 +27,9 @@ const scanForBeacons = (manager: BleManager) => {
           }
           if (closest.rssi && closest.name) {
             if (closest.rssi > THRESHOLD) {
-              dispatch(beaconDetected(closest.id, closest.id));
+              dispatch(beaconDetected(closest.name, closest.id));
+            } else {
+              dispatch(beaconOutOfRange());
             }
           }
         }
