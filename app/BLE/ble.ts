@@ -7,7 +7,7 @@ import {
 import { useDispatch } from 'react-redux';
 
 const THRESHOLD = -70;
-const TIMEOUT = 3000; // in ms
+const TIMEOUT = 5000; // in ms
 
 const scanForBeacons = (manager: BleManager) => {
   const dispatch = useDispatch();
@@ -23,11 +23,11 @@ const scanForBeacons = (manager: BleManager) => {
       console.log(error.reason);
     }
     if (device && device.name && device.rssi) {
-      if (device.name.startsWith('nmw')) {
-        if (device.rssi > -THRESHOLD) {
-          devices.push(device);
-        }
+      // if (device.name.startsWith('nmw')) {
+      if (device.rssi > -THRESHOLD) {
+        devices.push(device);
       }
+      // }
     }
   });
   if (devices.length > 0) {
