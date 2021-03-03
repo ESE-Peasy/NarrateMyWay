@@ -13,37 +13,39 @@ const scanForBeacons = (manager: BleManager) => {
   const dispatch = useDispatch();
   const devices: Device[] = [];
 
-  setTimeout(() => {
-    manager.stopDeviceScan();
-  }, TIMEOUT);
-
-  manager.startDeviceScan(null, null, (error, device) => {
-    if (error) {
+  setInterval(() => {
+    setTimeout(() => {
       manager.stopDeviceScan();
-      console.log(error.reason);
-    }
-    if (device && device.name && device.rssi) {
-      // if (device.name.startsWith('nmw')) {
-      if (device.rssi > -THRESHOLD) {
-        devices.push(device);
+    }, TIMEOUT);
+
+    manager.startDeviceScan(null, null, (error, device) => {
+      if (error) {
+        manager.stopDeviceScan();
+        console.log(error.reason);
       }
-      // }
-    }
-  });
-  if (devices.length > 0) {
-    let closestDevice = devices[0];
-    for (const dev of devices) {
-      if (dev && dev.rssi && closestDevice.rssi) {
-        if (dev.rssi > closestDevice.rssi) {
-          closestDevice = dev;
+      if (device && device.name && device.rssi) {
+        // if (device.name.startsWith('nmw')) {
+        if (device.rssi > -THRESHOLD) {
+          devices.push(device);
+        }
+        // }
+      }
+    });
+    if (devices.length > 0) {
+      let closestDevice = devices[0];
+      for (const dev of devices) {
+        if (dev && dev.rssi && closestDevice.rssi) {
+          if (dev.rssi > closestDevice.rssi) {
+            closestDevice = dev;
+          }
         }
       }
-    }
 
-    dispatch(beaconOutOfRange());
-    if (closestDevice.name)
-      dispatch(beaconDetected(closestDevice.name, closestDevice.id));
-  }
+      dispatch(beaconOutOfRange());
+      if (closestDevice.name)
+        dispatch(beaconDetected(closestDevice.name, closestDevice.id));
+    }
+  }, 2 * TIMEOUT);
 };
 
 export default scanForBeacons;
