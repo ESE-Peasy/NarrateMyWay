@@ -19,7 +19,7 @@ const scanForBeacons = (manager: BleManager) => {
 
   manager.startDeviceScan(null, null, (error, device) => {
     if (error) {
-      // manager.stopDeviceScan();
+      manager.stopDeviceScan();
       console.log(error.reason);
     }
     if (device && device.name && device.rssi) {
