@@ -38,7 +38,9 @@ const Stack = createStackNavigator<RootStackParamList>();
 const manager = new BleManager();
 
 function RootNavigator() {
-  scanForBeacons(manager);
+  setInterval(() => {
+    scanForBeacons(manager);
+  }, 10000);
 
   return (
     <Stack.Navigator
