@@ -27,54 +27,48 @@ class Storage {
 
   // Create and populate database tables
   createTable() {
-    this.db.transaction(
-      (tx) => {
-        tx.executeSql(
-          'CREATE TABLE IF NOT EXISTS locationCodes (id string primary key not null, description text, emblem text);'
-        );
-        tx.executeSql(
-          'CREATE TABLE IF NOT EXISTS versionRecord (id integer primary key not null, version text);'
-        );
-        tx.executeSql('SELECT * FROM versionRecord', [], (_, results) => {
-          if (results.rows.length == 0) {
-            tx.executeSql('INSERT INTO versionRecord (version) VALUES (?)', [
-              nmwTable.version
-            ]);
-            nmwTable.nmw.forEach((value) => {
-              tx.executeSql(
-                'INSERT INTO locationCodes (id, description, emblem) VALUES (?,?,?)',
-                [value.code, value.description, value.emblem]
-              );
-            });
-          } else if (results.rows.item(0) != nmwTable.version) {
-            tx.executeSql('INSERT INTO versionRecord (version) VALUES (?)', [
-              nmwTable.version
-            ]);
+    this.db.transaction((tx) => {
+      tx.executeSql(
+        'CREATE TABLE IF NOT EXISTS locationCodes (id string primary key not null, description text, emblem text);'
+      );
+      tx.executeSql(
+        'CREATE TABLE IF NOT EXISTS versionRecord (id integer primary key not null, version text);'
+      );
+      tx.executeSql('SELECT * FROM versionRecord', [], (_, results) => {
+        if (results.rows.length == 0) {
+          tx.executeSql('INSERT INTO versionRecord (version) VALUES (?)', [
+            nmwTable.version
+          ]);
+          nmwTable.nmw.forEach((value) => {
+            tx.executeSql(
+              'INSERT INTO locationCodes (id, description, emblem) VALUES (?,?,?)',
+              [value.code, value.description, value.emblem]
+            );
+          });
+        } else if (results.rows.item(0) != nmwTable.version) {
+          tx.executeSql('INSERT INTO versionRecord (version) VALUES (?)', [
+            nmwTable.version
+          ]);
 
-            nmwTable.nmw.forEach((value) => {
-              tx.executeSql(
-                'INSERT INTO locationCodes (id, description, emblem) VALUES (?,?,?)',
-                [value.code, value.description, value.emblem]
-              );
-            });
-          }
-        });
-      },
-      null,
-    );
+          nmwTable.nmw.forEach((value) => {
+            tx.executeSql(
+              'INSERT INTO locationCodes (id, description, emblem) VALUES (?,?,?)',
+              [value.code, value.description, value.emblem]
+            );
+          });
+        }
+      });
+    }, null);
   }
 
   // Input location code data
   loadData(data: location) {
-    this.db.transaction(
-      (tx) => {
-        tx.executeSql(
-          'INSERT INTO locationCodes (id, description, emblem) VALUES (? ,?, ?)',
-          [data.code, data.description, data.emblem]
-        );
-      },
-      null,
-    );
+    this.db.transaction((tx) => {
+      tx.executeSql(
+        'INSERT INTO locationCodes (id, description, emblem) VALUES (? ,?, ?)',
+        [data.code, data.description, data.emblem]
+      );
+    }, null);
   }
 
   // Clear storage
@@ -120,7 +114,6 @@ class Storage {
         }
       );
     });
-
   }
 }
 
