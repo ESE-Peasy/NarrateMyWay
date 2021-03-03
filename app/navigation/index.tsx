@@ -12,7 +12,7 @@ import ScanningScreen from '../screens/ScanningScreen';
 import { Header } from '../constants/Header';
 import { BleManager } from 'react-native-ble-plx';
 
-import scanForBeacons from '../BLE/ble';
+import scanForBeacons from '../src/ble';
 
 // If you are not familiar with React Navigation, we recommend going through the
 // "Fundamentals" guide: https://reactnavigation.org/docs/getting-started
