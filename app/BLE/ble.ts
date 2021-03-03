@@ -7,45 +7,48 @@ import {
 import { useDispatch } from 'react-redux';
 
 const THRESHOLD = -70;
-const TIMEOUT = 5000; // in ms
+const TIMEOUT = 2000; // in ms
 
 const scanForBeacons = (manager: BleManager) => {
   const dispatch = useDispatch();
-  const devices: Device[] = [];
+  let devices: Device[] = [];
 
+  // clear devices list
   setInterval(() => {
+    devices = [];
     setTimeout(() => {
-      manager.stopDeviceScan();
-    }, TIMEOUT);
-
-    manager.startDeviceScan(null, null, (error, device) => {
-      if (error) {
-        manager.stopDeviceScan();
-        console.log(error.reason);
+      if (devices.length > 0) {
+        let closest = devices[0];
+        for (const dev of devices) {
+          if (dev.rssi && closest.rssi) {
+            if (dev.rssi > closest.rssi) {
+              closest = dev;
+            }
+          }
+          if (closest.rssi && closest.name) {
+            if (closest.rssi > THRESHOLD) {
+              dispatch(beaconDetected(closest.name, closest.id));
+            }
+          }
+        }
+      } else {
+        dispatch(beaconOutOfRange());
       }
-      if (device && device.name && device.rssi) {
-        // if (device.name.startsWith('nmw')) {
+    }, TIMEOUT);
+  }, 2 * TIMEOUT);
+
+  manager.startDeviceScan(null, null, (error, device) => {
+    if (error) {
+      manager.stopDeviceScan();
+      console.log(error.reason);
+    }
+    if (device && device.name && device.rssi) {
+      if (device.name.startsWith('nmw')) {
         if (device.rssi > -THRESHOLD) {
           devices.push(device);
         }
-        // }
       }
-    });
-    if (devices.length > 0) {
-      let closestDevice = devices[0];
-      for (const dev of devices) {
-        if (dev && dev.rssi && closestDevice.rssi) {
-          if (dev.rssi > closestDevice.rssi) {
-            closestDevice = dev;
-          }
-        }
-      }
-
-      dispatch(beaconOutOfRange());
-      if (closestDevice.name)
-        dispatch(beaconDetected(closestDevice.name, closestDevice.id));
     }
-  }, 2 * TIMEOUT);
+  });
 };
-
 export default scanForBeacons;
