@@ -9,9 +9,6 @@ export const currentBeacon: CurrentBeacon = {};
 const DELAY_TIME = 30000; // in ms
 let lastTime = Date.now() - DELAY_TIME;
 
-const now = new Date();
-let lastTime = Math.round(now.getTime() / 1000); // milliseconds to seconds
-
 function beaconStateReducer(
   state: CurrentBeacon = currentBeacon,
   action: BeaconStateAction
