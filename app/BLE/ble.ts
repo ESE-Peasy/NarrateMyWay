@@ -27,7 +27,7 @@ const scanForBeacons = (manager: BleManager) => {
           }
           if (closest.rssi && closest.name) {
             if (closest.rssi > THRESHOLD) {
-              dispatch(beaconDetected(closest.name, closest.id));
+              dispatch(beaconDetected(closest.id, closest.id));
             }
           }
         }
@@ -42,6 +42,7 @@ const scanForBeacons = (manager: BleManager) => {
       manager.stopDeviceScan();
       console.log(error.reason);
     }
+
     if (device && device.name && device.rssi) {
       if (device.name.startsWith('nmw')) {
         if (device.rssi > -THRESHOLD) {
