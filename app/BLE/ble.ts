@@ -7,10 +7,15 @@ import {
 import { useDispatch } from 'react-redux';
 
 const THRESHOLD = -70;
+const TIMEOUT = 3000; // in ms
 
 const scanForBeacons = (manager: BleManager) => {
   const dispatch = useDispatch();
   const devices: Device[] = [];
+
+  setTimeout(() => {
+    manager.stopDeviceScan();
+  }, TIMEOUT);
 
   manager.startDeviceScan(null, null, (error, device) => {
     if (error) {
