@@ -19,8 +19,9 @@ function MainScreen({
   storage.clearStorage();
   storage.createTable();
 
-  function printLookupResult(codeDescription: String) {
+  function printLookupResult(codeDescription: String, codeEmblem: String) {
     console.log(codeDescription);
+    console.log(codeEmblem);
   }
 
   storage.lookupDataForNMWCode('1-1-1', printLookupResult);

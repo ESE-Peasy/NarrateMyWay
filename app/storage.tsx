@@ -75,7 +75,6 @@ class Storage {
   clearStorage() {
     this.db.transaction((tx) => {
       tx.executeSql('DROP TABLE locationCodes;');
-
       tx.executeSql('DROP TABLE versionRecord;');
     });
   }
@@ -100,22 +99,14 @@ class Storage {
   lookupDataForNMWCode(code: String, callback: Function) {
     this.db.transaction((tx) => {
       tx.executeSql(
-        'SELECT description FROM locationCodes WHERE id=?',
+        'SELECT description, emblem FROM locationCodes WHERE id=?',
         [code],
         (_, results) => {
-          callback(results.rows.item(0).description);
-        }
-      );
-      tx.executeSql(
-        'SELECT emblem FROM locationCodes WHERE id=?',
-        [code],
-        (_, results) => {
-          callback(results.rows.item(0).emblem);
+          callback(results.rows.item(0).description, results.rows.item(0).emblem);
         }
       );
     });
   }
 }
 
-export default Storage;
-export default location;
+export default Storage
