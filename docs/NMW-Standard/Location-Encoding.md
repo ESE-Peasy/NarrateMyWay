@@ -10,7 +10,7 @@ parent: NMW Standard
 
 # Location Encoding
 
-[Click here to scroll to the table of codes](#22){: .btn }
+[Click here to scroll to the table of codes](#32){: .btn }
 
 ## Outline
 
