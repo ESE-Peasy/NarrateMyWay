@@ -102,11 +102,14 @@ class Storage {
         'SELECT description, emblem FROM locationCodes WHERE id=?',
         [code],
         (_, results) => {
-          callback(results.rows.item(0).description, results.rows.item(0).emblem);
+          callback(
+            results.rows.item(0).description,
+            results.rows.item(0).emblem
+          );
         }
       );
     });
   }
 }
 
-export default Storage
+export default Storage;
