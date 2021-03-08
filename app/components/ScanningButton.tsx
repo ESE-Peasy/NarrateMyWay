@@ -8,6 +8,11 @@ import * as Speech from 'expo-speech';
 import DefaultColors from '../constants/DefaultColors';
 
 class ScanningButton extends Component {
+  componentDidMount() {
+    setTimeout(() => {
+      Speech.speak('Scanning for beacons');
+    }, 2);
+  }
   render() {
     return (
       <Pressable

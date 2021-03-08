@@ -5,6 +5,8 @@ import { Pressable, Text } from 'react-native';
 import styles from './styles/LargeButton.style';
 import DefaultColors from '../constants/DefaultColors';
 
+import * as Speech from 'expo-speech';
+
 class LargeButton extends Component {
   render() {
     return (
@@ -13,7 +15,7 @@ class LargeButton extends Component {
         android_ripple={DefaultColors.rippleColor}
         onPress={() => {
           // Triggered when the user taps on the button
-          console.log('Test onPress');
+          Speech.speak(this.props.audio);
         }}
         onPressOut={() => {
           // Triggered when user removes their finger

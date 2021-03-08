@@ -5,65 +5,57 @@ import { Pressable, Text } from 'react-native';
 import styles from './styles/BeaconInfo.style';
 import { Ionicons } from '@expo/vector-icons';
 import { View } from 'react-native';
-import { HorizontalSeparator, VerticalSeparator } from './Separators';
+import { VerticalSeparator } from './Separators';
 
 import * as Speech from 'expo-speech';
 import DefaultColors from '../constants/DefaultColors';
 
 class BeaconInfo extends Component {
+  componentDidMount() {
+    setTimeout(() => {
+      Speech.speak(this.props.audio);
+    }, 2);
+  }
+
   render() {
     return (
       <View style={styles.beaconInfoContainer}>
-        <TypeText title={this.props.type}></TypeText>
-        <HorizontalSeparator />
         <View style={styles.placeContainer}>
-          <PlaceIcon></PlaceIcon>
+          <PlaceIcon icon={this.props.icon}></PlaceIcon>
           <VerticalSeparator />
-          <PlaceText title={this.props.place}></PlaceText>
+          <PlaceText
+            description={this.props.description}
+            audio={this.props.audio}
+          ></PlaceText>
         </View>
       </View>
     );
   }
 }
 
-const TypeText = ({ title }) => (
-  <Pressable
-    style={styles.typeContainer}
-    android_ripple={DefaultColors.rippleColor}
-    accessible={true}
-    onPress={() => {
-      Speech.speak('A point of interest has been located near you');
-    }}
-  >
-    <Text style={styles.typeText} numberOfLines={1} adjustsFontSizeToFit>
-      {title}
-    </Text>
-  </Pressable>
-);
-
-const PlaceIcon = () => (
+const PlaceIcon = ({ icon }) => (
   <Ionicons
-    name="cafe"
+    name={icon}
     style={styles.placeIcon}
     size={80}
     accessible={true}
-    accessibilityLabel="Icon of a cafe"
-    accessibilityHint="test"
+    accessibilityLabel={'Icon of a ' + icon}
     adjustsFontSizeToFit
   />
 );
 
-const PlaceText = ({ title }) => (
+const PlaceText = ({ description, audio }) => (
   <Pressable
     style={styles.placeTextContainer}
     android_ripple={DefaultColors.rippleColor}
     accessible={true}
     onPress={() => {
-      Speech.speak('A cafe has been located near you');
+      console.log('here');
+      Speech.speak(audio);
     }}
   >
     <Text style={styles.placeText} numberOfLines={1} adjustsFontSizeToFit>
-      {title}
+      {description}
     </Text>
   </Pressable>
 );
