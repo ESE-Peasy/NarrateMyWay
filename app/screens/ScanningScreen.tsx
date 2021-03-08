@@ -13,7 +13,7 @@ function ScanningScreen({
 }: StackScreenProps<RootStackParamList, 'Scanning'>) {
   return (
     <View style={styles.container}>
-      <ScanningButton accessibilityLabel="Currently scanning for beacons near you" />
+      <ScanningButton accessibilityLabel="Scanning" />
     </View>
   );
 }

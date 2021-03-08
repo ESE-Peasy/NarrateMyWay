@@ -21,7 +21,7 @@ function MainScreen({
   navigation
 }: StackScreenProps<RootStackParamList, 'Main'>) {
   const beacon = store.getState() as Beacon;
-  let code = '1-1-1';
+  let code = '';
   if (beacon.beaconName) {
     code = beacon.beaconName.split(':')[1];
   }
@@ -33,14 +33,17 @@ function MainScreen({
     setBeaconDescription(codeDescription);
     setBeaconIcon(codeEmblem);
   }
-  storage.lookupDataForNMWCode(code, setBeaconData);
+
+  if (code != '') {
+    storage.lookupDataForNMWCode(code, setBeaconData);
+  }
 
   const audioSnippet = 'A ' + beaconDescription + ' has been located near you';
 
   return (
     <View style={styles.container}>
       <LargeButton
-        accessibilityLabel="Tap here to repeat the previous audio output"
+        accessibilityLabel="Button to repeat the previous audio output"
         audio={audioSnippet}
       >
         Tap to repeat
@@ -53,7 +56,7 @@ function MainScreen({
       />
       <HorizontalSeparator />
       <LargeButton
-        accessibilityLabel="Tap here for more information"
+        accessibilityLabel="Button for more information"
         audio="Unfortunately there is no more information available for this location"
       >
         Tap for more info
