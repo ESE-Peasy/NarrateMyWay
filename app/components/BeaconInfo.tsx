@@ -50,11 +50,10 @@ const PlaceText = ({ description, audio }) => (
     android_ripple={DefaultColors.rippleColor}
     accessible={true}
     onPress={() => {
-      console.log('here');
       Speech.speak(audio);
     }}
   >
-    <Text style={styles.placeText} numberOfLines={1} adjustsFontSizeToFit>
+    <Text style={styles.placeText} adjustsFontSizeToFit>
       {description}
     </Text>
   </Pressable>

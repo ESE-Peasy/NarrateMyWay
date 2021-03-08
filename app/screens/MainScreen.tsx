@@ -13,6 +13,7 @@ import { RootStackParamList } from '../types';
 
 import store from '../src/state/store';
 
+// Setup storage once
 const storage = new Storage();
 storage.clearStorage();
 storage.createTable();
@@ -38,7 +39,10 @@ function MainScreen({
     storage.lookupDataForNMWCode(code, setBeaconData);
   }
 
-  const audioSnippet = 'A ' + beaconDescription + ' has been located near you';
+  let audioSnippet = '';
+  if (beaconDescription != '') {
+    audioSnippet = 'A ' + beaconDescription + ' has been located near you';
+  }
 
   return (
     <View style={styles.container}>
@@ -65,8 +69,10 @@ function MainScreen({
   );
 }
 
-const mapStateToProps = (state: Beacon, ownProps) => {
-  console.log(state);
+const mapStateToProps = (
+  state: Beacon,
+  ownProps: { navigation: StackNavigationProp<RootStackParamList, 'Main'> }
+) => {
   if (!state.beaconName) {
     ownProps.navigation.replace('Scanning');
   }

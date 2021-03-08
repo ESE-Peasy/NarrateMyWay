@@ -52,6 +52,7 @@ export default StyleSheet.create({
     fontSize: 42,
     color: '#fff',
     textTransform: 'uppercase',
-    fontWeight: 'bold'
+    fontWeight: 'bold',
+    textAlign: 'center'
   }
 });
