@@ -19,10 +19,7 @@ class BeaconInfo extends Component {
   }
 
   componentDidUpdate() {
-    if (this.state.prev_description == this.props.description) {
-      console.log('Description has not changed');
-    } else {
-      console.log('Description has changed');
+    if (this.state.prev_description != this.props.description) {
       Speech.speak(this.props.audio);
       this.setState({ prev_description: this.props.description });
     }
