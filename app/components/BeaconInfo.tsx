@@ -11,10 +11,21 @@ import * as Speech from 'expo-speech';
 import DefaultColors from '../constants/DefaultColors';
 
 class BeaconInfo extends Component {
-  componentDidMount() {
-    setTimeout(() => {
+  constructor(props) {
+    super(props);
+    this.state = {
+      prev_description: ''
+    };
+  }
+
+  componentDidUpdate() {
+    if (this.state.prev_description == this.props.description) {
+      console.log('Description has not changed');
+    } else {
+      console.log('Description has changed');
       Speech.speak(this.props.audio);
-    }, 2);
+      this.setState({ prev_description: this.props.description });
+    }
   }
 
   render() {
