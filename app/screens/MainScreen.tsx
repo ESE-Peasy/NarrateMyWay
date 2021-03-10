@@ -11,30 +11,58 @@ import { View } from '../components/Themed';
 import { Beacon } from '../src/state/types';
 import { RootStackParamList } from '../types';
 
+import store from '../src/state/store';
+
+// Setup storage once
+const storage = new Storage();
+storage.clearStorage();
+storage.createTable();
+
 function MainScreen({
   navigation
 }: StackScreenProps<RootStackParamList, 'Main'>) {
-  // Test database functionality
-  const storage = new Storage();
-  storage.clearStorage();
-  storage.createTable();
-
-  function printLookupResult(codeDescription: String, codeEmblem: String) {
-    console.log(codeDescription);
-    console.log(codeEmblem);
+  const beacon = store.getState() as Beacon;
+  let code = '';
+  if (beacon.beaconName) {
+    code = beacon.beaconName.split(':')[1];
   }
 
-  storage.lookupDataForNMWCode('1-1-1', printLookupResult);
+  const [beaconDescription, setBeaconDescription] = React.useState('');
+  const [beaconIcon, setBeaconIcon] = React.useState('');
+
+  function setBeaconData(codeDescription: String, codeEmblem: String) {
+    setBeaconDescription(codeDescription);
+    setBeaconIcon(codeEmblem);
+  }
+
+  if (code != '') {
+    storage.lookupDataForNMWCode(code, setBeaconData);
+  }
+
+  let audioSnippet = '';
+  if (beaconDescription != '') {
+    audioSnippet = beaconDescription + ' located';
+  }
 
   return (
     <View style={styles.container}>
-      <LargeButton accessibilityLabel="Tap here to repeat the previous audio output">
+      <LargeButton
+        accessibilityLabel="Button to repeat the previous audio output"
+        audio={audioSnippet}
+      >
         Tap to repeat
       </LargeButton>
       <HorizontalSeparator />
-      <BeaconInfo type="Point of Interest " place="Cafe " />
+      <BeaconInfo
+        description={beaconDescription}
+        icon={beaconIcon}
+        audio={audioSnippet}
+      />
       <HorizontalSeparator />
-      <LargeButton accessibilityLabel="Tap here for more information">
+      <LargeButton
+        accessibilityLabel="Button for more information"
+        audio="No additional information available"
+      >
         Tap for more info
       </LargeButton>
     </View>
@@ -45,7 +73,6 @@ const mapStateToProps = (
   state: Beacon,
   ownProps: { navigation: StackNavigationProp<RootStackParamList, 'Main'> }
 ) => {
-  console.log(state);
   if (!state.beaconName) {
     ownProps.navigation.replace('Scanning');
   }
