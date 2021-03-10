@@ -14,11 +14,20 @@ Once the app has discovered a URL to download an expansion pack from, this downl
 
 ```json
 {
-  "<UUID>": {
-    "nmw": "<NMW Code>",
-    "name": "<Name of location>",
-    "description": "<Description of location>",
-    "website": "<Optional website for location>"
+  "meta": {
+    "pack_name": "<Name of expansion pack>",
+    "description": "<Description of expansion pack>",
+    "w3w": "<Optional what3words address of where pack relates to>",
+    "organisation": "<Organisation responsible for expansion pack>"
+  },
+  "UUIDs": {
+    "<UUID>": {
+        "nmw": "<NMW Code>",
+        "name": "<Name of location>",
+        "description": "<Description of location>",
+        "website": "<Optional website for location>"
+      }
+    }
   }
 }
 ```
