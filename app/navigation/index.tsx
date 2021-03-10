@@ -5,6 +5,7 @@ import { ColorSchemeName } from 'react-native';
 import DefaultColors from '../constants/DefaultColors';
 
 import MainScreen from '../screens/MainScreen';
+import SettingsScreen from '../screens/SettingsScreen';
 import { RootStackParamList } from '../types';
 import LinkingConfiguration from './LinkingConfiguration';
 import ScanningScreen from '../screens/ScanningScreen';
@@ -44,7 +45,7 @@ function RootNavigator() {
     <Stack.Navigator
       screenOptions={{ headerShown: true }}
       headerMode="float"
-      initialRouteName="Scanning"
+      initialRouteName="Settings"
     >
       <Stack.Screen
         name="Main"
@@ -55,6 +56,11 @@ function RootNavigator() {
         name="Scanning"
         component={ScanningScreen}
         options={Header.options}
+      />
+      <Stack.Screen
+        name="Settings"
+        component={SettingsScreen}
+        options={Header.settings}
       />
     </Stack.Navigator>
   );

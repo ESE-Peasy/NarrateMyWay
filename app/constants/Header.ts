@@ -6,5 +6,13 @@ export const Header = {
       fontWeight: 'bold',
       textTransform: 'uppercase'
     }
+  },
+  settings: {
+    title: 'Settings',
+    headerTitleAlign: 'center',
+    headerTitleStyle: {
+      fontWeight: 'bold',
+      textTransform: 'uppercase'
+    }
   }
 };
