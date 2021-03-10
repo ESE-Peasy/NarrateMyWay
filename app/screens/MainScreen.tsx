@@ -41,7 +41,7 @@ function MainScreen({
 
   let audioSnippet = '';
   if (beaconDescription != '') {
-    audioSnippet = 'A ' + beaconDescription + ' has been located near you';
+    audioSnippet = beaconDescription + ' located';
   }
 
   return (
@@ -61,7 +61,7 @@ function MainScreen({
       <HorizontalSeparator />
       <LargeButton
         accessibilityLabel="Button for more information"
-        audio="Unfortunately there is no more information available for this location"
+        audio="No additional information available"
       >
         Tap for more info
       </LargeButton>
