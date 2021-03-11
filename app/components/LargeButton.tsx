@@ -8,10 +8,15 @@ import DefaultColors from '../constants/DefaultColors';
 import * as Speech from 'expo-speech';
 import { defaultTheme, setTheme } from '../src/themes';
 
+import store from '../src/state/store';
+import { Theme } from '../src/state/types';
+
 let theme = defaultTheme;
 class LargeButton extends Component {
   render() {
-    theme = setTheme(this.props.theme);
+    const currentTheme = store.getState().themeReducer as Theme;
+
+    theme = setTheme(currentTheme.themeName);
     return (
       <Pressable
         style={[

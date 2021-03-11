@@ -1,4 +1,3 @@
-import AsyncStorage from '@react-native-async-storage/async-storage';
 import { StackScreenProps } from '@react-navigation/stack';
 import * as React from 'react';
 import {
@@ -12,47 +11,40 @@ import { HorizontalSeparator } from '../components/Separators';
 import DefaultColors from '../constants/DefaultColors';
 
 import { RootStackParamList } from '../types';
+import { useDispatch } from 'react-redux';
+import { themeUpdated } from '../src/state/themes/actions';
 
-import {
-  monochromeTheme,
-  defaultTheme,
-  highContrastTheme
-} from '../src/themes';
+import { defaultTheme, setTheme } from '../src/themes';
+
+import store from '../src/state/store';
+import { Theme } from '../src/state/types';
 
 let theme = defaultTheme;
 
 export default function SettingsScreen({
   navigation
 }: StackScreenProps<RootStackParamList, 'Settings'>) {
-  const [currentTheme, setCurrentTheme] = React.useState('default');
+  const currentSetTheme = store.getState().themeReducer as Theme;
+  const [currentTheme, setCurrentTheme] = React.useState(
+    currentSetTheme.themeName
+  );
 
-  AsyncStorage.getItem('theme').then((result) => {
-    console.log(result);
-    setTheme(result);
-  });
-
-  const setTheme = (themeOption: string) => {
-    if (themeOption == 'monochrome') {
-      theme = monochromeTheme;
-    } else if (themeOption == 'highContrast') {
-      theme = highContrastTheme;
-    } else {
-      theme = defaultTheme;
-    }
-    setCurrentTheme(themeOption);
-  };
+  const dispatch = useDispatch();
 
   const updateTheme = async () => {
     try {
       if (currentTheme == 'monochrome') {
-        await AsyncStorage.setItem('theme', 'highContrast');
-        setTheme('highContrast');
+        dispatch(themeUpdated('highContrast'));
+        setCurrentTheme('highContrast');
+        theme = setTheme('highContrast');
       } else if (currentTheme == 'highContrast') {
-        await AsyncStorage.setItem('theme', 'default');
-        setTheme('default');
+        dispatch(themeUpdated('default'));
+        setCurrentTheme('default');
+        theme = setTheme('default');
       } else {
-        await AsyncStorage.setItem('theme', 'monochrome');
-        setTheme('monochrome');
+        dispatch(themeUpdated('monochrome'));
+        setCurrentTheme('monochrome');
+        theme = setTheme('monochrome');
       }
     } catch (e) {
       console.log('error: ', e);

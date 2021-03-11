@@ -1,7 +1,7 @@
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import * as React from 'react';
-import { ColorSchemeName } from 'react-native';
+import { ColorSchemeName, Pressable } from 'react-native';
 import DefaultColors from '../constants/DefaultColors';
 
 import MainScreen from '../screens/MainScreen';
@@ -10,10 +10,10 @@ import { RootStackParamList } from '../types';
 import LinkingConfiguration from './LinkingConfiguration';
 import ScanningScreen from '../screens/ScanningScreen';
 
-import { Header } from '../constants/Header';
 import { BleManager } from 'react-native-ble-plx';
 
 import scanForBeacons from '../src/ble';
+import { Ionicons } from '@expo/vector-icons';
 
 // If you are not familiar with React Navigation, we recommend going through the
 // "Fundamentals" guide: https://reactnavigation.org/docs/getting-started
@@ -45,22 +45,67 @@ function RootNavigator() {
     <Stack.Navigator
       screenOptions={{ headerShown: true }}
       headerMode="float"
-      initialRouteName="Settings"
+      initialRouteName="Scanning"
     >
       <Stack.Screen
         name="Main"
         component={MainScreen}
-        options={Header.options}
+        options={({ navigation, route }) => ({
+          title: 'Narrate My Way',
+          headerTitleAlign: 'center',
+          headerTitleStyle: {
+            fontWeight: 'bold',
+            textTransform: 'uppercase'
+          },
+          headerRight: () => (
+            <Pressable onPress={() => navigation.navigate('Settings')}>
+              <Ionicons
+                name="settings-outline"
+                style={{ color: '#fff', paddingRight: 10 }}
+                size={35}
+                // accessible={true}
+                accessibilityLabel="Icon of a"
+                // adjustsFontSizeToFit
+              />
+            </Pressable>
+          )
+        })}
       />
       <Stack.Screen
         name="Scanning"
         component={ScanningScreen}
-        options={Header.options}
+        options={({ navigation, route }) => ({
+          title: 'Narrate My Way',
+          headerTitleAlign: 'center',
+          headerTitleStyle: {
+            fontWeight: 'bold',
+            textTransform: 'uppercase'
+          },
+          headerRight: () => (
+            <Pressable onPress={() => navigation.navigate('Settings')}>
+              <Ionicons
+                name="settings-outline"
+                style={{ color: '#fff', paddingRight: 10 }}
+                size={35}
+                // accessible={true}
+                accessibilityLabel="Icon of a"
+                // adjustsFontSizeToFit
+              />
+            </Pressable>
+          )
+        })}
       />
       <Stack.Screen
         name="Settings"
         component={SettingsScreen}
-        options={Header.settings}
+        options={({ navigation, route }) => ({
+          title: 'Settings',
+          headerTitleAlign: 'center',
+          headerTitleStyle: {
+            fontWeight: 'bold',
+            textTransform: 'uppercase'
+          }
+        })}
       />
     </Stack.Navigator>
   );

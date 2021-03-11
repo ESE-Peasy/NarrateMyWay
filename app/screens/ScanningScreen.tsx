@@ -6,33 +6,24 @@ import ScanningButton from '../components/ScanningButton';
 import { RootStackParamList } from '../types';
 import { StackNavigationProp, StackScreenProps } from '@react-navigation/stack';
 import { connect } from 'react-redux';
-import { Beacon } from '../src/state/types';
-import AsyncStorage from '@react-native-async-storage/async-storage';
+import { Beacon, Theme } from '../src/state/types';
 
 function ScanningScreen({
   navigation
 }: StackScreenProps<RootStackParamList, 'Scanning'>) {
-  const [currentTheme, setCurrentTheme] = React.useState('default');
-
-  AsyncStorage.getItem('theme').then((result) => {
-    setCurrentTheme(result);
-  });
-
   return (
     <View style={styles.container}>
-      <ScanningButton
-        theme={currentTheme}
-        accessibilityLabel="Currently scanning for beacons near you"
-      />
+      <ScanningButton accessibilityLabel="Currently scanning for beacons near you" />
     </View>
   );
 }
 
 const mapStateToProps = (
-  state: Beacon,
+  state: { beaconStateReducer: Beacon; themeReducer: Theme },
   ownProps: { navigation: StackNavigationProp<RootStackParamList, 'Scanning'> }
 ) => {
-  if (state.beaconName) {
+  const beaconName = state.beaconStateReducer.beaconName;
+  if (beaconName != undefined) {
     ownProps.navigation.replace('Main');
   }
   return {

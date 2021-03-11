@@ -7,6 +7,8 @@ import styles from './styles/ScanningButton.style';
 
 import * as Speech from 'expo-speech';
 import DefaultColors from '../constants/DefaultColors';
+import store from '../src/state/store';
+import { Theme } from '../src/state/types';
 
 let theme = defaultTheme;
 class ScanningButton extends Component {
@@ -16,7 +18,9 @@ class ScanningButton extends Component {
     }, 2);
   }
   render() {
-    theme = setTheme(this.props.theme);
+    const currentTheme = store.getState().themeReducer as Theme;
+
+    theme = setTheme(currentTheme.themeName);
 
     return (
       <Pressable
