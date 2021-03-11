@@ -14,6 +14,9 @@ import { BleManager } from 'react-native-ble-plx';
 
 import scanForBeacons from '../src/ble';
 import { Ionicons } from '@expo/vector-icons';
+import { useDispatch } from 'react-redux';
+import AsyncStorage from '@react-native-async-storage/async-storage';
+import { themeUpdated } from '../src/state/themes/actions';
 
 // If you are not familiar with React Navigation, we recommend going through the
 // "Fundamentals" guide: https://reactnavigation.org/docs/getting-started
@@ -40,6 +43,11 @@ const manager = new BleManager();
 
 function RootNavigator() {
   scanForBeacons(manager);
+  const dispatch = useDispatch();
+
+  AsyncStorage.getItem('theme').then((themeName) => {
+    dispatch(themeUpdated(themeName));
+  });
 
   return (
     <Stack.Navigator

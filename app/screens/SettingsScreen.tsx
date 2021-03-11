@@ -1,12 +1,6 @@
 import { StackScreenProps } from '@react-navigation/stack';
 import * as React from 'react';
-import {
-  Pressable,
-  StyleSheet,
-  Text,
-  TouchableOpacity,
-  View
-} from 'react-native';
+import { Pressable, StyleSheet, Text, View } from 'react-native';
 import { HorizontalSeparator } from '../components/Separators';
 import DefaultColors from '../constants/DefaultColors';
 
@@ -17,34 +11,37 @@ import { themeUpdated } from '../src/state/themes/actions';
 import { defaultTheme, setTheme } from '../src/themes';
 
 import store from '../src/state/store';
-import { Theme } from '../src/state/types';
-
-let theme = defaultTheme;
+import AsyncStorage from '@react-native-async-storage/async-storage';
 
 export default function SettingsScreen({
   navigation
 }: StackScreenProps<RootStackParamList, 'Settings'>) {
-  const currentSetTheme = store.getState().themeReducer as Theme;
+  const currentSetTheme = store.getState().themeReducer;
   const [currentTheme, setCurrentTheme] = React.useState(
     currentSetTheme.themeName
   );
+  let theme = setTheme(currentTheme);
 
   const dispatch = useDispatch();
 
+  const updateAndSetTheme = (themeName: string) => {
+    dispatch(themeUpdated(themeName));
+    setCurrentTheme(themeName);
+    theme = setTheme(themeName);
+    AsyncStorage.setItem('theme', themeName);
+  };
+
   const updateTheme = async () => {
     try {
-      if (currentTheme == 'monochrome') {
-        dispatch(themeUpdated('highContrast'));
-        setCurrentTheme('highContrast');
-        theme = setTheme('highContrast');
-      } else if (currentTheme == 'highContrast') {
-        dispatch(themeUpdated('default'));
-        setCurrentTheme('default');
-        theme = setTheme('default');
-      } else {
-        dispatch(themeUpdated('monochrome'));
-        setCurrentTheme('monochrome');
-        theme = setTheme('monochrome');
+      switch (currentTheme) {
+        case 'monochrome':
+          updateAndSetTheme('highContrast');
+          break;
+        case 'highContrast':
+          updateAndSetTheme('default');
+          break;
+        default:
+          updateAndSetTheme('monochrome');
       }
     } catch (e) {
       console.log('error: ', e);
@@ -53,25 +50,27 @@ export default function SettingsScreen({
 
   return (
     <View style={styles.container}>
+      <Text>Tap below to try out different themes:</Text>
       <HorizontalSeparator />
       <Pressable
         style={[
           styles.button,
-          { backgroundColor: theme.color1, borderColor: theme.color2 }
+          {
+            backgroundColor: theme.backgroundColor,
+            borderColor: theme.borderColor,
+            width: `95%`
+          }
         ]}
         android_ripple={DefaultColors.rippleColor}
         onPress={updateTheme}
       >
         <Text
-          style={[styles.buttonText, { color: theme.color2 }]}
+          style={[styles.buttonText, { color: theme.textColor }]}
           adjustsFontSizeToFit
         >
-          Tap to change colour scheme
+          {theme.name}
         </Text>
       </Pressable>
-      <TouchableOpacity onPress={() => navigation.replace('Main')}>
-        <Text>Go to home screen!</Text>
-      </TouchableOpacity>
     </View>
   );
 }
@@ -90,6 +89,7 @@ const styles = StyleSheet.create({
   },
   buttonText: {
     fontSize: 42,
-    textAlign: 'center'
+    textAlign: 'center',
+    textTransform: 'uppercase'
   }
 });

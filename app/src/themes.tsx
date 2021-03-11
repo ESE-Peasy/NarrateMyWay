@@ -1,22 +1,34 @@
 const monochromeTheme = {
-  color1: '#fff',
-  color2: '#000',
-  color3: '#000',
-  color4: '#333'
+  name: 'monochrome',
+  backgroundColor: '#fff',
+  borderColor: '#000',
+  textColor: '#000',
+  rippleColor: '#333',
+  backgroundColorInverted: '#000',
+  borderColorInverted: '#fff',
+  textColorInverted: '#fff'
 };
 
 const defaultTheme = {
-  color1: '#000',
-  color2: '#fff',
-  color3: '#fff',
-  color4: '#666'
+  name: 'default',
+  backgroundColor: '#093f74',
+  borderColor: '#fff',
+  textColor: '#fff',
+  rippleColor: '#666',
+  backgroundColorInverted: '#fff',
+  borderColorInverted: '#093f74',
+  textColorInverted: '#093f74'
 };
 
 const highContrastTheme = {
-  color1: '#00f',
-  color2: '#f00',
-  color3: '#666',
-  color4: '#999'
+  name: 'highContrast',
+  backgroundColor: '#00f',
+  borderColor: '#f00',
+  textColor: '#f00',
+  rippleColor: '#f00',
+  backgroundColorInverted: '#f00',
+  borderColorInverted: '#00f',
+  textColorInverted: '#00f'
 };
 
 function setTheme(themeName: string) {

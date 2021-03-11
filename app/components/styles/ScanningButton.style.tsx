@@ -8,7 +8,8 @@ export default StyleSheet.create({
     justifyContent: 'center',
     width: '90%',
     height: '20%',
-    borderRadius: 50
+    borderRadius: 50,
+    borderWidth: 1
   },
   text: {
     fontSize: 42,

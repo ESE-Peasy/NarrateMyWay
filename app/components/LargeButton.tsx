@@ -3,27 +3,27 @@ import { Component } from 'react';
 import * as React from 'react';
 import { Pressable, Text } from 'react-native';
 import styles from './styles/LargeButton.style';
-import DefaultColors from '../constants/DefaultColors';
 
 import * as Speech from 'expo-speech';
-import { defaultTheme, setTheme } from '../src/themes';
+import { setTheme } from '../src/themes';
 
 import store from '../src/state/store';
-import { Theme } from '../src/state/types';
 
-let theme = defaultTheme;
 class LargeButton extends Component {
   render() {
-    const currentTheme = store.getState().themeReducer as Theme;
+    const currentTheme = store.getState().themeReducer;
 
-    theme = setTheme(currentTheme.themeName);
+    const theme = setTheme(currentTheme.themeName);
     return (
       <Pressable
         style={[
           styles.largeButtonContainer,
-          { backgroundColor: theme.color1, borderColor: theme.color2 }
+          {
+            backgroundColor: theme.backgroundColor,
+            borderColor: theme.borderColor
+          }
         ]}
-        android_ripple={DefaultColors.rippleColor}
+        android_ripple={{ color: theme.rippleColor }}
         onPress={() => {
           // Triggered when the user taps on the button
           Speech.speak(this.props.audio);
@@ -41,7 +41,7 @@ class LargeButton extends Component {
         accessibilityLabel={this.props.accessibilityLabel}
       >
         <Text
-          style={[styles.largeButtonText, { color: theme.color2 }]}
+          style={[styles.largeButtonText, { color: theme.textColor }]}
           adjustsFontSizeToFit
         >
           {this.props.children}
