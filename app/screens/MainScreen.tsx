@@ -12,6 +12,7 @@ import { Beacon } from '../src/state/types';
 import { RootStackParamList } from '../types';
 
 import store from '../src/state/store';
+import AsyncStorage from '@react-native-async-storage/async-storage';
 
 // Setup storage once
 const storage = new Storage();
@@ -44,9 +45,16 @@ function MainScreen({
     audioSnippet = beaconDescription + ' located';
   }
 
+  const [currentTheme, setCurrentTheme] = React.useState('default');
+
+  AsyncStorage.getItem('theme').then((result) => {
+    setCurrentTheme(result);
+  });
+
   return (
     <View style={styles.container}>
       <LargeButton
+        theme={currentTheme}
         accessibilityLabel="Button to repeat the previous audio output"
         audio={audioSnippet}
       >
@@ -60,6 +68,7 @@ function MainScreen({
       />
       <HorizontalSeparator />
       <LargeButton
+        theme={currentTheme}
         accessibilityLabel="Button for more information"
         audio="No additional information available"
       >

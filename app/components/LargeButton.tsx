@@ -6,12 +6,18 @@ import styles from './styles/LargeButton.style';
 import DefaultColors from '../constants/DefaultColors';
 
 import * as Speech from 'expo-speech';
+import { defaultTheme, setTheme } from '../src/themes';
 
+let theme = defaultTheme;
 class LargeButton extends Component {
   render() {
+    theme = setTheme(this.props.theme);
     return (
       <Pressable
-        style={styles.largeButtonContainer}
+        style={[
+          styles.largeButtonContainer,
+          { backgroundColor: theme.color1, borderColor: theme.color2 }
+        ]}
         android_ripple={DefaultColors.rippleColor}
         onPress={() => {
           // Triggered when the user taps on the button
@@ -29,7 +35,10 @@ class LargeButton extends Component {
         accessible={true}
         accessibilityLabel={this.props.accessibilityLabel}
       >
-        <Text style={styles.largeButtonText} adjustsFontSizeToFit>
+        <Text
+          style={[styles.largeButtonText, { color: theme.color2 }]}
+          adjustsFontSizeToFit
+        >
           {this.props.children}
         </Text>
       </Pressable>

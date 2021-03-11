@@ -13,42 +13,46 @@ import DefaultColors from '../constants/DefaultColors';
 
 import { RootStackParamList } from '../types';
 
-let color1 = '#000';
-let color2 = '#fff';
+import {
+  monochromeTheme,
+  defaultTheme,
+  highContrastTheme
+} from '../src/themes';
+
+let theme = defaultTheme;
 
 export default function SettingsScreen({
   navigation
 }: StackScreenProps<RootStackParamList, 'Settings'>) {
   const [currentTheme, setCurrentTheme] = React.useState('default');
 
-  const setTheme = () => {
-    if (currentTheme == 'theme1') {
-      color1 = '#fff';
-      color2 = '#000';
-      setCurrentTheme('theme2');
-    } else if (currentTheme == 'theme2') {
-      color1 = '#000';
-      color2 = '#fff';
-      setCurrentTheme('default');
+  AsyncStorage.getItem('theme').then((result) => {
+    console.log(result);
+    setTheme(result);
+  });
+
+  const setTheme = (themeOption: string) => {
+    if (themeOption == 'monochrome') {
+      theme = monochromeTheme;
+    } else if (themeOption == 'highContrast') {
+      theme = highContrastTheme;
     } else {
-      color1 = '#333';
-      color2 = '#999';
-      setCurrentTheme('theme1');
+      theme = defaultTheme;
     }
+    setCurrentTheme(themeOption);
   };
 
-  console.log(currentTheme);
   const updateTheme = async () => {
     try {
-      if (currentTheme == 'theme1') {
-        await AsyncStorage.setItem('theme', 'theme2');
-        setTheme();
-      } else if (currentTheme == 'theme2') {
+      if (currentTheme == 'monochrome') {
+        await AsyncStorage.setItem('theme', 'highContrast');
+        setTheme('highContrast');
+      } else if (currentTheme == 'highContrast') {
         await AsyncStorage.setItem('theme', 'default');
-        setTheme();
+        setTheme('default');
       } else {
-        await AsyncStorage.setItem('theme', 'theme1');
-        setTheme();
+        await AsyncStorage.setItem('theme', 'monochrome');
+        setTheme('monochrome');
       }
     } catch (e) {
       console.log('error: ', e);
@@ -61,13 +65,13 @@ export default function SettingsScreen({
       <Pressable
         style={[
           styles.button,
-          { backgroundColor: color1, borderColor: color2 }
+          { backgroundColor: theme.color1, borderColor: theme.color2 }
         ]}
         android_ripple={DefaultColors.rippleColor}
         onPress={updateTheme}
       >
         <Text
-          style={[styles.buttonText, { color: color2 }]}
+          style={[styles.buttonText, { color: theme.color2 }]}
           adjustsFontSizeToFit
         >
           Tap to change colour scheme

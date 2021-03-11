@@ -15,11 +15,8 @@ function ScanningScreen({
   const [currentTheme, setCurrentTheme] = React.useState('default');
 
   AsyncStorage.getItem('theme').then((result) => {
-    console.log(result);
     setCurrentTheme(result);
   });
-
-  console.log(currentTheme);
 
   return (
     <View style={styles.container}>
