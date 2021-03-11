@@ -1,8 +1,7 @@
 import { StackScreenProps } from '@react-navigation/stack';
 import * as React from 'react';
-import { Pressable, StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View } from 'react-native';
 import { HorizontalSeparator } from '../components/Separators';
-import DefaultColors from '../constants/DefaultColors';
 
 import { RootStackParamList } from '../types';
 import { useDispatch } from 'react-redux';
@@ -13,6 +12,7 @@ import { setTheme } from '../src/themes';
 import store from '../src/state/store';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import SwitchTheme from '../components/SwitchTheme';
+import * as Speech from 'expo-speech';
 
 export default function SettingsScreen({
   navigation
@@ -29,6 +29,7 @@ export default function SettingsScreen({
     dispatch(themeUpdated(themeName));
     setCurrentTheme(themeName);
     theme = setTheme(themeName);
+    Speech.speak(themeName);
     AsyncStorage.setItem('theme', themeName);
   };
 

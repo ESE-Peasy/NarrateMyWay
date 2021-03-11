@@ -29,7 +29,6 @@ class BeaconInfo extends Component {
 
   render() {
     const currentTheme = store.getState().themeReducer;
-
     const theme = setTheme(currentTheme.themeName);
 
     return (

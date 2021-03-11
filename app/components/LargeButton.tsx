@@ -12,8 +12,8 @@ import store from '../src/state/store';
 class LargeButton extends Component {
   render() {
     const currentTheme = store.getState().themeReducer;
-
     const theme = setTheme(currentTheme.themeName);
+
     return (
       <Pressable
         style={[

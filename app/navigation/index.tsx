@@ -17,6 +17,7 @@ import { Ionicons } from '@expo/vector-icons';
 import { useDispatch } from 'react-redux';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { themeUpdated } from '../src/state/themes/actions';
+import { Header } from '../constants/Header';
 
 // If you are not familiar with React Navigation, we recommend going through the
 // "Fundamentals" guide: https://reactnavigation.org/docs/getting-started
@@ -58,7 +59,7 @@ function RootNavigator() {
       <Stack.Screen
         name="Main"
         component={MainScreen}
-        options={({ navigation, route }) => ({
+        options={({ navigation }) => ({
           title: 'Narrate My Way',
           headerTitleAlign: 'center',
           headerTitleStyle: {
@@ -71,9 +72,7 @@ function RootNavigator() {
                 name="settings-outline"
                 style={{ color: '#fff', paddingRight: 10 }}
                 size={35}
-                // accessible={true}
-                accessibilityLabel="Icon of a"
-                // adjustsFontSizeToFit
+                accessibilityLabel="Settings"
               />
             </Pressable>
           )
@@ -82,7 +81,7 @@ function RootNavigator() {
       <Stack.Screen
         name="Scanning"
         component={ScanningScreen}
-        options={({ navigation, route }) => ({
+        options={({ navigation }) => ({
           title: 'Narrate My Way',
           headerTitleAlign: 'center',
           headerTitleStyle: {
@@ -91,14 +90,7 @@ function RootNavigator() {
           },
           headerRight: () => (
             <Pressable onPress={() => navigation.navigate('Settings')}>
-              <Ionicons
-                name="settings-outline"
-                style={{ color: '#fff', paddingRight: 10 }}
-                size={35}
-                // accessible={true}
-                accessibilityLabel="Icon of a"
-                // adjustsFontSizeToFit
-              />
+              <SettingsIcon />
             </Pressable>
           )
         })}
@@ -106,15 +98,20 @@ function RootNavigator() {
       <Stack.Screen
         name="Settings"
         component={SettingsScreen}
-        options={({ navigation, route }) => ({
-          title: 'Settings',
-          headerTitleAlign: 'center',
-          headerTitleStyle: {
-            fontWeight: 'bold',
-            textTransform: 'uppercase'
-          }
-        })}
+        options={Header.settings}
       />
     </Stack.Navigator>
   );
 }
+
+const SettingsIcon = () => {
+  return (
+    <Ionicons
+      name="settings-outline"
+      style={{ color: '#fff', paddingRight: 10 }}
+      size={35}
+      accessible={true}
+      accessibilityLabel="Settings"
+    />
+  );
+};

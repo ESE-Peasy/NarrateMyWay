@@ -18,6 +18,8 @@ class SwitchTheme extends Component {
           }
         ]}
         onPress={this.props.onPress}
+        accessible={true}
+        accessibilityLabel="Switch theme"
       >
         <Text
           style={[styles.buttonText, { color: theme.textColor }]}
