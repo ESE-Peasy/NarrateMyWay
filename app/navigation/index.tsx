@@ -68,12 +68,7 @@ function RootNavigator() {
           },
           headerRight: () => (
             <Pressable onPress={() => navigation.navigate('Settings')}>
-              <Ionicons
-                name="settings-outline"
-                style={{ color: '#fff', paddingRight: 10 }}
-                size={35}
-                accessibilityLabel="Settings"
-              />
+              <SettingsIcon />
             </Pressable>
           )
         })}
