@@ -1,4 +1,5 @@
 package com.esepeasy.narratemyway;
+import com.esepeasy.narratemyway.ble.BLEPackage;
 
 import android.app.Application;
 import android.content.Context;
@@ -43,6 +44,7 @@ public class MainApplication extends Application implements ReactApplication {
     protected List<ReactPackage> getPackages() {
       List<ReactPackage> packages = new PackageList(this).getPackages();
       packages.add(new ModuleRegistryAdapter(mModuleRegistryProvider));
+      packages.add(new BLEPackage());
       return packages;
     }
 

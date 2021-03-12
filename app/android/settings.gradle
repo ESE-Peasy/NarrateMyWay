@@ -1,3 +1,4 @@
+include ':android-beacon-library-2.17.1'
 rootProject.name = 'NarrateMyWay'
 
 apply from: '../node_modules/react-native-unimodules/gradle.groovy'

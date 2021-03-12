@@ -1,0 +1,29 @@
+"id": "DC:0D:30:01:CD:BA", 
+"isConnectable": null, "
+localName": "nmw:1-exp-and", 
+"manufacturerData": null, 
+"mtu": 23, 
+"name": "nmw:1-exp-and", 
+"overflowServiceUUIDs": null, 
+"rssi": -42, 
+"serviceData": {
+    "0000feaa-0000-1000-8000-00805f9b34fb": "EAADYmVhY29uLmNvbQ==", 
+    "0000fff0-0000-1000-8000-00805f9b34fb": "GgIJktwNMAHNumQ="
+}, 
+"serviceUUIDs": ["0000feaa-0000-1000-8000-00805f9b34fb"], "solicitedServiceUUIDs": null, "txPowerLevel": null}
+
+}
+{"id": "DC:0D:30:01:CD:BA", 
+"isConnectable": null, 
+"localName": "nmw:1-exp-and",
+ "manufacturerData": null, "mtu": 23,
+  "name": "nmw:1-exp-and", 
+  "overflowServiceUUIDs": null, 
+  "rssi": -39, 
+  "serviceData": {
+      "0000feaa-0000-1000-8000-00805f9b34fb": "IAALkIAAAAAARwAAE0w=",
+      "0000fff0-0000-1000-8000-00805f9b34fb": "GgIJktwNMAHNumA="
+    }, 
+   "serviceUUIDs": ["0000feaa-0000-1000-8000-00805f9b34fb"], 
+   "solicitedServiceUUIDs": null, 
+   "txPowerLevel": null}
