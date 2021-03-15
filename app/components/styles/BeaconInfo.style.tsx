@@ -46,7 +46,8 @@ export default StyleSheet.create({
     elevation: 8,
     borderRadius: 50,
     width: '70%',
-    height: '80%'
+    height: '80%',
+    borderWidth: 1
   },
   placeText: {
     fontSize: 42,

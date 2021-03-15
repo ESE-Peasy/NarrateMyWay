@@ -5,7 +5,6 @@ import { Pressable, Text } from 'react-native';
 import styles from './styles/ScanningButton.style';
 
 import * as Speech from 'expo-speech';
-import DefaultColors from '../constants/DefaultColors';
 
 class ScanningButton extends Component {
   componentDidMount() {
@@ -14,17 +13,27 @@ class ScanningButton extends Component {
     }, 2);
   }
   render() {
+    const theme = this.props.theme;
+
     return (
       <Pressable
-        style={styles.buttonContainer}
-        android_ripple={DefaultColors.rippleColor}
+        style={[
+          styles.container,
+          {
+            backgroundColor: theme.backgroundColor,
+            borderColor: theme.borderColor
+          }
+        ]}
         onPress={() => {
           Speech.speak('Scanning for beacons');
         }}
         accessible={true}
         accessibilityLabel={this.props.accessibilityLabel}
       >
-        <Text style={styles.buttonText} adjustsFontSizeToFit>
+        <Text
+          style={[styles.text, { color: theme.textColor }]}
+          adjustsFontSizeToFit
+        >
           Scanning...
         </Text>
       </Pressable>

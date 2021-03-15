@@ -3,6 +3,7 @@ export type RootStackParamList = {
   NotFound: undefined;
   Main: undefined;
   Scanning: undefined;
+  Settings: undefined;
 };
 
 export type MainParamList = {
@@ -11,4 +12,8 @@ export type MainParamList = {
 
 export type ScanningParamList = {
   ScanningScreen: undefined;
+};
+
+export type SettingsParamList = {
+  SettingsScreen: undefined;
 };
