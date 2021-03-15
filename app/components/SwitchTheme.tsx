@@ -24,6 +24,7 @@ class SwitchTheme extends Component {
         <Text
           style={[styles.buttonText, { color: theme.textColor }]}
           adjustsFontSizeToFit
+          numberOfLines={1}
         >
           {theme.name}
         </Text>

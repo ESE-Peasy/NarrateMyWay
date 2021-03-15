@@ -5,7 +5,7 @@ const BackIcon = ({ theme }) => {
   return (
     <Ionicons
       name="arrow-back"
-      style={{ color: theme.textColor, paddingLeft: 10 }}
+      style={{ color: theme.headerTextColor, paddingLeft: 10 }}
       size={35}
       accessible={true}
       accessibilityLabel="Back"
@@ -17,7 +17,7 @@ const SettingsIcon = ({ theme }) => {
   return (
     <Ionicons
       name="settings-outline"
-      style={{ color: theme.textColor, paddingRight: 10 }}
+      style={{ color: theme.headerTextColor, paddingRight: 10 }}
       size={35}
       accessible={true}
       accessibilityLabel="Settings"

@@ -69,10 +69,10 @@ function RootNavigator() {
           headerTitleStyle: {
             fontWeight: 'bold',
             textTransform: 'uppercase',
-            color: theme.textColor
+            color: theme.headerTextColor
           },
           headerStyle: {
-            backgroundColor: theme.backgroundColor
+            backgroundColor: theme.headerBackgroundColor
           },
           headerLeft: () => {},
           headerRight: () => (
@@ -91,10 +91,10 @@ function RootNavigator() {
           headerTitleStyle: {
             fontWeight: 'bold',
             textTransform: 'uppercase',
-            color: theme.textColor
+            color: theme.headerTextColor
           },
           headerStyle: {
-            backgroundColor: theme.backgroundColor
+            backgroundColor: theme.headerBackgroundColor
           },
           headerLeft: () => {},
           headerRight: () => (
@@ -113,10 +113,10 @@ function RootNavigator() {
           headerTitleStyle: {
             fontWeight: 'bold',
             textTransform: 'uppercase',
-            color: theme.textColor
+            color: theme.headerTextColor
           },
           headerStyle: {
-            backgroundColor: theme.backgroundColor
+            backgroundColor: theme.headerBackgroundColor
           },
           headerRight: () => {},
           headerLeft: () => (

@@ -1,6 +1,8 @@
+import { StackNavigationProp } from '@react-navigation/stack';
 import React from 'react';
 import { Pressable } from 'react-native';
 import { BackIcon, SettingsIcon } from '../components/HeaderIcons';
+import { RootStackParamList } from '../types';
 
 const monochromeTheme = {
   name: 'monochrome',
@@ -9,7 +11,9 @@ const monochromeTheme = {
   textColor: '#000',
   backgroundColorInverted: '#000',
   borderColorInverted: '#fff',
-  textColorInverted: '#fff'
+  textColorInverted: '#fff',
+  headerBackgroundColor: '#000',
+  headerTextColor: '#fff'
 };
 
 const defaultTheme = {
@@ -19,7 +23,9 @@ const defaultTheme = {
   textColor: '#fff',
   backgroundColorInverted: '#fff',
   borderColorInverted: '#093f74',
-  textColorInverted: '#093f74'
+  textColorInverted: '#093f74',
+  headerBackgroundColor: '#093f74',
+  headerTextColor: '#fff'
 };
 
 const highContrastTheme = {
@@ -29,10 +35,20 @@ const highContrastTheme = {
   textColor: '#f00',
   backgroundColorInverted: '#f00',
   borderColorInverted: '#00f',
-  textColorInverted: '#00f'
+  textColorInverted: '#00f',
+  headerBackgroundColor: '#00f',
+  headerTextColor: '#f00'
 };
 
-function setTheme(themeName: string, navigation, routeName) {
+function setTheme(
+  themeName: string,
+  navigation:
+    | StackNavigationProp<RootStackParamList, 'Main'>
+    | StackNavigationProp<RootStackParamList, 'Settings'>
+    | StackNavigationProp<RootStackParamList, 'Scanning'>
+    | undefined,
+  routeName: string
+) {
   let theme = defaultTheme;
   if (themeName == 'monochrome') {
     theme = monochromeTheme;
@@ -45,11 +61,11 @@ function setTheme(themeName: string, navigation, routeName) {
     if (routeName == 'Main' || routeName == 'Scanning') {
       React.useEffect(() => {
         navigation.setOptions({
-          headerStyle: { backgroundColor: theme.backgroundColor },
+          headerStyle: { backgroundColor: theme.headerBackgroundColor },
           headerTitleStyle: {
             fontWeight: 'bold',
             textTransform: 'uppercase',
-            color: theme.textColor
+            color: theme.headerTextColor
           },
           headerLeft: () => {},
           headerRight: () => (
@@ -62,11 +78,11 @@ function setTheme(themeName: string, navigation, routeName) {
     } else {
       React.useEffect(() => {
         navigation.setOptions({
-          headerStyle: { backgroundColor: theme.backgroundColor },
+          headerStyle: { backgroundColor: theme.headerBackgroundColor },
           headerTitleStyle: {
             fontWeight: 'bold',
             textTransform: 'uppercase',
-            color: theme.textColor
+            color: theme.headerTextColor
           },
           headerRight: () => {},
           headerLeft: () => (
