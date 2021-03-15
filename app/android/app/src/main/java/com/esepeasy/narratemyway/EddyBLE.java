@@ -1,5 +1,6 @@
 package com.esepeasy.narratemyway;
 
+import android.util.Log;
 import com.facebook.react.bridge.NativeModule;
 import com.facebook.react.bridge.ReactApplicationContext;
 import com.facebook.react.bridge.ReactContext;
@@ -17,19 +18,22 @@ public class EddyBLE extends ReactContextBaseJavaModule  {
     @ReactMethod
     public void getStatus(
             Callback successCallback) {
-        successCallback.invoke(null, isOn);
+        successCallback.invoke(null, test);
 
     }
 
     @ReactMethod
-    public String turnOn() {
+    public void turnOn() {
         isOn = true;
-        return "Bulb is turn ON";
     }
     @ReactMethod
-    public String turnOff() {
+    public void turnOff() {
         isOn = false;
-        return "Bulb is turn OFF";
+    }
+
+    @ReactMethod
+    public void getString(Callback stringCallback) {
+        stringCallback.invoke("Working Bridge we can use for EddyStone URLs");
     }
 
     @Override

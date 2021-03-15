@@ -13,7 +13,6 @@ const TIMEOUT = 2000; // in ms
 const scanForBeacons = (manager: BleManager) => {
   const dispatch = useDispatch();
   let devices: Device[] = [];
-  NativeModules.EddyBLE.turnOff();
   setInterval(() => {
     devices = [];
     setTimeout(() => {
@@ -46,7 +45,7 @@ const scanForBeacons = (manager: BleManager) => {
     }
 
     if (device && device.name && device.rssi) {
-      console.log(NativeModules.EddyBLE.getName());
+      NativeModules.EddyBLE.getString((string: any) => console.log(string));
       if (device.name.startsWith('nmw')) {
         if (device.rssi > THRESHOLD) {
           if (device.name == 'nmw:1-exp-and') {
