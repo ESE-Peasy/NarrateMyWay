@@ -8,9 +8,6 @@ import { View } from 'react-native';
 import { VerticalSeparator } from './Separators';
 
 import * as Speech from 'expo-speech';
-import DefaultColors from '../constants/DefaultColors';
-import { setTheme } from '../src/themes';
-import store from '../src/state/store';
 
 class BeaconInfo extends Component {
   constructor(props) {
@@ -28,8 +25,7 @@ class BeaconInfo extends Component {
   }
 
   render() {
-    const currentTheme = store.getState().themeReducer;
-    const theme = setTheme(currentTheme.themeName);
+    const theme = this.props.theme;
 
     return (
       <View style={styles.beaconInfoContainer}>
@@ -67,7 +63,6 @@ const PlaceText = ({ theme, description, audio }) => (
         borderColor: theme.borderColorInverted
       }
     ]}
-    android_ripple={DefaultColors.rippleColor}
     accessible={true}
     onPress={() => {
       Speech.speak(audio);

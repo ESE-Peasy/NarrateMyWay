@@ -13,11 +13,12 @@ import ScanningScreen from '../screens/ScanningScreen';
 import { BleManager } from 'react-native-ble-plx';
 
 import scanForBeacons from '../src/ble';
-import { Ionicons } from '@expo/vector-icons';
 import { useDispatch } from 'react-redux';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { themeUpdated } from '../src/state/themes/actions';
-import { Header } from '../constants/Header';
+import store from '../src/state/store';
+import { setTheme } from '../src/themes';
+import { BackIcon, SettingsIcon } from '../components/HeaderIcons';
 
 // If you are not familiar with React Navigation, we recommend going through the
 // "Fundamentals" guide: https://reactnavigation.org/docs/getting-started
@@ -50,6 +51,9 @@ function RootNavigator() {
     dispatch(themeUpdated(themeName));
   });
 
+  const currentTheme = store.getState().themeReducer;
+  const theme = setTheme(currentTheme.themeName, undefined);
+
   return (
     <Stack.Navigator
       screenOptions={{ headerShown: true }}
@@ -64,11 +68,16 @@ function RootNavigator() {
           headerTitleAlign: 'center',
           headerTitleStyle: {
             fontWeight: 'bold',
-            textTransform: 'uppercase'
+            textTransform: 'uppercase',
+            color: theme.textColor
           },
+          headerStyle: {
+            backgroundColor: theme.backgroundColor
+          },
+          headerLeft: () => {},
           headerRight: () => (
-            <Pressable onPress={() => navigation.navigate('Settings')}>
-              <SettingsIcon />
+            <Pressable onPress={() => navigation.push('Settings')}>
+              <SettingsIcon theme={theme} />
             </Pressable>
           )
         })}
@@ -81,11 +90,16 @@ function RootNavigator() {
           headerTitleAlign: 'center',
           headerTitleStyle: {
             fontWeight: 'bold',
-            textTransform: 'uppercase'
+            textTransform: 'uppercase',
+            color: theme.textColor
           },
+          headerStyle: {
+            backgroundColor: theme.backgroundColor
+          },
+          headerLeft: () => {},
           headerRight: () => (
-            <Pressable onPress={() => navigation.navigate('Settings')}>
-              <SettingsIcon />
+            <Pressable onPress={() => navigation.push('Settings')}>
+              <SettingsIcon theme={theme} />
             </Pressable>
           )
         })}
@@ -93,20 +107,25 @@ function RootNavigator() {
       <Stack.Screen
         name="Settings"
         component={SettingsScreen}
-        options={Header.settings}
+        options={({ navigation }) => ({
+          title: 'Settings',
+          headerTitleAlign: 'center',
+          headerTitleStyle: {
+            fontWeight: 'bold',
+            textTransform: 'uppercase',
+            color: theme.textColor
+          },
+          headerStyle: {
+            backgroundColor: theme.backgroundColor
+          },
+          headerRight: () => {},
+          headerLeft: () => (
+            <Pressable onPress={() => navigation.goBack()}>
+              <BackIcon theme={theme} />
+            </Pressable>
+          )
+        })}
       />
     </Stack.Navigator>
   );
 }
-
-const SettingsIcon = () => {
-  return (
-    <Ionicons
-      name="settings-outline"
-      style={{ color: '#fff', paddingRight: 10 }}
-      size={35}
-      accessible={true}
-      accessibilityLabel="Settings"
-    />
-  );
-};

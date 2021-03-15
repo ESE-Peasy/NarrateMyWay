@@ -1,9 +1,12 @@
+import React from 'react';
+import { Pressable } from 'react-native';
+import { BackIcon, SettingsIcon } from '../components/HeaderIcons';
+
 const monochromeTheme = {
   name: 'monochrome',
   backgroundColor: '#fff',
   borderColor: '#000',
   textColor: '#000',
-  rippleColor: '#333',
   backgroundColorInverted: '#000',
   borderColorInverted: '#fff',
   textColorInverted: '#fff'
@@ -14,7 +17,6 @@ const defaultTheme = {
   backgroundColor: '#093f74',
   borderColor: '#fff',
   textColor: '#fff',
-  rippleColor: '#666',
   backgroundColorInverted: '#fff',
   borderColorInverted: '#093f74',
   textColorInverted: '#093f74'
@@ -25,20 +27,58 @@ const highContrastTheme = {
   backgroundColor: '#00f',
   borderColor: '#f00',
   textColor: '#f00',
-  rippleColor: '#f00',
   backgroundColorInverted: '#f00',
   borderColorInverted: '#00f',
   textColorInverted: '#00f'
 };
 
-function setTheme(themeName: string) {
+function setTheme(themeName: string, navigation, routeName) {
+  let theme = defaultTheme;
   if (themeName == 'monochrome') {
-    return monochromeTheme;
+    theme = monochromeTheme;
   } else if (themeName == 'highContrast') {
-    return highContrastTheme;
+    theme = highContrastTheme;
   } else {
-    return defaultTheme;
+    theme = defaultTheme;
   }
+  if (navigation) {
+    if (routeName == 'Main' || routeName == 'Scanning') {
+      React.useEffect(() => {
+        navigation.setOptions({
+          headerStyle: { backgroundColor: theme.backgroundColor },
+          headerTitleStyle: {
+            fontWeight: 'bold',
+            textTransform: 'uppercase',
+            color: theme.textColor
+          },
+          headerLeft: () => {},
+          headerRight: () => (
+            <Pressable onPress={() => navigation.navigate('Settings')}>
+              <SettingsIcon theme={theme} />
+            </Pressable>
+          )
+        });
+      });
+    } else {
+      React.useEffect(() => {
+        navigation.setOptions({
+          headerStyle: { backgroundColor: theme.backgroundColor },
+          headerTitleStyle: {
+            fontWeight: 'bold',
+            textTransform: 'uppercase',
+            color: theme.textColor
+          },
+          headerRight: () => {},
+          headerLeft: () => (
+            <Pressable onPress={() => navigation.goBack()}>
+              <BackIcon theme={theme} />
+            </Pressable>
+          )
+        });
+      });
+    }
+  }
+  return theme;
 }
 
 export { defaultTheme, monochromeTheme, highContrastTheme, setTheme };

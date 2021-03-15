@@ -12,6 +12,8 @@ import { Beacon, Theme } from '../src/state/types';
 import { RootStackParamList } from '../types';
 
 import store from '../src/state/store';
+import { setTheme } from '../src/themes';
+import { useRoute } from '@react-navigation/native';
 
 // Setup storage once
 const storage = new Storage();
@@ -21,6 +23,9 @@ storage.createTable();
 function MainScreen({
   navigation
 }: StackScreenProps<RootStackParamList, 'Main'>) {
+  const currentTheme = store.getState().themeReducer;
+  const theme = setTheme(currentTheme.themeName, navigation, useRoute().name);
+
   const beacon = store.getState().beaconStateReducer as Beacon;
   let code = '';
   if (beacon.beaconName) {
@@ -47,6 +52,7 @@ function MainScreen({
   return (
     <View style={styles.container}>
       <LargeButton
+        theme={theme}
         accessibilityLabel="Button to repeat the previous audio output"
         audio={audioSnippet}
       >
@@ -54,12 +60,14 @@ function MainScreen({
       </LargeButton>
       <HorizontalSeparator />
       <BeaconInfo
+        theme={theme}
         description={beaconDescription}
         icon={beaconIcon}
         audio={audioSnippet}
       />
       <HorizontalSeparator />
       <LargeButton
+        theme={theme}
         accessibilityLabel="Button for more information"
         audio="No additional information available"
       >

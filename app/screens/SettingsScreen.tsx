@@ -13,6 +13,7 @@ import store from '../src/state/store';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import SwitchTheme from '../components/SwitchTheme';
 import * as Speech from 'expo-speech';
+import { useRoute } from '@react-navigation/core';
 
 export default function SettingsScreen({
   navigation
@@ -21,14 +22,15 @@ export default function SettingsScreen({
   const [currentTheme, setCurrentTheme] = React.useState(
     currentSetTheme.themeName
   );
-  let theme = setTheme(currentTheme);
+
+  const route = useRoute();
+  const theme = setTheme(currentTheme, navigation, route.name);
 
   const dispatch = useDispatch();
 
   const updateAndSetTheme = (themeName: string) => {
     dispatch(themeUpdated(themeName));
     setCurrentTheme(themeName);
-    theme = setTheme(themeName);
     Speech.speak(themeName);
     AsyncStorage.setItem('theme', themeName);
   };

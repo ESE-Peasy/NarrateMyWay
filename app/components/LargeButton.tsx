@@ -5,15 +5,10 @@ import { Pressable, Text } from 'react-native';
 import styles from './styles/LargeButton.style';
 
 import * as Speech from 'expo-speech';
-import { setTheme } from '../src/themes';
-
-import store from '../src/state/store';
 
 class LargeButton extends Component {
   render() {
-    const currentTheme = store.getState().themeReducer;
-    const theme = setTheme(currentTheme.themeName);
-
+    const theme = this.props.theme;
     return (
       <Pressable
         style={[
@@ -23,7 +18,6 @@ class LargeButton extends Component {
             borderColor: theme.borderColor
           }
         ]}
-        android_ripple={{ color: theme.rippleColor }}
         onPress={() => {
           // Triggered when the user taps on the button
           Speech.speak(this.props.audio);
