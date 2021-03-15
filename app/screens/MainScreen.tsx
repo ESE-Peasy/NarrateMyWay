@@ -17,6 +17,7 @@ import store from '../src/state/store';
 const storage = new Storage();
 storage.clearStorage();
 storage.createTable();
+storage.parseExpansionPack();
 
 function MainScreen({
   navigation
@@ -33,6 +34,8 @@ function MainScreen({
   function setBeaconData(codeDescription: String, codeEmblem: String) {
     setBeaconDescription(codeDescription);
     setBeaconIcon(codeEmblem);
+    console.log(codeDescription);
+    console.log(codeEmblem);
   }
 
   if (code != '') {
