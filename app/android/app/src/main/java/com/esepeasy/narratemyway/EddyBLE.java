@@ -1,5 +1,8 @@
 package com.esepeasy.narratemyway;
 
+import android.content.Context;
+import android.os.Handler;
+import android.os.Looper;
 import android.util.Log;
 import com.facebook.react.bridge.NativeModule;
 import com.facebook.react.bridge.ReactApplicationContext;
@@ -8,17 +11,21 @@ import com.facebook.react.bridge.ReactContextBaseJavaModule;
 import com.facebook.react.bridge.ReactMethod;
 import com.facebook.react.bridge.Callback;
 
+import org.altbeacon.beacon.*;
+
 public class EddyBLE extends ReactContextBaseJavaModule  {
     private static Boolean isOn = false;
-    public String test = "Testing Bulb";
+    public EddyBeaconScanner scanner;
     public EddyBLE(ReactApplicationContext reactContext) {
         super(reactContext);
+        Looper.prepare();
+        this.scanner = new EddyBeaconScanner();
     }
 
     @ReactMethod
     public void getStatus(
             Callback successCallback) {
-        successCallback.invoke(null, test);
+        successCallback.invoke(null, isOn);
 
     }
 
@@ -33,7 +40,7 @@ public class EddyBLE extends ReactContextBaseJavaModule  {
 
     @ReactMethod
     public void getString(Callback stringCallback) {
-        stringCallback.invoke("Working Bridge we can use for EddyStone URLs");
+        stringCallback.invoke(this.scanner.beacon);
     }
 
     @Override
