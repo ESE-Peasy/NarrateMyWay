@@ -4,7 +4,6 @@ import {
   beaconOutOfRange
 } from '../src/state/bluetooth/actions';
 import { useDispatch } from 'react-redux';
-import * as FileSystem from 'expo-file-system';
 
 const THRESHOLD = -70; // in dB
 const TIMEOUT = 2000; // in ms
