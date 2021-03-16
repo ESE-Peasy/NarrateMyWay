@@ -35,14 +35,12 @@ class Storage {
       );
       tx.executeSql(
         'CREATE TABLE IF NOT EXISTS versionRecord (id integer primary key not null, version text);'
-      );
-      
+      );   
       tx.executeSql(
-        'CREATE TABLE IF NOT EXISTS expansionPackTable (id int NOT NULL AUTO_INCREMENT, pack_name text, description text, wtw text, organisation text);'
+        'CREATE TABLE IF NOT EXISTS expansionPackTable (id integer primary key autoincrement, pack_name text, description text, wtw text, organisation text);'
       );
-      
       tx.executeSql(
-        'CREATE TABLE IF NOT EXISTS uuidTable (id integer primary key not null, nmw text, name text, description text, website text);'
+        'CREATE TABLE IF NOT EXISTS uuidTable (id string primary key not null, nmw text, name text, description text, website text);'
       );
       
       tx.executeSql('SELECT * FROM versionRecord', [], (_, results) => {
@@ -72,26 +70,60 @@ class Storage {
     }, null);
   }
 
-    // Parse Expansion pack json object
-    parseExpansionPack(){
-      // console.log(expansionData.meta);
-      this.db.transaction((tx) => {
-        tx.executeSql(
-          'INSERT INTO expansionPackTable (pack_name, description, w3w, organisation) VALUES (?,?,?,?)',
-          [expansionData.meta.pack_name, expansionData.meta.description, expansionData.meta.w3w, expansionData.meta.organisation],
-          console.log("complete")
-        );
+  insertExpansion(){
+    this.db.transaction((tx) => {
       expansionData.UUIDs.forEach((value) => {
         tx.executeSql(
           'INSERT INTO uuidTable (id, nmw, name, description, website) VALUES (?,?,?,?,?)',
-          [value.code, value.nmw, value.name, value.description, value.website],
-          console.log("complete 2")
+          [value.code, value.nmw, value.name, value.description, value.website]
         );
-        });
       });
-      console.log("hello")
-    }
+     tx.executeSql(
+      'INSERT INTO expansionPackTable (pack_name, description, wtw, organisation) VALUES (?,?,?,?)',
+          [expansionData.meta.pack_name, expansionData.meta.description, expansionData.meta.w3w, expansionData.meta.organisation]
+    );
+    });
+  }
 
+
+// 'INSERT INTO versionRecord (version) VALUES (?)'
+   parseExpansionPack(){
+    this.db.transaction((tx) => {
+    tx.executeSql(
+      'SELECT * FROM uuidTable',
+      [],
+      (_, results) => {
+        console.log(results.rows);
+      },
+    );  
+    tx.executeSql(
+      'SELECT * FROM expansionPackTable',
+      [],
+      (_, results) => {
+        console.log(results.rows);
+      },
+    );  
+    }, null);
+   }
+
+
+    getUUIDData(code: string, callback: Function){
+      this.db.transaction((tx) => {
+        tx.executeSql(
+          'SELECT nmw FROM uuidTable WHERE nmw=?',
+          [code],
+          (_, results) => {
+            console.log(results, "this is results ---");
+            callback(
+              results.rows.item(0).nmw 
+            );
+          },
+        );
+        console.log("error error error");
+      });
+      // console.log("this is the code");
+      console.log(code);
+    }
   // Input location code data
   loadData(data: location) {
     this.db.transaction((tx) => {
@@ -101,14 +133,15 @@ class Storage {
       );
     }, null);
   }
-
+  
   // Clear storage
   clearStorage() {
     this.db.transaction((tx) => {
       tx.executeSql('DROP TABLE locationCodes;');
       tx.executeSql('DROP TABLE versionRecord;');
-      tx.executeSql('DROP TABLE uuidTable;');
       tx.executeSql('DROP TABLE expansionPackTable;');
+      tx.executeSql('DROP TABLE uuidTable;');
+
     });
   }
 

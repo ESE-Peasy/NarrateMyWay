@@ -17,6 +17,7 @@ import store from '../src/state/store';
 const storage = new Storage();
 storage.clearStorage();
 storage.createTable();
+storage.insertExpansion();
 storage.parseExpansionPack();
 
 function MainScreen({
@@ -34,18 +35,25 @@ function MainScreen({
   function setBeaconData(codeDescription: String, codeEmblem: String) {
     setBeaconDescription(codeDescription);
     setBeaconIcon(codeEmblem);
-    console.log(codeDescription);
-    console.log(codeEmblem);
+    // console.log(codeDescription);
+    // console.log(codeEmblem);
+  }
+
+  function printUUIDData(name: String) {
+    console.log(name);
+    console.log("this is the output.");
   }
 
   if (code != '') {
     storage.lookupDataForNMWCode(code, setBeaconData);
+    // storage.getUUIDData(code, printUUIDData);
   }
 
   let audioSnippet = '';
   if (beaconDescription != '') {
     audioSnippet = beaconDescription + ' located';
   }
+  storage.parseExpansionPack();
 
   return (
     <View style={styles.container}>
