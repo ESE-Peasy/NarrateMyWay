@@ -47,7 +47,7 @@ const scanForBeacons = (manager: BleManager) => {
     }, TIMEOUT);
   }, 2 * TIMEOUT);
 
-  manager.startDeviceScan(null, null, async (error, device) => {
+  manager.startDeviceScan(null, null, (error, device) => {
     if (error) {
       manager.stopDeviceScan();
       console.log(error.reason);
