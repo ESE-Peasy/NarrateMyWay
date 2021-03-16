@@ -27,6 +27,7 @@
     "expo": "^40.0.0",
     "expo-asset": "~8.2.1",
     "expo-constants": "~9.3.3",
+    "expo-file-system": "~9.3.0",
     "expo-font": "~8.4.0",
     "expo-linking": "~2.0.1",
     "expo-speech": "~8.5.0",
