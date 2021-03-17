@@ -38,13 +38,6 @@ function MainScreen({
   function setBeaconData(codeDescription: String, codeEmblem: String) {
     setBeaconDescription(codeDescription);
     setBeaconIcon(codeEmblem);
-    // console.log(codeDescription);
-    // console.log(codeEmblem);
-  }
-
-  function printUUIDData(name: String) {
-    console.log(name);
-    console.log('this is the output.');
   }
 
   if (code != '') {
@@ -56,7 +49,6 @@ function MainScreen({
   if (beaconDescription != '') {
     audioSnippet = beaconDescription + ' located';
   }
-  storage.parseExpansionPack();
 
   return (
     <View style={styles.container}>
