@@ -42,7 +42,6 @@ function MainScreen({
 
   if (code != '') {
     storage.lookupDataForNMWCode(code, setBeaconData);
-    // storage.getUUIDData(code, printUUIDData);
   }
 
   let audioSnippet = '';
