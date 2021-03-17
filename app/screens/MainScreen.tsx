@@ -19,6 +19,8 @@ storage.clearStorage();
 storage.createTable();
 storage.insertExpansion();
 storage.parseExpansionPack();
+storage.deleteExpansionPack(1);
+storage.parseExpansionPack();
 
 function MainScreen({
   navigation
