@@ -83,17 +83,22 @@ class Storage {
 
   insertExpansion(){
     this.db.transaction((tx) => {
-      
-      expansionData.UUIDs.forEach((value) => {
-        tx.executeSql(
-          'INSERT INTO uuidTable (id, nmw, name, description, website, expansionID) VALUES (?,?,?,?,?,?)',
-          [value.code, value.nmw, value.name, value.description, value.website, 0]
-        );
-      });
-    
      tx.executeSql(
       'INSERT INTO expansionPackTable (pack_name, description, wtw, organisation) VALUES (?,?,?,?)',
           [expansionData.meta.pack_name, expansionData.meta.description, expansionData.meta.w3w, expansionData.meta.organisation]
+    );
+    tx.executeSql(
+      'SELECT id FROM expansionPackTable WHERE pack_name=?',
+      ["Boyd Orr"],
+      (_, results) => {
+        console.log(results.rows.item(0).id);
+        expansionData.UUIDs.forEach((value) => {
+          tx.executeSql(
+            'INSERT INTO uuidTable (id, nmw, name, description, website, expansionID) VALUES (?,?,?,?,?,?)',
+            [value.code, value.nmw, value.name, value.description, value.website, results.rows.item(0).id]
+          );
+        });
+      }
     );
     });
   }
