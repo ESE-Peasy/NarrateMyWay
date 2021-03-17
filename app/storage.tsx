@@ -112,7 +112,6 @@ class Storage {
     });
   }
 
-  // 'INSERT INTO versionRecord (version) VALUES (?)'
   printExpansionPack() {
     this.db.transaction((tx) => {
       tx.executeSql('SELECT * FROM uuidTable', [], (_, results) => {
@@ -124,19 +123,16 @@ class Storage {
     }, null);
   }
 
-  getUUIDData(code: string, callback: Function) {
+  getUUIDDescription(code: string, callback: Function) {
     this.db.transaction((tx) => {
       tx.executeSql(
-        'SELECT nmw FROM uuidTable WHERE nmw=?',
+        'SELECT description FROM uuidTable WHERE id=?',
         [code],
         (_, results) => {
-          console.log(results, 'this is results ---');
-          callback(results.rows.item(0).nmw);
+          callback(results.rows.item(0).description);
         }
       );
-      console.log('error error error');
     });
-    // console.log("this is the code");
     console.log(code);
   }
   // Input location code data
