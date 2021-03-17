@@ -12,15 +12,16 @@ import { Beacon } from '../src/state/types';
 import { RootStackParamList } from '../types';
 
 import store from '../src/state/store';
+import * as expansionData from '../expansion1.json';
 
 // Setup storage once
 const storage = new Storage();
 storage.clearStorage();
 storage.createTable();
-storage.insertExpansion();
-storage.parseExpansionPack();
+storage.parseExpansionPack(expansionData);
+storage.printExpansionPack();
 storage.deleteExpansionPack(1);
-storage.parseExpansionPack();
+storage.printExpansionPack();
 
 function MainScreen({
   navigation
@@ -43,7 +44,7 @@ function MainScreen({
 
   function printUUIDData(name: String) {
     console.log(name);
-    console.log("this is the output.");
+    console.log('this is the output.');
   }
 
   if (code != '') {

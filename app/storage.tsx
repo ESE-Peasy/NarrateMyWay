@@ -1,7 +1,6 @@
 import * as SQLite from 'expo-sqlite';
 
 import * as nmwTable from './nmwstandard.json';
-import * as expansionData from './expansion1.json';
 
 // Interface for data
 interface location {
@@ -23,13 +22,6 @@ class Storage {
   // Create database
   createDb() {
     const db = SQLite.openDatabase('database.db');
-    /*
-    db.exec(
-      [{ sql: 'PRAGMA foreign_keys = ON;', args: [] }],
-      false,
-      () => console.log('Foreign keys turned on'),
-    );
-    */
     db.transaction((tx) => {
       tx.executeSql('PRAGMA foreign_keys = ON');
     });
@@ -48,7 +40,6 @@ class Storage {
       tx.executeSql(
         'CREATE TABLE IF NOT EXISTS expansionPackTable (id integer primary key autoincrement, pack_name text, description text, wtw text, organisation text);'
       );
-      // FOREIGN KEY (expansionID) REFERENCES expansionPackTable (id)
       tx.executeSql(
         'CREATE TABLE IF NOT EXISTS uuidTable (id string primary key not null, nmw text, name text, description text, website text, expansionID INTEGER REFERENCES expansionPackTable(id));'
       );
@@ -80,7 +71,8 @@ class Storage {
     }, null);
   }
 
-  insertExpansion() {
+  // Insert expansion pack into the database
+  parseExpansionPack(expansionData) {
     this.db.transaction((tx) => {
       tx.executeSql(
         'INSERT INTO expansionPackTable (pack_name, description, wtw, organisation) VALUES (?,?,?,?)',
@@ -95,7 +87,6 @@ class Storage {
         'SELECT id FROM expansionPackTable WHERE pack_name=?',
         ['Boyd Orr'],
         (_, results) => {
-          console.log(results.rows.item(0).id);
           expansionData.UUIDs.forEach((value) => {
             tx.executeSql(
               'INSERT INTO uuidTable (id, nmw, name, description, website, expansionID) VALUES (?,?,?,?,?,?)',
@@ -122,7 +113,7 @@ class Storage {
   }
 
   // 'INSERT INTO versionRecord (version) VALUES (?)'
-  parseExpansionPack() {
+  printExpansionPack() {
     this.db.transaction((tx) => {
       tx.executeSql('SELECT * FROM uuidTable', [], (_, results) => {
         console.log(results.rows);
