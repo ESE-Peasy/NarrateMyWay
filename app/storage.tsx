@@ -85,7 +85,7 @@ class Storage {
       );
       tx.executeSql(
         'SELECT id FROM expansionPackTable WHERE pack_name=?',
-        ['Boyd Orr'],
+        [expansionData.meta.pack_name],
         (_, results) => {
           expansionData.UUIDs.forEach((value) => {
             tx.executeSql(
@@ -123,13 +123,13 @@ class Storage {
     }, null);
   }
 
-  getUUIDDescription(code: string, callback: Function) {
+  getUUIDData(code: string, callback: Function) {
     this.db.transaction((tx) => {
       tx.executeSql(
-        'SELECT description FROM uuidTable WHERE id=?',
+        'SELECT * FROM uuidTable WHERE id=?',
         [code],
         (_, results) => {
-          callback(results.rows.item(0).description);
+          callback(results.rows.item(0));
         }
       );
     });
