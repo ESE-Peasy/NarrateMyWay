@@ -12,6 +12,7 @@ import { Beacon, Theme } from '../src/state/types';
 import { RootStackParamList } from '../types';
 
 import store from '../src/state/store';
+import * as expansionData from '../expansion1.json';
 import { setTheme } from '../src/themes';
 import { useRoute } from '@react-navigation/native';
 
@@ -19,6 +20,10 @@ import { useRoute } from '@react-navigation/native';
 const storage = new Storage();
 storage.clearStorage();
 storage.createTable();
+storage.parseExpansionPack(expansionData);
+storage.printExpansionPack();
+storage.deleteExpansionPack(1);
+storage.printExpansionPack();
 
 function MainScreen({
   navigation

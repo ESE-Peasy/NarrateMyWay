@@ -5,24 +5,24 @@
     "w3w": "years.gains.branch",
     "organisation": "University of Glasgow"
   },
-  "UUIDs": {
-    "00000000-0000-0000-0000-000000000001": {
+  "UUIDs": [
+    {"code":"00000000-0000-0000-0000-000000000001",
       "nmw": "2-1-2",
       "name": "BO Lecture Theatre 1",
       "description": "Lecture theatre one in the Boyd Orr building",
       "website": ""
     },
-    "00000000-0000-0000-0000-000000000002": {
+    {"code":"00000000-0000-0000-0000-000000000002",
       "nmw": "2-1-2",
       "name": "BO Lecture Theatre 1",
       "description": "Lecture theatre one in the Boyd Orr building",
       "website": ""
     },
-    "00000000-0000-0000-0000-000000000003": {
+    {"code":"00000000-0000-0000-0000-000000000003",
       "nmw": "2-1-2",
       "name": "Boyd Orr",
       "description": "Entrance to Boyd Orr building",
       "website": "example.com"
     }
-  }
+  ]
 }
