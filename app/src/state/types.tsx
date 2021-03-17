@@ -21,3 +21,14 @@ export type CurrentBeacon = Beacon | NoBeacon;
 export type AppState = {
   currentBeacon: CurrentBeacon;
 };
+
+export type Theme = {
+  themeName: string;
+};
+
+export type ThemeUpdatedAction = {
+  type: string;
+  theme: Theme;
+};
+
+export type ThemeAction = ThemeUpdatedAction;

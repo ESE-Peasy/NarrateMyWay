@@ -7,7 +7,8 @@ export default StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
     width: '100%',
-    height: '30%'
+    height: '30%',
+    borderWidth: 1
   },
   largeButtonText: {
     fontSize: 42,

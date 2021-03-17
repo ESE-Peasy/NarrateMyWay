@@ -8,7 +8,6 @@ import { View } from 'react-native';
 import { VerticalSeparator } from './Separators';
 
 import * as Speech from 'expo-speech';
-import DefaultColors from '../constants/DefaultColors';
 
 class BeaconInfo extends Component {
   constructor(props) {
@@ -26,12 +25,15 @@ class BeaconInfo extends Component {
   }
 
   render() {
+    const theme = this.props.theme;
+
     return (
       <View style={styles.beaconInfoContainer}>
         <View style={styles.placeContainer}>
           <PlaceIcon icon={this.props.icon}></PlaceIcon>
           <VerticalSeparator />
           <PlaceText
+            theme={theme}
             description={this.props.description}
             audio={this.props.audio}
           ></PlaceText>
@@ -52,16 +54,24 @@ const PlaceIcon = ({ icon }) => (
   />
 );
 
-const PlaceText = ({ description, audio }) => (
+const PlaceText = ({ theme, description, audio }) => (
   <Pressable
-    style={styles.placeTextContainer}
-    android_ripple={DefaultColors.rippleColor}
+    style={[
+      styles.placeTextContainer,
+      {
+        backgroundColor: theme.backgroundColorInverted,
+        borderColor: theme.borderColorInverted
+      }
+    ]}
     accessible={true}
     onPress={() => {
       Speech.speak(audio);
     }}
   >
-    <Text style={styles.placeText} adjustsFontSizeToFit>
+    <Text
+      style={[styles.placeText, { color: theme.textColorInverted }]}
+      adjustsFontSizeToFit
+    >
       {description}
     </Text>
   </Pressable>
