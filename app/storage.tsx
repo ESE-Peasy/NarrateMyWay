@@ -24,11 +24,16 @@ class Storage {
   // Create database
   createDb() {
     const db = SQLite.openDatabase('database.db');
+    /*
     db.exec(
       [{ sql: 'PRAGMA foreign_keys = ON;', args: [] }],
       false,
       () => console.log('Foreign keys turned on'),
     );
+    */
+   db.transaction((tx) => {
+    tx.executeSql("PRAGMA foreign_keys = ON");
+   });
     return db;
   }
 
@@ -44,8 +49,9 @@ class Storage {
       tx.executeSql(
         'CREATE TABLE IF NOT EXISTS expansionPackTable (id integer primary key autoincrement, pack_name text, description text, wtw text, organisation text);'
       );
+      // FOREIGN KEY (expansionID) REFERENCES expansionPackTable (id)
       tx.executeSql(
-        'CREATE TABLE IF NOT EXISTS uuidTable (id string primary key not null, nmw text, name text, description text, website text, expansionID string, FOREIGN KEY (expansionID) REFERENCES expansionPackTable (id));'
+        'CREATE TABLE IF NOT EXISTS uuidTable (id string primary key not null, nmw text, name text, description text, website text, expansionID INTEGER REFERENCES expansionPackTable(id));'
       );
       
       tx.executeSql('SELECT * FROM versionRecord', [], (_, results) => {
@@ -80,11 +86,11 @@ class Storage {
       
       expansionData.UUIDs.forEach((value) => {
         tx.executeSql(
-          'INSERT INTO uuidTable (id, nmw, name, description, website) VALUES (?,?,?,?,?)',
-          [value.code, value.nmw, value.name, value.description, value.website]
+          'INSERT INTO uuidTable (id, nmw, name, description, website, expansionID) VALUES (?,?,?,?,?,?)',
+          [value.code, value.nmw, value.name, value.description, value.website, 0]
         );
       });
-      
+    
      tx.executeSql(
       'INSERT INTO expansionPackTable (pack_name, description, wtw, organisation) VALUES (?,?,?,?)',
           [expansionData.meta.pack_name, expansionData.meta.description, expansionData.meta.w3w, expansionData.meta.organisation]
