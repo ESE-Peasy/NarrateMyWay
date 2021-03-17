@@ -1,4 +1,6 @@
-import {} from './storage';
+import Storage from './storage';
+
+const storage = new Storage();
 
 /**
  * Normalise a detected NMW code so all fields are converted to upper case and any
@@ -37,4 +39,49 @@ export function normaliseNMWString(nmwCode: String): String | undefined {
     }
   }
   return 'nmw:' + fields.join('-');
+}
+
+type LookupResultSimple = {
+  description: String;
+  icon: String;
+}
+
+type LookupResultExpanded = {
+  name: String;
+  description: String;
+  icon: String;
+}
+
+/**
+ * To be called when a new beacon is detected. The function wraps the necessary
+ * lookup(s) to the database to retrieve all desired information. This also includes
+ * error handling of the NMW code that was received from the beacon.
+ *
+ * @param {String} nmwCode NMW code of detected beacon
+ * @param {String} uuid UUID of detected beacon
+ * @return {LookupResultSimple | LookupResultExpanded | undefined} `LookupResultSimple`
+ * if the lookup only resulted in standard NMW code results, `LookupResultExpanded` if
+ * additional information was available via an expansion pack, and `undefined` if the
+ * lookup failed
+ */
+export async function lookupBeacon(
+  nmwCode: String,
+  uuid: String
+): Promise<LookupResultSimple | LookupResultExpanded | undefined> {
+  // Ensure the NMW code is correctly formatted
+  const normalisedNMWCode = normaliseNMWString(nmwCode);
+  if (normalisedNMWCode == undefined) {
+    // Return if the code is invalid and not convertible to a valid format
+    return undefined;
+  }
+  nmwCode = normalisedNMWCode;
+
+  // Query database
+  return new Promise((resolve, _) => {
+    storage.getUUIDData(uuid, (result) => {
+      if (result != null) {
+      resolve({result.name, result.description, result.icon});
+      }
+    })
+  });
 }
