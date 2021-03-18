@@ -1,7 +1,7 @@
 import Storage, { nmwLocation, uuidLocation } from './storage';
 
-import * as expansionData from './expansion1.json';
-import { Beacon } from './src/state/types';
+import * as expansionData from '../expansion1.json';
+import { Beacon } from './state/types';
 
 const storage = new Storage();
 storage.clearStorage();

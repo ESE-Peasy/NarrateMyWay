@@ -14,7 +14,7 @@ import store from '../src/state/store';
 import { setTheme } from '../src/themes';
 import { useRoute } from '@react-navigation/native';
 
-import * as Lookup from '../lookup';
+import * as Lookup from '../src/lookup';
 
 function MainScreen({
   navigation
@@ -22,12 +22,7 @@ function MainScreen({
   const currentTheme = store.getState().themeReducer;
   const theme = setTheme(currentTheme.themeName, navigation, useRoute().name);
 
-  // Mock beacon here
-  // const beacon = store.getState().beaconStateReducer as Beacon;
-  const beacon: Beacon = {
-    beaconName: 'nmw:1-1-1',
-    beaconId: '00000000-0000-0000-0000-000000000001'
-  };
+  const beacon = store.getState().beaconStateReducer as Beacon;
 
   const [beaconDescription, setBeaconDescription] = React.useState('');
   const [beaconIcon, setBeaconIcon] = React.useState('');

@@ -1,4 +1,4 @@
-import { normaliseNMWString } from '../lookup';
+import { normaliseNMWString } from '../src/lookup';
 
 test('Non-NMW code returns undefined', () => {
   expect(normaliseNMWString('')).toBe(undefined);

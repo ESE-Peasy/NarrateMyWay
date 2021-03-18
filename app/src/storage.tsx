@@ -1,6 +1,6 @@
 import * as SQLite from 'expo-sqlite';
 
-import * as nmwTable from './nmwstandard.json';
+import * as nmwTable from '../nmwstandard.json';
 
 // Interface for data
 export interface nmwLocation {
