@@ -18,15 +18,6 @@ import { useRoute } from '@react-navigation/native';
 
 import * as Lookup from '../lookup';
 
-// Setup storage once
-// const storage = new Storage();
-// storage.clearStorage();
-// storage.createTable();
-// storage.parseExpansionPack(expansionData);
-// storage.printExpansionPack();
-// storage.deleteExpansionPack(1);
-// storage.printExpansionPack();
-
 function MainScreen({
   navigation
 }: StackScreenProps<RootStackParamList, 'Main'>) {
@@ -40,18 +31,11 @@ function MainScreen({
     beaconId: '00000000-0000-0000-0000-000000000001'
   };
 
-  // let code = '';
-  // if (beacon.beaconName) {
-  //   code = beacon.beaconName.split(':')[1];
-  // }
-
   const [beaconDescription, setBeaconDescription] = React.useState('');
   const [beaconIcon, setBeaconIcon] = React.useState('');
-
-  // function setBeaconData(x) {
-  //   setBeaconDescription(x.description);
-  //   setBeaconIcon(x.icon);
-  // }
+  const [additionalAudio, setAdditionalAudio] = React.useState(
+    'No additional information available'
+  );
 
   Lookup.lookupBeacon(beacon).then((result: Lookup.LookupResult) => {
     switch (result._tag) {
@@ -59,6 +43,7 @@ function MainScreen({
         console.log('Enriched result', result);
         setBeaconDescription(result.name);
         setBeaconIcon(result.icon);
+        setAdditionalAudio(result.description);
         break;
       case 'Simple':
         console.log('Simple result', result);
@@ -69,10 +54,6 @@ function MainScreen({
         console.log('Error performing lookup');
     }
   });
-
-  // if (code != '') {
-  //   storage.lookupNMWCode(code, setBeaconData);
-  // }
 
   let audioSnippet = '';
   if (beaconDescription != '') {
@@ -99,7 +80,7 @@ function MainScreen({
       <LargeButton
         theme={theme}
         accessibilityLabel="Button for more information"
-        audio="No additional information available"
+        audio={additionalAudio}
       >
         Tap for more info
       </LargeButton>
