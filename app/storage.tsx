@@ -3,10 +3,10 @@ import * as SQLite from 'expo-sqlite';
 import * as nmwTable from './nmwstandard.json';
 
 // Interface for data
-interface location {
+export interface nmwLocation {
   code: string;
   description: string;
-  emblem: String;
+  icon: string;
 }
 
 // Storage Class
@@ -32,7 +32,7 @@ class Storage {
   createTable() {
     this.db.transaction((tx) => {
       tx.executeSql(
-        'CREATE TABLE IF NOT EXISTS locationCodes (id string primary key not null, description text, emblem text);'
+        'CREATE TABLE IF NOT EXISTS locationCodes (code string primary key not null, description text, icon text);'
       );
       tx.executeSql(
         'CREATE TABLE IF NOT EXISTS versionRecord (id integer primary key not null, version text);'
@@ -51,8 +51,8 @@ class Storage {
           ]);
           nmwTable.nmw.forEach((value) => {
             tx.executeSql(
-              'INSERT INTO locationCodes (id, description, emblem) VALUES (?,?,?)',
-              [value.code, value.description, value.emblem]
+              'INSERT INTO locationCodes (code, description, icon) VALUES (?,?,?)',
+              [value.code, value.description, value.icon]
             );
           });
         } else if (results.rows.item(0) != nmwTable.version) {
@@ -62,8 +62,8 @@ class Storage {
 
           nmwTable.nmw.forEach((value) => {
             tx.executeSql(
-              'INSERT INTO locationCodes (id, description, emblem) VALUES (?,?,?)',
-              [value.code, value.description, value.emblem]
+              'INSERT INTO locationCodes (code, description, icon) VALUES (?,?,?)',
+              [value.code, value.description, value.icon]
             );
           });
         }
@@ -96,7 +96,7 @@ class Storage {
                 value.name,
                 value.description,
                 value.website,
-                results.rows.item(0).id
+                results.rows.item(0).code
               ]
             );
           });
@@ -123,7 +123,7 @@ class Storage {
     }, null);
   }
 
-  getUUIDData(code: string, callback: Function) {
+  lookupUUID(code: string, callback: Function) {
     this.db.transaction((tx) => {
       tx.executeSql(
         'SELECT * FROM uuidTable WHERE id=?',
@@ -136,11 +136,11 @@ class Storage {
     console.log(code);
   }
   // Input location code data
-  loadData(data: location) {
+  loadData(data: nmwLocation) {
     this.db.transaction((tx) => {
       tx.executeSql(
-        'INSERT INTO locationCodes (id, description, emblem) VALUES (? ,?, ?)',
-        [data.code, data.description, data.emblem]
+        'INSERT INTO locationCodes (code, description, icon) VALUES (? ,?, ?)',
+        [data.code, data.description, data.icon]
       );
     }, null);
   }
@@ -156,9 +156,9 @@ class Storage {
   }
 
   // Delete element from location table
-  deleteElementLocation(id: string) {
+  deleteElementLocation(code: string) {
     this.db.transaction((tx) => {
-      tx.executeSql('DELETE FROM locationCodes WHERE id=?', [id]);
+      tx.executeSql('DELETE FROM locationCodes WHERE code=?', [code]);
     });
   }
 
@@ -172,16 +172,17 @@ class Storage {
   }
 
   // Lookup code description
-  lookupDataForNMWCode(code: String, callback: Function) {
+  lookupNMWCode(code: string, callback: (location: nmwLocation) => void) {
     this.db.transaction((tx) => {
       tx.executeSql(
-        'SELECT description, emblem FROM locationCodes WHERE id=?',
+        'SELECT description, icon FROM locationCodes WHERE code=?',
         [code],
         (_, results) => {
-          callback(
-            results.rows.item(0).description,
-            results.rows.item(0).emblem
-          );
+          console.log("lookupNMWCode result", results.rows.item(0));
+          callback(results.rows.item(0));
+        },
+        (_, error) => {
+          console.log("lookupNMWCode error", error);
         }
       );
     });

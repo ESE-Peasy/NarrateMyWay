@@ -16,14 +16,16 @@ import * as expansionData from '../expansion1.json';
 import { setTheme } from '../src/themes';
 import { useRoute } from '@react-navigation/native';
 
+import * as Lookup from '../lookup'
+
 // Setup storage once
-const storage = new Storage();
-storage.clearStorage();
-storage.createTable();
-storage.parseExpansionPack(expansionData);
-storage.printExpansionPack();
-storage.deleteExpansionPack(1);
-storage.printExpansionPack();
+// const storage = new Storage();
+// storage.clearStorage();
+// storage.createTable();
+// storage.parseExpansionPack(expansionData);
+// storage.printExpansionPack();
+// storage.deleteExpansionPack(1);
+// storage.printExpansionPack();
 
 function MainScreen({
   navigation
@@ -31,23 +33,35 @@ function MainScreen({
   const currentTheme = store.getState().themeReducer;
   const theme = setTheme(currentTheme.themeName, navigation, useRoute().name);
 
-  const beacon = store.getState().beaconStateReducer as Beacon;
-  let code = '';
-  if (beacon.beaconName) {
-    code = beacon.beaconName.split(':')[1];
-  }
+  // Mock beacon here
+  // const beacon = store.getState().beaconStateReducer as Beacon;
+  const beacon: Beacon = {
+    beaconName: 'nmw:1-1-1',
+    beaconId: '00000000-0000-0000-0000-000000000001'
+  };
+
+  // let code = '';
+  // if (beacon.beaconName) {
+  //   code = beacon.beaconName.split(':')[1];
+  // }
 
   const [beaconDescription, setBeaconDescription] = React.useState('');
   const [beaconIcon, setBeaconIcon] = React.useState('');
 
-  function setBeaconData(codeDescription: String, codeEmblem: String) {
-    setBeaconDescription(codeDescription);
-    setBeaconIcon(codeEmblem);
-  }
+  // function setBeaconData(x) {
+  //   setBeaconDescription(x.description);
+  //   setBeaconIcon(x.icon);
+  // }
 
-  if (code != '') {
-    storage.lookupDataForNMWCode(code, setBeaconData);
-  }
+  Lookup.lookupBeacon(beacon).then((result: Lookup.LookupResultSimple) => {
+    setBeaconDescription(result.description);
+    setBeaconIcon(result.icon);
+  })
+  
+
+  // if (code != '') {
+  //   storage.lookupNMWCode(code, setBeaconData);
+  // }
 
   let audioSnippet = '';
   if (beaconDescription != '') {

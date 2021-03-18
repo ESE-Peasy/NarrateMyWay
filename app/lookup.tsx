@@ -1,6 +1,31 @@
-import Storage from './storage';
+import Storage, { nmwLocation } from './storage';
+
+import * as expansionData from './expansion1.json';
+import { Beacon } from './src/state/types';
 
 const storage = new Storage();
+storage.clearStorage();
+storage.createTable();
+storage.parseExpansionPack(expansionData);
+storage.printExpansionPack();
+storage.deleteExpansionPack(1);
+storage.printExpansionPack();
+
+class NMWCode {
+  #code: string;
+
+  constructor(code: string) {
+    this.#code = code;
+  }
+
+  getCode() {
+    return this.#code;
+  }
+
+  getPretty() {
+    return 'nmw:' + this.#code;
+  }
+}
 
 /**
  * Normalise a detected NMW code so all fields are converted to upper case and any
@@ -8,11 +33,11 @@ const storage = new Storage();
  * code format will cause `undefined` to be returned. This means it is a valid method to
  * check if a received code is an NMW code.
  *
- * @param {String} nmwCode The NMW code as received from the beacon
- * @return {String | undefined} The normalised string or `undefined` if the input being
- * malformed makes this impossible
+ * @param {string} nmwCode The NMW code as received from the beacon
+ * @return {NMWCode | undefined} The normalised `NMWCode` or `undefined` if the input
+ * being malformed makes this impossible
  */
-export function normaliseNMWString(nmwCode: String): String | undefined {
+export function normaliseNMWString(nmwCode: string): NMWCode | undefined {
   const splitCode = nmwCode.split(':');
 
   // A valid code has the format "nmw:AB-CDE-FGH"
@@ -38,50 +63,58 @@ export function normaliseNMWString(nmwCode: String): String | undefined {
       fields[i] = '0';
     }
   }
-  return 'nmw:' + fields.join('-');
+  return new NMWCode(fields.join('-'));
 }
 
-type LookupResultSimple = {
-  description: String;
-  icon: String;
-}
+export type LookupResultSimple = {
+  description: string;
+  icon: string;
+};
 
-type LookupResultExpanded = {
-  name: String;
-  description: String;
-  icon: String;
-}
+export type LookupResultExpanded = {
+  name: string;
+  description: string;
+  icon: string;
+};
 
 /**
  * To be called when a new beacon is detected. The function wraps the necessary
  * lookup(s) to the database to retrieve all desired information. This also includes
  * error handling of the NMW code that was received from the beacon.
  *
- * @param {String} nmwCode NMW code of detected beacon
- * @param {String} uuid UUID of detected beacon
+ * @param {Beacon} beacon The detected beacon to be looked up
  * @return {LookupResultSimple | LookupResultExpanded | undefined} `LookupResultSimple`
  * if the lookup only resulted in standard NMW code results, `LookupResultExpanded` if
  * additional information was available via an expansion pack, and `undefined` if the
  * lookup failed
  */
 export async function lookupBeacon(
-  nmwCode: String,
-  uuid: String
+  beacon: Beacon
 ): Promise<LookupResultSimple | LookupResultExpanded | undefined> {
   // Ensure the NMW code is correctly formatted
-  const normalisedNMWCode = normaliseNMWString(nmwCode);
-  if (normalisedNMWCode == undefined) {
+  console.log('lookupBeacon', beacon);
+  const nmwCode = normaliseNMWString(beacon.beaconName);
+  if (nmwCode == undefined) {
     // Return if the code is invalid and not convertible to a valid format
     return undefined;
   }
-  nmwCode = normalisedNMWCode;
 
   // Query database
+  // return new Promise((resolve, _) => {
+  //   storage.lookupUUID(uuid, (result: nmwLocation) => {
+  //     if (result != null) {
+  //     resolve({name: result.name, description: result.description, icon: result.icon});
+  //     } else {
+  //       storage.lookupNMWCode
+  //     }
+  //   })
+  // });
+
   return new Promise((resolve, _) => {
-    storage.getUUIDData(uuid, (result) => {
+    storage.lookupNMWCode(nmwCode.getCode(), (result: nmwLocation) => {
       if (result != null) {
-      resolve({result.name, result.description, result.icon});
+        resolve({ description: result.description, icon: result.icon });
       }
-    })
+    });
   });
 }
