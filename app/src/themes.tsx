@@ -30,14 +30,14 @@ const defaultTheme = {
 
 const highContrastTheme = {
   name: 'highContrast',
-  backgroundColor: '#00f',
-  borderColor: '#f00',
-  textColor: '#f00',
-  backgroundColorInverted: '#f00',
-  borderColorInverted: '#00f',
-  textColorInverted: '#00f',
-  headerBackgroundColor: '#00f',
-  headerTextColor: '#f00'
+  backgroundColor: '#000',
+  borderColor: '#eeee66',
+  textColor: '#eeee66',
+  backgroundColorInverted: '#eeee66',
+  borderColorInverted: '#000',
+  textColorInverted: '#000',
+  headerBackgroundColor: '#000',
+  headerTextColor: '#eeee66'
 };
 
 function setTheme(
