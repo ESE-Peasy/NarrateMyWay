@@ -1,4 +1,4 @@
-import Storage, { nmwLocation } from './storage';
+import Storage, { nmwLocation, uuidLocation } from './storage';
 
 import * as expansionData from './expansion1.json';
 import { Beacon } from './src/state/types';
@@ -105,23 +105,26 @@ export async function lookupBeacon(beacon: Beacon): Promise<LookupResult> {
   }
 
   // Query database
-  // return new Promise((resolve, _) => {
-  //   storage.lookupUUID(uuid, (result: nmwLocation) => {
-  //     if (result != null) {
-  //     resolve({name: result.name, description: result.description, icon: result.icon});
-  //     } else {
-  //       storage.lookupNMWCode
-  //     }
-  //   })
-  // });
-
   return new Promise((resolve, _) => {
-    storage.lookupNMWCode(nmwCode.getCode(), (result: nmwLocation) => {
+    storage.lookupUUID(beacon.beaconId, (result: uuidLocation) => {
       if (result != null) {
         resolve({
+          name: result.name,
           description: result.description,
           icon: result.icon,
-          _tag: 'Simple'
+          _tag: 'Enriched'
+        });
+      } else {
+        storage.lookupNMWCode(nmwCode.getCode(), (result: nmwLocation) => {
+          if (result != null) {
+            resolve({
+              description: result.description,
+              icon: result.icon,
+              _tag: 'Simple'
+            });
+          } else {
+            resolve({ _tag: 'LookupError' });
+          }
         });
       }
     });

@@ -9,6 +9,15 @@ export interface nmwLocation {
   icon: string;
 }
 
+export interface uuidLocation {
+  nmw: string;
+  name: string;
+  description: string;
+  icon: string;
+  website: string;
+  expansionPackID: number;
+}
+
 // Storage Class
 class Storage {
   //
@@ -123,13 +132,30 @@ class Storage {
     }, null);
   }
 
-  lookupUUID(code: string, callback: Function) {
+  lookupUUID(code: string, callback: (location: uuidLocation) => void) {
     this.db.transaction((tx) => {
+      // Lookup in UUID table
       tx.executeSql(
         'SELECT * FROM uuidTable WHERE id=?',
         [code],
         (_, results) => {
-          callback(results.rows.item(0));
+          const result: uuidLocation = results.rows.item(0);
+          if (result == null) {
+            callback(result);
+            return;
+          }
+          console.log('lookupUUID result', result);
+
+          // On success lookup icon in NMW codes table
+          tx.executeSql(
+            'SELECT icon FROM locationCodes WHERE code=?',
+            [result.nmw],
+            (_, resultsNMW) => {
+              result.icon = resultsNMW.rows.item(0).icon;
+              console.log('lookupUUID result w/ icon', result);
+              callback(result);
+            }
+          );
         }
       );
     });
@@ -178,11 +204,11 @@ class Storage {
         'SELECT description, icon FROM locationCodes WHERE code=?',
         [code],
         (_, results) => {
-          console.log("lookupNMWCode result", results.rows.item(0));
+          console.log('lookupNMWCode result', results.rows.item(0));
           callback(results.rows.item(0));
         },
         (_, error) => {
-          console.log("lookupNMWCode error", error);
+          console.log('lookupNMWCode error', error);
         }
       );
     });

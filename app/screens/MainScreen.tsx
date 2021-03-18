@@ -57,6 +57,8 @@ function MainScreen({
     switch (result._tag) {
       case 'Enriched':
         console.log('Enriched result', result);
+        setBeaconDescription(result.name);
+        setBeaconIcon(result.icon);
         break;
       case 'Simple':
         console.log('Simple result', result);
