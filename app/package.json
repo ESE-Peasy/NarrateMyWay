@@ -27,7 +27,6 @@
     "expo": "^40.0.0",
     "expo-asset": "~8.2.1",
     "expo-constants": "~9.3.3",
-    "expo-file-system": "~9.3.0",
     "expo-font": "~8.4.0",
     "expo-linking": "~2.0.1",
     "expo-speech": "~8.5.0",
@@ -42,7 +41,6 @@
     "react-native-reanimated": "~1.13.0",
     "react-native-safe-area-context": "3.1.9",
     "react-native-screens": "~2.15.2",
-    "react-native-unimodules": "~0.12.0",
     "react-native-web": "~0.13.12",
     "react-redux": "^7.2.2",
     "redux": "^4.0.5"

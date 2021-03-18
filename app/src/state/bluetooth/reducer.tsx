@@ -1,7 +1,8 @@
 import {
   BeaconDetectedAction,
   CurrentBeacon,
-  BeaconStateAction
+  BeaconStateAction,
+  ExpansionPackDetectedAction
 } from '../types';
 import { BEACON_STATE_ACTION_TYPES } from './actions';
 
@@ -27,6 +28,15 @@ function beaconStateReducer(
     case BEACON_STATE_ACTION_TYPES.BEACON_OUT_OF_RANGE: {
       if (lastTime + DELAY_TIME <= currentTime) {
         return {};
+      } else {
+        return state;
+      }
+    }
+    case BEACON_STATE_ACTION_TYPES.EXPANSION_PACK_DETECTED: {
+      if (lastTime + DELAY_TIME <= currentTime) {
+        lastTime = currentTime;
+        const { beacon } = action as ExpansionPackDetectedAction;
+        return beacon;
       } else {
         return state;
       }

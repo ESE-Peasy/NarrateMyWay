@@ -10,6 +10,7 @@ import { Beacon, Theme } from '../src/state/types';
 import { setTheme } from '../src/themes';
 import store from '../src/state/store';
 import { useRoute } from '@react-navigation/core';
+import { fetchExpansionPackMetadata } from '../src/meta-fetcher';
 
 function ScanningScreen({
   navigation
@@ -32,8 +33,14 @@ const mapStateToProps = (
   ownProps: { navigation: StackNavigationProp<RootStackParamList, 'Scanning'> }
 ) => {
   const beaconName = state.beaconStateReducer.beaconName;
-  if (beaconName != undefined) {
+  const isExpansionPack = state.beaconStateReducer.isExpansionPack;
+  const beaconId = state.beaconStateReducer.beaconId;
+  if (!isExpansionPack && beaconName != undefined) {
     ownProps.navigation.replace('Main');
+  } else if (isExpansionPack && beaconId != undefined) {
+    console.log('detected an expansion pack');
+    fetchExpansionPackMetadata(beaconId);
+    // ownProps.navigation.replace('Settings');
   }
   return {
     state
