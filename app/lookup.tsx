@@ -66,16 +66,24 @@ export function normaliseNMWString(nmwCode: string): NMWCode | undefined {
   return new NMWCode(fields.join('-'));
 }
 
-export type LookupResultSimple = {
+type Simple = {
   description: string;
   icon: string;
+  _tag: 'Simple';
 };
 
-export type LookupResultExpanded = {
+type Enriched = {
   name: string;
   description: string;
   icon: string;
+  _tag: 'Enriched';
 };
+
+type LookupError = {
+  _tag: 'LookupError';
+};
+
+export type LookupResult = Simple | Enriched | LookupError;
 
 /**
  * To be called when a new beacon is detected. The function wraps the necessary
@@ -83,20 +91,17 @@ export type LookupResultExpanded = {
  * error handling of the NMW code that was received from the beacon.
  *
  * @param {Beacon} beacon The detected beacon to be looked up
- * @return {LookupResultSimple | LookupResultExpanded | undefined} `LookupResultSimple`
- * if the lookup only resulted in standard NMW code results, `LookupResultExpanded` if
- * additional information was available via an expansion pack, and `undefined` if the
- * lookup failed
+ * @return {LookupResult} `Simple` if the lookup only resulted in standard NMW code
+ * results, `Enriched` if additional information was available via an expansion pack,
+ * and `Error` if the lookup failed
  */
-export async function lookupBeacon(
-  beacon: Beacon
-): Promise<LookupResultSimple | LookupResultExpanded | undefined> {
+export async function lookupBeacon(beacon: Beacon): Promise<LookupResult> {
   // Ensure the NMW code is correctly formatted
   console.log('lookupBeacon', beacon);
   const nmwCode = normaliseNMWString(beacon.beaconName);
   if (nmwCode == undefined) {
     // Return if the code is invalid and not convertible to a valid format
-    return undefined;
+    return { _tag: 'LookupError' };
   }
 
   // Query database
@@ -113,7 +118,11 @@ export async function lookupBeacon(
   return new Promise((resolve, _) => {
     storage.lookupNMWCode(nmwCode.getCode(), (result: nmwLocation) => {
       if (result != null) {
-        resolve({ description: result.description, icon: result.icon });
+        resolve({
+          description: result.description,
+          icon: result.icon,
+          _tag: 'Simple'
+        });
       }
     });
   });

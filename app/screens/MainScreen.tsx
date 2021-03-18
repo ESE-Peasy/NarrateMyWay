@@ -16,7 +16,7 @@ import * as expansionData from '../expansion1.json';
 import { setTheme } from '../src/themes';
 import { useRoute } from '@react-navigation/native';
 
-import * as Lookup from '../lookup'
+import * as Lookup from '../lookup';
 
 // Setup storage once
 // const storage = new Storage();
@@ -53,11 +53,20 @@ function MainScreen({
   //   setBeaconIcon(x.icon);
   // }
 
-  Lookup.lookupBeacon(beacon).then((result: Lookup.LookupResultSimple) => {
-    setBeaconDescription(result.description);
-    setBeaconIcon(result.icon);
-  })
-  
+  Lookup.lookupBeacon(beacon).then((result: Lookup.LookupResult) => {
+    switch (result._tag) {
+      case 'Enriched':
+        console.log('Enriched result', result);
+        break;
+      case 'Simple':
+        console.log('Simple result', result);
+        setBeaconDescription(result.description);
+        setBeaconIcon(result.icon);
+        break;
+      case 'LookupError':
+        console.log('Error performing lookup');
+    }
+  });
 
   // if (code != '') {
   //   storage.lookupNMWCode(code, setBeaconData);
