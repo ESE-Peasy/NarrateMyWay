@@ -7,9 +7,6 @@ const storage = new Storage();
 storage.clearStorage();
 storage.createTable();
 storage.parseExpansionPack(expansionData);
-storage.printExpansionPack();
-storage.deleteExpansionPack(1);
-storage.printExpansionPack();
 
 class NMWCode {
   #code: string;
