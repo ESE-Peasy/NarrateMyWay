@@ -132,6 +132,13 @@ class Storage {
     }, null);
   }
 
+  /**
+   * Perform a lookup based on a beacon's UUID
+   *
+   * @param {string} code The UUID to look up.
+   * @param {Function} callback Function to call on completion
+   * of lookup. The `location` parameter may be `null` if the lookup fails.
+   */
   lookupUUID(code: string, callback: (location: uuidLocation) => void) {
     this.db.transaction((tx) => {
       // Lookup in UUID table
@@ -197,7 +204,13 @@ class Storage {
     });
   }
 
-  // Lookup code description
+  /**
+   * Perform a lookup based on a beacon's NMW code
+   *
+   * @param {string} code The NMW code to look up.
+   * @param {Function} callback Function to call on completion
+   * of lookup. The `location` parameter may be `null` if the lookup fails.
+   */
   lookupNMWCode(code: string, callback: (location: nmwLocation) => void) {
     this.db.transaction((tx) => {
       tx.executeSql(

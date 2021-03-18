@@ -8,17 +8,34 @@ storage.clearStorage();
 storage.createTable();
 storage.parseExpansionPack(expansionData);
 
+/**
+ * A wrapper for the NMW code. This exists so a single reference to a NMW code can be
+ * used as a code with or without the `'nmw:'` prepended.
+ */
 class NMWCode {
   #code: string;
 
+  /**
+   * Construct an `NMWCode` object without any error checking.
+   *
+   * @param {string} code NMW code as a string
+   */
   constructor(code: string) {
     this.#code = code;
   }
 
+  /**
+   *
+   * @return {string} The code without `'nmw:'`
+   */
   getCode() {
     return this.#code;
   }
 
+  /**
+   *
+   * @return {string} The code with `'nmw:'`
+   */
   getPretty() {
     return 'nmw:' + this.#code;
   }
@@ -80,6 +97,13 @@ type LookupError = {
   _tag: 'LookupError';
 };
 
+/**
+ * Type of a result after performing a lookup.
+ *
+ * - If only standard NMW code information is available: `Simple`
+ * - With enriched UUID-based information: `Enriched`
+ * - If a lookup error occurs: `LookupError`
+ */
 export type LookupResult = Simple | Enriched | LookupError;
 
 /**

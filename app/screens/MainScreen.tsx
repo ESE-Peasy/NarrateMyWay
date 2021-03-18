@@ -5,14 +5,12 @@ import { connect } from 'react-redux';
 import BeaconInfo from '../components/BeaconInfo';
 import LargeButton from '../components/LargeButton';
 import { HorizontalSeparator } from '../components/Separators';
-import Storage from '../storage';
 
 import { View } from '../components/Themed';
 import { Beacon, Theme } from '../src/state/types';
 import { RootStackParamList } from '../types';
 
 import store from '../src/state/store';
-import * as expansionData from '../expansion1.json';
 import { setTheme } from '../src/themes';
 import { useRoute } from '@react-navigation/native';
 
