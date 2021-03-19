@@ -54,7 +54,7 @@ const scanForBeacons = (manager: BleManager) => {
     }
 
     if (device && device.name && device.rssi) {
-      if (device.name.toUpperCase().startsWith('nmw')) {
+      if (device.name.toUpperCase().startsWith('NMW:')) {
         if (device.rssi > THRESHOLD) {
           devices.push(device);
         }
