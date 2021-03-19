@@ -1,12 +1,21 @@
 import * as SQLite from 'expo-sqlite';
 
-import * as nmwTable from './nmwstandard.json';
+import * as nmwTable from '../nmwstandard.json';
 
 // Interface for data
-interface location {
+export interface nmwLocation {
   code: string;
   description: string;
-  emblem: String;
+  icon: string;
+}
+
+export interface uuidLocation {
+  nmw: string;
+  name: string;
+  description: string;
+  icon: string;
+  website: string;
+  expansionPackID: number;
 }
 
 // Storage Class
@@ -32,7 +41,7 @@ class Storage {
   createTable() {
     this.db.transaction((tx) => {
       tx.executeSql(
-        'CREATE TABLE IF NOT EXISTS locationCodes (id string primary key not null, description text, emblem text);'
+        'CREATE TABLE IF NOT EXISTS locationCodes (code string primary key not null, description text, icon text);'
       );
       tx.executeSql(
         'CREATE TABLE IF NOT EXISTS versionRecord (id integer primary key not null, version text);'
@@ -51,8 +60,8 @@ class Storage {
           ]);
           nmwTable.nmw.forEach((value) => {
             tx.executeSql(
-              'INSERT INTO locationCodes (id, description, emblem) VALUES (?,?,?)',
-              [value.code, value.description, value.emblem]
+              'INSERT INTO locationCodes (code, description, icon) VALUES (?,?,?)',
+              [value.code, value.description, value.icon]
             );
           });
         } else if (results.rows.item(0) != nmwTable.version) {
@@ -62,8 +71,8 @@ class Storage {
 
           nmwTable.nmw.forEach((value) => {
             tx.executeSql(
-              'INSERT INTO locationCodes (id, description, emblem) VALUES (?,?,?)',
-              [value.code, value.description, value.emblem]
+              'INSERT INTO locationCodes (code, description, icon) VALUES (?,?,?)',
+              [value.code, value.description, value.icon]
             );
           });
         }
@@ -96,7 +105,7 @@ class Storage {
                 value.name,
                 value.description,
                 value.website,
-                results.rows.item(0).id
+                results.rows.item(0).code
               ]
             );
           });
@@ -123,24 +132,48 @@ class Storage {
     }, null);
   }
 
-  getUUIDData(code: string, callback: Function) {
+  /**
+   * Perform a lookup based on a beacon's UUID
+   *
+   * @param {string} code The UUID to look up.
+   * @param {Function} callback Function to call on completion
+   * of lookup. The `location` parameter may be `null` if the lookup fails.
+   */
+  lookupUUID(code: string, callback: (location: uuidLocation) => void) {
     this.db.transaction((tx) => {
+      // Lookup in UUID table
       tx.executeSql(
         'SELECT * FROM uuidTable WHERE id=?',
         [code],
         (_, results) => {
-          callback(results.rows.item(0));
+          const result: uuidLocation = results.rows.item(0);
+          if (result == null) {
+            callback(result);
+            return;
+          }
+          console.log('lookupUUID result', result);
+
+          // On success lookup icon in NMW codes table
+          tx.executeSql(
+            'SELECT icon FROM locationCodes WHERE code=?',
+            [result.nmw],
+            (_, resultsNMW) => {
+              result.icon = resultsNMW.rows.item(0).icon;
+              console.log('lookupUUID result w/ icon', result);
+              callback(result);
+            }
+          );
         }
       );
     });
     console.log(code);
   }
   // Input location code data
-  loadData(data: location) {
+  loadData(data: nmwLocation) {
     this.db.transaction((tx) => {
       tx.executeSql(
-        'INSERT INTO locationCodes (id, description, emblem) VALUES (? ,?, ?)',
-        [data.code, data.description, data.emblem]
+        'INSERT INTO locationCodes (code, description, icon) VALUES (? ,?, ?)',
+        [data.code, data.description, data.icon]
       );
     }, null);
   }
@@ -156,9 +189,9 @@ class Storage {
   }
 
   // Delete element from location table
-  deleteElementLocation(id: string) {
+  deleteElementLocation(code: string) {
     this.db.transaction((tx) => {
-      tx.executeSql('DELETE FROM locationCodes WHERE id=?', [id]);
+      tx.executeSql('DELETE FROM locationCodes WHERE code=?', [code]);
     });
   }
 
@@ -171,17 +204,24 @@ class Storage {
     });
   }
 
-  // Lookup code description
-  lookupDataForNMWCode(code: String, callback: Function) {
+  /**
+   * Perform a lookup based on a beacon's NMW code
+   *
+   * @param {string} code The NMW code to look up.
+   * @param {Function} callback Function to call on completion
+   * of lookup. The `location` parameter may be `null` if the lookup fails.
+   */
+  lookupNMWCode(code: string, callback: (location: nmwLocation) => void) {
     this.db.transaction((tx) => {
       tx.executeSql(
-        'SELECT description, emblem FROM locationCodes WHERE id=?',
+        'SELECT description, icon FROM locationCodes WHERE code=?',
         [code],
         (_, results) => {
-          callback(
-            results.rows.item(0).description,
-            results.rows.item(0).emblem
-          );
+          console.log('lookupNMWCode result', results.rows.item(0));
+          callback(results.rows.item(0));
+        },
+        (_, error) => {
+          console.log('lookupNMWCode error', error);
         }
       );
     });

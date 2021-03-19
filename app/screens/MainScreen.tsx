@@ -5,25 +5,16 @@ import { connect } from 'react-redux';
 import BeaconInfo from '../components/BeaconInfo';
 import LargeButton from '../components/LargeButton';
 import { HorizontalSeparator } from '../components/Separators';
-import Storage from '../storage';
 
 import { View } from '../components/Themed';
 import { Beacon, Theme } from '../src/state/types';
 import { RootStackParamList } from '../types';
 
 import store from '../src/state/store';
-import * as expansionData from '../expansion1.json';
 import { setTheme } from '../src/themes';
 import { useRoute } from '@react-navigation/native';
 
-// Setup storage once
-const storage = new Storage();
-storage.clearStorage();
-storage.createTable();
-storage.parseExpansionPack(expansionData);
-storage.printExpansionPack();
-storage.deleteExpansionPack(1);
-storage.printExpansionPack();
+import * as Lookup from '../src/lookup';
 
 function MainScreen({
   navigation
@@ -32,22 +23,28 @@ function MainScreen({
   const theme = setTheme(currentTheme.themeName, navigation, useRoute().name);
 
   const beacon = store.getState().beaconStateReducer as Beacon;
-  let code = '';
-  if (beacon.beaconName) {
-    code = beacon.beaconName.split(':')[1];
-  }
 
   const [beaconDescription, setBeaconDescription] = React.useState('');
   const [beaconIcon, setBeaconIcon] = React.useState('');
+  const [additionalAudio, setAdditionalAudio] = React.useState(
+    'No additional information available'
+  );
 
-  function setBeaconData(codeDescription: String, codeEmblem: String) {
-    setBeaconDescription(codeDescription);
-    setBeaconIcon(codeEmblem);
-  }
-
-  if (code != '') {
-    storage.lookupDataForNMWCode(code, setBeaconData);
-  }
+  Lookup.lookupBeacon(beacon).then((result: Lookup.LookupResult) => {
+    switch (result._tag) {
+      case 'Enriched':
+        setBeaconDescription(result.name);
+        setBeaconIcon(result.icon);
+        setAdditionalAudio(result.description);
+        break;
+      case 'Simple':
+        setBeaconDescription(result.description);
+        setBeaconIcon(result.icon);
+        break;
+      case 'LookupError':
+        console.error('Error performing lookup');
+    }
+  });
 
   let audioSnippet = '';
   if (beaconDescription != '') {
@@ -74,7 +71,7 @@ function MainScreen({
       <LargeButton
         theme={theme}
         accessibilityLabel="Button for more information"
-        audio="No additional information available"
+        audio={additionalAudio}
       >
         Tap for more info
       </LargeButton>

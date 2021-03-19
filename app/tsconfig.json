@@ -10,7 +10,8 @@
     "noEmit": true,
     "skipLibCheck": true,
     "resolveJsonModule": true,
-    "strict": true
+    "strict": true,
+    "target": "ES2017"
   },
   "exclude": [
     "__tests__/**/*-test.ts"
