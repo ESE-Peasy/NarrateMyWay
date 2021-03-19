@@ -1,4 +1,6 @@
 rootProject.name = 'NarrateMyWay'
+include ':react-native-connectivity-status'
+project(':react-native-connectivity-status').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-connectivity-status/android')
 
 apply from: '../node_modules/react-native-unimodules/gradle.groovy'
 includeUnimodulesProjects()

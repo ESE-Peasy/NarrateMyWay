@@ -21,4 +21,6 @@ target 'NarrateMyWay' do
   #  post_install do |installer|
   #    flipper_post_install(installer)
   #  end
+  pod 'react-native-connectivity-status', :path => '../node_modules/react-native-connectivity-status'
+
 end
