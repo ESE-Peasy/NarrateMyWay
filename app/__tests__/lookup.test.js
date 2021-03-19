@@ -1,11 +1,6 @@
-import Storage from '../src/storage';
 import { normaliseNMWString } from '../src/lookup';
 
 jest.mock('../src/storage');
-
-beforeEach(() => {
-  Storage.mockClear();
-});
 
 test('Non-NMW code returns undefined', () => {
   expect(normaliseNMWString('')).toBe(undefined);

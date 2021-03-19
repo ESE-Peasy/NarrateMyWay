@@ -118,7 +118,6 @@ export type LookupResult = Simple | Enriched | LookupError;
  */
 export async function lookupBeacon(beacon: Beacon): Promise<LookupResult> {
   // Ensure the NMW code is correctly formatted
-  console.log('lookupBeacon', beacon);
   const nmwCode = normaliseNMWString(beacon.beaconName);
   if (nmwCode == undefined) {
     // Return if the code is invalid and not convertible to a valid format
