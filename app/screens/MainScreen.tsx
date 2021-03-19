@@ -33,18 +33,16 @@ function MainScreen({
   Lookup.lookupBeacon(beacon).then((result: Lookup.LookupResult) => {
     switch (result._tag) {
       case 'Enriched':
-        console.log('Enriched result', result);
         setBeaconDescription(result.name);
         setBeaconIcon(result.icon);
         setAdditionalAudio(result.description);
         break;
       case 'Simple':
-        console.log('Simple result', result);
         setBeaconDescription(result.description);
         setBeaconIcon(result.icon);
         break;
       case 'LookupError':
-        console.log('Error performing lookup');
+        console.error('Error performing lookup');
     }
   });
 
