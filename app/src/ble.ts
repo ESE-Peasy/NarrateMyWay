@@ -14,6 +14,9 @@ const TIMEOUT = 2000; // in ms
 const EXPANSION_PACK = 'NMW:1-EXP-AND';
 
 async function bluetoothDisabledAlert(manager: BleManager) {
+  Speech.speak(
+    'Bluetooth disabled. Bluetooth must be enabled for this app to work'
+  );
   Alert.alert(
     'Bluetooth is disabled',
     'Bluetooth must be enabled for this application to work',
@@ -23,9 +26,13 @@ async function bluetoothDisabledAlert(manager: BleManager) {
         onPress: async () => {
           if (Platform.OS === 'android') {
             // On Android we can enable Bluetooth
-            const newManager = await manager.enable('test');
-            setListener(newManager);
-            return newManager;
+            try {
+              const newManager = await manager.enable('test');
+              setListener(newManager);
+              return newManager;
+            } catch (error) {
+              console.log(error);
+            }
           }
         }
       }
