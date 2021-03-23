@@ -32,15 +32,11 @@ const mapStateToProps = (
   state: { beaconStateReducer: Beacon; themeReducer: Theme },
   ownProps: { navigation: StackNavigationProp<RootStackParamList, 'Scanning'> }
 ) => {
-  const beaconName = state.beaconStateReducer.beaconName;
-  const isExpansionPack = state.beaconStateReducer.isExpansionPack;
-  const beaconId = state.beaconStateReducer.beaconId;
+  const { beaconName, isExpansionPack, beaconId } = state.beaconStateReducer;
   if (!isExpansionPack && beaconName != undefined) {
     ownProps.navigation.replace('Main');
   } else if (isExpansionPack && beaconId != undefined) {
-    console.log('detected an expansion pack');
     fetchExpansionPackMetadata(beaconId);
-    // ownProps.navigation.replace('Settings');
   }
   return {
     state

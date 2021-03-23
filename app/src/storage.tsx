@@ -185,14 +185,12 @@ class Storage {
             [result.nmw],
             (_, resultsNMW) => {
               result.icon = resultsNMW.rows.item(0).icon;
-              console.log('lookupUUID result w/ icon', result);
               callback(result);
             }
           );
         }
       );
     });
-    console.log(code);
   }
   // Input location code data
   loadData(data: nmwLocation) {
@@ -239,7 +237,6 @@ class Storage {
    */
   lookupNMWCode(code: string, callback: (location: nmwLocation) => void) {
     this.db.transaction((tx) => {
-      console.log('here');
       tx.executeSql(
         'SELECT description, icon FROM locationCodes WHERE code=?',
         [code],

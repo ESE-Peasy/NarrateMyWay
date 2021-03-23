@@ -39,7 +39,7 @@ async function downloadExpansionPack(url: string) {
       // Update UUID database
       Lookup.saveExpansionPack(expansionPackData).then((success) => {
         if (success) {
-          console.log('Successfuly saved expansion pack!');
+          console.log('Successfully saved expansion pack!');
         } else {
           console.log('Unable to save expansion pack');
         }
