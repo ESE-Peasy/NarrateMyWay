@@ -18,6 +18,24 @@ export interface uuidLocation {
   expansionPackID: number;
 }
 
+export interface expansionPackMeta {
+  packId: number;
+  packName: string;
+  packVersion: number;
+  description: string;
+  w3w: string;
+  organisation: string;
+}
+
+export interface expansionPackData {
+  uuid: string;
+  mac: string;
+  nmw: string;
+  name: number;
+  description: string;
+  website: string;
+}
+
 // Storage Class
 class Storage {
   //
@@ -47,10 +65,10 @@ class Storage {
         'CREATE TABLE IF NOT EXISTS versionRecord (id integer primary key not null, version text);'
       );
       tx.executeSql(
-        'CREATE TABLE IF NOT EXISTS expansionPackTable (id integer primary key autoincrement, pack_name text, description text, wtw text, organisation text);'
+        'CREATE TABLE IF NOT EXISTS expansionPackTable (packId integer primary key not null, packName text, packVersion integer, description text, wtw text, organisation text);'
       );
       tx.executeSql(
-        'CREATE TABLE IF NOT EXISTS uuidTable (id string primary key not null, nmw text, name text, description text, website text, expansionID INTEGER REFERENCES expansionPackTable(id));'
+        'CREATE TABLE IF NOT EXISTS beaconTable (uuid string primary key not null, mac string not null, nmw text, name text, description text, website text, expansionID INTEGER REFERENCES expansionPackTable(id));'
       );
 
       tx.executeSql('SELECT * FROM versionRecord', [], (_, results) => {
@@ -84,46 +102,52 @@ class Storage {
   parseExpansionPack(expansionData) {
     this.db.transaction((tx) => {
       tx.executeSql(
-        'INSERT INTO expansionPackTable (pack_name, description, wtw, organisation) VALUES (?,?,?,?)',
+        'INSERT INTO expansionPackTable (packId, packName, packVersion, description, wtw, organisation) VALUES (?,?,?,?,?,?)',
         [
+          expansionData.meta.pack_id,
           expansionData.meta.pack_name,
+          expansionData.meta.pack_version,
           expansionData.meta.description,
           expansionData.meta.w3w,
           expansionData.meta.organisation
-        ]
-      );
-      tx.executeSql(
-        'SELECT id FROM expansionPackTable WHERE pack_name=?',
-        [expansionData.meta.pack_name],
-        (_, results) => {
-          expansionData.UUIDs.forEach((value) => {
-            tx.executeSql(
-              'INSERT INTO uuidTable (id, nmw, name, description, website, expansionID) VALUES (?,?,?,?,?,?)',
-              [
-                value.code,
-                value.nmw,
-                value.name,
-                value.description,
-                value.website,
-                results.rows.item(0).code
-              ]
-            );
-          });
+        ],
+        undefined,
+        () => {
+          return false;
         }
       );
+      expansionData.beacons.forEach((beacon) => {
+        tx.executeSql(
+          'INSERT INTO beaconTable (uuid, mac, nmw, name, description, website, expansionID) VALUES (?,?,?,?,?,?,?)',
+          [
+            beacon.uuid,
+            beacon.mac,
+            beacon.nmw,
+            beacon.name,
+            beacon.description,
+            beacon.website,
+            expansionData.meta.pack_id
+          ],
+          undefined,
+          () => {
+            return false;
+          }
+        );
+      });
     });
+    return true;
   }
 
   deleteExpansionPack(code: number) {
     this.db.transaction((tx) => {
-      tx.executeSql('DELETE FROM uuidTable WHERE expansionID=?;', [code]);
+      tx.executeSql('DELETE FROM beaconTable WHERE expansionID=?;', [code]);
       tx.executeSql('DELETE FROM expansionPackTable WHERE id=?;', [code]);
     });
   }
 
   printExpansionPack() {
     this.db.transaction((tx) => {
-      tx.executeSql('SELECT * FROM uuidTable', [], (_, results) => {
+      tx.executeSql('SELECT * FROM beaconTable', [], (_, results) => {
         console.log(results.rows);
       });
       tx.executeSql('SELECT * FROM expansionPackTable', [], (_, results) => {
@@ -143,7 +167,7 @@ class Storage {
     this.db.transaction((tx) => {
       // Lookup in UUID table
       tx.executeSql(
-        'SELECT * FROM uuidTable WHERE id=?',
+        'SELECT * FROM beaconTable WHERE uuid=?',
         [code],
         (_, results) => {
           const result: uuidLocation = results.rows.item(0);
@@ -184,7 +208,7 @@ class Storage {
       tx.executeSql('DROP TABLE locationCodes;');
       tx.executeSql('DROP TABLE versionRecord;');
       tx.executeSql('DROP TABLE expansionPackTable;');
-      tx.executeSql('DROP TABLE uuidTable;');
+      tx.executeSql('DROP TABLE beaconTable;');
     });
   }
 
@@ -213,6 +237,7 @@ class Storage {
    */
   lookupNMWCode(code: string, callback: (location: nmwLocation) => void) {
     this.db.transaction((tx) => {
+      console.log('here');
       tx.executeSql(
         'SELECT description, icon FROM locationCodes WHERE code=?',
         [code],
@@ -222,6 +247,35 @@ class Storage {
         },
         (_, error) => {
           console.log('lookupNMWCode error', error);
+        }
+      );
+    });
+  }
+
+  /**
+   * Check if an expansion pack exists and if it does, determine the version number
+   * of it.
+   *
+   * @param {number} packId The unique pack ID
+   * @param {number} packVersionNumber The version number retrieved from central
+   * database for this pack
+   * @param {Function} callback Function to call on completion
+   * of lookup. The `location` parameter may be `null` if the lookup fails.
+   */
+  lookupExpansionPack(
+    packId: number,
+    packVersionNumber: number,
+    callback: (packMeta: expansionPackMeta) => void
+  ) {
+    this.db.transaction((tx) => {
+      tx.executeSql(
+        'SELECT * FROM expansionPackTable WHERE packId=?',
+        [packId],
+        (_, results) => {
+          callback(results.rows.item(0));
+        },
+        (_, error) => {
+          console.log('lookupExpansionPack error', error);
         }
       );
     });
