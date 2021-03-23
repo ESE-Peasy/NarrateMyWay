@@ -2,6 +2,8 @@ import * as SQLite from 'expo-sqlite';
 
 import * as nmwTable from '../nmwstandard.json';
 
+import { Platform } from 'react-native';
+
 // Interface for data
 export interface nmwLocation {
   code: string;
@@ -9,7 +11,7 @@ export interface nmwLocation {
   icon: string;
 }
 
-export interface uuidLocation {
+export interface enrichedLocation {
   nmw: string;
   name: string;
   description: string;
@@ -18,7 +20,7 @@ export interface uuidLocation {
   expansionPackID: number;
 }
 
-export interface expansionPackMeta {
+export interface expansionPackMetaData {
   packId: number;
   packName: string;
   packVersion: number;
@@ -27,13 +29,18 @@ export interface expansionPackMeta {
   organisation: string;
 }
 
-export interface expansionPackData {
+export interface expansionPackBeaconsData {
   uuid: string;
   mac: string;
   nmw: string;
   name: number;
   description: string;
   website: string;
+}
+
+export interface expansionPack {
+  meta: expansionPackMetaData;
+  beacons: expansionPackBeaconsData[];
 }
 
 // Storage Class
@@ -72,21 +79,13 @@ class Storage {
       );
 
       tx.executeSql('SELECT * FROM versionRecord', [], (_, results) => {
-        if (results.rows.length == 0) {
+        if (
+          results.rows.length == 0 ||
+          results.rows.item(0) != nmwTable.version
+        ) {
           tx.executeSql('INSERT INTO versionRecord (version) VALUES (?)', [
             nmwTable.version
           ]);
-          nmwTable.nmw.forEach((value) => {
-            tx.executeSql(
-              'INSERT INTO locationCodes (code, description, icon) VALUES (?,?,?)',
-              [value.code, value.description, value.icon]
-            );
-          });
-        } else if (results.rows.item(0) != nmwTable.version) {
-          tx.executeSql('INSERT INTO versionRecord (version) VALUES (?)', [
-            nmwTable.version
-          ]);
-
           nmwTable.nmw.forEach((value) => {
             tx.executeSql(
               'INSERT INTO locationCodes (code, description, icon) VALUES (?,?,?)',
@@ -95,28 +94,28 @@ class Storage {
           });
         }
       });
-    }, null);
+    }, undefined);
   }
 
   // Insert expansion pack into the database
-  parseExpansionPack(expansionData) {
+  parseExpansionPack(expansionPack: expansionPack) {
     this.db.transaction((tx) => {
       tx.executeSql(
         'INSERT INTO expansionPackTable (packId, packName, packVersion, description, wtw, organisation) VALUES (?,?,?,?,?,?)',
         [
-          expansionData.meta.pack_id,
-          expansionData.meta.pack_name,
-          expansionData.meta.pack_version,
-          expansionData.meta.description,
-          expansionData.meta.w3w,
-          expansionData.meta.organisation
+          expansionPack.meta.packId,
+          expansionPack.meta.packName,
+          expansionPack.meta.packVersion,
+          expansionPack.meta.description,
+          expansionPack.meta.w3w,
+          expansionPack.meta.organisation
         ],
         undefined,
         () => {
           return false;
         }
       );
-      expansionData.beacons.forEach((beacon) => {
+      expansionPack.beacons.forEach((beacon: expansionPackBeaconsData) => {
         tx.executeSql(
           'INSERT INTO beaconTable (uuid, mac, nmw, name, description, website, expansionID) VALUES (?,?,?,?,?,?,?)',
           [
@@ -126,7 +125,7 @@ class Storage {
             beacon.name,
             beacon.description,
             beacon.website,
-            expansionData.meta.pack_id
+            expansionPack.meta.packId
           ],
           undefined,
           () => {
@@ -141,7 +140,7 @@ class Storage {
   deleteExpansionPack(code: number) {
     this.db.transaction((tx) => {
       tx.executeSql('DELETE FROM beaconTable WHERE expansionID=?;', [code]);
-      tx.executeSql('DELETE FROM expansionPackTable WHERE id=?;', [code]);
+      tx.executeSql('DELETE FROM expansionPackTable WHERE packId=?;', [code]);
     });
   }
 
@@ -153,29 +152,32 @@ class Storage {
       tx.executeSql('SELECT * FROM expansionPackTable', [], (_, results) => {
         console.log(results.rows);
       });
-    }, null);
+    }, undefined);
   }
 
   /**
-   * Perform a lookup based on a beacon's UUID
+   * Perform a lookup based on a beacon's UUID (iOS) or MAC Address (Android)
    *
-   * @param {string} code The UUID to look up.
+   * @param {string} code The UUID or MAC Address to look up.
    * @param {Function} callback Function to call on completion
    * of lookup. The `location` parameter may be `null` if the lookup fails.
    */
-  lookupUUID(code: string, callback: (location: uuidLocation) => void) {
+  lookupEnrichedInfo(
+    code: string,
+    callback: (location: enrichedLocation) => void
+  ) {
     this.db.transaction((tx) => {
-      // Lookup in UUID table
+      // Lookup in beacon table
+      const lookupType = Platform.OS === 'ios' ? 'uuid' : 'mac';
       tx.executeSql(
-        'SELECT * FROM beaconTable WHERE uuid=?',
+        `SELECT * FROM beaconTable WHERE ${lookupType}=?`,
         [code],
         (_, results) => {
-          const result: uuidLocation = results.rows.item(0);
+          const result: enrichedLocation = results.rows.item(0);
           if (result == null) {
             callback(result);
             return;
           }
-          console.log('lookupUUID result', result);
 
           // On success lookup icon in NMW codes table
           tx.executeSql(
@@ -199,7 +201,7 @@ class Storage {
         'INSERT INTO locationCodes (code, description, icon) VALUES (? ,?, ?)',
         [data.code, data.description, data.icon]
       );
-    }, null);
+    }, undefined);
   }
 
   // Clear storage
@@ -242,30 +244,26 @@ class Storage {
         'SELECT description, icon FROM locationCodes WHERE code=?',
         [code],
         (_, results) => {
-          console.log('lookupNMWCode result', results.rows.item(0));
           callback(results.rows.item(0));
         },
         (_, error) => {
           console.log('lookupNMWCode error', error);
+          return false;
         }
       );
     });
   }
 
   /**
-   * Check if an expansion pack exists and if it does, determine the version number
-   * of it.
+   * Check if an expansion pack exists and if it does, pass it back view the callback
    *
    * @param {number} packId The unique pack ID
-   * @param {number} packVersionNumber The version number retrieved from central
-   * database for this pack
    * @param {Function} callback Function to call on completion
-   * of lookup. The `location` parameter may be `null` if the lookup fails.
+   * of lookup. The `expansionPackMeta` parameter may be `null` if the lookup fails.
    */
   lookupExpansionPack(
     packId: number,
-    packVersionNumber: number,
-    callback: (packMeta: expansionPackMeta) => void
+    callback: (packMeta: expansionPackMetaData) => void
   ) {
     this.db.transaction((tx) => {
       tx.executeSql(
@@ -276,6 +274,7 @@ class Storage {
         },
         (_, error) => {
           console.log('lookupExpansionPack error', error);
+          return false;
         }
       );
     });

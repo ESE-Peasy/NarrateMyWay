@@ -1,26 +1,22 @@
 import * as Lookup from './lookup';
+import { Platform } from 'react-native';
+import { expansionPack } from './storage';
 
 const endpoint: string =
-  'https://narratemyway-default-rtdb.europe-west1.firebasedatabase.app/meta-packs.json?orderBy="MAC"&equalTo=';
+  'https://narratemyway-default-rtdb.europe-west1.firebasedatabase.app/meta-packs.json?';
 
-async function fetchExpansionPackMetadata(uuid: string) {
-  fetch(endpoint + '"' + uuid + '"')
+async function fetchExpansionPackMetadata(code: string) {
+  const lookupType = Platform.OS === 'ios' ? 'UUID' : 'MAC';
+
+  fetch(`${endpoint}orderBy="${lookupType}"&equalTo="${code}"`)
     .then((response) => response.json())
     .then((json) => {
       Object.keys(json).forEach((key) => {
         const packInfo = json[key];
-        // Check if retrieved meta data has higher version number
-        // than currently in database
-        // If so then download into database, else do nothing
-        Lookup.checkExpansionPack(packInfo.pack_id, packInfo.version).then(
+        Lookup.checkExpansionPack(packInfo.packId, packInfo.version).then(
           (result: Lookup.ExpansionPackLookupResult) => {
             switch (result._tag) {
               case 'ExpansionPackDownloadRequired':
-                console.log(
-                  'Download of pack ',
-                  packInfo.pack_name,
-                  ' is required'
-                );
                 downloadExpansionPack(packInfo.pack);
                 break;
               case 'ExpansionPackDownloadNotRequired':
@@ -31,7 +27,6 @@ async function fetchExpansionPackMetadata(uuid: string) {
             }
           }
         );
-        // downloadExpansionPack(packInfo.pack);
       });
     })
     .catch((error) => console.log(error));
@@ -40,9 +35,9 @@ async function fetchExpansionPackMetadata(uuid: string) {
 async function downloadExpansionPack(url: string) {
   fetch(url)
     .then((response) => response.json())
-    .then((json) => {
+    .then((expansionPackData: expansionPack) => {
       // Update UUID database
-      Lookup.saveExpansionPack(json).then((success) => {
+      Lookup.saveExpansionPack(expansionPackData).then((success) => {
         if (success) {
           console.log('Successfuly saved expansion pack!');
         } else {

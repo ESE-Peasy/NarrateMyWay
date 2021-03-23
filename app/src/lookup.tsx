@@ -1,8 +1,8 @@
 import Storage, {
-  expansionPackData,
-  expansionPackMeta,
   nmwLocation,
-  uuidLocation
+  enrichedLocation,
+  expansionPackMetaData,
+  expansionPack
 } from './storage';
 
 import { Beacon } from './state/types';
@@ -129,7 +129,7 @@ export async function lookupBeacon(beacon: Beacon): Promise<LookupResult> {
 
   // Query database
   return new Promise((resolve, _) => {
-    storage.lookupUUID(beacon.beaconId, (result: uuidLocation) => {
+    storage.lookupEnrichedInfo(beacon.beaconId, (result: enrichedLocation) => {
       if (result != null) {
         resolve({
           name: result.name,
@@ -195,33 +195,26 @@ export async function checkExpansionPack(
   packId: number,
   latestPackVersionNumber: number
 ): Promise<ExpansionPackLookupResult> {
-  // Query database
   return new Promise((resolve, _) => {
-    storage.lookupExpansionPack(
-      packId,
-      latestPackVersionNumber,
-      (result: expansionPackMeta) => {
-        // No entry in local database means pack has not been downloaded.
-        // If version number in local database is lower than latest pack version number
-        // then we need to download the latest version
-        console.log('Result of lookup is', result);
-
-        if (result == null || result.packVersion < latestPackVersionNumber) {
-          resolve({
-            _tag: 'ExpansionPackDownloadRequired'
-          });
-        } else if (result.packVersion == latestPackVersionNumber) {
-          resolve({
-            _tag: 'ExpansionPackDownloadNotRequired'
-          });
-        } else {
-          resolve({ _tag: 'ExpansionPackLookupError' });
-        }
+    storage.lookupExpansionPack(packId, (result: expansionPackMetaData) => {
+      // No entry in local database means pack has not been downloaded.
+      // If version number in local database is lower than latest pack version number
+      // then we need to download the latest version
+      if (result == null || result.packVersion < latestPackVersionNumber) {
+        resolve({
+          _tag: 'ExpansionPackDownloadRequired'
+        });
+      } else if (result.packVersion == latestPackVersionNumber) {
+        resolve({
+          _tag: 'ExpansionPackDownloadNotRequired'
+        });
+      } else {
+        resolve({ _tag: 'ExpansionPackLookupError' });
       }
-    );
+    });
   });
 }
 
-export async function saveExpansionPack(expansionData) {
+export async function saveExpansionPack(expansionData: expansionPack) {
   return storage.parseExpansionPack(expansionData);
 }
