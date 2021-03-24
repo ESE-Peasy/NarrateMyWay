@@ -252,7 +252,7 @@ class Storage {
   }
 
   /**
-   * Check if an expansion pack exists and if it does, pass it back view the callback
+   * Check if an expansion pack exists and if it does, pass it back via the callback
    *
    * @param {number} packId The unique pack ID
    * @param {Function} callback Function to call on completion
