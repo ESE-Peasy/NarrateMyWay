@@ -1,6 +1,10 @@
 import * as Lookup from './lookup';
 import { Platform } from 'react-native';
 import { expansionPack } from './storage';
+import {
+  internetDisabledAlert,
+  packDownloadedSuccessAlert
+} from '../components/Alerts';
 
 const endpoint: string =
   'https://narratemyway-default-rtdb.europe-west1.firebasedatabase.app/meta-packs.json?';
@@ -29,7 +33,10 @@ async function fetchExpansionPackMetadata(code: string) {
         );
       });
     })
-    .catch((error) => console.log(error));
+    .catch((error) => {
+      internetDisabledAlert();
+      console.log(error);
+    });
 }
 
 async function downloadExpansionPack(url: string) {
@@ -39,7 +46,7 @@ async function downloadExpansionPack(url: string) {
       // Update UUID database
       Lookup.saveExpansionPack(expansionPackData).then((success) => {
         if (success) {
-          console.log('Successfully saved expansion pack!');
+          packDownloadedSuccessAlert(expansionPackData.meta.packName);
         } else {
           console.log('Unable to save expansion pack');
         }
