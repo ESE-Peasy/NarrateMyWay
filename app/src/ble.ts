@@ -7,6 +7,13 @@ import {
 import { useDispatch } from 'react-redux';
 import { Alert, Platform } from 'react-native';
 import * as Speech from 'expo-speech';
+import {
+  check,
+  request,
+  PERMISSIONS,
+  RESULTS,
+  Permission
+} from 'react-native-permissions';
 
 const THRESHOLD = -100; // in dB
 const TIMEOUT = 2000; // in ms
@@ -81,8 +88,34 @@ function startScan(manager: BleManager) {
     }
   });
 }
+const checkPermission = (permission: Permission) => {
+  check(permission).then((result) => {
+    switch (result) {
+      case RESULTS.DENIED || RESULTS.BLOCKED:
+        console.log('Permission denied');
+        console.log(permission);
+        request(permission);
+        break;
+    }
+  });
+};
+
+const checkAllPermissions = () => {
+  if (Platform.OS == 'android') {
+    console.log('android');
+    checkPermission(PERMISSIONS.ANDROID.ACCESS_FINE_LOCATION);
+    checkPermission(PERMISSIONS.ANDROID.ACCESS_COARSE_LOCATION);
+    checkPermission(PERMISSIONS.ANDROID.READ_EXTERNAL_STORAGE);
+    checkPermission(PERMISSIONS.ANDROID.WRITE_EXTERNAL_STORAGE);
+  } else if (Platform.OS == 'ios') {
+    console.log('ios');
+    checkPermission(PERMISSIONS.IOS.LOCATION_ALWAYS);
+    checkPermission(PERMISSIONS.IOS.BLUETOOTH_PERIPHERAL);
+  }
+};
 
 const scanForBeacons = (manager: BleManager) => {
+  checkAllPermissions();
   const dispatch = useDispatch();
 
   setInterval(() => {
