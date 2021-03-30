@@ -1,12 +1,15 @@
-import Storage, { nmwLocation, uuidLocation } from './storage';
+import Storage, {
+  nmwLocation,
+  enrichedLocation,
+  expansionPackMetaData,
+  expansionPack
+} from './storage';
 
-import * as expansionData from '../expansion1.json';
 import { Beacon } from './state/types';
 
 const storage = new Storage();
 storage.clearStorage();
 storage.createTable();
-storage.parseExpansionPack(expansionData);
 
 /**
  * A wrapper for the NMW code. This exists so a single reference to a NMW code can be
@@ -126,7 +129,7 @@ export async function lookupBeacon(beacon: Beacon): Promise<LookupResult> {
 
   // Query database
   return new Promise((resolve, _) => {
-    storage.lookupUUID(beacon.beaconId, (result: uuidLocation) => {
+    storage.lookupEnrichedInfo(beacon.beaconId, (result: enrichedLocation) => {
       if (result != null) {
         resolve({
           name: result.name,
@@ -149,4 +152,69 @@ export async function lookupBeacon(beacon: Beacon): Promise<LookupResult> {
       }
     });
   });
+}
+
+type ExpansionPackDownloadRequired = {
+  _tag: 'ExpansionPackDownloadRequired';
+};
+
+type ExpansionPackDownloadNotRequired = {
+  _tag: 'ExpansionPackDownloadNotRequired';
+};
+
+type ExpansionPackLookupError = {
+  _tag: 'ExpansionPackLookupError';
+};
+
+/**
+ * Type of a result after performing a lookup.
+ *
+ * - If expansion pack has not been downloaded or is outdated:
+ *      `ExpansionPackDownloadRequired`
+ * - If expansion pack has been downloaded AND is latest version:
+ *      `ExpansionPackDownloadNotRequired`
+ * - If a lookup error occurs: `ExpansionPackLookupError`
+ */
+export type ExpansionPackLookupResult =
+  | ExpansionPackDownloadRequired
+  | ExpansionPackDownloadNotRequired
+  | ExpansionPackLookupError;
+
+/**
+ * To be called when an expansion pack beacon is detected new beacon is detected. The * function wraps the necessary lookup(s) to the database to check if the detected
+ * expansion pack has already been downloaded or if it is outdated. This also includes
+ * error handling of the NMW code that was received from the beacon.
+ *
+ * @param {number} packId The unique id of this pack
+ * @param {number} latestPackVersionNumber The version number retrieved from central
+ * database for this pack
+ * @return {ExpansionPackLookupResult} The download is either required or not required.
+ * `Error` if the lookup failed
+ */
+export async function checkExpansionPack(
+  packId: number,
+  latestPackVersionNumber: number
+): Promise<ExpansionPackLookupResult> {
+  return new Promise((resolve, _) => {
+    storage.lookupExpansionPack(packId, (result: expansionPackMetaData) => {
+      // No entry in local database means pack has not been downloaded.
+      // If version number in local database is lower than latest pack version number
+      // then we need to download the latest version
+      if (result == null || result.packVersion < latestPackVersionNumber) {
+        resolve({
+          _tag: 'ExpansionPackDownloadRequired'
+        });
+      } else if (result.packVersion == latestPackVersionNumber) {
+        resolve({
+          _tag: 'ExpansionPackDownloadNotRequired'
+        });
+      } else {
+        resolve({ _tag: 'ExpansionPackLookupError' });
+      }
+    });
+  });
+}
+
+export async function saveExpansionPack(expansionData: expansionPack) {
+  return storage.parseExpansionPack(expansionData);
 }

@@ -15,6 +15,7 @@ import { setTheme } from '../src/themes';
 import { useRoute } from '@react-navigation/native';
 
 import * as Lookup from '../src/lookup';
+import { fetchExpansionPackMetadata } from '../src/meta-fetcher';
 
 function MainScreen({
   navigation
@@ -30,21 +31,28 @@ function MainScreen({
     'No additional information available'
   );
 
-  Lookup.lookupBeacon(beacon).then((result: Lookup.LookupResult) => {
-    switch (result._tag) {
-      case 'Enriched':
-        setBeaconDescription(result.name);
-        setBeaconIcon(result.icon);
-        setAdditionalAudio(result.description);
-        break;
-      case 'Simple':
-        setBeaconDescription(result.description);
-        setBeaconIcon(result.icon);
-        break;
-      case 'LookupError':
-        console.error('Error performing lookup');
+  if (beacon.beaconName != undefined) {
+    if (beacon.isExpansionPack) {
+      fetchExpansionPackMetadata(beacon.beaconId);
+    } else {
+      Lookup.lookupBeacon(beacon).then((result: Lookup.LookupResult) => {
+        console.log(result);
+        switch (result._tag) {
+          case 'Enriched':
+            setBeaconDescription(result.name);
+            setBeaconIcon(result.icon);
+            setAdditionalAudio(result.description);
+            break;
+          case 'Simple':
+            setBeaconDescription(result.description);
+            setBeaconIcon(result.icon);
+            break;
+          case 'LookupError':
+            console.error('Error performing lookup');
+        }
+      });
     }
-  });
+  }
 
   let audioSnippet = '';
   if (beaconDescription != '') {

@@ -1,6 +1,7 @@
 export type Beacon = {
   beaconName: string;
   beaconId: string;
+  isExpansionPack: boolean;
 };
 
 export type NoBeacon = {};
@@ -14,7 +15,15 @@ export type BeaconOutOfRangeAction = {
   type: string;
 };
 
-export type BeaconStateAction = BeaconDetectedAction | BeaconOutOfRangeAction;
+export type ExpansionPackDetectedAction = {
+  type: string;
+  beacon: Beacon;
+};
+
+export type BeaconStateAction =
+  | BeaconDetectedAction
+  | BeaconOutOfRangeAction
+  | ExpansionPackDetectedAction;
 
 export type CurrentBeacon = Beacon | NoBeacon;
 

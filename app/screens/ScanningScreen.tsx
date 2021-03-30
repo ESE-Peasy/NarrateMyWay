@@ -10,6 +10,9 @@ import { Beacon, Theme } from '../src/state/types';
 import { setTheme } from '../src/themes';
 import store from '../src/state/store';
 import { useRoute } from '@react-navigation/core';
+import { fetchExpansionPackMetadata } from '../src/meta-fetcher';
+import NetInfo from '@react-native-community/netinfo';
+import { Banner } from '../components/Alerts';
 
 function ScanningScreen({
   navigation
@@ -17,12 +20,39 @@ function ScanningScreen({
   const currentTheme = store.getState().themeReducer;
   const theme = setTheme(currentTheme.themeName, navigation, useRoute().name);
 
+  const [internetStateDisabled, setInternetStateDisabled] = React.useState(
+    false
+  );
+
+  React.useEffect(() => {
+    // Initialise internetStateDisabled and event listener the first time
+    // the user opens ScanningScreen
+    NetInfo.fetch().then((state) => {
+      setInternetStateDisabled(!state.isConnected);
+    });
+    const unsubscribe = NetInfo.addEventListener((state) => {
+      if (!state.isConnected != internetStateDisabled) {
+        setInternetStateDisabled(!state.isConnected);
+      }
+    });
+    return () => {
+      // Unsubscribe the event listener when the screen is unmounted
+      unsubscribe();
+    };
+  });
+
+  const banner = <Banner />;
+  const nothing = <View></View>;
+
   return (
     <View style={styles.container}>
-      <ScanningButton
-        theme={theme}
-        accessibilityLabel="Currently scanning for beacons near you"
-      />
+      {internetStateDisabled ? banner : nothing}
+      <View style={styles.scanningButtonContainer}>
+        <ScanningButton
+          theme={theme}
+          accessibilityLabel="Currently scanning for beacons near you"
+        />
+      </View>
     </View>
   );
 }
@@ -31,9 +61,11 @@ const mapStateToProps = (
   state: { beaconStateReducer: Beacon; themeReducer: Theme },
   ownProps: { navigation: StackNavigationProp<RootStackParamList, 'Scanning'> }
 ) => {
-  const beaconName = state.beaconStateReducer.beaconName;
-  if (beaconName != undefined) {
+  const { beaconName, isExpansionPack, beaconId } = state.beaconStateReducer;
+  if (!isExpansionPack && beaconName != undefined) {
     ownProps.navigation.replace('Main');
+  } else if (isExpansionPack && beaconId != undefined) {
+    fetchExpansionPackMetadata(beaconId);
   }
   return {
     state
@@ -44,6 +76,9 @@ export default connect(mapStateToProps)(ScanningScreen);
 
 const styles = StyleSheet.create({
   container: {
+    flex: 1
+  },
+  scanningButtonContainer: {
     flex: 1,
     alignItems: 'center',
     justifyContent: 'center'
