@@ -18,7 +18,6 @@ const scanForBeacons = (manager: BleManager) => {
   setInterval(() => {
     devices = [];
     setTimeout(() => {
-      // console.log(devices);
       if (devices.length > 0) {
         let closest = devices[0];
         for (const dev of devices) {
@@ -30,10 +29,8 @@ const scanForBeacons = (manager: BleManager) => {
           if (closest.rssi && closest.name) {
             if (closest.rssi > THRESHOLD) {
               if (closest.name.toUpperCase() == EXPANSION_PACK) {
-                console.log('expansion detected');
                 dispatch(expansionPackDetected(closest.name, closest.id));
               } else {
-                console.log('beacon detected', closest.name, closest.rssi);
                 dispatch(beaconDetected(closest.name, closest.id));
               }
             } else {
@@ -53,7 +50,6 @@ const scanForBeacons = (manager: BleManager) => {
       console.log(error.reason);
     }
     if (device && device.name) {
-      console.log(device.name);
       if (device.name.toUpperCase().startsWith('NMW:')) {
         // if (device.rssi > THRESHOLD) {
         console.log(device.name);
