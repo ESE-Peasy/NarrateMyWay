@@ -22,6 +22,7 @@ const TIMEOUT = 2000; // in ms
 const EXPANSION_PACK = 'NMW:1-EXP-AND';
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 let devices: Device[] = [];
 let alertPresented: boolean = false;
 
@@ -102,8 +103,7 @@ const checkPermission = (permission: Permission) => {
   });
 };
 
-=======
->>>>>>> Updated to ask all permissions
+
 const checkAllPermissions = () => {
   let perms: Permission[] = [];
   if (Platform.OS == 'android') {
@@ -122,7 +122,6 @@ const checkAllPermissions = () => {
 };
 
 const scanForBeacons = (manager: BleManager) => {
-  checkAllPermissions();
   const dispatch = useDispatch();
 
   setInterval(() => {
