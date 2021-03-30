@@ -11,7 +11,8 @@ import {
   request,
   PERMISSIONS,
   RESULTS,
-  Permission
+  Permission,
+  requestMultiple
 } from 'react-native-permissions';
 
 const THRESHOLD = -100; // in dB
@@ -19,30 +20,21 @@ const TIMEOUT = 2000; // in ms
 
 const EXPANSION_PACK = 'NMW:1-EXP-AND';
 
-const checkPermission = (permission: Permission) => {
-  check(permission).then((result) => {
-    switch (result) {
-      case RESULTS.DENIED || RESULTS.BLOCKED:
-        console.log('Permission denied');
-        console.log(permission);
-        request(permission);
-        break;
-    }
-  });
-};
-
 const checkAllPermissions = () => {
+  let perms: Permission[] = [];
   if (Platform.OS == 'android') {
-    console.log('android');
-    checkPermission(PERMISSIONS.ANDROID.ACCESS_FINE_LOCATION);
-    checkPermission(PERMISSIONS.ANDROID.ACCESS_COARSE_LOCATION);
-    checkPermission(PERMISSIONS.ANDROID.READ_EXTERNAL_STORAGE);
-    checkPermission(PERMISSIONS.ANDROID.WRITE_EXTERNAL_STORAGE);
+    perms = [
+      PERMISSIONS.ANDROID.ACCESS_FINE_LOCATION,
+      PERMISSIONS.ANDROID.ACCESS_COARSE_LOCATION
+    ];
   } else if (Platform.OS == 'ios') {
     console.log('ios');
-    checkPermission(PERMISSIONS.IOS.LOCATION_ALWAYS);
-    checkPermission(PERMISSIONS.IOS.BLUETOOTH_PERIPHERAL);
+    perms = [
+      PERMISSIONS.IOS.LOCATION_ALWAYS,
+      PERMISSIONS.IOS.BLUETOOTH_PERIPHERAL
+    ];
   }
+  requestMultiple(perms);
 };
 
 const scanForBeacons = (manager: BleManager) => {
