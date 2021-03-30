@@ -5,40 +5,13 @@ import {
   expansionPackDetected
 } from '../src/state/bluetooth/actions';
 import { useDispatch } from 'react-redux';
-import { Platform } from 'react-native';
-import {
-  check,
-  request,
-  PERMISSIONS,
-  RESULTS,
-  Permission,
-  requestMultiple
-} from 'react-native-permissions';
 
 const THRESHOLD = -100; // in dB
 const TIMEOUT = 2000; // in ms
 
 const EXPANSION_PACK = 'NMW:1-EXP-AND';
 
-const checkAllPermissions = () => {
-  let perms: Permission[] = [];
-  if (Platform.OS == 'android') {
-    perms = [
-      PERMISSIONS.ANDROID.ACCESS_FINE_LOCATION,
-      PERMISSIONS.ANDROID.ACCESS_COARSE_LOCATION
-    ];
-  } else if (Platform.OS == 'ios') {
-    console.log('ios');
-    perms = [
-      PERMISSIONS.IOS.LOCATION_ALWAYS,
-      PERMISSIONS.IOS.BLUETOOTH_PERIPHERAL
-    ];
-  }
-  requestMultiple(perms);
-};
-
 const scanForBeacons = (manager: BleManager) => {
-  checkAllPermissions();
   const dispatch = useDispatch();
   let devices: Device[] = [];
 
