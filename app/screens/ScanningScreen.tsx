@@ -58,11 +58,12 @@ function ScanningScreen({
     const locationListener = addListener(({ locationEnabled }) => {
       if (locationEnabled) {
         setLocationStateDisabled(false);
+        return;
       }
       if (!locationEnabled && !locationEnabled != locationStateDisabled) {
         // If location is disabled, present an alert to the user
-        locationDisabledAlert();
         setLocationStateDisabled(!locationEnabled);
+        locationDisabledAlert();
       }
     });
 
