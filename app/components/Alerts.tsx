@@ -21,7 +21,7 @@ export function internetDisabledAlert() {
   );
 }
 
-export const Banner = () => (
+export const InternetDisabledBanner = () => (
   <Pressable
     style={styles.banner}
     onPress={() =>
@@ -31,7 +31,19 @@ export const Banner = () => (
     }
   >
     <Text style={styles.bannerText}>
-      Internet is disabled. Please enable internet to download Expansion Packs.
+      Internet is disabled. Please enable this to download Expansion Packs.
+    </Text>
+  </Pressable>
+);
+
+export const LocationDisabledBanner = () => (
+  <Pressable
+    style={styles.banner}
+    onPress={() => Speech.speak('Location is disabled')}
+  >
+    <Text style={styles.bannerText}>
+      Location Permissions are disabled. Please enable this to allow the app to
+      detect beacons near you.
     </Text>
   </Pressable>
 );

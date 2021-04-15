@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { StyleSheet } from 'react-native';
+import { StyleSheet, Alert, Platform } from 'react-native';
 
 import { View } from '../components/Themed';
 import ScanningButton from '../components/ScanningButton';
@@ -12,7 +12,21 @@ import store from '../src/state/store';
 import { useRoute } from '@react-navigation/core';
 import { fetchExpansionPackMetadata } from '../src/meta-fetcher';
 import NetInfo from '@react-native-community/netinfo';
-import { Banner } from '../components/Alerts';
+import {
+  InternetDisabledBanner,
+  LocationDisabledBanner
+} from '../components/Alerts';
+import LocationEnabler from 'react-native-location-enabler';
+import * as Speech from 'expo-speech';
+
+const {
+  PRIORITIES: { HIGH_ACCURACY },
+  addListener,
+  checkSettings,
+  requestResolutionSettings
+} = LocationEnabler;
+
+let alertPresented: boolean = false;
 
 function ScanningScreen({
   navigation
@@ -24,29 +38,57 @@ function ScanningScreen({
     false
   );
 
+  const [locationStateDisabled, setLocationStateDisabled] = React.useState(
+    false
+  );
+
   React.useEffect(() => {
     // Initialise internetStateDisabled and event listener the first time
     // the user opens ScanningScreen
     NetInfo.fetch().then((state) => {
       setInternetStateDisabled(!state.isConnected);
     });
-    const unsubscribe = NetInfo.addEventListener((state) => {
+    const unsubscribeInternetListener = NetInfo.addEventListener((state) => {
       if (!state.isConnected != internetStateDisabled) {
         setInternetStateDisabled(!state.isConnected);
       }
     });
+
+    // Initialise listener for location change events
+    const locationListener = addListener(({ locationEnabled }) => {
+      if (locationEnabled) {
+        setLocationStateDisabled(false);
+      }
+      if (!locationEnabled && !locationEnabled != locationStateDisabled) {
+        // If location is disabled, present an alert to the user
+        locationDisabledAlert();
+        setLocationStateDisabled(!locationEnabled);
+      }
+    });
+
+    const locationConfig = {
+      priority: HIGH_ACCURACY,
+      alwaysShow: true,
+      needBle: true
+    };
+
+    checkSettings(locationConfig);
+
     return () => {
-      // Unsubscribe the event listener when the screen is unmounted
-      unsubscribe();
+      // Unsubscribe the listeners when the screen is unmounted
+      unsubscribeInternetListener();
+      locationListener.remove();
     };
   });
 
-  const banner = <Banner />;
+  const internetDisabledBanner = <InternetDisabledBanner />;
+  const locationDisabledBanner = <LocationDisabledBanner />;
   const nothing = <View></View>;
 
   return (
     <View style={styles.container}>
-      {internetStateDisabled ? banner : nothing}
+      {internetStateDisabled ? internetDisabledBanner : nothing}
+      {locationStateDisabled ? locationDisabledBanner : nothing}
       <View style={styles.scanningButtonContainer}>
         <ScanningButton
           theme={theme}
@@ -54,6 +96,40 @@ function ScanningScreen({
         />
       </View>
     </View>
+  );
+}
+
+async function locationDisabledAlert() {
+  if (alertPresented) {
+    return;
+  }
+  alertPresented = true;
+  Speech.speak('Location Permissions Disabled. Location must be enabled');
+  Alert.alert(
+    'Location is disabled',
+    'Location must be enabled for this application to work',
+    [
+      {
+        text: Platform.OS === 'android' ? 'Enable' : 'OK',
+        onPress: async () => {
+          if (Platform.OS == 'android') {
+            try {
+              requestResolutionSettings({
+                priority: HIGH_ACCURACY,
+                alwaysShow: true,
+                needBle: true
+              });
+              alertPresented = false;
+            } catch (error) {
+              console.log(error);
+            }
+          }
+        }
+      }
+    ],
+    {
+      cancelable: false
+    }
   );
 }
 
