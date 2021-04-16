@@ -1,0 +1,20 @@
+{
+    "version": "0.0.1",
+    "nmw": [
+    {"code": "1-0-0", "description": "General navigation markers", "icon": "information"},
+    {"code": "1-1-0", "description": "Warnings/dangerous area", "icon": "warning"},
+    {"code": "1-1-1", "description": "General caution/warning", "icon": "warning"},
+    {"code": "1-2-0", "description": "Information point", "icon": "information"},
+    {"code": "1-2-1", "description": "Visual-only navigation sign", "icon": "trail-sign"},
+    {"code": "1-2-2", "description": "Audio-accessible information point", "icon": "information"},
+    {"code": "2-0-0", "description": "Education", "icon": "book"},
+    {"code": "2-1-0", "description": "Classrooms", "icon": "book"},
+    {"code": "2-1-1", "description": "Classroom", "icon": "book"},
+    {"code": "2-1-2", "description": "Lecture theatre", "icon": "book"},
+    {"code": "2-2-0", "description": "Practical rooms", "icon": "hammer"},
+    {"code": "2-2-1", "description": "Workshop", "icon": "hammer"},
+    {"code": "2-2-2", "description": "Laboratory", "icon": "beaker"},
+    {"code": "3-0-0", "description": "Food/drink venues", "icon": "fast-food"},
+    {"code": "4-0-0", "description": "Transport", "icon": "car"}
+    ]
+   }

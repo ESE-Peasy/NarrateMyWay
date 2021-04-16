@@ -80,3 +80,13 @@ jobs:
         run: |
           cd app
           npm run test:update
+  
+  check-nmw-docs-match-app:
+    # Check that any updates to one nmw JSON are reflected in the other
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Check JSON standards match
+        run: diff app/nmwstandard.json docs/_data/nmwstandard.json
