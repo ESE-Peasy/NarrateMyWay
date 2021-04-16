@@ -12,7 +12,12 @@ import store from '../src/state/store';
 import { useRoute } from '@react-navigation/core';
 import { fetchExpansionPackMetadata } from '../src/meta-fetcher';
 import NetInfo from '@react-native-community/netinfo';
-import { Banner } from '../components/Alerts';
+import {
+  InternetDisabledBanner,
+  LocationDisabledBanner,
+  BluetoothDisabledBanner
+} from '../components/Alerts';
+import ConnectivityManager from 'react-native-connectivity-status';
 
 function ScanningScreen({
   navigation
@@ -24,29 +29,61 @@ function ScanningScreen({
     false
   );
 
+  const [locationStateDisabled, setLocationStateDisabled] = React.useState(
+    false
+  );
+
+  const [bluetoothStateDisabled, setBluetoothStateDisabled] = React.useState(
+    false
+  );
+
   React.useEffect(() => {
     // Initialise internetStateDisabled and event listener the first time
     // the user opens ScanningScreen
     NetInfo.fetch().then((state) => {
       setInternetStateDisabled(!state.isConnected);
     });
-    const unsubscribe = NetInfo.addEventListener((state) => {
+    const unsubscribeInternetListener = NetInfo.addEventListener((state) => {
       if (!state.isConnected != internetStateDisabled) {
         setInternetStateDisabled(!state.isConnected);
       }
     });
+
+    // Initialise listener for location change events
+    const connectivityStatusSubscription = ConnectivityManager.addStatusListener(
+      ({ eventType, status }) => {
+        switch (eventType) {
+          case 'bluetooth':
+            if (!status != bluetoothStateDisabled) {
+              setBluetoothStateDisabled(!status);
+            }
+            break;
+          case 'location':
+            if (!status != locationStateDisabled) {
+              setLocationStateDisabled(!status);
+            }
+            break;
+        }
+      }
+    );
+
     return () => {
-      // Unsubscribe the event listener when the screen is unmounted
-      unsubscribe();
+      // Unsubscribe the listeners when the screen is unmounted
+      unsubscribeInternetListener();
+      connectivityStatusSubscription.remove();
     };
   });
 
-  const banner = <Banner />;
+  const internetDisabledBanner = <InternetDisabledBanner />;
+  const locationDisabledBanner = <LocationDisabledBanner />;
+  const bluetoothDisabledBanner = <BluetoothDisabledBanner />;
   const nothing = <View></View>;
 
   return (
     <View style={styles.container}>
-      {internetStateDisabled ? banner : nothing}
+      {internetStateDisabled ? internetDisabledBanner : nothing}
+      {locationStateDisabled ? locationDisabledBanner : nothing}
+      {bluetoothStateDisabled ? bluetoothDisabledBanner : nothing}
       <View style={styles.scanningButtonContainer}>
         <ScanningButton
           theme={theme}
