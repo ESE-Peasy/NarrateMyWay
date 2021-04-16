@@ -17,16 +17,12 @@ import {
   LocationDisabledBanner
 } from '../components/Alerts';
 import LocationEnabler from 'react-native-location-enabler';
-import * as Speech from 'expo-speech';
 
 const {
   PRIORITIES: { HIGH_ACCURACY },
   addListener,
-  checkSettings,
-  requestResolutionSettings
+  checkSettings
 } = LocationEnabler;
-
-let alertPresented: boolean = false;
 
 function ScanningScreen({
   navigation
@@ -63,7 +59,6 @@ function ScanningScreen({
       if (!locationEnabled && !locationEnabled != locationStateDisabled) {
         // If location is disabled, present an alert to the user
         setLocationStateDisabled(!locationEnabled);
-        locationDisabledAlert();
       }
     });
 
@@ -97,40 +92,6 @@ function ScanningScreen({
         />
       </View>
     </View>
-  );
-}
-
-async function locationDisabledAlert() {
-  if (alertPresented) {
-    return;
-  }
-  alertPresented = true;
-  Speech.speak('Location Permissions Disabled. Location must be enabled');
-  Alert.alert(
-    'Location is disabled',
-    'Location must be enabled for this application to work',
-    [
-      {
-        text: Platform.OS === 'android' ? 'Enable' : 'OK',
-        onPress: async () => {
-          if (Platform.OS == 'android') {
-            try {
-              requestResolutionSettings({
-                priority: HIGH_ACCURACY,
-                alwaysShow: true,
-                needBle: true
-              });
-              alertPresented = false;
-            } catch (error) {
-              console.log(error);
-            }
-          }
-        }
-      }
-    ],
-    {
-      cancelable: false
-    }
   );
 }
 
