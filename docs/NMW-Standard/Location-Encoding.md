@@ -37,7 +37,7 @@ An example location encoding could therefore be `nmw:1-42-1`.
 
 #### 1.2.
 
-Each field consists of characters from zero to nine and *A* to *Z*. Any alphabetic characters in the location fields should be presented in upper-case form, although the standard is case-insensitive, so lower-case characters should not cause a failure.
+Each field consists of characters from zero to nine and _A_ to _Z_. Any alphabetic characters in the location fields should be presented in upper-case form, although the standard is case-insensitive, so lower-case characters should not cause a failure.
 
 #### 1.3.
 
@@ -138,6 +138,9 @@ Locations are defined as in the following table. Note that these are English tra
 
 <script type="text/javascript">
 $(document).ready( function () {
-    $('table.display').DataTable();
+    $('table.display').DataTable({
+      "aLengthMenu": [[10, 15, 18, 50, -1], [10, 15, 18, 50, "All"]],
+      "pageLength": 18
+      });
 } );
 </script>
