@@ -8,9 +8,8 @@ import useCachedResources from './hooks/useCachedResources';
 import useColorScheme from './hooks/useColorScheme';
 import Navigation from './navigation';
 import { Provider } from 'react-redux';
-import { Platform, Alert } from 'react-native';
+import { Platform, Alert, Linking } from 'react-native';
 import {
-  check,
   PERMISSIONS,
   RESULTS,
   Permission,
@@ -23,12 +22,17 @@ function checkAllPermissions(perms: Permission[]) {
   const reqs = checkMultiple(perms).then((statuses) => {
     const reqs: Permission[] = [];
     for (let i = 0; i < perms.length; i++) {
-      if (statuses[perms[i]] == 'denied' || statuses[perms[i]] == 'blocked') {
+      console.log(statuses[perms[i]]);
+      if (
+        statuses[perms[i]] == RESULTS.DENIED ||
+        statuses[perms[i]] == RESULTS.BLOCKED
+      ) {
         reqs.push(perms[i]);
       }
     }
     return reqs;
   });
+  console.log(reqs);
   return reqs;
 }
 
@@ -48,22 +52,32 @@ const checkAndGetAllPermissions = () => {
   }
   checkAllPermissions(perms).then((reqs) => {
     if (reqs.length > 0) {
-      requestMultiple(reqs);
-    }
-  });
-  checkAllPermissions(perms).then((reqs) => {
-    console.log('here');
-    if (reqs.length > 0) {
-      Alert.alert(
-        'Permission Denied',
-        'You must allow location permissions to use this app',
-        [
-          {
-            text: 'Exit',
-            onPress: () => RNExitApp.exitApp()
+      console.log('Requesting Permissions');
+      console.log(reqs);
+      requestMultiple(reqs).then((statuses) => {
+        for (let i = 0; i < perms.length; i++) {
+          if (
+            statuses[perms[i]] == 'denied' ||
+            statuses[perms[i]] == 'blocked'
+          ) {
+            Alert.alert(
+              'Permission Denied',
+              'You must allow location permissions to use this app',
+              [
+                {
+                  text: 'Settings',
+                  onPress: () => Linking.openSettings()
+                },
+                {
+                  text: 'Exit',
+                  onPress: () => RNExitApp.exitApp()
+                }
+              ]
+            );
+            break;
           }
-        ]
-      );
+        }
+      });
     }
   });
 };
