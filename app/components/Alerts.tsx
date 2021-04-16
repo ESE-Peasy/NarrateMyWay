@@ -47,3 +47,15 @@ export const LocationDisabledBanner = () => (
     </Text>
   </Pressable>
 );
+
+export const BluetoothDisabledBanner = () => (
+  <Pressable
+    style={styles.banner}
+    onPress={() => Speech.speak('Bluetooth is disabled')}
+  >
+    <Text style={styles.bannerText}>
+      Bluetooth is disabled. Please enable this to allow the app to detect
+      beacons near you.
+    </Text>
+  </Pressable>
+);

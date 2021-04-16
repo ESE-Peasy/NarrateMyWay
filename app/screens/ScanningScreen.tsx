@@ -14,15 +14,10 @@ import { fetchExpansionPackMetadata } from '../src/meta-fetcher';
 import NetInfo from '@react-native-community/netinfo';
 import {
   InternetDisabledBanner,
-  LocationDisabledBanner
+  LocationDisabledBanner,
+  BluetoothDisabledBanner
 } from '../components/Alerts';
-import LocationEnabler from 'react-native-location-enabler';
-
-const {
-  PRIORITIES: { HIGH_ACCURACY },
-  addListener,
-  checkSettings
-} = LocationEnabler;
+import ConnectivityManager from 'react-native-connectivity-status';
 
 function ScanningScreen({
   navigation
@@ -35,6 +30,10 @@ function ScanningScreen({
   );
 
   const [locationStateDisabled, setLocationStateDisabled] = React.useState(
+    false
+  );
+
+  const [bluetoothStateDisabled, setBluetoothStateDisabled] = React.useState(
     false
   );
 
@@ -51,40 +50,40 @@ function ScanningScreen({
     });
 
     // Initialise listener for location change events
-    const locationListener = addListener(({ locationEnabled }) => {
-      if (locationEnabled) {
-        setLocationStateDisabled(false);
-        return;
+    const connectivityStatusSubscription = ConnectivityManager.addStatusListener(
+      ({ eventType, status }) => {
+        switch (eventType) {
+          case 'bluetooth':
+            if (!status != bluetoothStateDisabled) {
+              setBluetoothStateDisabled(!status);
+            }
+            break;
+          case 'location':
+            if (!status != locationStateDisabled) {
+              setLocationStateDisabled(!status);
+            }
+            break;
+        }
       }
-      if (!locationEnabled && !locationEnabled != locationStateDisabled) {
-        // If location is disabled, present an alert to the user
-        setLocationStateDisabled(!locationEnabled);
-      }
-    });
-
-    const locationConfig = {
-      priority: HIGH_ACCURACY,
-      alwaysShow: true,
-      needBle: true
-    };
-
-    checkSettings(locationConfig);
+    );
 
     return () => {
       // Unsubscribe the listeners when the screen is unmounted
       unsubscribeInternetListener();
-      locationListener.remove();
+      connectivityStatusSubscription.remove();
     };
   });
 
   const internetDisabledBanner = <InternetDisabledBanner />;
   const locationDisabledBanner = <LocationDisabledBanner />;
+  const bluetoothDisabledBanner = <BluetoothDisabledBanner />;
   const nothing = <View></View>;
 
   return (
     <View style={styles.container}>
       {internetStateDisabled ? internetDisabledBanner : nothing}
       {locationStateDisabled ? locationDisabledBanner : nothing}
+      {bluetoothStateDisabled ? bluetoothDisabledBanner : nothing}
       <View style={styles.scanningButtonContainer}>
         <ScanningButton
           theme={theme}
