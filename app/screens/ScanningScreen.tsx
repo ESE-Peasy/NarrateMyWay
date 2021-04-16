@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { StyleSheet, Alert, Platform } from 'react-native';
+import { StyleSheet } from 'react-native';
 
 import { View } from '../components/Themed';
 import ScanningButton from '../components/ScanningButton';
