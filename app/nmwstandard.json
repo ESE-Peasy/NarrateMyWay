@@ -1,72 +1,340 @@
 {
     "version": "0.0.2",
     "nmw": [
-    {"code": "1-0-0", "description": "General navigation markers", "icon": "information"},
-    {"code": "1-1-0", "description": "Warnings/dangerous area", "icon": "warning"},
-    {"code": "1-1-1", "description": "General caution/warning", "icon": "warning"},
-    {"code": "1-2-0", "description": "Information point", "icon": "information"},
-    {"code": "1-2-1", "description": "Visual-only navigation sign", "icon": "trail-sign"},
-    {"code": "1-2-2", "description": "Audio-accessible information point", "icon": "information"},
-    {"code": "1-3-0", "description": "Junction", "icon": ""},
-    {"code": "1-3-1", "description": "T Junction", "icon": ""},
-    {"code": "1-3-2", "description": "Four-way junction", "icon": ""},
-    {"code": "1-4-0", "description": "Stairs", "icon": "stairs"},
-    {"code": "1-4-1", "description": "Stairs: keep left", "icon": "stairs"},
-    {"code": "1-4-2", "description": "Stairs: keep right", "icon": "stairs"},
-    {"code": "1-5-0", "description": "Elevator", "icon": "elevator"},
-    {"code": "1-5-1", "description": "Elevator", "icon": "elevator"},
-    {"code": "1-5-2", "description": "Wheelchair elevator", "icon": "elevator"},
-    {"code": "1-5-3", "description": "Chairlift", "icon": "elevator"},
-    {"code": "1-6-0", "description": "Public toilet", "icon": ""},
-    {"code": "1-6-1", "description": "Public toilet", "icon": ""},
-    {"code": "1-6-2", "description": "Public toilet (single occupancy)", "icon": ""},
-    {"code": "1-6-3", "description": "Public washroom with shower", "icon": ""},
-    {"code": "2-0-0", "description": "Education", "icon": "book"},
-    {"code": "2-1-0", "description": "Classrooms", "icon": "book"},
-    {"code": "2-1-1", "description": "Classroom", "icon": "book"},
-    {"code": "2-1-2", "description": "Lecture theatre", "icon": "book"},
-    {"code": "2-2-0", "description": "Practical rooms", "icon": "hammer"},
-    {"code": "2-2-1", "description": "Workshop", "icon": "hammer"},
-    {"code": "2-2-2", "description": "Laboratory", "icon": "beaker"},
-    {"code": "3-0-0", "description": "Food/drink venues", "icon": "fast-food"},
-    {"code": "3-1-0", "description": "Fast food", "icon": "fast-food"},
-    {"code": "3-2-0", "description": "Café", "icon": "fast-food"},
-    {"code": "3-3-0", "description": "Restaurant", "icon": "restaurant"},
-    {"code": "4-0-0", "description": "Transport", "icon": "car"},
-    {"code": "4-1-0", "description": "Railway", "icon": "train"},
-    {"code": "4-1-1", "description": "Train", "icon": "train"},
-    {"code": "4-1-2", "description": "Train station", "icon": "train"},
-    {"code": "4-1-3", "description": "Ticket barrier", "icon": "boom-gate"},
-    {"code": "4-1-4", "description": "Ticket counter", "icon": "ticket"},
-    {"code": "4-1-5", "description": "Ticket machine", "icon": "ticket"},
-    {"code": "4-1-6", "description": "Platform", "icon": "train"},
-    {"code": "4-1-7", "description": "Platform 1", "icon": "train"},
-    {"code": "4-1-8", "description": "Platform 2", "icon": "train"},
-    {"code": "4-1-9", "description": "Platform 3", "icon": "train"},
-    {"code": "4-1-A", "description": "Platform 4", "icon": "train"},
-    {"code": "4-1-B", "description": "Platform 5", "icon": "train"},
-    {"code": "4-1-C", "description": "Platform 6", "icon": "train"},
-    {"code": "4-1-D", "description": "Platform 7", "icon": "train"},
-    {"code": "4-1-E", "description": "Platform 8", "icon": "train"},
-    {"code": "4-1-F", "description": "Platform 9", "icon": "train"},
-    {"code": "4-1-G", "description": "Platform 10", "icon": "train"},
-    {"code": "4-1-H", "description": "Platform 11", "icon": "train"},
-    {"code": "4-1-I", "description": "Platform 12", "icon": "train"},
-    {"code": "4-1-J", "description": "Platform 13", "icon": "train"},
-    {"code": "4-1-K", "description": "Platform 14", "icon": "train"},
-    {"code": "4-1-L", "description": "Platform 15", "icon": "train"},
-    {"code": "4-1-M", "description": "Platform 16", "icon": "train"},
-    {"code": "4-1-N", "description": "Platform 17", "icon": "train"},
-    {"code": "4-1-O", "description": "Platform 18", "icon": "train"},
-    {"code": "4-1-P", "description": "Platform 19", "icon": "train"},
-    {"code": "4-1-Q", "description": "Platform 20", "icon": "train"},
-    {"code": "4-2-0", "description": "Bus", "icon": "bus"},
-    {"code": "4-2-1", "description": "Bus", "icon": "bus"},
-    {"code": "4-2-2", "description": "Bus stop", "icon": "bus-stop"},
-    {"code": "4-2-3", "description": "Bus stop with shelter", "icon": "bus-stop-covered"},
-    {"code": "4-2-4", "description": "Bus station", "icon": "bus"},
-    {"code": "4-3-0", "description": "Taxi", "icon": "taxi"},
-    {"code": "4-3-1", "description": "Taxi", "icon": "taxi"},
-    {"code": "4-3-2", "description": "Taxi stand", "icon": "taxi"},
+        {
+            "code": "1-0-0",
+            "description": "General navigation markers",
+            "icon": "ionicon/information"
+        },
+        {
+            "code": "1-1-0",
+            "description": "Warnings/dangerous area",
+            "icon": "ionicon/warning"
+        },
+        {
+            "code": "1-1-1",
+            "description": "General caution/warning",
+            "icon": "ionicon/warning"
+        },
+        {
+            "code": "1-2-0",
+            "description": "Information point",
+            "icon": "ionicon/information"
+        },
+        {
+            "code": "1-2-1",
+            "description": "Visual-only navigation sign",
+            "icon": "ionicon/trail-sign"
+        },
+        {
+            "code": "1-2-2",
+            "description": "Audio-accessible information point",
+            "icon": "ionicon/information"
+        },
+        {
+            "code": "1-3-0",
+            "description": "Junction",
+            "icon": "ionicon/expand"
+        },
+        {
+            "code": "1-3-1",
+            "description": "T Junction",
+            "icon": "ionicon/expand"
+        },
+        {
+            "code": "1-3-2",
+            "description": "Four-way junction",
+            "icon": "ionicon/expand"
+        },
+        {
+            "code": "1-4-0",
+            "description": "Stairs",
+            "icon": "material-community/stairs"
+        },
+        {
+            "code": "1-4-1",
+            "description": "Stairs: keep left",
+            "icon": "material-community/stairs"
+        },
+        {
+            "code": "1-4-2",
+            "description": "Stairs: keep right",
+            "icon": "material-community/stairs"
+        },
+        {
+            "code": "1-5-0",
+            "description": "Elevator",
+            "icon": "material/elevator"
+        },
+        {
+            "code": "1-5-1",
+            "description": "Elevator",
+            "icon": "material/elevator"
+        },
+        {
+            "code": "1-5-2",
+            "description": "Wheelchair elevator",
+            "icon": "material/elevator"
+        },
+        {
+            "code": "1-5-3",
+            "description": "Chairlift",
+            "icon": "material/elevator"
+        },
+        {
+            "code": "1-6-0",
+            "description": "Public toilet",
+            "icon": "font-awesome-5/toilet"
+        },
+        {
+            "code": "1-6-1",
+            "description": "Public toilet",
+            "icon": "font-awesome-5/toilet"
+        },
+        {
+            "code": "1-6-2",
+            "description": "Public toilet (single occupancy)",
+            "icon": "font-awesome-5/toilet"
+        },
+        {
+            "code": "1-6-3",
+            "description": "Public washroom with shower",
+            "icon": "font-awesome-5/shower"
+        },
+        {
+            "code": "2-0-0",
+            "description": "Education",
+            "icon": "ionicon/book"
+        },
+        {
+            "code": "2-1-0",
+            "description": "Classrooms",
+            "icon": "ionicon/book"
+        },
+        {
+            "code": "2-1-1",
+            "description": "Classroom",
+            "icon": "ionicon/book"
+        },
+        {
+            "code": "2-1-2",
+            "description": "Lecture theatre",
+            "icon": "ionicon/book"
+        },
+        {
+            "code": "2-2-0",
+            "description": "Practical rooms",
+            "icon": "ionicon/hammer"
+        },
+        {
+            "code": "2-2-1",
+            "description": "Workshop",
+            "icon": "ionicon/hammer"
+        },
+        {
+            "code": "2-2-2",
+            "description": "Laboratory",
+            "icon": "ionicon/beaker"
+        },
+        {
+            "code": "3-0-0",
+            "description": "Food/drink venues",
+            "icon": "ionicon/fast-food"
+        },
+        {
+            "code": "3-1-0",
+            "description": "Fast food",
+            "icon": "ionicon/fast-food"
+        },
+        {
+            "code": "3-2-0",
+            "description": "Café",
+            "icon": "ionicon/fast-food"
+        },
+        {
+            "code": "3-3-0",
+            "description": "Restaurant",
+            "icon": "ionicon/restaurant"
+        },
+        {
+            "code": "4-0-0",
+            "description": "Transport",
+            "icon": "ionicon/car"
+        },
+        {
+            "code": "4-1-0",
+            "description": "Railway",
+            "icon": "ionicon/train-sharp"
+        },
+        {
+            "code": "4-1-1",
+            "description": "Train",
+            "icon": "ionicon/train-sharp"
+        },
+        {
+            "code": "4-1-2",
+            "description": "Train station",
+            "icon": "ionicon/train-sharp"
+        },
+        {
+            "code": "4-1-3",
+            "description": "Ticket barrier",
+            "icon": "material-community/boom-gate"
+        },
+        {
+            "code": "4-1-4",
+            "description": "Ticket counter",
+            "icon": "font-awesome/ticket"
+        },
+        {
+            "code": "4-1-5",
+            "description": "Ticket machine",
+            "icon": "font-awesome/ticket"
+        },
+        {
+            "code": "4-1-6",
+            "description": "Platform",
+            "icon": "ionicon/train-sharp"
+        },
+        {
+            "code": "4-1-7",
+            "description": "Platform 1",
+            "icon": "ionicon/train-sharp"
+        },
+        {
+            "code": "4-1-8",
+            "description": "Platform 2",
+            "icon": "ionicon/train-sharp"
+        },
+        {
+            "code": "4-1-9",
+            "description": "Platform 3",
+            "icon": "ionicon/train-sharp"
+        },
+        {
+            "code": "4-1-A",
+            "description": "Platform 4",
+            "icon": "ionicon/train-sharp"
+        },
+        {
+            "code": "4-1-B",
+            "description": "Platform 5",
+            "icon": "ionicon/train-sharp"
+        },
+        {
+            "code": "4-1-C",
+            "description": "Platform 6",
+            "icon": "ionicon/train-sharp"
+        },
+        {
+            "code": "4-1-D",
+            "description": "Platform 7",
+            "icon": "ionicon/train-sharp"
+        },
+        {
+            "code": "4-1-E",
+            "description": "Platform 8",
+            "icon": "ionicon/train-sharp"
+        },
+        {
+            "code": "4-1-F",
+            "description": "Platform 9",
+            "icon": "ionicon/train-sharp"
+        },
+        {
+            "code": "4-1-G",
+            "description": "Platform 10",
+            "icon": "ionicon/train-sharp"
+        },
+        {
+            "code": "4-1-H",
+            "description": "Platform 11",
+            "icon": "ionicon/train-sharp"
+        },
+        {
+            "code": "4-1-I",
+            "description": "Platform 12",
+            "icon": "ionicon/train-sharp"
+        },
+        {
+            "code": "4-1-J",
+            "description": "Platform 13",
+            "icon": "ionicon/train-sharp"
+        },
+        {
+            "code": "4-1-K",
+            "description": "Platform 14",
+            "icon": "ionicon/train-sharp"
+        },
+        {
+            "code": "4-1-L",
+            "description": "Platform 15",
+            "icon": "ionicon/train-sharp"
+        },
+        {
+            "code": "4-1-M",
+            "description": "Platform 16",
+            "icon": "ionicon/train-sharp"
+        },
+        {
+            "code": "4-1-N",
+            "description": "Platform 17",
+            "icon": "ionicon/train-sharp"
+        },
+        {
+            "code": "4-1-O",
+            "description": "Platform 18",
+            "icon": "ionicon/train-sharp"
+        },
+        {
+            "code": "4-1-P",
+            "description": "Platform 19",
+            "icon": "ionicon/train-sharp"
+        },
+        {
+            "code": "4-1-Q",
+            "description": "Platform 20",
+            "icon": "ionicon/train-sharp"
+        },
+        {
+            "code": "4-2-0",
+            "description": "Bus",
+            "icon": "font-awesome-5/bus"
+        },
+        {
+            "code": "4-2-1",
+            "description": "Bus",
+            "icon": "font-awesome-5/bus"
+        },
+        {
+            "code": "4-2-2",
+            "description": "Bus stop",
+            "icon": "material-community/bus-stop"
+        },
+        {
+            "code": "4-2-3",
+            "description": "Bus stop with shelter",
+            "icon": "material-community/bus-stop-covered"
+        },
+        {
+            "code": "4-2-4",
+            "description": "Bus station",
+            "icon": "font-awesome-5/bus"
+        },
+        {
+            "code": "4-3-0",
+            "description": "Taxi",
+            "icon": "material-community/taxi"
+        },
+        {
+            "code": "4-3-1",
+            "description": "Taxi",
+            "icon": "material-community/taxi"
+        },
+        {
+            "code": "4-3-2",
+            "description": "Taxi stand",
+            "icon": "material-community/taxi"
+        }
     ]
-   }
+}
