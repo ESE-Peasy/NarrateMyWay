@@ -102,6 +102,11 @@
             "icon": "font-awesome-5/shower"
         },
         {
+            "code": "1-EXP-AND",
+            "description":"Expansion pack beacon",
+            "icon": "material-community/map-plus"
+        },
+        {
             "code": "2-0-0",
             "description": "Education",
             "icon": "ionicon/book"
