@@ -43,7 +43,7 @@ class BeaconInfo extends Component {
   }
 }
 
-const PlaceIcon = ( {icon} ) => (
+const PlaceIcon = ({ icon }) => (
   <Icon
     name={icon.split('/')[1]}
     type={icon.split('/')[0]}
