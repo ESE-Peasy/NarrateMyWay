@@ -1,4 +1,4 @@
-import { Platform, Alert, Linking } from 'react-native';
+import { Platform, Alert, Linking, DevSettings } from 'react-native';
 import {
   PERMISSIONS,
   RESULTS,
@@ -62,12 +62,22 @@ const checkAndGetAllPermissions = () => {
                 }
               ]
             );
-            break;
+
+            return;
           }
         }
+        Alert.alert('Permission Accepted', 'Please restart the app', [
+          {
+            text: 'Restart',
+            onPress: () => {
+              DevSettings.reload();
+            }
+          }
+        ]);
       });
     }
   });
+  return 1;
 };
 
 export default checkAndGetAllPermissions;
