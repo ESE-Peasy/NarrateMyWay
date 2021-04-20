@@ -22,15 +22,6 @@ class LargeButton extends Component {
           // Triggered when the user taps on the button
           Speech.speak(this.props.audio);
         }}
-        onPressOut={() => {
-          // Triggered when user removes their finger
-          console.log('Test onPressOut');
-        }}
-        onLongPress={() => {
-          // Triggered when the user presses and holds for longer than 500ms
-          // Can customise the duration by setting delayLongPress
-          console.log('Test onLongPress');
-        }}
         accessible={true}
         accessibilityLabel={this.props.accessibilityLabel}
       >

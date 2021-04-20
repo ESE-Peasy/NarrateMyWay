@@ -21,7 +21,6 @@ function checkAllPermissions(perms: Permission[]) {
     }
     return reqs;
   });
-  console.log(reqs);
   return reqs;
 }
 
