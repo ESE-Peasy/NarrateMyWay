@@ -8,6 +8,9 @@ parent: NMW Standard
 <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.23/css/jquery.dataTables.min.css">
 <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.23/js/jquery.dataTables.min.js"></script>
 
+Version {{ site.data.nmwstandard.version }}
+{: .label .label-blue}
+
 # Location Encoding
 
 [Click here to scroll to the table of codes](#32){: .btn }
