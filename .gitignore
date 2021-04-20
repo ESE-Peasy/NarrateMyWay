@@ -3,6 +3,7 @@ docs/_site/*
 
 #Ignore all locks generated from Vim, Gem etc.
 *.lock
+package-lock.json
 
 #React native offical suggested ignore files
 

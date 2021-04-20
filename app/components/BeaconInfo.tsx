@@ -3,7 +3,7 @@ import { Component } from 'react';
 import * as React from 'react';
 import { Pressable, Text } from 'react-native';
 import styles from './styles/BeaconInfo.style';
-import { Ionicons } from '@expo/vector-icons';
+import { Icon } from 'react-native-elements';
 import { View } from 'react-native';
 import { VerticalSeparator } from './Separators';
 
@@ -30,7 +30,10 @@ class BeaconInfo extends Component {
     return (
       <View style={styles.beaconInfoContainer}>
         <View style={styles.placeContainer}>
-          <PlaceIcon icon={this.props.icon}></PlaceIcon>
+          <PlaceIcon
+            icon={this.props.icon}
+            description={this.props.description}
+          ></PlaceIcon>
           <VerticalSeparator />
           <PlaceText
             theme={theme}
@@ -43,13 +46,14 @@ class BeaconInfo extends Component {
   }
 }
 
-const PlaceIcon = ({ icon }) => (
-  <Ionicons
-    name={icon}
+const PlaceIcon = ({ icon, description }) => (
+  <Icon
+    name={icon.split('/')[1]}
+    type={icon.split('/')[0]}
     style={styles.placeIcon}
     size={80}
     accessible={true}
-    accessibilityLabel={'Icon of a ' + icon}
+    accessibilityLabel={'Icon for ' + description}
     adjustsFontSizeToFit
   />
 );
