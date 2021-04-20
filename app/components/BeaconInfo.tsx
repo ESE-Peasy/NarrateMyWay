@@ -30,7 +30,10 @@ class BeaconInfo extends Component {
     return (
       <View style={styles.beaconInfoContainer}>
         <View style={styles.placeContainer}>
-          <PlaceIcon icon={this.props.icon}></PlaceIcon>
+          <PlaceIcon
+            icon={this.props.icon}
+            description={this.props.description}
+          ></PlaceIcon>
           <VerticalSeparator />
           <PlaceText
             theme={theme}
@@ -43,14 +46,14 @@ class BeaconInfo extends Component {
   }
 }
 
-const PlaceIcon = ({ icon }) => (
+const PlaceIcon = ({ icon, description }) => (
   <Icon
     name={icon.split('/')[1]}
     type={icon.split('/')[0]}
     style={styles.placeIcon}
     size={80}
     accessible={true}
-    accessibilityLabel={'Icon of a ' + icon}
+    accessibilityLabel={'Icon for ' + description}
     adjustsFontSizeToFit
   />
 );
