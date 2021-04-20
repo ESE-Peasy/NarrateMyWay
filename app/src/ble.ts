@@ -153,6 +153,7 @@ const scanForBeacons = (manager: BleManager) => {
     }, TIMEOUT);
   }, 2 * TIMEOUT);
 
+<<<<<<< HEAD
   manager.state().then((state) => {
     if (state === 'PoweredOff') {
       bluetoothDisabledAlert(manager).then((newManager) => {
@@ -163,6 +164,17 @@ const scanForBeacons = (manager: BleManager) => {
     } else if (state === 'PoweredOn') {
       setListener(manager);
       startScan(manager);
+=======
+  manager.startDeviceScan(null, null, (error, device) => {
+    if (error) {
+      manager.stopDeviceScan();
+      console.log(error.reason);
+    }
+    if (device && device.name) {
+      if (device.name.toUpperCase().startsWith('NMW:')) {
+        devices.push(device);
+      }
+>>>>>>> Update requests made by Ashwin
     }
   });
 };
