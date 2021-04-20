@@ -7,22 +7,12 @@ import {
 import { useDispatch } from 'react-redux';
 import { Alert, Platform } from 'react-native';
 import * as Speech from 'expo-speech';
-import {
-  check,
-  request,
-  PERMISSIONS,
-  RESULTS,
-  Permission,
-  requestMultiple
-} from 'react-native-permissions';
 
 const THRESHOLD = -100; // in dB
 const TIMEOUT = 2000; // in ms
 
 const EXPANSION_PACK = 'NMW:1-EXP-AND';
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 let devices: Device[] = [];
 let alertPresented: boolean = false;
 
@@ -91,35 +81,6 @@ function startScan(manager: BleManager) {
     }
   });
 }
-const checkPermission = (permission: Permission) => {
-  check(permission).then((result) => {
-    switch (result) {
-      case RESULTS.DENIED || RESULTS.BLOCKED:
-        console.log('Permission denied');
-        console.log(permission);
-        request(permission);
-        break;
-    }
-  });
-};
-
-
-const checkAllPermissions = () => {
-  let perms: Permission[] = [];
-  if (Platform.OS == 'android') {
-    perms = [
-      PERMISSIONS.ANDROID.ACCESS_FINE_LOCATION,
-      PERMISSIONS.ANDROID.ACCESS_COARSE_LOCATION
-    ];
-  } else if (Platform.OS == 'ios') {
-    console.log('ios');
-    perms = [
-      PERMISSIONS.IOS.LOCATION_ALWAYS,
-      PERMISSIONS.IOS.BLUETOOTH_PERIPHERAL
-    ];
-  }
-  requestMultiple(perms);
-};
 
 const scanForBeacons = (manager: BleManager) => {
   const dispatch = useDispatch();
@@ -153,7 +114,6 @@ const scanForBeacons = (manager: BleManager) => {
     }, TIMEOUT);
   }, 2 * TIMEOUT);
 
-<<<<<<< HEAD
   manager.state().then((state) => {
     if (state === 'PoweredOff') {
       bluetoothDisabledAlert(manager).then((newManager) => {
@@ -164,17 +124,6 @@ const scanForBeacons = (manager: BleManager) => {
     } else if (state === 'PoweredOn') {
       setListener(manager);
       startScan(manager);
-=======
-  manager.startDeviceScan(null, null, (error, device) => {
-    if (error) {
-      manager.stopDeviceScan();
-      console.log(error.reason);
-    }
-    if (device && device.name) {
-      if (device.name.toUpperCase().startsWith('NMW:')) {
-        devices.push(device);
-      }
->>>>>>> Update requests made by Ashwin
     }
   });
 };
