@@ -9,7 +9,7 @@ import SettingsScreen from '../screens/SettingsScreen';
 import { RootStackParamList } from '../types';
 import LinkingConfiguration from './LinkingConfiguration';
 import ScanningScreen from '../screens/ScanningScreen';
-import checkAndGetAllPermissions from '../src/permissions';
+
 import { BleManager } from 'react-native-ble-plx';
 
 import scanForBeacons from '../src/ble';
@@ -40,7 +40,7 @@ export default function Navigation({
 // A root stack navigator is often used for displaying modals on top of all other content
 // Read more here: https://reactnavigation.org/docs/modal
 const Stack = createStackNavigator<RootStackParamList>();
-checkAndGetAllPermissions();
+
 const manager = new BleManager();
 
 function RootNavigator() {
