@@ -36,7 +36,6 @@ function MainScreen({
       fetchExpansionPackMetadata(beacon.beaconId);
     } else {
       Lookup.lookupBeacon(beacon).then((result: Lookup.LookupResult) => {
-        console.log(result);
         switch (result._tag) {
           case 'Enriched':
             setBeaconDescription(result.name);

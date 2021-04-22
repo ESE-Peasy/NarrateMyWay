@@ -48,7 +48,13 @@ function ScanningScreen({
         setInternetStateDisabled(!state.isConnected);
       }
     });
+    ConnectivityManager.areLocationServicesEnabled().then((locationEnabled) => {
+      setLocationStateDisabled(!locationEnabled);
+    });
 
+    ConnectivityManager.isBluetoothEnabled().then((bluteoothEnabled) => {
+      setBluetoothStateDisabled(!bluteoothEnabled);
+    });
     // Initialise listener for location change events
     const connectivityStatusSubscription = ConnectivityManager.addStatusListener(
       ({ eventType, status }) => {
