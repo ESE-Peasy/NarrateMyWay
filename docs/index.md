@@ -20,8 +20,8 @@ With a large array of navigation tools currently available, NarrateMyWay aims to
 ## User Interface
 
 <div align="center" display="flex" justify-content="space-between"> 
-  <img src="../images/screenshots/scanning-screen.jpg" alt="Logo for NarrateMyWay" width="300">
-  <img src="../images/screenshots/info-screen.jpg" alt="Logo for NarrateMyWay" width="300">
+  <img src="./images/screenshots/scanning-screen.jpg" alt="Logo for NarrateMyWay" width="300">
+  <img src="./images/screenshots/info-screen.jpg" alt="Logo for NarrateMyWay" width="300">
 </div>
 
 ### Description
