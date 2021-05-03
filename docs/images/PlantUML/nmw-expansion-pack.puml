@@ -1,0 +1,62 @@
+@startuml NMW-Main-New-Location
+skinparam titleBorderThickness 2
+skinparam titleBorderColor red
+skinparam titleFontStyle bold
+
+title NarrateMyWay - Detecting an Expansion Pack
+
+participant ExpansionPackBeacon
+actor user
+participant NarrateMyWay
+participant GUI
+participant LocalStorage
+participant ExternalStorage
+
+
+user->NarrateMyWay : Open application
+activate NarrateMyWay
+note over NarrateMyWay
+    Begin loop to scan for
+    beacons.     
+end note
+NarrateMyWay->GUI : Render "Scanning" screen
+NarrateMyWay<--GUI
+user <- NarrateMyWay : Audio: "Scanning for beacons"
+
+deactivate NarrateMyWay
+
+NarrateMyWay <- ExpansionPackBeacon : "ExpansionPack" beacon detected within 10m
+
+note over NarrateMyWay
+    Halt loop which is scanning for beacons
+end note
+
+activate NarrateMyWay
+
+NarrateMyWay <- ExpansionPackBeacon : UUID/MAC Address of expansion pack beacon
+NarrateMyWay -> ExternalStorage : Get expansion pack metadata for this UUID/MAC Address
+NarrateMyWay <-- ExternalStorage
+
+note over NarrateMyWay
+    Check if expansion pack is outdated or does not exist
+end note
+
+NarrateMyWay -> ExpansionPackData : If pack is outdated or does not exist then retrieve it 
+NarrateMyWay <-- ExpansionPackData
+
+NarrateMyWay -> LocalStorage : Add pack to local database
+NarrateMyWay <-- LocalStorage
+NarrateMyWay -> GUI : Notify user that pack has\nbeen downloaded
+NarrateMyWay <-- GUI
+user <- NarrateMyWay : Audio: "Expansion pack for X \nhas been downloaded"
+
+note over NarrateMyWay
+    Begin loop to scan for 
+    beacons
+end note
+
+NarrateMyWay -> GUI : Render "Scanning" screen
+NarrateMyWay <-- GUI
+user <- NarrateMyWay : Audio: "Scanning for beacons"
+
+@enduml

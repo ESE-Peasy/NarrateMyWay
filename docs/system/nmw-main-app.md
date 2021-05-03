@@ -42,23 +42,23 @@ However, with the setup application, it is also possible for the beacon to provi
 </h4>
 
 | Location attribute | Required? | Description                                                                                           |
-| ------------------ | --------- | ----------------------------------------------------------------------------------------------------- | --- |
+| ------------------ | --------- | ----------------------------------------------------------------------------------------------------- |
 | NMW location code  | **Yes**   | The location code according to this standard                                                          |
-| Name               | **Yes**   | A name for the location. This could be, for example the name of a business                            |     |
+| Name               | **Yes**   | A name for the location. This could be, for example the name of a business                            |
 | Description        | **Yes**   | A field that must be included to provide the user with more meaningful information about the location |
 | Website            | No        | This is optional and should only be present if the website is accessible for visually impaired users  |
 
-### Extension Packs
+### Expansion Packs
 
 As part of our desire to ensure that our application is usable by users without internet connection, any NarrateMyWay beacon detected by the app will at the very least provide users with the information outlined in [Table 1](#table-1) above.
 
-However, with our intended desire to use the NarrateMyWay system within larger organisations, we provide users with the option to download Extension Packs, which allow the more enriched information of [Table 2](#table-2) to be provided to the user.
+However, with our intended desire to use the NarrateMyWay system within larger organisations, we provide users with the option to download Expansion Packs, which allow the more enriched information of [Table 2](#table-2) to be provided to the user.
 
-The intention is that each of these organisations will setup beacons with this additional information, and this is stored externally on a database. Users will then be able to download this information in the form of an Extension Pack, either provided by representatives of the organisation at the location, or downloadable via the application itself as explained below.
+The intention is that each of these organisations will setup beacons with this additional information, and this is stored externally on a database. Users will then be able to download this information in the form of an Expansion Pack, either provided by representatives of the organisation at the location, or downloadable via the application itself as explained below.
 
-### 2. Extension Pack Beacons
+### 2. Expansion Pack Beacons
 
-As outlined above, it is possible for each beacon setup using NarrateMyWay to provide enriched information which makes use of the UUID of the beacon. If setup to include this additional information, these details along with the UUID are stored in an external database. The purpose of these Extension Pack Beacons, is to allow a user to easily download these packs when they come across such a beacon:
+As outlined above, it is possible for each beacon setup using NarrateMyWay to provide enriched information which makes use of the UUID of the beacon. If setup to include this additional information, these details along with the UUID are stored in an external database. The purpose of these Expansion Pack Beacons, is to allow a user to easily download these packs when they come across such a beacon:
 
 <embed src="../images/NMW-Main-New-Location.pdf" type="application/pdf" width="100%" height="600px" />
 

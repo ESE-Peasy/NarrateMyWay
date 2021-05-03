@@ -1,0 +1,52 @@
+@startuml NMW-Main-New-Location
+skinparam titleBorderThickness 2
+skinparam titleBorderColor red
+skinparam titleFontStyle bold
+
+title NarrateMyWay - Detecting an NMW Beacon
+
+participant NMWBeacon
+actor user
+participant NarrateMyWay
+participant GUI
+participant LocalStorage
+
+
+user->NarrateMyWay : Open application
+activate NarrateMyWay
+note over NarrateMyWay
+    Begin loop to scan for
+    beacons.     
+end note
+NarrateMyWay->GUI : Render "Scanning" screen
+NarrateMyWay<--GUI
+user <- NarrateMyWay : Audio: "Scanning for beacons"
+
+deactivate NarrateMyWay
+
+NarrateMyWay <- NMWBeacon : NMW beacon detected within 10m
+
+note over NarrateMyWay
+    Halt loop which is scanning for beacons
+end note
+
+activate NarrateMyWay
+
+NarrateMyWay <- NMWBeacon : UUID/MAC Address of expansion pack beacon
+NarrateMyWay -> LocalStorage : Check if enriched info exists\nfor this beacon or if we should\ndefault to the NMW standard
+NarrateMyWay <-- LocalStorage
+
+NarrateMyWay -> GUI : Switch to "Information" screen
+NarrateMyWay <-- GUI
+user <- NarrateMyWay : Audio: "X detected"
+
+note over NarrateMyWay
+    Begin loop to scan for 
+    beacons
+end note
+
+NarrateMyWay -> GUI : Render "Scanning" screen
+NarrateMyWay <-- GUI
+user <- NarrateMyWay : Audio: "Scanning for beacons"
+
+@enduml

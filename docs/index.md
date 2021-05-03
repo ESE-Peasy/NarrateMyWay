@@ -17,12 +17,11 @@ title: Welcome!
 
 With a large array of navigation tools currently available, NarrateMyWay aims to provide the benefits of visual signs to various groups of individuals, such as visually impaired people, tourists who may not speak the native language and pensioners who require extra mobility aids. This will give users more context to their surroundings to aid navigation and will be achieved by connecting the user's device to various Bluetooth beacons that will be placed at significant locations. Despite the technology being developed for the University of Glasgow campus, it will have the ability to be easily expanded to any location. The technologies extensibility will also be combined with the application being free and available across Andriod and IOS devices.
 
-## Demonstration
+## User Interface
 
-### Concept User Interface
-
-<div align="center"> 
-  <img src="images/ui-image.png" alt="Logo for NarrateMyWay" width="300">
+<div align="center" display="flex" justify-content="space-between"> 
+  <img src="../images/screenshots/scanning-screen.jpg" alt="Logo for NarrateMyWay" width="300">
+  <img src="../images/screenshots/info-screen.jpg" alt="Logo for NarrateMyWay" width="300">
 </div>
 
 ### Description

@@ -20,11 +20,15 @@
   </p>
 </p>
 
+<div align="center">
+
 ![Contributors](https://img.shields.io/github/contributors/ESE-Peasy/NarrateMyWay.svg?style=for-the-badge)
 ![Forks](https://img.shields.io/github/forks/ESE-Peasy/NarrateMyWay.svg?style=for-the-badge)
 ![Stargazers](https://img.shields.io/github/stars/ESE-Peasy/NarrateMyWay.svg?style=for-the-badge)
 ![Issues](https://img.shields.io/github/issues/ESE-Peasy/NarrateMyWay.svg?style=for-the-badge)
 ![GNU GPL-3.0 License](https://img.shields.io/github/license/ESE-Peasy/NarrateMyWay.svg?style=for-the-badge)
+
+</div>
 
 <!-- TABLE OF CONTENTS -->
 <details open="open">
@@ -53,11 +57,12 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-With a large array of navigation tools currently available, NarrateMyWay aims to provide the benefits of visual signs to various groups of individuals, such as visually impaired people, tourists who may not speak the native language and pensioners who require extra mobility aids. This will give users more context to their surroundings to aid navigation and will be achieved by connecting the user's device to various Bluetooth beacons that will be placed at significant locations. Despite the technology being developed for the University of Glasgow campus, it will have the ability to be easily expanded to any location. The technologies extensibility will also be combined with the application being free and available across Andriod and IOS devices.
+With a large array of navigation tools currently available, NarrateMyWay aims to provide the benefits of visual signs to various groups of individuals, such as visually impaired people, tourists who may not speak the native language and pensioners who require extra mobility aids. This will give users more context to their surroundings to aid navigation and will be achieved by connecting the user's device to various Bluetooth beacons that will be placed at significant locations. Despite the technology being developed for the University of Glasgow campus, it will have the ability to be easily expanded to any location. The technologies extensibility will also be combined with the application being free and available across Andriod and iOS devices.
 
 ### Technologies Used
 
 * The application for this project is being developed using [React Native](https://reactnative.dev)
+* To interact with BLE beacons, the [react-native-ble-plx](https://github.com/Polidea/react-native-ble-plx) library is being used
 
 
 <!-- GETTING STARTED -->
@@ -68,10 +73,11 @@ To get started with installing and running the NarrateMyWay application please r
 <!-- USAGE EXAMPLES -->
 ## Usage
 
-### Concept User Interface
+### User Interface
 
-<div align="center"> 
-  <img src="docs/images/ui-image.png" alt="Logo for NarrateMyWay" width="300">
+<div align="center" display="flex" justify-content="space-between"> 
+  <img src="docs/images/screenshots/scanning-screen.jpg" alt="Logo for NarrateMyWay" width="300">
+  <img src="docs/images/screenshots/info-screen.jpg" alt="Logo for NarrateMyWay" width="300">
 </div>
 
 ### Description
